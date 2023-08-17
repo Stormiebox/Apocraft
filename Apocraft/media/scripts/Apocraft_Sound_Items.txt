@@ -11,6 +11,17 @@ module Apocraft
 
    }
 
+      sound ChoppingFoodSFX
+   {
+
+      clip
+      {
+         file = media/sound/ChoppingFoodSFX.wav,
+         volume = 0.7,
+      }
+
+   }
+
       sound ClothesRipping1SFX
    {
 
@@ -72,6 +83,17 @@ module Apocraft
       clip
       {
          file = media/sound/LaboratoryTableSFX.wav,
+         volume = 0.7,
+      }
+
+   }
+
+      sound LoggingSFX
+   {
+
+      clip
+      {
+         file = media/sound/LoggingSFX.wav,
          volume = 0.7,
       }
 

@@ -16,9 +16,16 @@ module Apocraft
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:CannedTomatoOpen,
-      Time:380.0,
+      Time:500.0,
       Category:Cooking,
-      SkillRequired:Cooking=5,
+      Sound:ChoppingFoodSFX,
+      AnimNode:CharacterActionAnims.Craft,
+      Prop1:HuntingKnife,
+      Prop2:TinCanEmpty,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      SkillRequired:Cooking=3,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Fill Empty Can With Potato
@@ -32,9 +39,16 @@ module Apocraft
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:CannedPotatoOpen,
-      Time:380.0,
+      Time:500.0,
       Category:Cooking,
-      SkillRequired:Cooking=5,
+      Sound:ChoppingFoodSFX,
+      AnimNode:CharacterActionAnims.Craft,
+      Prop1:HuntingKnife,
+      Prop2:TinCanEmpty,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      SkillRequired:Cooking=3,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Fill Empty Can With Peas
@@ -47,9 +61,16 @@ module Apocraft
       TinCanEmpty,
 
       Result:CannedPeasOpen,
-      Time:380.0,
+      Time:500.0,
       Category:Cooking,
-      SkillRequired:Cooking=5,
+      Sound:ChoppingFoodSFX,
+      AnimNode:CharacterActionAnims.Craft,
+      Prop1:HuntingKnife,
+      Prop2:TinCanEmpty,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      SkillRequired:Cooking=3,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Fill Empty Can With Carrots
@@ -63,9 +84,16 @@ module Apocraft
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:CannedCarrotsOpen,
-      Time:380.0,
+      Time:500.0,
       Category:Cooking,
-      SkillRequired:Cooking=5,
+      Sound:ChoppingFoodSFX,
+      AnimNode:CharacterActionAnims.Craft,
+      Prop1:HuntingKnife,
+      Prop2:TinCanEmpty,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      SkillRequired:Cooking=3,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Fill Empty Can With Corn
@@ -79,22 +107,35 @@ module Apocraft
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:CannedCornOpen,
-      Time:380.0,
+      Time:500.0,
       Category:Cooking,
-      SkillRequired:Cooking=5,
+      Sound:ChoppingFoodSFX,
+      AnimNode:CharacterActionAnims.Craft,
+      Prop1:HuntingKnife,
+      Prop2:TinCanEmpty,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      SkillRequired:Cooking=3,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
-   recipe Pour Soup Into Empty Cans
+   recipe Fill Empty Can With Soup
    {
       PotOfSoup/PotOfSoupRecipe,
       TinCanEmpty,
 
       Result:TinnedSoupOpen=4,
       OnCreate:SealBowlOfSoup4_OnCreate,
-      Time:480.0,
+      Time:500.0,
       Category:Cooking,
-      SkillRequired:Cooking=5,
-      OnGiveXP:NoXP_OnGiveXP,
+      Sound:ChoppingFoodSFX,
+      AnimNode:CharacterActionAnims.Craft,
+      Prop1:HuntingKnife,
+      Prop2:TinCanEmpty,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      SkillRequired:Cooking=3,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Fill Empty Can With Mushroom Soup
@@ -110,9 +151,16 @@ module Apocraft
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:CannedMushroomSoupOpen,
-      Time:380.0,
+      Time:500.0,
       Category:Cooking,
-      SkillRequired:Cooking=5,
+      Sound:ChoppingFoodSFX,
+      AnimNode:CharacterActionAnims.Craft,
+      Prop1:HuntingKnife,
+      Prop2:TinCanEmpty,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      SkillRequired:Cooking=3,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Fill Empty Can With Sardines
@@ -129,9 +177,15 @@ module Apocraft
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:CannedSardinesOpen,
-      Time:430.0,
+      Time:500.0,
       Category:Cooking,
-      SkillRequired:Cooking=5,
+      Sound:ChoppingFoodSFX,
+      AnimNode:CharacterActionAnims.Craft,
+      Prop1:HuntingKnife,
+      Prop2:TinCanEmpty,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      SkillRequired:Cooking=3,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -149,9 +203,16 @@ module Apocraft
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:TunaTinOpen,
-      Time:430.0,
+      Time:500.0,
       Category:Cooking,
-      SkillRequired:Cooking=5,
+      Sound:ChoppingFoodSFX,
+      AnimNode:CharacterActionAnims.Craft,
+      Prop1:HuntingKnife,
+      Prop2:TinCanEmpty,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      SkillRequired:Cooking=3,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -171,9 +232,15 @@ module Apocraft
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:CannedChiliOpen,
-      Time:900.0,
+      Time:500.0,
       Category:Cooking,
-      SkillRequired:Cooking=5,
+      Sound:ChoppingFoodSFX,
+      AnimNode:CharacterActionAnims.Craft,
+      Prop1:HuntingKnife,
+      Prop2:TinCanEmpty,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      SkillRequired:Cooking=3,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -192,13 +259,19 @@ module Apocraft
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:CannedBologneseOpen,
-      Time:900.0,
+      Time:500.0,
       Category:Cooking,
-      SkillRequired:Cooking=5,
+      Sound:ChoppingFoodSFX,
+      AnimNode:CharacterActionAnims.Craft,
+      Prop1:HuntingKnife,
+      Prop2:TinCanEmpty,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      SkillRequired:Cooking=3,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
-   recipe Fill Empty Can With CornedBeef
+   recipe Fill Empty Can With Corned Beef
    {
       Pickles,
       Steak,
@@ -214,9 +287,69 @@ module Apocraft
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:CannedCornedBeefOpen,
-      Time:900.0,
+      Time:500.0,
       Category:Cooking,
-      SkillRequired:Cooking=5,
+      Sound:ChoppingFoodSFX,
+      AnimNode:CharacterActionAnims.Craft,
+      Prop1:HuntingKnife,
+      Prop2:TinCanEmpty,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      SkillRequired:Cooking=3,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
+   }
+
+   recipe Fill Empty Can With Beans
+   {
+      Blackbeans=3,
+      WildGarlic,
+      Water=3,
+      Vinegar=3,
+      Salt=2,
+      Pepper=2,
+      TinCanEmpty,
+      keep MortarPestle,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+
+      Result:OpenBeans,
+      Time:500.0,
+      Category:Cooking,
+      Sound:ChoppingFoodSFX,
+      AnimNode:CharacterActionAnims.Craft,
+      Prop1:HuntingKnife,
+      Prop2:TinCanEmpty,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      SkillRequired:Cooking=3,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
+   }
+
+   recipe Fill Empty Can With Fruit
+   {
+      Apple,
+      Cherry,
+      Mango,
+      Pear,
+      Peach,
+      Pineapple,
+      Water=2,
+      Vinegar=2,
+      Salt=2,
+      Pepper=2,
+      TinCanEmpty,
+      keep MortarPestle,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+
+      Result:CannedFruitCocktailOpen,
+      Time:500.0,
+      Category:Cooking,
+      Sound:ChoppingFoodSFX,
+      AnimNode:CharacterActionAnims.Craft,
+      Prop1:HuntingKnife,
+      Prop2:TinCanEmpty,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      SkillRequired:Cooking=3,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -228,11 +361,17 @@ module Apocraft
       WeldingRods=1,
       ScrapMetal,
       keep [Recipe.GetItemTypes.WeldingMask],
-      keep [Recipe.GetItemTypes.Saw],
 
       Result:CannedTomato2,
-      Time:380.0,
+      Time:500.0,
       Category:Welding,
+      Sound:MetalWeldingSFX,
+      AnimNode:BlowTorchFloor,
+      NearItem:Mechanic Table,
+      Prop1:BlowTorch,
+      Prop2:CannedTomatoOpen,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -244,11 +383,17 @@ module Apocraft
       WeldingRods=1,
       ScrapMetal,
       keep [Recipe.GetItemTypes.WeldingMask],
-      keep [Recipe.GetItemTypes.Saw],
 
       Result:CannedPotato2,
-      Time:380.0,
+      Time:500.0,
       Category:Welding,
+      Sound:MetalWeldingSFX,
+      AnimNode:BlowTorchFloor,
+      NearItem:Mechanic Table,
+      Prop1:BlowTorch,
+      Prop2:CannedPotatoOpen,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -258,13 +403,19 @@ module Apocraft
       CannedPeasOpen,
       BlowTorch=1,
       WeldingRods=1,
-      SmallSheetMetal=2,
+      ScrapMetal,
       keep [Recipe.GetItemTypes.WeldingMask],
-      keep [Recipe.GetItemTypes.Saw],
 
-      Result:CannedPeas=2,
-      Time:380.0,
+      Result:CannedPeas,
+      Time:500.0,
       Category:Welding,
+      Sound:MetalWeldingSFX,
+      AnimNode:BlowTorchFloor,
+      NearItem:Mechanic Table,
+      Prop1:BlowTorch,
+      Prop2:CannedPeasOpen,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -276,11 +427,17 @@ module Apocraft
       WeldingRods=1,
       ScrapMetal,
       keep [Recipe.GetItemTypes.WeldingMask],
-      keep [Recipe.GetItemTypes.Saw],
 
       Result:CannedCarrots2,
-      Time:380.0,
+      Time:500.0,
       Category:Welding,
+      Sound:MetalWeldingSFX,
+      AnimNode:BlowTorchFloor,
+      NearItem:Mechanic Table,
+      Prop1:BlowTorch,
+      Prop2:CannedCarrotsOpen,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -292,11 +449,17 @@ module Apocraft
       WeldingRods=1,
       ScrapMetal,
       keep [Recipe.GetItemTypes.WeldingMask],
-      keep [Recipe.GetItemTypes.Saw],
 
       Result:CannedCorn,
-      Time:380.0,
+      Time:500.0,
       Category:Welding,
+      Sound:MetalWeldingSFX,
+      AnimNode:BlowTorchFloor,
+      NearItem:Mechanic Table,
+      Prop1:BlowTorch,
+      Prop2:CannedCornOpen,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -307,11 +470,17 @@ module Apocraft
       BlowTorch=1,
       ScrapMetal,
       keep [Recipe.GetItemTypes.WeldingMask],
-      keep [Recipe.GetItemTypes.Saw],
 
       Result:TinnedSoup,
-      Time:380.0,
+      Time:500.0,
       Category:Welding,
+      Sound:MetalWeldingSFX,
+      AnimNode:BlowTorchFloor,
+      NearItem:Mechanic Table,
+      Prop1:BlowTorch,
+      Prop2:TinnedSoupOpen,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -323,11 +492,17 @@ module Apocraft
       WeldingRods=1,
       ScrapMetal,
       keep [Recipe.GetItemTypes.WeldingMask],
-      keep [Recipe.GetItemTypes.Saw],
 
       Result:CannedMushroomSoup,
-      Time:380.0,
+      Time:500.0,
       Category:Welding,
+      Sound:MetalWeldingSFX,
+      AnimNode:BlowTorchFloor,
+      NearItem:Mechanic Table,
+      Prop1:BlowTorch,
+      Prop2:CannedMushroomSoupOpen,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -337,13 +512,19 @@ module Apocraft
       CannedSardinesOpen,
       BlowTorch=1,
       WeldingRods=1,
-      SmallSheetMetal=2,
+      ScrapMetal,
       keep [Recipe.GetItemTypes.WeldingMask],
-      keep [Recipe.GetItemTypes.Saw],
 
       Result:CannedSardines,
-      Time:380.0,
+      Time:500.0,
       Category:Welding,
+      Sound:MetalWeldingSFX,
+      AnimNode:BlowTorchFloor,
+      NearItem:Mechanic Table,
+      Prop1:BlowTorch,
+      Prop2:CannedSardinesOpen,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -353,13 +534,19 @@ module Apocraft
       TunaTinOpen,
       BlowTorch=1,
       WeldingRods=1,
-      SmallSheetMetal=3,
+      ScrapMetal,
       keep [Recipe.GetItemTypes.WeldingMask],
-      keep [Recipe.GetItemTypes.Saw],
 
       Result:TunaTin,
-      Time:430.0,
+      Time:500.0,
       Category:Welding,
+      Sound:MetalWeldingSFX,
+      AnimNode:BlowTorchFloor,
+      NearItem:Mechanic Table,
+      Prop1:BlowTorch,
+      Prop2:TunaTinOpen,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -369,13 +556,19 @@ module Apocraft
       CannedChiliOpen,
       BlowTorch=1,
       WeldingRods=1,
-      SmallSheetMetal=3,
+      ScrapMetal,
       keep [Recipe.GetItemTypes.WeldingMask],
-      keep [Recipe.GetItemTypes.Saw],
 
       Result:CannedChili,
-      Time:430.0,
+      Time:500.0,
       Category:Welding,
+      Sound:MetalWeldingSFX,
+      AnimNode:BlowTorchFloor,
+      NearItem:Mechanic Table,
+      Prop1:BlowTorch,
+      Prop2:CannedChiliOpen,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -385,46 +578,41 @@ module Apocraft
       CannedBologneseOpen,
       BlowTorch=1,
       WeldingRods=1,
+      ScrapMetal,
+      keep [Recipe.GetItemTypes.WeldingMask],
+
+      Result:CannedBolognese,
+      Time:500.0,
+      Category:Welding,
+      Sound:MetalWeldingSFX,
+      AnimNode:BlowTorchFloor,
+      NearItem:Mechanic Table,
+      Prop1:BlowTorch,
+      Prop2:CannedBologneseOpen,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      SkillRequired:MetalWelding=2,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Seal Corned Beef Can
+   {
+      CannedCornedBeefOpen,
+      BlowTorch=1,
+      WeldingRods=1,
       SmallSheetMetal,
       keep [Recipe.GetItemTypes.WeldingMask],
-      keep MortarPestle,
-      keep [Recipe.GetItemTypes.Saw],
 
-      Result:CannedBolognese=3,
-      Time:430.0,
+      Result:CannedCornedBeef,
+      Time:500.0,
       Category:Welding,
-      SkillRequired:MetalWelding=2,
-      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-   }
-
-   recipe Seal CornedBeef Can
-   {
-      CannedCornedBeefOpen=3,
-      BlowTorch=1,
-      WeldingRods=1,
-      SmallSheetMetal=3,
-      keep [Recipe.GetItemTypes.WeldingMask],
-      keep [Recipe.GetItemTypes.Saw],
-
-      Result:CannedCornedBeef=3,
-      Time:430.0,
-      Category:Welding,
-      SkillRequired:MetalWelding=2,
-      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-   }
-
-   recipe Seal Evaporated Milk Can
-   {
-      CannedMilkOpen=3,
-      BlowTorch=1,
-      WeldingRods=1,
-      SmallSheetMetal=3,
-      keep [Recipe.GetItemTypes.WeldingMask],
-      keep [Recipe.GetItemTypes.Saw],
-
-      Result:CannedMilk=3,
-      Time:430.0,
-      Category:Welding,
+      Sound:MetalWeldingSFX,
+      AnimNode:BlowTorchFloor,
+      NearItem:Mechanic Table,
+      Prop1:BlowTorch,
+      Prop2:CannedCornedBeefOpen,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -436,29 +624,84 @@ module Apocraft
       WeldingRods=1,
       ScrapMetal,
       keep [Recipe.GetItemTypes.WeldingMask],
-      keep [Recipe.GetItemTypes.Saw],
 
       Result:CannedPeaches,
-      Time:380.0,
+      Time:500.0,
       Category:Welding,
+      Sound:MetalWeldingSFX,
+      AnimNode:BlowTorchFloor,
+      NearItem:Mechanic Table,
+      Prop1:BlowTorch,
+      Prop2:CannedPeachesOpen,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
 
    recipe Seal Pineapples Can
    {
-      CannedPineappleOpen=2,
+      CannedPineappleOpen,
       BlowTorch=1,
       WeldingRods=1,
-      SmallSheetMetal=2,
+      ScrapMetal,
       keep [Recipe.GetItemTypes.WeldingMask],
-      keep [Recipe.GetItemTypes.Saw],
 
-      Result:CannedPineapple=2,
-      Time:380.0,
+      Result:CannedPineapple,
+      Time:500.0,
       Category:Welding,
+      Sound:MetalWeldingSFX,
+      AnimNode:BlowTorchFloor,
+      NearItem:Mechanic Table,
+      Prop1:BlowTorch,
+      Prop2:CannedPineappleOpen,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
 
+   recipe Seal Beans Can
+   {
+      OpenBeans,
+      BlowTorch=1,
+      WeldingRods=1,
+      ScrapMetal,
+      keep [Recipe.GetItemTypes.WeldingMask],
+
+      Result:TinnedBeans,
+      Time:500.0,
+      Category:Welding,
+      Sound:MetalWeldingSFX,
+      AnimNode:BlowTorchFloor,
+      NearItem:Mechanic Table,
+      Prop1:BlowTorch,
+      Prop2:OpenBeans,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      SkillRequired:MetalWelding=2,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Seal Fruit Cocktail Can
+   {
+      CannedFruitCocktailOpen,
+      BlowTorch=1,
+      WeldingRods=1,
+      SmallSheetMetal,
+      keep [Recipe.GetItemTypes.WeldingMask],
+
+      Result:CannedFruitCocktail,
+      Time:500.0,
+      Category:Welding,
+      Sound:MetalWeldingSFX,
+      AnimNode:BlowTorchFloor,
+      NearItem:MechanicTable,
+      Prop1:BlowTorch,
+      Prop2:CannedFruitCocktailOpen,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      SkillRequired:MetalWelding=3,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
 }
