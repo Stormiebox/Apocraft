@@ -1,0 +1,464 @@
+module Apocraft
+{
+    imports
+    {
+        Base
+    }
+   /*********************Canning Preparation*********************/
+   recipe Fill Empty Can With Tomato
+   {
+      Tomato,
+      Water=2,
+      Vinegar=2,
+      Salt=2,
+      Pepper=2,
+      TinCanEmpty,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+
+      Result:CannedTomatoOpen,
+      Time:380.0,
+      Category:Cooking,
+      SkillRequired:Cooking=5,
+   }
+
+   recipe Fill Empty Can With Potato
+   {
+      Potato,
+      Water=2,
+      Vinegar=2,
+      Salt=2,
+      Pepper=2,
+      TinCanEmpty,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+
+      Result:CannedPotatoOpen,
+      Time:380.0,
+      Category:Cooking,
+      SkillRequired:Cooking=5,
+   }
+
+   recipe Fill Empty Can With Peas
+   {
+      Peas,
+      Water=2,
+      Vinegar=2,
+      Salt=2,
+      Pepper=2,
+      TinCanEmpty,
+
+      Result:CannedPeasOpen,
+      Time:380.0,
+      Category:Cooking,
+      SkillRequired:Cooking=5,
+   }
+
+   recipe Fill Empty Can With Carrots
+   {
+      Carrots,
+      Water=2,
+      Vinegar=2,
+      Salt=2,
+      Pepper=2,
+      TinCanEmpty,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+
+      Result:CannedCarrotsOpen,
+      Time:380.0,
+      Category:Cooking,
+      SkillRequired:Cooking=5,
+   }
+
+   recipe Fill Empty Can With Corn
+   {
+      Corn,
+      Water=2,
+      Vinegar=2,
+      Salt=2,
+      Pepper=2,
+      TinCanEmpty,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+
+      Result:CannedCornOpen,
+      Time:380.0,
+      Category:Cooking,
+      SkillRequired:Cooking=5,
+   }
+
+   recipe Pour Soup Into Empty Cans
+   {
+      PotOfSoup/PotOfSoupRecipe,
+      TinCanEmpty,
+
+      Result:TinnedSoupOpen=4,
+      OnCreate:SealBowlOfSoup4_OnCreate,
+      Time:480.0,
+      Category:Cooking,
+      SkillRequired:Cooking=5,
+      OnGiveXP:NoXP_OnGiveXP,
+   }
+
+   recipe Fill Empty Can With Mushroom Soup
+   {
+      MushroomGeneric1/MushroomGeneric2/MushroomGeneric3/MushroomGeneric4/MushroomGeneric5/MushroomGeneric6/MushroomGeneric7,
+      LemonGrass,
+      WildGarlic,
+      Water=2,
+      Vinegar=2,
+      Salt=2,
+      Pepper=2,
+      TinCanEmpty,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+
+      Result:CannedMushroomSoupOpen,
+      Time:380.0,
+      Category:Cooking,
+      SkillRequired:Cooking=5,
+   }
+
+   recipe Fill Empty Can With Sardines
+   {
+      BaitFish=5,
+      LemonGrass,
+      WildGarlic,
+      Water=2,
+      Vinegar=2,
+      Salt=2,
+      Pepper=2,
+      TinCanEmpty,
+      keep MortarPestle,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+
+      Result:CannedSardinesOpen,
+      Time:430.0,
+      Category:Cooking,
+      SkillRequired:Cooking=5,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
+   }
+
+   recipe Fill Empty Can With Tuna
+   {
+      FishFillet=2,
+      LemonGrass,
+      WildGarlic,
+      Water=2,
+      Vinegar=2,
+      Salt=2,
+      Pepper=2,
+      TinCanEmpty,
+      keep MortarPestle,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+
+      Result:TunaTinOpen,
+      Time:430.0,
+      Category:Cooking,
+      SkillRequired:Cooking=5,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
+   }
+
+
+   recipe Fill Empty Can With Chili
+   {
+      FrogMeat/Rabbitmeat/Smallanimalmeat/Smallbirdmeat,
+      Tomato/CannedTomatoOpen,
+      Blackbeans,
+      BellPepper,
+      Water=2,
+      Vinegar=2,
+      Salt=2,
+      Pepper=2,
+      TinCanEmpty,
+      keep MortarPestle,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+
+      Result:CannedChiliOpen,
+      Time:900.0,
+      Category:Cooking,
+      SkillRequired:Cooking=5,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
+   }
+
+   recipe Fill Empty Can With Spaghetti Bolognese
+   {
+      Pasta=5,
+      Chicken/PorkChop/MuttonChop/FrogMeat/MincedMeat/Steak,
+      LemonGrass,
+      WildGarlic,
+      Water=2,
+      Vinegar=2,
+      Salt=2,
+      Pepper=2,
+      TinCanEmpty,
+      keep MortarPestle,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+
+      Result:CannedBologneseOpen,
+      Time:900.0,
+      Category:Cooking,
+      SkillRequired:Cooking=5,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
+   }
+
+   recipe Fill Empty Can With CornedBeef
+   {
+      Pickles,
+      Steak,
+      BlackSage=2,
+      LemonGrass,
+      WildGarlic,
+      Water=2,
+      Vinegar=2,
+      Salt=2,
+      Pepper=2,
+      TinCanEmpty,
+      keep MortarPestle,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+
+      Result:CannedCornedBeefOpen,
+      Time:900.0,
+      Category:Cooking,
+      SkillRequired:Cooking=5,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
+   }
+
+   /*********************Finished Canning*********************/
+   recipe Seal Tomato Can
+   {
+      CannedTomatoOpen,
+      BlowTorch=1,
+      WeldingRods=1,
+      ScrapMetal,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+
+      Result:CannedTomato2,
+      Time:380.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=2,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Seal Potato Can
+   {
+      CannedPotatoOpen,
+      BlowTorch=1,
+      WeldingRods=1,
+      ScrapMetal,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+
+      Result:CannedPotato2,
+      Time:380.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=2,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Seal Peas Can
+   {
+      CannedPeasOpen,
+      BlowTorch=1,
+      WeldingRods=1,
+      SmallSheetMetal=2,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+
+      Result:CannedPeas=2,
+      Time:380.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=2,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Seal Carrots Can
+   {
+      CannedCarrotsOpen,
+      BlowTorch=1,
+      WeldingRods=1,
+      ScrapMetal,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+
+      Result:CannedCarrots2,
+      Time:380.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=2,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Seal Corn Can
+   {
+      CannedCornOpen,
+      BlowTorch=1,
+      WeldingRods=1,
+      ScrapMetal,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+
+      Result:CannedCorn,
+      Time:380.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=2,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Seal Soup Can
+   {
+      TinnedSoupOpen,
+      BlowTorch=1,
+      ScrapMetal,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+
+      Result:TinnedSoup,
+      Time:380.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=2,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Seal Mushroom Soup Can
+   {
+      CannedMushroomSoupOpen,
+      BlowTorch=1,
+      WeldingRods=1,
+      ScrapMetal,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+
+      Result:CannedMushroomSoup,
+      Time:380.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=2,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Seal Sardines Cans
+   {
+      CannedSardinesOpen,
+      BlowTorch=1,
+      WeldingRods=1,
+      SmallSheetMetal=2,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+
+      Result:CannedSardines,
+      Time:380.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=2,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Seal Tuna Can
+   {
+      TunaTinOpen,
+      BlowTorch=1,
+      WeldingRods=1,
+      SmallSheetMetal=3,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+
+      Result:TunaTin,
+      Time:430.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=2,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Seal Chili Can
+   {
+      CannedChiliOpen,
+      BlowTorch=1,
+      WeldingRods=1,
+      SmallSheetMetal=3,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+
+      Result:CannedChili,
+      Time:430.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=2,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Seal Spaghetti Bolognese Can
+   {
+      CannedBologneseOpen,
+      BlowTorch=1,
+      WeldingRods=1,
+      SmallSheetMetal,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep MortarPestle,
+      keep [Recipe.GetItemTypes.Saw],
+
+      Result:CannedBolognese=3,
+      Time:430.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=2,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Seal CornedBeef Can
+   {
+      CannedCornedBeefOpen=3,
+      BlowTorch=1,
+      WeldingRods=1,
+      SmallSheetMetal=3,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+
+      Result:CannedCornedBeef=3,
+      Time:430.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=2,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Seal Evaporated Milk Can
+   {
+      CannedMilkOpen=3,
+      BlowTorch=1,
+      WeldingRods=1,
+      SmallSheetMetal=3,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+
+      Result:CannedMilk=3,
+      Time:430.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=2,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Seal Peaches Can
+   {
+      CannedPeachesOpen,
+      BlowTorch=1,
+      WeldingRods=1,
+      ScrapMetal,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+
+      Result:CannedPeaches,
+      Time:380.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=2,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Seal Pineapples Can
+   {
+      CannedPineappleOpen=2,
+      BlowTorch=1,
+      WeldingRods=1,
+      SmallSheetMetal=2,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+
+      Result:CannedPineapple=2,
+      Time:380.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=2,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+}

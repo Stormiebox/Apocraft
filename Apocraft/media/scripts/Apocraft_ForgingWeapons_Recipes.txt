@@ -1,0 +1,471 @@
+module Apocraft
+{
+    imports
+    {
+        Base
+    }
+
+   recipe Make Hand Axe
+   {
+      BlowTorch=1,
+      MetalBar,
+      IronIngot=2,
+      Plank,
+      Charcoal,
+      WeldingRods,
+      Water=20,
+      keep Pot,
+      keep Stone,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      keep [Recipe.GetItemTypes.Hammer],
+      keep Tongs,
+      keep Bellows,
+
+      Result:HandAxe,
+      CanBeDoneFromFloor:true,
+      Time:800.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=5,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+   }
+
+   recipe Make Hand Scythe
+   {
+      BlowTorch=1,
+      MetalBar,
+      IronIngot=2,
+      Plank,
+      Charcoal,
+      WeldingRods,
+      Water=20,
+      keep Pot,
+      keep Stone,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      keep [Recipe.GetItemTypes.Hammer],
+      keep Tongs,
+      keep Bellows,
+
+      Result:HandScythe,
+      CanBeDoneFromFloor:true,
+      Time:800.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=5,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+   }
+
+   recipe Make Metal Bar
+   {
+      BlowTorch=1,
+      IronIngot=2,
+      Charcoal,
+      Water=20,
+      keep Pot,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Hammer],
+      keep Tongs,
+      keep Bellows,
+
+      Result:MetalBar,
+      CanBeDoneFromFloor:true,
+      Time:600.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=5,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Make Garden Hoe
+   {
+      BlowTorch=1,
+      IronIngot=3,
+      Charcoal,
+      Water=20,
+      keep Pot,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Hammer],
+      keep Tongs,
+      keep Bellows,
+
+      Result:GardenHoe,
+      CanBeDoneFromFloor:true,
+      Time:800.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=5,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Make Pick Axe
+   {
+      BlowTorch=1,
+      IronIngot=4,
+      Plank,
+      MetalBar,
+      Charcoal=2,
+      Water=20,
+      WeldingRods=1,
+      keep Pot,
+      keep Stone,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      keep [Recipe.GetItemTypes.Hammer],
+      keep Tongs,
+      keep Bellows,
+
+      Result:PickAxe,
+      CanBeDoneFromFloor:true,
+      Time:1000.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=6,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+   }
+
+   recipe Make BarBell
+   {
+      BlowTorch,
+      MetalBar=2,
+      IronIngot=8,
+      Charcoal=3,
+      WeldingRods,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Hammer],
+      keep Tongs,
+      keep Bellows,
+
+      Result:BarBell,
+      CanBeDoneFromFloor:true,
+      Time:1200.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=7,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+   }
+
+   recipe Make Meat Cleaver
+   {
+      BlowTorch=1,
+      IronIngot=2,
+      Plank,
+      Charcoal,
+      Water=20,
+      keep Pot,
+      keep Stone,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      keep [Recipe.GetItemTypes.Hammer],
+      keep Tongs,
+      keep Bellows,
+
+      Result:MeatCleaver,
+      CanBeDoneFromFloor:true,
+      Time:800.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=6,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+   }
+
+   recipe Make Sledgehammer
+   {
+      BlowTorch=3,
+      IronIngot=8,
+      Charcoal=8,
+      Log=2,
+      PaintRed=1,
+      WeldingRods=3,
+      Water=20,
+      Twine=4,
+      Thread=4,
+      keep Pot,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Hammer],
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      keep Tongs,
+      keep Bellows,
+
+      Result:Sledgehammer,
+      CanBeDoneFromFloor:true,
+      Time:1200.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=10,
+      SKillRequired:Tailoring=7,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+   }
+
+   recipe Make Machete
+   {
+      BlowTorch=1,
+      IronIngot=3,
+      Charcoal=6,
+      Plank=2,
+      WeldingRods=2,
+      Water=10,
+      Twine=2,
+      Thread=2,
+      keep Pot,
+      keep Stone,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      keep [Recipe.GetItemTypes.Hammer],
+      keep Tongs,
+      keep Bellows,
+
+      Result:Machete,
+      CanBeDoneFromFloor:true,
+      Time:1000.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=7,
+      SKillRequired:Tailoring=4,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+   }
+
+   recipe Make Fire Axe
+   {
+      BlowTorch=1,
+      IronIngot=4,
+      Charcoal=2,
+      MetalBar=2,
+      Plank=2,
+      PaintRed=1,
+      WeldingRods=2,
+      Water=10,
+      Twine=2,
+      keep Pot,
+      keep Stone,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      keep [Recipe.GetItemTypes.Hammer],
+      keep Tongs,
+      keep Bellows,
+
+      Result:Axe,
+      CanBeDoneFromFloor:true,
+      Time:1200.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=8,
+      SKillRequired:Tailoring=5,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+   }
+
+   recipe Make Wood Axe
+   {
+      BlowTorch=2,
+      IronIngot=8,
+      Charcoal=4,
+      MetalBar=2,
+      Log=2,
+      WeldingRods=2,
+      Water=10,
+      Twine=2,
+      keep Pot,
+      keep Stone,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      keep [Recipe.GetItemTypes.Hammer],
+      keep Tongs,
+      keep Bellows,
+
+      Result:WoodAxe,
+      CanBeDoneFromFloor:true,
+      Time:1800.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=8,
+      SKillRequired:Tailoring=5,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+   }
+
+   recipe Make Katana
+   {
+      BlowTorch=4,
+      IronIngot=20,
+      Charcoal=8,
+      SmallSheetMetal=10,
+      SheetMetal=2,
+      Log=2,
+      Water=10,
+      OilVegetable=10,
+      WeldingRods=3,
+      Twine=4,
+      Thread=2,
+      keep Pot,
+      keep Stone,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Hammer],
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      keep Tongs,
+      keep Bellows,
+
+      Result:Katana,
+      CanBeDoneFromFloor:true,
+      Time:3600.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=9,
+      SKillRequired:Tailoring=6,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+   }
+
+   recipe Make Nightstick
+   {
+      BlowTorch=1,
+      MetalBar,
+      Charcoal,
+      WeldingRods,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Hammer],
+      keep Tongs,
+      keep Bellows,
+
+      Result:Nightstick,
+      CanBeDoneFromFloor:true,
+      Time:400.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=4,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Make Shovel
+   {
+      MetalPipe=2,
+      SheetMetal,
+      SmallSheetMetal=2,
+      BlowTorch=2,
+      WeldingRods=2,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+      keep [Recipe.GetItemTypes.HuntingKnife],
+
+      Result:Shovel,
+      Time:1600.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=3,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+   }
+
+   recipe Make Shovel
+   {
+      WoodenStick=1,
+      SheetMetal,
+      Doorknob,
+      Woodglue/Glue,
+      WeldingRods=2,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+      keep [Recipe.GetItemTypes.HuntingKnife],
+
+      Result:Shovel2,
+      Time:1200.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=2,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+   }
+
+   recipe Make Trowel
+   {
+      ButterKnife,
+      SmallSheetMetal,
+      WeldingRods=1,
+      BlowTorch=1,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+
+      Result:HandShovel,
+      Time:800.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=1,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Make Trowel
+   {
+      WoodenStick,
+      SmallSheetMetal=2,
+      BlowTorch=1,
+      WeldingRods=1,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+
+      Result:HandShovel,
+      Time:800.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=1,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Make Snow Shovel
+   {
+      MetalPipe,
+      WoodenStick,
+      SheetMetal,
+      BlowTorch=2,
+      PaintRed=1,
+      WeldingRods=2,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep Paintbrush,
+      keep [Recipe.GetItemTypes.Saw],
+      keep [Recipe.GetItemTypes.HuntingKnife],
+
+      Result:SnowShovel,
+      CanBeDoneFromFloor:true,
+      Time:1200.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=2,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Make Garden Fork
+   {
+      MetalPipe,
+      WoodenStick,
+      MetalBar=2,
+      BlowTorch=2,
+      WeldingRods=2,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+      keep [Recipe.GetItemTypes.HuntingKnife],
+
+      Result:GardenFork,
+      CanBeDoneFromFloor:true,
+      Time:1200.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=3,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+   }
+
+   recipe Make Hand Fork
+   {
+      WoodenStick,
+      MetalBar,
+      BlowTorch=1,
+      WeldingRods=1,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Saw],
+      keep [Recipe.GetItemTypes.HuntingKnife],
+
+      Result:HandFork,
+      CanBeDoneFromFloor:true,
+      Time:800.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=1,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Make DumbBell
+   {
+      BlowTorch=1,
+      MetalBar,
+      IronIngot=4,
+      Charcoal,
+      WeldingRods,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      keep [Recipe.GetItemTypes.Hammer],
+      keep Tongs,
+      keep Bellows,
+
+      Result:DumbBell,
+      CanBeDoneFromFloor:true,
+      Time:1000.0,
+      Category:Welding,
+      SkillRequired:MetalWelding=3,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+}

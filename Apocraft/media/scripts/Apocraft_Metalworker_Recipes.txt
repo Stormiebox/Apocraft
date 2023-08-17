@@ -1,0 +1,7 @@
+module Apocraft
+{
+    imports
+    {
+        Base
+    }
+}

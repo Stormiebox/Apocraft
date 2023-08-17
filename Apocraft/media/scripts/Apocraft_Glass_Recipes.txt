@@ -1,0 +1,53 @@
+module Apocraft
+{
+   imports
+   {
+      Base
+   }
+   /************************Glass Pane, Mold & Shards************************/
+   recipe Make Glass Mold
+   {
+      keep [Recipe.GetItemTypes.WeldingMask],
+      ScrapMetal=20,
+      WeldingRods=2,
+      BlowTorch=1,
+
+      Result:GlassMold,
+      Time:700.0,
+      Category:Welding,
+      NeedToBeLearn:false,
+      CanBeDoneFromFloor:true,
+      SkillRequired:MetalWelding=3,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Make Glass Pane
+   {
+      keep GlassMold,
+      CampfireKit=1,
+      GlassShard=4,
+
+      Result:GlassPane,
+      RemoveResultItem:true,
+      Time:1000.0,
+      Category:Recycling,
+      NeedToBeLearn:false,
+      CanBeDoneFromFloor:true,
+      Sound:MakePlaster,
+      OnCreate:Recipe.OnCreate.TryMakeGlass,
+   }
+
+   recipe Break Car Window
+   {
+      keep [Recipe.GetItemTypes.Hammer],
+      Windshield1/Windshield2/Windshield3/RearWindshield1/RearWindshield2/RearWindshield3/FrontWindow1/FrontWindow2/FrontWindow3/RearWindow1/RearWindow2/RearWindow3,
+
+      Result:GlassShard=4,
+      Time:300.0,
+      Category:Recycling,
+      NeedToBeLearn:false,
+      CanBeDoneFromFloor:true,
+      Sound:BreakGlassItem,
+      AllowDestroyedItem:true,
+   }
+}

@@ -1,0 +1,7 @@
+Recipes_EN =
+{
+	Recipe_Make_Electric_Wire = "Create Electric Wire",
+	Recipe_Make_Key_Ring = "Create Key Ring",
+	Recipe_Scrap_Key_Ring= "Scrap Key Ring",
+	Recipe_Make_Duct_Tape= "Create Duct Tape",
+}

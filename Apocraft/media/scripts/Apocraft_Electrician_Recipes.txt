@@ -1,0 +1,88 @@
+module Apocraft
+{
+    imports
+    {
+        Base,
+        Radio
+    }
+
+   recipe Make Electric Wire
+   {
+      Wire=3,
+      ElectronicsScrap=2,
+      BlowTorch=1,
+      keep [Recipe.GetItemTypes.Scissors],
+      keep [Recipe.GetItemTypes.WeldingMask],
+      SkillRequired:Electricity=5,
+      SkillRequired:MetalWelding=5,
+      OnGiveXP:Give25MWXP,
+      Result:ElectricWire=10,
+      AnimNode:Disassemble,
+      Time:100.0,
+      Category:Electrical,
+   }
+
+   /************************Generator Battery Charges and Flashlights************************/
+   recipe Make Generator
+   {
+      ElectronicsScrap=60,
+      ElectricWire=30,
+      LightBulb=2,
+      LightBulbRed=1,
+      LightBulbGreen=1,
+      MetalPipe=8,
+      Screws=40,
+      SmallSheetMetal=4,
+      keep [Recipe.GetItemTypes.Hammer],
+      keep [Recipe.GetItemTypes.Screwdriver],
+
+      Result:Generator,
+      Time:300.0,
+      Category:Electrical,
+      SkillRequired:Electricity=8,
+   }
+
+   recipe Make Car Battery Charger
+   {
+      ElectronicsScrap=25,
+      ElectricWire=8,
+      LightBulbRed=1,
+      LightBulbGreen=1,
+      SmallSheetMetal,
+      Screws=10,
+      keep [Recipe.GetItemTypes.Hammer],
+      keep [Recipe.GetItemTypes.Screwdriver],
+
+      Result:CarBatteryCharger,
+      Time:150.0,
+      Category:Electrical,
+      SkillRequired:Electricity=8,
+   }
+
+   recipe Make Hand Torch
+   {
+      ElectronicsScrap=5,
+      ElectricWire=1,
+      LightBulb=1,
+      keep [Recipe.GetItemTypes.Screwdriver],
+
+      Result:HandTorch,
+      Time:50.0,
+      Category:Electrical,
+      SkillRequired:Electricity=3,
+   }
+
+   recipe Make Flashlight
+   {
+      ElectronicsScrap=8,
+      ElectricWire=1,
+      LightBulb=2,
+      keep [Recipe.GetItemTypes.Screwdriver],
+
+      Result:Torch,
+      Time:75.0,
+      Category:Electrical,
+      SkillRequired:Electricity=5,
+   }
+
+}

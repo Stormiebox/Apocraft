@@ -1,0 +1,40 @@
+module Apocraft
+{
+   imports
+   {
+      Base
+   }
+   /************************ISA Craft Solar Panels************************/
+   recipe Make Solar Panel
+   {
+      keep [Recipe.GetItemTypes.Screwdriver],
+      keep Base.BlowTorch=3,
+      destroy Base.SheetMetal=3,
+      destroy Base.ElectronicsScrap=8,
+      destroy Radio.ElectricWire=2,
+      destroy Base.Screws=7,
+
+      Result:ISA.SolarPanel,
+      SkillRequired:Electricity=6,
+      Time:250.0,
+      Category:Electrical,
+      AllowDestroyedItem:false,
+   }
+
+   recipe Make Inverter
+   {
+      keep [Recipe.GetItemTypes.Screwdriver],
+      destroy Base.SmallSheetMetal=3,
+      destroy Base.ScrapMetal=4,
+      destroy Base.ElectronicsScrap=18,
+      destroy Radio.ElectricWire=3,
+      destroy Base.Screws=8,
+
+      Result:ISA.ISAInverter,
+      SkillRequired:Electricity=6,
+      Time:250.0,
+      Category:Electrical,
+      AllowDestroyedItem:false,
+   }
+
+}

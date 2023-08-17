@@ -1,0 +1,48 @@
+module Apocraft
+{
+	imports
+	{
+		Base
+	}
+	
+	fixing Fix Katana
+	{
+		Require : Katana,
+	
+	Fixer : DuctTape=2,
+    Fixer : Glue=2,
+    Fixer : Scotchtape=4,
+	}
+	fixing Fix Crowbar
+	{
+		Require : Crowbar,
+		
+	Fixer : DuctTape=2,
+    Fixer : Glue=2,
+    Fixer : Scotchtape=4,
+	}
+	fixing Fix Nightstick
+	{
+		Require : Nightstick,
+		
+	Fixer : DuctTape=2,
+    Fixer : Glue=2,
+    Fixer : Scotchtape=4,
+	}
+	fixing Fix Meat Cleaver
+	{
+		Require : MeatCleaver,
+		
+	Fixer : DuctTape,
+    Fixer : Glue,
+    Fixer : Scotchtape=2,
+	}
+	fixing Fix Pipe Wrench
+	{
+		Require : PipeWrench,
+		
+	Fixer : DuctTape,
+	Fixer : Glue,
+    Fixer : Scotchtape=2,
+	}
+}
