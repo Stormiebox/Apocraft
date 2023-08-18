@@ -8,137 +8,116 @@ module Apocraft
    recipe Make Instant Popcorn
    {
       Corn,
+      Butter,
+      Salt=2,
       Newspaper,
       keep [Recipe.GetItemTypes.HuntingKnife],
+      keep CuttingBoardWooden,
 
-      Result:Popcorn=2,
+      Result:Popcorn,
       Time:200.0,
       SkillRequired:Cooking=1,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Chocolate Chips
    {
       Chocolate,
       keep [Recipe.GetItemTypes.HuntingKnife],
+      keep CuttingBoardWooden,
 
-      Result:ChocolateChips=4,
+      Result:ChocolateChips=6,
       Time:200.0,
       SkillRequired:Cooking=1,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Sugar Packets
    {
-      Sugar;1,
+      Sugar=1,
       SheetPaper2,
+      Glue=1,
       keep [Recipe.GetItemTypes.Scissors],
 
-      Result:SugarPacket=5,
+      Result:SugarPacket=4,
       Time:160.0,
       SkillRequired:Cooking=1,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Brown Sugar Packets
    {
-      SugarBrown;1,
+      SugarBrown=1,
       SheetPaper2,
+      Glue=1,
       keep [Recipe.GetItemTypes.Scissors],
 
-      Result:SugarPacket=5,
+      Result:SugarPacket=4,
       Time:160.0,
       SkillRequired:Cooking=1,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Pot of Miso Soup
    {
       Seaweed=2,
       Tofu,
-      Water=15,
-      Pot,
+      Salt=1,
+      Water=10,
+      keep Pot,
       keep [Recipe.GetItemTypes.HuntingKnife],
+      keep CuttingBoardWooden,
 
       Result:PotOfSoup,
       Time:260.0,
       SkillRequired:Cooking=1,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Fries
    {
       Potato=2,
-      Salt;1,
-      Butter;5,
+      [Recipe.GetItemTypes.Oil]=2,
+      Salt=1,
+      Butter,
       Newspaper,
-      Ketchup;1,
       keep [Recipe.GetItemTypes.HuntingKnife],
+      keep CuttingBoardWooden,
 
-      Result:Fries=4,
+      Result:Fries=6,
       Time:300.0,
       SkillRequired:Cooking=2,
       Category:Cooking,
-   }
-
-   recipe Make Candied Fruit Slices
-   {
-      Pineapple,
-      SugarPacket=5,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-
-      Result:CandyFruitSlices=5,
-      Time:300.0,
-      SkillRequired:Cooking=2,
-      Category:Cooking,
-   }
-
-   recipe Make Candied Fruit Slices
-   {
-      Mango/Grapefruit,
-      SugarPacket=4,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-
-      Result:CandyFruitSlices=4,
-      Time:300.0,
-      SkillRequired:Cooking=2,
-      Category:Cooking,
-   }
-
-   recipe Make Candied Fruit Slices
-   {
-      Apple/Banana/Pear/Grapes,
-      SugarPacket=3,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-
-      Result:CandyFruitSlices=3,
-      Time:300.0,
-      SkillRequired:Cooking=2,
-      Category:Cooking,
-   }
-
-   recipe Make Candied Fruit Slices
-   {
-      Orange/Peach/Lime/BeautyBerry/HollyBerry/WinterBerry/Lemon/BerryBlack/BerryBlue/BerryGeneric2/BerryGeneric4/BerryGeneric5,
-      SugarPacket=2,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-
-      Result:CandyFruitSlices=2,
-      Time:300.0,
-      SkillRequired:Cooking=2,
-      Category:Cooking,
-   }
-
-   recipe Make Candied Fruit Slices
-   {
-      Cherry/Rosehips/BerryGeneric1/BerryGeneric3,
-      SugarPacket,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-
-      Result:CandyFruitSlices,
-      Time:300.0,
-      SkillRequired:Cooking=2,
-      Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Fried Onion Rings
@@ -146,273 +125,306 @@ module Apocraft
       Onion,
       Flour=1,
       Egg/WildEggs,
-      Salt;1,
-      OilVegetable;5,
+      Salt=1,
+      [Recipe.GetItemTypes.Oil]=4,
       keep [Recipe.GetItemTypes.HuntingKnife],
       keep Pan,
+      keep CuttingBoardWooden,
 
-      Result:FriedOnionRings=6,
-      Time:400.0,
+      Result:FriedOnionRings=8,
+      Time:320.0,
       SkillRequired:Cooking=2,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      NearItem:Mov_GreyOven/Mov_ModernOven/Mov_GreenOven/Mov_RedOven,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Smores
    {
-      GrahamCrackers,
-      Marshmallows,
+      GrahamCrackers=4,
+      Marshmallows=4,
       Chocolate,
-      keep CampfireKit,
 
-      Result:Smore=6,
-      Time:400.0,
+      Result:Smore=8,
+      Time:320.0,
       SkillRequired:Cooking=2,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
-   recipe Make TV Dinner
+   recipe Make Rice TV Dinner
    {
       RedRadish/Tomato/Leek/Peas/Carrots/Broccoli/BellPepper/Eggplant/Zucchini,
-      Rice;10,
-      FrogMeat/Smallanimalmeat/Smallbirdmeat/DogfoodOpen,
+      Rice=7,
+      FrogMeat/Smallanimalmeat/Smallbirdmeat/MincedMeat,
       Newspaper/Aluminum,
       keep [Recipe.GetItemTypes.HuntingKnife],
+      keep CuttingBoardWooden,
 
-      Result:TVDinner=3,
-      Time:300.0,
-      SkillRequired:Cooking=2,
-      Category:Cooking,
-   }
-
-   recipe Make TV Dinner
-   {
-      RedRadish/Tomato/Leek/Peas/Carrots/Broccoli/BellPepper/Eggplant/Zucchini,
-      Pasta;10,
-      FrogMeat/Smallanimalmeat/Smallbirdmeat/DogfoodOpen,
-      Newspaper/Aluminum,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-
-      Result:TVDinner=3,
-      Time:300.0,
-      SkillRequired:Cooking=2,
-      Category:Cooking,
-   }
-
-   recipe Make TV Dinner
-   {
-      RedRadish/Tomato/Leek/Peas/Carrots/Broccoli/BellPepper/Eggplant/Zucchini,
-      Macandcheese;10,
-      FrogMeat/Smallanimalmeat/Smallbirdmeat/DogfoodOpen,
-      Newspaper/Aluminum,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-
-      Result:TVDinner=3,
-      Time:300.0,
-      SkillRequired:Cooking=2,
-      Category:Cooking,
-   }
-
-   recipe Make TV Dinner
-   {
-      OpenBeans,
-      FrogMeat/Smallanimalmeat/Smallbirdmeat/DogfoodOpen,
-      Newspaper/Aluminum,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-
-      Result:TVDinner=2,
-      Time:300.0,
-      SkillRequired:Cooking=2,
-      Category:Cooking,
-   }
-
-   recipe Make Ice Cream Cones
-   {
-      Flour=1,
-      Sugar;1,
-      OilVegetable;1,
-      Milk;5,
-      Salt;1,
-      keep Spoon,
-      keep Pan,
-      keep MortarPestle,
-
-      Result:Cone=10,
-      Time:200.0,
+      Result:TVDinner=4,
+      Time:330.0,
       SkillRequired:Cooking=3,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
-   recipe Make Ice Cream Cones
+   recipe Make Pasta TV Dinner
    {
-      Flour=1,
-      Sugar;1,
-      OilVegetable;1,
-      Milk;5,
-      Salt;1,
-      keep Bowl,
-      keep Spoon,
-      keep Pan,
-      keep MortarPestle,
+      RedRadish/Tomato/Leek/Peas/Carrots/Broccoli/BellPepper/Eggplant/Zucchini,
+      Pasta=7,
+      FrogMeat/Smallanimalmeat/Smallbirdmeat/MincedMeat,
+      Newspaper/Aluminum,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      keep CuttingBoardWooden,
 
-      Result:Cone=10,
-      Time:200.0,
-      SkillRequired:Cooking=3,
+      Result:TVDinner=4,
+      Time:330.0,
+      SkillRequired:Cooking=2,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Ice Cream Cones
    {
-      Flour=1,
-      Sugar;1,
+      Flour=2,
+      BakingSoda,
       Egg/WildEggs,
-      Butter;5,
+      Butter=2,
+      Sugar=2,
+      [Recipe.GetItemTypes.Oil]=1,
+      Milk=4,
+      Salt=1,
       keep Bowl,
       keep Spoon,
-      keep Pan,
+      keep BakingTray,
       keep MortarPestle,
 
       Result:Cone=10,
       Time:200.0,
       SkillRequired:Cooking=3,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
-   recipe Make Corndogs
+   recipe Make Corndog
    {
       MeatPatty,
       BreadDough,
-      Ketchup;2,
-      Mustard;2,
-      Twigs=5,
+      Salt=1,
+      WoodenStick,
       keep [Recipe.GetItemTypes.HuntingKnife],
       keep RollingPin,
+      keep BakingTray,
+      keep CuttingBoardWooden,
 
       Result:Corndog=5,
-      Time:400.0,
+      Time:285.0,
       SkillRequired:Cooking=3,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Pretzels
    {
-      Flour=1,
+      Flour=2,
       Yeast=1,
-      Sugar;1,
-      Butter;5,
-      Salt;2,
+      Sugar=1,
+      Butter=3,
+      Salt=2,
       keep [Recipe.GetItemTypes.HuntingKnife],
+      keep RollingPin,
+      keep BakingTray,
+      keep CuttingBoardWooden,
 
-      Result:Pretzel=6,
-      Time:600.0,
+      Result:Pretzel=8,
+      Time:450.0,
       SkillRequired:Cooking=3,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Peanut Butter Sandwich
    {
-      PeanutButter;1,
-      BreadSlices=2,
-      keep ButterKnife/KitchenKnife/HuntingKnife,
+      PeanutButter=1,
+      BreadSlices,
+      keep [Recipe.GetItemTypes.DullKnife],
 
       Result:PeanutButterSandwich,
-      Time:100.0,
+      Time:120.0,
       SkillRequired:Cooking=3,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
-   recipe Make Traditional BLT Sandwiches
+   recipe Make Traditional Sandwiches
    {
-      Bacon,
-      Lettuce,
-      Tomato/CannedTomatoOpen,
-      BreadSlices,
-      keep ButterKnife/KitchenKnife/HuntingKnife,
+      HamSlice=4,
+      Lettuce=4,
+      Tomato=4,
+      BreadSlices=2,
+      Processedcheese=2,
+      MayonnaiseFull=2,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      keep CuttingBoardWooden,
+
+      Result:Sandwich=2,
+      Time:180.0,
+      SkillRequired:Cooking=3,
+      Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
+   }
+
+   recipe Make Homemade Burgers
+   {
+      MeatPatty=2,
+      Cabbage=2,
+      Tomato=2,
+      Bacon=2,
+      Processedcheese=2,
+      BreadSlices=2,
+      MayonnaiseFull=2,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      keep CuttingBoardWooden,
 
       Result:Burger=2,
-      Time:300.0,
+      Time:230.0,
       SkillRequired:Cooking=3,
       Category:Cooking,
-   }
-
-   recipe Make Improvised BLT Sandwiches
-   {
-      MeatPatty,
-      Cabbage,
-      Tomato/CannedTomatoOpen,
-      Egg/WildEggs,
-      Bread,
-      keep ButterKnife/KitchenKnife/HuntingKnife,
-
-      Result:Burger=4,
-      Time:300.0,
-      SkillRequired:Cooking=3,
-      Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Yoghurt
    {
-      Yoghurt,
-      Milk;10,
+      Apple/Banana/Cherry/Strewberrie/BerryBlue/BerryBlack/BeautyBerry/HollyBerry/WinterBerry/BerryGeneric1/BerryGeneric2/BerryGeneric3/BerryGeneric4/BerryGeneric5,
+      Milk=5,
       EmptyJar,
       JarLid,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      keep SaucePan,
 
-      Result:Yoghurt=3,
-      Time:500.0,
+      Result:Yoghurt=4,
+      Time:400.0,
       SkillRequired:Cooking=3,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Processed Cheese
    {
       Cheese,
-      Salt;1,
+      Salt=2,
       Aluminum/Plasticbag,
       keep [Recipe.GetItemTypes.HuntingKnife],
       keep RollingPin,
 
-      Result:Processedcheese=5,
-      Time:100.0,
+      Result:Processedcheese=6,
+      Time:150.0,
       SkillRequired:Cooking=3,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Tortilla
    {
       Flour/Cornflour,
-      Salt;1,
-      OilOlive;2,
+      Salt=3,
+      [Recipe.GetItemTypes.Oil]=2,
       Water=5,
       keep RollingPin,
+      keep GridlePan,
 
       Result:Tortilla=10,
-      Time:800.0,
+      Time:500.0,
       SkillRequired:Cooking=3,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Tortilla Chips
    {
-      Tortilla=2,
-      Salt;1,
-      OilOlive;2,
-      keep Pan/BakingTray/BakingPan,
+      Tortilla=3,
+      Salt=2,
+      [Recipe.GetItemTypes.Oil]=2,
+      keep Pan/BakingTray/BakingPan/GridlePan,
 
-      Result:TortillaChips,
-      Time:200.0,
+      Result:TortillaChips=2,
+      Time:230.0,
       SkillRequired:Cooking=3,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Taco Shells
    {
-      Tortilla=5,
-      keep Pan/BakingTray/BakingPan,
+      Tortilla=8,
+      keep Pan/BakingTray/BakingPan/GridlePan,
       keep MetalBar,
 
-      Result:TacoShell=5,
-      Time:300.0,
+      Result:TacoShell=8,
+      Time:350.0,
       SkillRequired:Cooking=3,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Baguette
@@ -425,54 +437,77 @@ module Apocraft
       Time:500.0,
       SkillRequired:Cooking=3,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Bagels
    {
-      Flour=1,
+      Flour=2,
       Yeast=1,
-      Sugar;1,
-      Salt;1,
+      Sugar=2,
+      Salt=2,
       keep Pot,
+      keep RollingPin,
       keep BakingPan/BakingTray,
 
       Result:BagelPlain=6,
-      Time:1000.0,
+      Time:600.0,
       SkillRequired:Cooking=3,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Mince Meat
    {
       Steak/CannedCornedBeefOpen/FrogMeat/Rabbitmeat/Smallanimalmeat/Smallbirdmeat/PorkChop/MuttonChop/Chicken,
-      keep Bowl,
+      Salt=2,
+      keep CuttingBoardWooden,
       keep [Recipe.GetItemTypes.HuntingKnife],
 
-      Result:MincedMeat,
-      Time:200.0,
+      Result:MincedMeat=4,
+      Time:400.0,
       SkillRequired:Cooking=3,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Sausage
    {
       MincedMeat,
-      Salt;1,
-      Pepper;1,
-      Egg/WildEggs,
-      keep Bowl,
+      Salt=1,
+      Pepper=1,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      keep CuttingBoardWooden,
 
-      Result:Sausage=3,
-      Time:800.0,
+      Result:Sausage=4,
+      Time:550.0,
       SkillRequired:Cooking=3,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Icing
    {
-      Milk;5,
-      Sugar;2,
-      keep Fork,
+      Milk=5,
+      Sugar=2/BrownSugar=2,
+      Salt=1,
+      keep Spoon,
       keep MortarPestle,
       keep Bowl,
 
@@ -480,34 +515,47 @@ module Apocraft
       Time:600.0,
       SkillRequired:Cooking=3,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Potato Pancakes
    {
       Potato/CannedPotatoOpen,
-      Salt;1,
-      Pepper;1,
+      Egg/WildEggs,
+      WildGarlic,
       Onion,
-      OilVegetable;5,
-      keep Fork,
-      keep KitchenKnife/HuntingKnife
+      Salt=1,
+      Pepper=1,
+      [Recipe.GetItemTypes.Oil]=2,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      keep Spoon,
       keep Bowl,
+      keep CuttingBoardWooden,
 
-      Result:PotatoPancakes=4,
-      Time:400.0,
+      Result:PotatoPancakes=2,
+      Time:210.0,
       SkillRequired:Cooking=3,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Chocolate Bar
    {
       CocoaPowder,
-      Butter;5,
-      Salt;1,
-      Milk;5,
-      Sugar;1,
-      Water;10,
-      keep Fork,
+      Butter=3,
+      Salt=1,
+      Milk=3,
+      Sugar=1,
+      Water=5,
+      keep Spoon,
       keep RollingPin,
       keep Pot,
       keep BakingTray,
@@ -516,214 +564,165 @@ module Apocraft
       Time:600.0,
       SkillRequired:Cooking=4,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Crackers
    {
       Flour=1,
-      Salt;1,
-      Water;5,
-      OilOlive;2,
-      Sugar;1,
-      keep Fork,
+      Salt=1,
+      Water=5,
+      [Recipe.GetItemTypes.Oil]=2,
+      Sugar=1,
+      keep Spoon,
       keep BakingTray/BakingPan,
-      keep [Recipe.GetItemTypes.HuntingKnife],
       keep RollingPin,
       keep Bowl,
 
       Result:Crackers=8,
-      Time:800.0,
-      SkillRequired:Cooking=4,
-      Category:Cooking,
-   }
-
-   recipe Make Apple Pie Slices
-   {
-      PiePrep,
-      Apple=4,
-      Water;5,
-      Butter;5,
-      Sugar;1,
-      SugarBrown;1,
-      keep Fork,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-      keep Bowl,
-
-      Result:PieApple=4,
-      Time:700.0,
-      SkillRequired:Cooking=4,
-      Category:Cooking,
-   }
-
-   recipe Make Blueberry Pie Slices
-   {
-      PiePrep,
-      BerryBlue=6,
-      Water;5,
-      Butter;5,
-      Sugar;1,
-      Egg/WildEggs,
-      keep Fork,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-      keep Bowl,
-
-      Result:PieBlueberry=4,
-      Time:700.0,
-      SkillRequired:Cooking=4,
-      Category:Cooking,
-   }
-
-   recipe Make Hotdogs
-   {
-      MeatPatty,
-      Onion,
-      CannedChiliOpen,
-      BreadDough,
-      Processedcheese=3,
-      Ketchup;2,
-      Mustard;2,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-
-      Result:Hotdog=5,
-      Time:400.0,
-      SkillRequired:Cooking=4,
-      Category:Cooking,
-   }
-
-   recipe Make Hotdogs
-   {
-      Sausage,
-      Onion,
-      CannedChiliOpen,
-      BreadDough,
-      Processedcheese=3,
-      Ketchup;2,
-      Mustard;2,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-
-      Result:Hotdog=4,
-      Time:400.0,
-      SkillRequired:Cooking=4,
-      Category:Cooking,
-   }
-
-   recipe Make Ham
-   {
-      PorkChop=2,
-      Salt;1,
-      Pepper;1,
-      Twine=1,
-      keep BakingTray/RoastingPan,
-
-      Result:Ham,
       Time:600.0,
       SkillRequired:Cooking=4,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
-   recipe Make Ham
+   recipe Skilled Pie Preparation
    {
-      PorkChop,
-      CannedBologneseOpen,
-      Salt;1,
-      Pepper;1,
-      Twine=1,
+      PieDough=2,
+      keep BakingPan,
+      keep RollingPin,
+      keep CuttingBoardWooden,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+
+      Result:PiePrep=4,
+      Time:700.0,
+      SkillRequired:Cooking=5,
+      Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
+   }
+
+   recipe Make Homemade Hotdogs
+   {
+      Sausage=2,
+      BreadSlices,
+
+      Result:Hotdog=2,
+      Time:80.0,
+      SkillRequired:Cooking=1,
+      Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
+   }
+
+   recipe Make Homemade Ham
+   {
+      PorkChop=3,
+      Salt=1,
+      Pepper=1,
+      WoodenStick=2,
       keep BakingTray/RoastingPan,
 
       Result:Ham,
-      Time:600.0,
+      Time:540.0,
       SkillRequired:Cooking=4,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Pepperoni
    {
       PorkChop,
       Steak,
-      Salt;2,
-      Pepper;2,
-      Sugar;2,
-      Hotsauce,
-      Twine=3,
+      Salt=2,
+      Pepper=2,
+      Sugar=1,
+      Twine=2,
+      [Recipe.GetItemTypes.Oil]=2,
+      keep Pan,
       keep WoodenStick,
       keep MortarPestle,
-      keep CampfireKit,
-      keep Lighter,
+      keep CuttingBoardWooden,
       keep [Recipe.GetItemTypes.HuntingKnife],
 
-      Result:Pepperoni=5,
-      Time:1800.0,
+      Result:Pepperoni=6,
+      Time:1000.0,
       SkillRequired:Cooking=4,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Salami
    {
       Steak,
       Onion,
-      Salt;2,
-      Pepper;2,
-      Hotsauce,
-      Twine=3,
+      Salt=2,
+      Pepper=2,
+      Sugar=1,
+      Twine=2,
+      [Recipe.GetItemTypes.Oil]=2,
+      keep Pan,
       keep WoodenStick,
       keep MortarPestle,
-      keep CampfireKit,
-      keep Lighter,
+      keep CuttingBoardWooden,
       keep [Recipe.GetItemTypes.HuntingKnife],
 
-      Result:Salami=4,
-      Time:1800.0,
+      Result:Salami=6,
+      Time:1000.0,
       SkillRequired:Cooking=4,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Baloney
    {
       Steak,
       Onion,
-      SugarBrown;1,
-      Water;5,
-      Twine=3,
+      SugarBrown=1,
+      Water=10,
+      Twine=2,
+      [Recipe.GetItemTypes.Oil]=2,
+      keep Pot,
       keep WoodenStick,
       keep MortarPestle,
-      keep CampfireKit,
-      keep Lighter,
+      keep CuttingBoardWooden,
       keep [Recipe.GetItemTypes.HuntingKnife],
 
-      Result:Baloney=2,
-      Time:1800.0,
+      Result:Baloney=4,
+      Time:1000.0,
       SkillRequired:Cooking=4,
       Category:Cooking,
-   }
-
-   recipe Make Traditional Savory Pie
-   {
-      MuttonChop/Steak/CannedCornedBeefOpen,
-      Leek,
-      Carrots/CannedCarrotsOpen,
-      PiePrep,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-
-      Result:Pie=4,
-      Time:800.0,
-      SkillRequired:Cooking=4,
-      Category:Cooking,
-   }
-
-   recipe Make Traditional Chicken Pot Pie
-   {
-      Chicken,
-      Potato/CannedPotatoOpen,
-      Carrots/CannedCarrotsOpen,
-      Peas/CannedPeasOpen,
-      Onion,
-      PiePrep,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-
-      Result:Pie=6,
-      Time:800.0,
-      SkillRequired:Cooking=4,
-      Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Pancakes
@@ -742,6 +741,11 @@ module Apocraft
       Time:800.0,
       SkillRequired:Cooking=4,
       Category:Cooking,
+      Sound:AddItemInRecipe,
+      AnimNode:Craft,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
    recipe Make Waffles
