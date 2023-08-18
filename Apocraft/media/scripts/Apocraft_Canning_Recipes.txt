@@ -13,6 +13,7 @@ module Apocraft
       Salt=2,
       Pepper=2,
       TinCanEmpty,
+      keep CuttingBoardWooden,
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:CannedTomatoOpen,
@@ -36,6 +37,7 @@ module Apocraft
       Salt=2,
       Pepper=2,
       TinCanEmpty,
+      keep CuttingBoardWooden,
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:CannedPotatoOpen,
@@ -59,6 +61,7 @@ module Apocraft
       Salt=2,
       Pepper=2,
       TinCanEmpty,
+      keep CuttingBoardWooden,
 
       Result:CannedPeasOpen,
       Time:500.0,
@@ -81,6 +84,7 @@ module Apocraft
       Salt=2,
       Pepper=2,
       TinCanEmpty,
+      keep CuttingBoardWooden,
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:CannedCarrotsOpen,
@@ -104,6 +108,7 @@ module Apocraft
       Salt=2,
       Pepper=2,
       TinCanEmpty,
+      keep CuttingBoardWooden,
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:CannedCornOpen,
@@ -123,6 +128,7 @@ module Apocraft
    {
       PotOfSoup/PotOfSoupRecipe,
       TinCanEmpty,
+      keep CuttingBoardWooden,
 
       Result:TinnedSoupOpen=4,
       OnCreate:SealBowlOfSoup4_OnCreate,
@@ -148,6 +154,7 @@ module Apocraft
       Salt=2,
       Pepper=2,
       TinCanEmpty,
+      keep CuttingBoardWooden,
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:CannedMushroomSoupOpen,
@@ -173,6 +180,7 @@ module Apocraft
       Salt=2,
       Pepper=2,
       TinCanEmpty,
+      keep CuttingBoardWooden,
       keep MortarPestle,
       keep [Recipe.GetItemTypes.HuntingKnife],
 
@@ -199,6 +207,7 @@ module Apocraft
       Salt=2,
       Pepper=2,
       TinCanEmpty,
+      keep CuttingBoardWooden,
       keep MortarPestle,
       keep [Recipe.GetItemTypes.HuntingKnife],
 
@@ -228,6 +237,7 @@ module Apocraft
       Salt=2,
       Pepper=2,
       TinCanEmpty,
+      keep CuttingBoardWooden,
       keep MortarPestle,
       keep [Recipe.GetItemTypes.HuntingKnife],
 
@@ -255,6 +265,7 @@ module Apocraft
       Salt=2,
       Pepper=2,
       TinCanEmpty,
+      keep CuttingBoardWooden,
       keep MortarPestle,
       keep [Recipe.GetItemTypes.HuntingKnife],
 
@@ -283,6 +294,7 @@ module Apocraft
       Salt=2,
       Pepper=2,
       TinCanEmpty,
+      keep CuttingBoardWooden,
       keep MortarPestle,
       keep [Recipe.GetItemTypes.HuntingKnife],
 
@@ -308,6 +320,7 @@ module Apocraft
       Salt=2,
       Pepper=2,
       TinCanEmpty,
+      keep CuttingBoardWooden,
       keep MortarPestle,
       keep [Recipe.GetItemTypes.HuntingKnife],
 
@@ -337,6 +350,7 @@ module Apocraft
       Salt=2,
       Pepper=2,
       TinCanEmpty,
+      keep CuttingBoardWooden,
       keep MortarPestle,
       keep [Recipe.GetItemTypes.HuntingKnife],
 

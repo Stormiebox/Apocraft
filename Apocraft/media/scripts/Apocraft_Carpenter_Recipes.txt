@@ -1,21 +1,23 @@
 module Apocraft
 {
-    imports
-    {
-        Base
-    }
+   imports
+   {
+      Base
+   }
    /*********************Carving Carepntry*********************/
    recipe Carve Mouse Trap
    {
       Plank,
       Wire=2,
       Thread=1,
-      keep [Recipe.GetItemTypes.Screwdriver],
       keep [Recipe.GetItemTypes.HuntingKnife],
-      keep Needle,
 
       Result:TrapMouse,
       Time:1000.0,
+      Sound:WoodCarvingSFX,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
       SkillRequired:Woodwork=4,
       Category:Carpentry,
       OnGiveXP:Give5WoodworkXP,
@@ -25,49 +27,62 @@ module Apocraft
    recipe Carve A Sturdy Stick
    {
       Twigs/TreeBranch,
-      keep [Recipe.GetItemTypes.Saw],
+      keep [Recipe.GetItemTypes.HuntingKnife],
+
       Result:WoodenStick,
       Time:100.0,
-      Category:Carpentry,
-      NeedToBeLearn:false,
+      Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
-      OnGiveXP:Give5WoodworkXP,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
+      Category:Carpentry,
+      OnGiveXP:Recipe.OnGiveXP.SawLogs,
    }
 
-   recipe Carve A Bundle Of Sturdy Sticks
+   recipe Carve A Bundle of Sturdy Sticks
    {
       Log,
       keep [Recipe.GetItemTypes.Saw],
+
       Result:WoodenStick=6,
       Time:100.0,
       Category:Carpentry,
-      NeedToBeLearn:false,
+      Sound:WoodCarvingSFX,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
       CanBeDoneFromFloor:true,
       OnGiveXP:Give5WoodworkXP,
    }
 
-   recipe Carve Out Mortar Pestle
+   recipe Carve Out Mortar Pestles
    {
       Log,
-      keep [Recipe.GetItemTypes.HuntingKnife],
+      keep [Recipe.GetItemTypes.Saw],
+
       Result:MortarPestle=3,
       Time:80.0,
       Category:Carpentry,
-      NeedToBeLearn:false,
+      Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
       SkillRequired:Carpentry=1,
    }
 
    recipe Carve Out Mortar Pestle
    {
-      Twigs/TreeBranch,
+      TreeBranch,
       keep [Recipe.GetItemTypes.HuntingKnife],
+
       Result:MortarPestle=1,
       Time:80.0,
       Category:Carpentry,
-      NeedToBeLearn:false,
+      Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
       SkillRequired:Carpentry=1,
    }
@@ -81,6 +96,10 @@ module Apocraft
       Result:Button=10,
       Time:1200.0,
       Category:Carpentry,
+      Sound:WoodCarvingSFX,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
    }
 
@@ -93,6 +112,10 @@ module Apocraft
       Result:CuttingBoardWooden,
       Time:600.0,
       Category:Carpentry,
+      Sound:WoodCarvingSFX,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
    }
 
@@ -104,6 +127,10 @@ module Apocraft
       Result:KnittingNeedles,
       Time:600.0,
       Category:Carpentry,
+      Sound:WoodCarvingSFX,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
    }
 
@@ -117,6 +144,10 @@ module Apocraft
       Time:1600.0,
       SkillRequired:Woodwork=4,
       Category:Carpentry,
+      Sound:WoodCarvingSFX,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
    }
 
@@ -130,39 +161,26 @@ module Apocraft
       Time:1600.0,
       SkillRequired:Woodwork=4,
       Category:Carpentry,
+      Sound:WoodCarvingSFX,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
-   }
-
-   recipe Carve LaCrosse Stick
-   {
-      TennisRacket,
-      Twine=1,
-      RippedSheets=2,
-      MetalBar,
-      keep [Recipe.GetItemTypes.WeldingMask],
-      keep [Recipe.GetItemTypes.Saw],
-      keep BlowTorch,
-      keep [Recipe.GetItemTypes.Scissors],
-      keep [Recipe.GetItemTypes.Hammer],
-
-      Result:LaCrosseStick,
-      Time:1600.0,
-      Category:Welding,
-      SkillRequired:MetalWelding=3,
-      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
 
    recipe Carve Baseball Bat
    {
       Log,
       RippedSheets=2,
-      keep Axe/HandAxe/AxeStone,
-      keep [Recipe.GetItemTypes.Saw],
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:BaseballBat,
       Time:750.0,
       Category:Carpentry,
+      Sound:WoodCarvingSFX,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
    }
 
@@ -170,25 +188,17 @@ module Apocraft
    {
       Log,
       PaintBlack=1,
-      keep Axe/HandAxe/AxeStone,
-      keep [Recipe.GetItemTypes.Saw],
+      keep Paintbrush,
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:CanoePadel,
       Time:1200.0,
       SkillRequired:Woodwork=3,
       Category:Carpentry,
-      OnGiveXP:Give5WoodworkXP,
-   }
-
-   recipe Carve Trowel
-   {
-      Twigs=3,
-      Rope=1,
-      SharpedStone=1,
-      Result : HandShovel,
-      Time : 250.0,
-      Category : Carpentry,
+      Sound:WoodCarvingSFX,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
    }
 
@@ -196,27 +206,33 @@ module Apocraft
    {
       Log=3,
       PaintBlack=1,
-      keep Axe/HandAxe/AxeStone,
-      keep [Recipe.GetItemTypes.Saw],
+      keep Paintbrush,
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:CanoePadelX2,
       Time:1600.0,
       SkillRequired:Woodwork=5,
       Category:Carpentry,
+      Sound:WoodCarvingSFX,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
    }
 
    recipe Carve Wooden Bowls
    {
       Log,
-      keep [Recipe.GetItemTypes.Saw],
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:Bowl=4,
       Time:1200.0,
       SkillRequired:Woodwork=1,
       Category:Carpentry,
+      Sound:WoodCarvingSFX,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
    }
 
@@ -232,6 +248,10 @@ module Apocraft
       Time:800.0,
       SkillRequired:Woodwork=1,
       Category:Carpentry,
+      Sound:WoodCarvingSFX,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
    }
 
@@ -240,130 +260,103 @@ module Apocraft
       Log,
       WoodenStick,
       Woodglue/Glue,
-
-      keep [Recipe.GetItemTypes.Saw],
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:RollingPin,
       Time:1200.0,
       SkillRequired:Woodwork=2,
       Category:Carpentry,
+      Sound:WoodCarvingSFX,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
    }
 
-    recipe Carve Paint Brush
-    {
-        keep [Recipe.GetItemTypes.HuntingKnife],
-        Plank,
-        RippedSheets=3,
-        DuctTape=2,
-        Result:Paintbrush,
-        Time:140.0,
-        NeedToBeLearn:false,
-        Category:Carpentry,
-        SkillRequired:Woodwork=1,
-        OnGiveXP:Give5WoodworkXP,
-        AnimNode:SawLog,
-        Prop1:GardenSaw,
-        Prop2:Plank,
-        Sound:Sawing,
-    }
+   recipe Carve Paint Brush
+   {
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      Plank,
+      RippedSheets=3,
+      DuctTape=2,
+
+      Result:Paintbrush,
+      Time:140.0,
+      Category:Carpentry,
+      Sound:WoodCarvingSFX,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
+      SkillRequired:Woodwork=1,
+      OnGiveXP:Give5WoodworkXP,
+   }
+
+   recipe Carve Wooden Cutting Board
+   {
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      Plank,
+      Water=1,
+      keep RippedSheets,
+
+      Result:CuttingBoardWooden,
+      Time:140.0,
+      Category:Carpentry,
+      Sound:WoodCarvingSFX,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
+      SkillRequired:Woodwork=1,
+      OnGiveXP:Give5WoodworkXP,
+   }
 
    /*********************Miscallenous Carpentry*********************/
+   recipe Craft WoodenPlank From UnusableWood
+   {
+      UnusableWood=2,
+      Woodglue=1,
+
+      Result:Plank,
+      Time:300.0,
+      Category:Carpentry,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
+      SkillRequired:Woodwork=1,
+      OnGiveXP:Give5WoodworkXP,
+   }
+
    recipe Combine Canoe Paddles
    {
       Log,
       CanoePadel=2,
       DuctTape=1,
-      keep Axe/HandAxe/AxeStone,
-      keep [Recipe.GetItemTypes.Saw],
       keep [Recipe.GetItemTypes.HuntingKnife],
 
       Result:CanoePadelX2,
       Time:800.0,
       SkillRequired:Woodwork=2,
       Category:Carpentry,
+      Sound:WoodCarvingSFX,
+      CanBeDoneFromFloor:true,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
    }
 
-   recipe Bind Two Logs with SheetRopes
+   recipe Mix Up A Batch of Plaster
    {
-      Log=2,
-      SheetRope=2,
-
-      CanBeDoneFromFloor:true,
-      Result:LogStacks2,
-      Time:200.0,
-      Category:Carpentry,
-   }
-
-   recipe Bind Two Logs with Ropes on the Ground
-   {
-      Log=2,
-      Rope=2,
-
-      CanBeDoneFromFloor:true,
-      Result:LogStacks2,
-      Time:200.0,
-      Category:Carpentry,
-   }
-
-   recipe Bind Three Logs with SheetRopes
-   {
-      Log=3,
-      SheetRope=2,
-
-      CanBeDoneFromFloor:true,
-      Result:LogStacks3,
+      keep HandShovel,
+      keep Bucket,
+      ConcretePowder,
+      Water=8,
+      Dirtbag=6,
+      Result:PlasterPowder=3,
       Time:300.0,
       Category:Carpentry,
-   }
-
-   recipe Bind Three Logs with Ropes on the Ground
-   {
-      Log=3,
-      Rope=2,
-
       CanBeDoneFromFloor:true,
-      Result:LogStacks3,
-      Time:300.0,
-      Category:Carpentry,
+      NeedToBeLearn:true,
+      NearItem:Armory Table,
+      SkillRequired:Woodwork=1,
+      OnGiveXP:Give5WoodworkXP,
    }
-
-   recipe Bind Four Logs with SheetRopes
-   {
-      Log=4,
-      SheetRope=2,
-
-      CanBeDoneFromFloor:true,
-      Result:LogStacks4,
-      Time:400.0,
-      Category:Carpentry,
-   }
-
-   recipe Bind Four Logs with Ropes on the Ground
-   {
-      Log=4,
-      Rope=2,
-
-      CanBeDoneFromFloor:true,
-      Result:LogStacks4,
-      Time:400.0,
-      Category:Carpentry,
-   }
-
-    recipe ImprovisedPlaster {
-        keep HandShovel,
-        ConcretePowder,
-        Dirtbag=8,
-        Result:PlasterPowder=3,
-        Time:300.0,
-        NeedToBeLearn:True,
-        Category:Carpentry,
-        AnimNode:Forage,
-        Prop:HandShovel,
-        Prop1:HandShovel,
-        Sound:PutItemInBag,
-    }
-
 }
