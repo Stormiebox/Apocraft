@@ -1,0 +1,78 @@
+module Base {
+
+	item BookLumberjack1
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages	=	220,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName = Lumberjack Vol. 1,
+        Icon	=	Book4,
+        SkillTrained = Lumberjack,
+        LvlSkillTrained = 1,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+        WorldStaticModel = BookYellowBrown_Ground,
+    }
+
+    item BookLumberjack2
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages	=	260,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName = Lumberjack Vol. 2,
+        Icon	=	Book4,
+        SkillTrained = Lumberjack,
+        LvlSkillTrained = 3,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+        WorldStaticModel = BookYellowBrown_Ground,
+    }
+
+     item BookLumberjack3
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages	=	300,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName = Lumberjack Vol. 3,
+        Icon	=	Book4,
+        SkillTrained = Lumberjack,
+        LvlSkillTrained = 5,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+        WorldStaticModel = BookYellowBrown_Ground,
+    }
+
+     item BookLumberjack4
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages	=	340,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName = Lumberjack Vol. 4,
+        Icon	=	Book4,
+        SkillTrained = Lumberjack,
+        LvlSkillTrained = 7,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+        WorldStaticModel = BookClosedYellowBrown_Ground,
+    }
+
+     item BookLumberjack5
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages	=	380,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName = Lumberjack Vol. 5,
+        Icon	=	Book4,
+        SkillTrained = Lumberjack,
+        LvlSkillTrained = 9,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+        WorldStaticModel = BookClosedYellowBrown_Ground,
+     }
+
+}

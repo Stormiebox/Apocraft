@@ -21,4 +21,5 @@ Tooltip_EN =
 	Tooltip_BLANK = "",
 	Tooltip_BLANK = "",
 	Tooltip_BLANK = "",
+	Tooltip_BookTitle_Lumberjack = "Lumberjack",
 }

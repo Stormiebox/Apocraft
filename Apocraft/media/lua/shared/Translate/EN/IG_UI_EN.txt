@@ -1,4 +1,5 @@
 IGUI_EN =
 {
 	IGUI_CraftCategory_ApoRecycle = "Apocraft Recycle",
+	IGUI_perks_Lumberjack = "Lumberjack",
 }
