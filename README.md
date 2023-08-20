@@ -2,17 +2,19 @@
 - [Apocraft Introduction](#apocraft)
 - [Guide](#guide)
 - [Skills & Professions](#skills--professions)
+- [Enhanced Forage](#enhanced-forage)
 - [Vanilla-Friendly & Compatibility](#vanilla-friendly--compatibility)
 - [Crafting Tables & Required Mod](#crafting-tables--required-mod)
 - [FAQs](#faqs)
 - [Changelog](#changelog)
 - [Feedback & Support](#feedback--support)
 
+
 ## Apocraft
 Welcome to Apocraft, a vanilla-friendly crafting overhaul for Project Zomboid! Delve into over 1,000 diverse crafting recipes, complemented by unique SFX for a heightened experience. Along with the foundational support from the "Crafting Enhanced Core" mod, Apocraft now also integrates with the "Target Square: On Load Commands" API mod, introducing dynamic in-game environmental interactions and additional crafting capabilities. Tailored for compatibility with other mods, Apocraft is poised to redefine and enhance your survival journey!
 
 ## Guide
-Crafting Categories include:
+### Crafting Categories include:
 - Cooking
 - Carpentry
 - Electrical
@@ -24,7 +26,7 @@ Crafting Categories include:
 - Survivalist
 - Lumberjack: Master the art of woodworking and logging, leveraging both strength and skill to harvest more resources and craft intricate woodworks.
 
-Enhanced Crafting Features include:
+### Enhanced Crafting Features include:
 - Diverse Paint Crafting
 - Canning Galore
 - Hair Dye Crafting
@@ -36,10 +38,20 @@ Enhanced Crafting Features include:
 ### Skills & Professions
 - Lumberjack Skill: Delve deeper into the art of woodworking and logging. Boosting this skill allows for better identification of unique trees and improved efficiency in extracting rare materials. Harness strength and finesse to gather more resources and construct intricate woodworks. As the skill levels up, integrate with advanced toolkits to maximize resource acquisition.
 
-Additional Features include:
+### Additional Features include:
 - Unique SFX for Crafting
 - Custom-made Magazine Textures
 - Molds for Enhanced Forging
+
+## Enhanced Forage
+Delve deeper into the environment with the Enhanced Forage system. As your foraging skill increases, you'll find a wider variety of items and encounter foraging hotspots where yield is doubled. Harness the power of nature and make your survival a tad easier!
+
+### How it works:
+- As players explore the world of Project Zomboid, certain areas or "hotspots" provide a greater yield for foraging.
+- The likelihood of these hotspots appearing is influenced by the in-game sandbox settings.
+- Once within these hotspots, players receive double the yield when they forage, providing a significant boost to their resources.
+- The type and amount of items players find are directly influenced by their foraging skill level. The higher the skill, the richer the rewards!
+- Integrated notifications ensure players are aware of their environment, helping them make the most of these hotspots.
 
 ## Vanilla-Friendly & Compatibility
 - **Vanilla Synergy:** Integrates seamlessly into the base game, enriching the experience without modifying the core essence.
@@ -63,6 +75,10 @@ Additional Features include:
   - A: As players hone their Lumberjack skills, they can more efficiently identify and extract valuable resources from these unique trees. The higher the skill level, the better the chances of harvesting special lumber from the "Heartwood Trees".
 
 ## Changelog
+### Version 1.4.0
+- **Added:** Enhanced Forage system, introducing dynamic foraging hotspots where players can find a more diverse range of items based on their foraging skill. In these zones, foraging yields are doubled.
+- **Integrated:** "Target Square: On Load Commands" API mod to support the Enhanced Forage system.
+
 ### Version 1.3.0
 - **Added:** Integration of the "Lumberjack" skill with specialized trees like "Heartwood Trees".
 - **Enhanced:** Lumberjack skill mechanics to align with the introduction of unique trees and advanced logging capabilities.
