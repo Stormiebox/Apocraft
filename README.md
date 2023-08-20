@@ -1,11 +1,11 @@
 ## Table of Contents
 - [Apocraft Introduction](#apocraft)
-- [Crafting Categories](#crafting-categories)
-- [Enhanced Crafting Features](#enhanced-crafting-features)
-- [Skills & Professions](#skills--professions)  <!-- New Section -->
-- [Additional Features](#additional-features)
+- [Guide](#guide)
 - [Vanilla-Friendly & Compatibility](#vanilla-friendly--compatibility)
 - [Crafting Tables & Required Mod](#crafting-tables--required-mod)
+- [FAQs](#faqs)
+- [Changelog](#changelog)
+- [Feedback & Support](#feedback--support)
 
 ## Apocraft
 Welcome to Apocraft, a vanilla-friendly crafting overhaul for Project Zomboid! Explore over 1,000 diverse crafting recipes, paired with unique SFX for a heightened experience. Tailored for compatibility with other mods, and powered by "Crafting Enhanced Core", Apocraft is set to redefine your survival journey!
