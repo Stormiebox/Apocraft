@@ -1,6 +1,9 @@
 -- ApoLumberJack_Main.lua
 -- This script contains the main logic for the Lumberjack skill in the Apocraft mod.
 
+-- Load Lumberjack_SpecialTrees module
+local Lumberjack_SpecialTrees = require "Lumberjack_SpecialTrees"
+
 -- Initialize the loggingOnWeapon table.
 local loggingOnWeapon = {}
 
@@ -10,12 +13,20 @@ Apocraft = Apocraft or {}
 -- This table stores weapon lengths, as there's no getter function for this in the game API.
 loggingOnWeapon.lengths = {}
 
+-- Store the locations of special trees in cells.
+local specialTreeCells = Lumberjack_SpecialTrees.getSpecialTreeCells()
+
 --- Calculate bonus planks based on the Lumberjack skill and player strength.
 function Apocraft.calculateBonusPlanks(player)
     local loggingSkill = player:getPerkLevel(Perks.Lumberjack)
     local strengthSkill = player:getPerkLevel(Perks.Strength)
     local bonus = math.floor(loggingSkill / 2) + math.floor(strengthSkill / 3)
     return bonus
+end
+
+--- Display a halo message to the player to notify them of the special tree.
+local function displaySpecialTreeMessage(player, treeType)
+    player:setHaloNote("You've hit a " .. treeType .. " tree!")
 end
 
 --- Handle the conversion of logs in the player's inventory to planks.
@@ -53,6 +64,12 @@ function loggingOnWeapon.hit(owner, weapon)
     if weapon:getScriptItem():getCategories():contains("Axe") then
         owner:getXp():AddXP(Perks.Lumberjack, 2.5)
         local square, tree = owner:getSquare()
+        local cellX, cellY = square:getCellX(), square:getCellY()
+
+        if specialTreeCells[cellX] and specialTreeCells[cellX][cellY] then
+            displaySpecialTreeMessage(owner, specialTreeCells[cellX][cellY].treeType)
+        end
+
         local wepLength = loggingOnWeapon.grabLengthOf(weapon) + 0.5
         local ownerForwardDir = owner:getForwardDirection()
         local ownerX, ownerY = owner:getX(), owner:getY()
