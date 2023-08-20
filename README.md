@@ -1,10 +1,11 @@
 ## Table of Contents
 - [Apocraft Introduction](#apocraft)
-- [Crafting Categories](#crafting-categories)
-- [Enhanced Crafting Features](#enhanced-crafting-features)
-- [Additional Features](#additional-features)
+- [Guide](#guide)
 - [Vanilla-Friendly & Compatibility](#vanilla-friendly--compatibility)
 - [Crafting Tables & Required Mod](#crafting-tables--required-mod)
+- [FAQs](#faqs)
+- [Changelog](#changelog)
+- [Feedback & Support](#feedback--support)
 
 ## Apocraft
 Welcome to Apocraft, a vanilla-friendly crafting overhaul for Project Zomboid! Explore over 1,000 diverse crafting recipes, paired with unique SFX for a heightened experience. Tailored for compatibility with other mods, and powered by "Crafting Enhanced Core", Apocraft is set to redefine your survival journey!
@@ -20,6 +21,7 @@ Crafting Categories
 - Metalworking: Dive deeper into metalwork, crafting everything from tools to intricate designs.
 - Tailoring: Stitch, repair, and craft outfits to survive in style.
 - Survivalist: Essential crafts to aid your longevity in the apocalypse.
+- Lumberjack: Master the art of woodworking and logging, leveraging both strength and skill to harvest more resources and craft intricate woodworks. <!-- New Category -->
 
 Enhanced Crafting Features
 - Diverse Paint Crafting: Bring color to the apocalypse! Craft different paint shades using real-life mixing techniques or mix existing in-game paint and hair dye colors.
@@ -29,6 +31,9 @@ Enhanced Crafting Features
 - Weapon/Tool Repair: Don't throw away your favorite tools! Repair weapons and tools that weren't repairable in the base game.
 - Glass Molding: A fresh introduction to the game. Craft glass, shape them for vehicle windows or other utility, and innovate in survival.
 
+### Skills & Professions  <!-- New Section -->
+- Lumberjack Skill: Enhance your woodworking capabilities with this new skill. The better you are, the more efficient your logging becomes, granting bonus resources as your expertise grows.
+  
 Additional Features
 - Unique SFX for Crafting: Each crafting category gets its own auditory flair, elevating your crafting experience.
 - Custom-made Magazine Textures: Discover and learn new recipes through exquisitely designed magazine items.
@@ -49,7 +54,14 @@ Crafting Tables & Required Mod
 - **Q: How do I repair my tools?**
   - A: With Apocraft, tool repairing becomes intuitive. Simply gather the required materials as indicated in the crafting menu and proceed as you would with any other crafting process.
 
+- **Q: I see a new skill called "Lumberjack". How does it work?**
+  - A: As you use axes and partake in woodworking activities, your Lumberjack skill will improve. As you level up, you'll notice increased efficiency in logging, granting bonus wood and resources.  <!-- New FAQ -->
+
 ## Changelog
+### Version 1.2.0  <!-- New Version -->
+- Introduced the "Lumberjack" skill, enhancing logging and woodworking capabilities.
+- Added associated recipes and mechanisms to support the new skill.
+
 ### Version 1.1.0
 - Added 50 new carpentry recipes.
 - Fixed a bug related to glass molding.
