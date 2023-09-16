@@ -1,7 +1,29 @@
 -- Lumberjack_SpecialTrees.lua
 -- This script handles special trees logic with the Lumberjack skill.
 
+require "!_TargetSquare_OnLoad.lua" -- Include the external API
+
 local Lumberjack_SpecialTrees = {}
+
+-- Function to check if a given square's cell is special.
+function Lumberjack_SpecialTrees.isSpecialCell(square)
+    local cell = square:getCell()
+    local worldX = cell:getWorldX()
+    local worldY = cell:getWorldY()
+
+    for treeType, cellData in pairs(Lumberjack_SpecialTrees.specialCells) do
+        if cellData.worldX == worldX and cellData.worldY == worldY then
+            return treeType
+        end
+    end
+
+    return nil
+end
+
+-- Function to get the special tree cells
+function Lumberjack_SpecialTrees.getSpecialTreeCells()
+    return Lumberjack_SpecialTrees.specialCells
+end
 
 -- Table that keeps track of special tree cells.
 Lumberjack_SpecialTrees.specialCells = {
@@ -11,20 +33,5 @@ Lumberjack_SpecialTrees.specialCells = {
     SilverCedar = { worldX = 53, worldY = 72 },
     -- ... add more cells if needed
 }
-
--- Checks if a given square's cell is special.
-function Lumberjack_SpecialTrees.isSpecialCell(square)
-    for treeType, cell in pairs(Lumberjack_SpecialTrees.specialCells) do
-        if square:getCell():getWorldX() == cell.worldX and square:getCell():getWorldY() == cell.worldY then
-            return treeType
-        end
-    end
-    return nil
-end
-
--- Function to get the special tree cells
-function Lumberjack_SpecialTrees.getSpecialTreeCells()
-    return Lumberjack_SpecialTrees.specialCells
-end
 
 return Lumberjack_SpecialTrees

@@ -1,14 +1,14 @@
 -- ApoLumberJack_Main.lua
 -- This script contains the main logic for the Lumberjack skill in the Apocraft mod.
 
--- Load Lumberjack_SpecialTrees module
+-- Import the Lumberjack_SpecialTrees module for special tree handling.
 local Lumberjack_SpecialTrees = require "Lumberjack_SpecialTrees"
 
--- Initialize the loggingOnWeapon table.
+-- Initialize the loggingOnWeapon table to store weapon-related functions.
 local loggingOnWeapon = {}
 
--- Initialize or use the existing Apocraft table.
-Apocraft = Apocraft or {}
+-- Initialize or use the existing Apocraft table to store main mod logic.
+local Apocraft = Apocraft or {}
 
 -- This table stores weapon lengths, as there's no getter function for this in the game API.
 loggingOnWeapon.lengths = {}
@@ -17,7 +17,13 @@ loggingOnWeapon.lengths = {}
 local specialTreeCells = Lumberjack_SpecialTrees.getSpecialTreeCells()
 
 --- Calculate bonus planks based on the Lumberjack skill and player strength.
+--- @param player -Player object to calculate the bonus for.
+--- @return number -The calculated bonus planks.
 function Apocraft.calculateBonusPlanks(player)
+    -- Validate the player object and the possession of required perks
+    assert(player, "Player object cannot be null")
+    assert(player:HasTrait(Perks.Lumberjack) and player:HasTrait(Perks.Strength),
+        "Player must have perks: Lumberjack and Strength")
     local loggingSkill = player:getPerkLevel(Perks.Lumberjack)
     local strengthSkill = player:getPerkLevel(Perks.Strength)
     local bonus = math.floor(loggingSkill / 2) + math.floor(strengthSkill / 3)
@@ -75,7 +81,7 @@ function loggingOnWeapon.hit(owner, weapon)
         local ownerX, ownerY = owner:getX(), owner:getY()
         local attackX, attackY = ownerForwardDir:getX(), ownerForwardDir:getY()
 
-        for i = 1, 10, 1 do
+        for i = 1, 10 do -- Removed the unnecessary third argument for incrementing by 1.
             local iDiv = i / 10
             local attackSquare = getSquare(ownerX + attackX * wepLength * iDiv, ownerY + attackY * wepLength * iDiv,
                 owner:getZ())
@@ -109,4 +115,5 @@ function OnCreateChopLogs(items, result, player)
     Apocraft.handleLogs(player)
 end
 
+-- Return the loggingOnWeapon module.
 return loggingOnWeapon
