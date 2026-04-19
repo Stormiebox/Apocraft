@@ -1,5 +1,20 @@
 IGUI_EN =
 {
 	IGUI_CraftCategory_ApoRecycle = "Apocraft Recycle",
+	IGUI_CraftCategory_ApoForging = "Apocraft Forging",
+	IGUI_CraftCategory_ApoElectrical = "Apocraft Electrical",
+	IGUI_CraftCategory_ApoCulinary = "Apocraft Culinary",
+	IGUI_CraftCategory_ApoCarpentry = "Apocraft Carpentry",
+	IGUI_CraftCategory_ApoCanning = "Apocraft Canning",
+	IGUI_CraftCategory_ApoPaints = "Apocraft Paints",
+	IGUI_CraftCategory_ApoRepairs = "Apocraft Repairs",
+	IGUI_CraftCategory_ApoMedical = "Apocraft Medical",
 	IGUI_perks_Lumberjack = "Lumberjack",
+	IGUI_Woodworker_Bonus = "Woodworker Bonus: +1 Plank!",
+	IGUI_Found_SuperOak = " Found Super Oak Heartwood!",
+	IGUI_Found_MagicPine = "Found Magic Pine Heartwood!",
+	IGUI_Found_GoldenBirch = "Found Golden Birch Heartwood!",
+	IGUI_Found_SilverCedar = "Found Silver Cedar Heartwood!",
+	IGUI_Found_Foraging_Hotspot = "Found a Foraging Hotspot!",
+	IGUI_Found_Extra_Stash = "Found an extra stash!",
 }

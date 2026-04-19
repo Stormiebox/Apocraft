@@ -45,3 +45,19 @@ function Recipe.OnTest.WholeProduce(item)
     if item:isFresh() then return not (baseHunger > hungerChange) end
     return not ((baseHunger * 0.75) > hungerChange)
 end
+
+local TTF = require("TraitTagFramework")
+
+-- Gives an extra plank to anyone with the "Woodworker" tag when sawing logs
+function Apocraft.OnCreate.SawLogsWoodworkerBonus(items, result, player, selectedItem)
+    -- Check if the player has the TTF tag
+    if TTF.PlayerHasTag(player, "Woodworker") then
+        -- Add an extra plank directly to their inventory
+        player:getInventory():AddItem("Base.Plank")
+
+        -- Pop up a little green text over their head so they know the trait worked!
+        if player:isLocalPlayer() then
+            player:setHaloNote(getText("IGUI_Woodworker_Bonus"), 0, 255, 0, 300)
+        end
+    end
+end

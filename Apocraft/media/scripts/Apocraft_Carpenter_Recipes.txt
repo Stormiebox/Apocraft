@@ -19,7 +19,7 @@ module Apocraft
       NeedToBeLearn:true,
       NearItem:Armory Table,
       SkillRequired:Woodwork=4,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       OnGiveXP:Give5WoodworkXP,
 
    }
@@ -33,9 +33,9 @@ module Apocraft
       Time:100.0,
       Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       NearItem:Armory Table,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       OnGiveXP:Recipe.OnGiveXP.SawLogs,
    }
 
@@ -46,10 +46,10 @@ module Apocraft
 
       Result:WoodenStick=6,
       Time:100.0,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       NearItem:Armory Table,
       CanBeDoneFromFloor:true,
       OnGiveXP:Give5WoodworkXP,
@@ -62,7 +62,7 @@ module Apocraft
 
       Result:MortarPestle=3,
       Time:80.0,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
       NeedToBeLearn:true,
@@ -78,7 +78,7 @@ module Apocraft
 
       Result:MortarPestle=1,
       Time:80.0,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
       NeedToBeLearn:true,
@@ -95,10 +95,10 @@ module Apocraft
 
       Result:Button=10,
       Time:1200.0,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
    }
@@ -111,10 +111,10 @@ module Apocraft
 
       Result:CuttingBoardWooden,
       Time:600.0,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
    }
@@ -126,10 +126,10 @@ module Apocraft
 
       Result:KnittingNeedles,
       Time:600.0,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
    }
@@ -143,7 +143,7 @@ module Apocraft
       Result:HockeyStick,
       Time:1600.0,
       SkillRequired:Woodwork=4,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
       NeedToBeLearn:true,
@@ -160,7 +160,7 @@ module Apocraft
       Result:IceHockeyStick,
       Time:1600.0,
       SkillRequired:Woodwork=4,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
       NeedToBeLearn:true,
@@ -176,7 +176,7 @@ module Apocraft
 
       Result:BaseballBat,
       Time:750.0,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
       NeedToBeLearn:true,
@@ -194,7 +194,7 @@ module Apocraft
       Result:CanoePadel,
       Time:1200.0,
       SkillRequired:Woodwork=3,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
       NeedToBeLearn:true,
@@ -212,7 +212,7 @@ module Apocraft
       Result:CanoePadelX2,
       Time:1600.0,
       SkillRequired:Woodwork=5,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
       NeedToBeLearn:true,
@@ -228,10 +228,10 @@ module Apocraft
       Result:Bowl=4,
       Time:1200.0,
       SkillRequired:Woodwork=1,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
    }
@@ -247,10 +247,10 @@ module Apocraft
       Result:Matches,
       Time:800.0,
       SkillRequired:Woodwork=1,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
    }
@@ -265,10 +265,10 @@ module Apocraft
       Result:RollingPin,
       Time:1200.0,
       SkillRequired:Woodwork=2,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
    }
@@ -282,10 +282,10 @@ module Apocraft
 
       Result:Paintbrush,
       Time:140.0,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       NearItem:Armory Table,
       SkillRequired:Woodwork=1,
       OnGiveXP:Give5WoodworkXP,
@@ -300,10 +300,10 @@ module Apocraft
 
       Result:CuttingBoardWooden,
       Time:140.0,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       NearItem:Armory Table,
       SkillRequired:Woodwork=1,
       OnGiveXP:Give5WoodworkXP,
@@ -317,7 +317,7 @@ module Apocraft
 
       Result:Plank,
       Time:300.0,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       CanBeDoneFromFloor:true,
       NeedToBeLearn:true,
       NearItem:Armory Table,
@@ -335,12 +335,27 @@ module Apocraft
       Result:CanoePadelX2,
       Time:800.0,
       SkillRequired:Woodwork=2,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       Sound:WoodCarvingSFX,
       CanBeDoneFromFloor:true,
       NeedToBeLearn:true,
       NearItem:Armory Table,
       OnGiveXP:Give5WoodworkXP,
+   }
+
+   recipe Make Concrete Powder
+   {
+      EmptySandbag=3,
+      Gravelbag=4,
+      Dirtbag=1,
+      Sandbag=2,
+      keep Pot,
+      keep MetalBar,
+      keep CampfireKit,
+      NeedToBeLearn:true
+      Result:ConcretePowder=3,
+      Time:1600.0,
+      Category:ApoCarpentry,
    }
 
    recipe Mix Up A Batch of Plaster
@@ -352,7 +367,7 @@ module Apocraft
       Dirtbag=6,
       Result:PlasterPowder=3,
       Time:300.0,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       CanBeDoneFromFloor:true,
       NeedToBeLearn:true,
       NearItem:Armory Table,

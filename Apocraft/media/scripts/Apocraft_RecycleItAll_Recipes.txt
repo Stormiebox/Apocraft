@@ -83,6 +83,7 @@ module Apocraft
       Category : Welding,
       OnGiveXP : Recipe.OnGiveXP.MetalWelding10,
       Sound : BlowTorch,
+      NearItem:Mechanic Table,
    }
 
    recipe Dismantle Metal (Tool)
@@ -101,12 +102,17 @@ module Apocraft
       OnTest:Recipe.OnTest.DismantleFavs,
       OnCreate:Recipe.OnCreate.RecycleToScrapMetal,
       AllowDestroyedItem:true,
+      NearItem:Mechanic Table,
    }
 
    recipe Get 1 Metal Scrap From 4 Tin Cans
    {
       TinCanEmpty=4,
+      keep [Recipe.GetItemTypes.WeldingMask],
       Result : ScrapMetal,
+      RemoveResultItem:false,
+      InSameInventory:false,
+      CanBeDoneFromFloor:true,
       Time : 30,
       Category : Welding,
       OnGiveXP : Recipe.OnGiveXP.MetalWelding5,
@@ -115,7 +121,11 @@ module Apocraft
    recipe Get 1 Metal Scrap From 4 Pop Cans
    {
       PopEmpty/Pop2Empty/Pop3Empty=4,
+      keep [Recipe.GetItemTypes.WeldingMask],
       Result : ScrapMetal,
+      RemoveResultItem:false,
+      InSameInventory:false,
+      CanBeDoneFromFloor:true,
       Time : 30,
       Category : Welding,
       OnGiveXP : Recipe.OnGiveXP.MetalWelding5,
@@ -139,6 +149,8 @@ module Apocraft
       OnGiveXP : Recipe.OnGiveXP.MetalWelding5,
       Time : 50.0,
       Sound : BlowTorch,
+      NearItem:Mechanic Table,
+      NeedToBeLearn:true
    }
 
    recipe Get 40 Nails From 1 Small Metal Sheet
@@ -151,6 +163,8 @@ module Apocraft
       OnGiveXP : Recipe.OnGiveXP.MetalWelding20,
       Time : 200.0,
       Sound : BlowTorch,
+      NearItem:Mechanic Table,
+      NeedToBeLearn:true
    }
 
    recipe Get 160 Nails From 1 Metal Sheet
@@ -163,6 +177,8 @@ module Apocraft
       OnGiveXP : Recipe.OnGiveXP.MetalWelding80,
       Time : 800.0,
       Sound : BlowTorch,
+      NearItem:Mechanic Table,
+      NeedToBeLearn:true
    }
 
    recipe Dismantle Metal (Kitchen)
@@ -181,6 +197,7 @@ module Apocraft
       OnTest:Recipe.OnTest.DismantleFavs,
       OnCreate:Recipe.OnCreate.RecycleToScrapMetal,
       AllowDestroyedItem:true,
+      NearItem:Mechanic Table,
    }
 
    recipe Dismantle Metal (Weights)
@@ -199,6 +216,7 @@ module Apocraft
       OnTest:Recipe.OnTest.DismantleFavs,
       OnCreate:Recipe.OnCreate.RecycleToScrapMetal,
       AllowDestroyedItem:true,
+      NearItem:Mechanic Table,
    }
 
    recipe Dismantle Metal (Container)
@@ -216,6 +234,7 @@ module Apocraft
       OnTest:Recipe.OnTest.DismantleFavs,
       OnCreate:Recipe.OnCreate.RecycleToScrapMetal,
       AllowDestroyedItem:true,
+      NearItem:Mechanic Table,
    }
 
    /*******Other Recycling Stuff*******/
@@ -308,6 +327,7 @@ module Apocraft
    recipe Pull Thread From Clothing
    {
       Hat_Sweatband/Bracelet_RightFriendshipTINT/Bracelet_LeftFriendshipTINT,
+      keep [Recipe.GetItemTypes.Scissors],
 
       Sound:ClothesRipping,
       AnimNode:RipSheets,

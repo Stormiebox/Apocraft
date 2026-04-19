@@ -1,4 +1,5 @@
 Sandbox_EN = {
-Sandbox_ApoEnhancedForaging = "Apocraft's Enhanced Foraging",
-Sandbox_ApoEnhancedForaging_HotspotChance = "Hotspot % Chance",
+    Sandbox_ApoEnhancedForaging = "Apocraft's Enhanced Foraging",
+    Sandbox_ApoEnhancedForaging_HotspotChance = "Hotspot % Chance",
+    Sandbox_ApoEnhancedForaging_HotspotChance_tooltip = "Determines the percentage chance for a map chunk to generate a 'Foraging Hotspot' when loaded. Players foraging inside a hotspot will receive double yields and find rare items.",
 }

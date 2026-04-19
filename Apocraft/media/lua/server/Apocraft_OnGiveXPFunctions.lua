@@ -332,3 +332,20 @@ end
 function Recipe.OnGiveXP.Tailoring01(recipe, ingredients, result, player)
     player:getXp():AddXP(Perks.Tailoring, 1)
 end
+
+-- Woodwork and other missing XP variables
+function Recipe.OnGiveXP.Give5WoodworkXP(recipe, ingredients, result, player)
+    player:getXp():AddXP(Perks.Woodwork, 5)
+end
+
+function Recipe.OnGiveXP.Get1FarmingXP(recipe, ingredients, result, player)
+    player:getXp():AddXP(Perks.Farming, 1)
+end
+
+function Recipe.OnGiveXP.Get10MetalWeldingXP(recipe, ingredients, result, player)
+    player:getXp():AddXP(Perks.MetalWelding, 10)
+end
+
+function Recipe.OnGiveXP.Get20MetalWeldingXP(recipe, ingredients, result, player)
+    player:getXp():AddXP(Perks.MetalWelding, 20)
+end

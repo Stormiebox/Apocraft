@@ -16,10 +16,11 @@ module Apocraft
       SkillRequired:Electricity=5,
       SkillRequired:MetalWelding=5,
       OnGiveXP:Give25MWXP,
-      Result:ElectricWire=10,
+      Result:ElectricWire=5,
       AnimNode:Disassemble,
       Time:100.0,
-      Category:Electrical,
+      Category:ApoElectrical,
+      NearItem:Mechanic Table,
    }
 
    /************************Generator Battery Charges and Flashlights************************/
@@ -35,11 +36,12 @@ module Apocraft
       SmallSheetMetal=4,
       keep [Recipe.GetItemTypes.Hammer],
       keep [Recipe.GetItemTypes.Screwdriver],
-
+      NeedToBeLearn:true
       Result:Generator,
       Time:300.0,
-      Category:Electrical,
+      Category:ApoElectrical,
       SkillRequired:Electricity=8,
+      NearItem:Mechanic Table,
    }
 
    recipe Make Car Battery Charger
@@ -52,11 +54,12 @@ module Apocraft
       Screws=10,
       keep [Recipe.GetItemTypes.Hammer],
       keep [Recipe.GetItemTypes.Screwdriver],
-
+      NeedToBeLearn:true
       Result:CarBatteryCharger,
       Time:150.0,
-      Category:Electrical,
-      SkillRequired:Electricity=8,
+      Category:ApoElectrical,
+      SkillRequired:Electricity=6,
+      NearItem:Mechanic Table,
    }
 
    recipe Make Hand Torch
@@ -68,7 +71,7 @@ module Apocraft
 
       Result:HandTorch,
       Time:50.0,
-      Category:Electrical,
+      Category:ApoElectrical,
       SkillRequired:Electricity=3,
    }
 
@@ -81,8 +84,8 @@ module Apocraft
 
       Result:Torch,
       Time:75.0,
-      Category:Electrical,
-      SkillRequired:Electricity=5,
+      Category:ApoElectrical,
+      SkillRequired:Electricity=4,
    }
 
 }

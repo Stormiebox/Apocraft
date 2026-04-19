@@ -19,6 +19,7 @@ module Apocraft
       OnGiveXP: Recipe.OnGiveXP.Tailoring2,
       AnimNode:Disassemble,
       Category:Tailoring,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Reinforced Leather Gloves
@@ -37,12 +38,12 @@ module Apocraft
       OnGiveXP: Recipe.OnGiveXP.Tailoring5,
       AnimNode:Disassemble,
       Category:Tailoring,
+      NearItem:Tailoring Table,
    }
 
    recipe Sheet from Skirts
    {
       Thread=2,
-      Skirt_Long,
       Skirt_Long,
       keep [Recipe.GetItemTypes.SewingNeedle],
       keep [Recipe.GetItemTypes.Scissors],
@@ -51,6 +52,7 @@ module Apocraft
       Time:650.0,
       Category:Tailoring,
       OnGiveXP:Get1TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Sling
@@ -67,6 +69,8 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Belt
@@ -84,6 +88,8 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Single Holster
@@ -99,6 +105,8 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Double Holster
@@ -114,6 +122,8 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Ammo Straps
@@ -129,6 +139,8 @@ module Apocraft
       SkillRequired:Tailoring=4,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Long Gloves
@@ -143,6 +155,8 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Leather Gloves
@@ -158,6 +172,8 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get6TailoringXP,
+      NearItem:Tailoring Table,
+      NearItem:Tailoring Table,
    }
 
    recipe Sew on Sleeves
@@ -172,6 +188,8 @@ module Apocraft
       Time:900.0,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
+      NearItem:Tailoring Table,
    }
 
    recipe Sew on Sleeves
@@ -186,6 +204,8 @@ module Apocraft
       Time:900.0,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Star Party Hat
@@ -199,6 +219,8 @@ module Apocraft
       Time:200.0,
       Category:Tailoring,
       OnGiveXP:Get1TailoringXP,
+      NearItem:Tailoring Table,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Party Hat
@@ -212,6 +234,8 @@ module Apocraft
       Time:200.0,
       Category:Tailoring,
       OnGiveXP:Get1TailoringXP,
+      NearItem:Tailoring Table,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Shower Cap
@@ -225,6 +249,8 @@ module Apocraft
       Time:200.0,
       Category:Tailoring,
       OnGiveXP:Get1TailoringXP,
+      NearItem:Tailoring Table,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Sweat Band
@@ -239,6 +265,8 @@ module Apocraft
       Time:200.0,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Bruce Lee Styled Bandana
@@ -254,6 +282,8 @@ module Apocraft
       Time:200.0,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Bandana
@@ -268,6 +298,8 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Coloured Face Bandana
@@ -284,6 +316,8 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Dust Mask
@@ -300,6 +334,8 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Visor
@@ -316,6 +352,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Gas Mask
@@ -337,6 +374,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get8TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Ear Muffs
@@ -359,6 +397,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get6TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Baseball Cap
@@ -374,6 +413,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Baseball Cap
@@ -389,6 +429,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Beret
@@ -403,6 +444,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Golf Cap
@@ -419,6 +461,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Chef Hat
@@ -433,6 +476,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Fast Food Hat
@@ -447,6 +491,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Ice Cream Hat
@@ -461,6 +506,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Weave Summer Hat
@@ -476,6 +522,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Bonnie Hat
@@ -491,6 +538,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Fedora
@@ -510,6 +558,7 @@ module Apocraft
       SkillRequired:Tailoring=4,
       Category:Tailoring,
       OnGiveXP:Get6TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Black Band Fedora
@@ -529,6 +578,7 @@ module Apocraft
       SkillRequired:Tailoring=4,
       Category:Tailoring,
       OnGiveXP:Get6TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Cowboy Hat
@@ -549,6 +599,7 @@ module Apocraft
       SkillRequired:Tailoring=4,
       Category:Tailoring,
       OnGiveXP:Get8TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Fingerless Gloves
@@ -563,6 +614,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor White Apron
@@ -577,6 +629,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Black Apron
@@ -593,6 +646,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Waistcoat
@@ -607,6 +661,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Grey Hunting Vest
@@ -625,6 +680,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Orange Hunting Vest
@@ -643,6 +699,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Camo Hunting Vest
@@ -664,6 +721,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Camo Hunting Vest
@@ -685,6 +743,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Green Camo Hunting Vest
@@ -706,6 +765,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Bullet Proof Vest
@@ -722,6 +782,7 @@ module Apocraft
       SkillRequired:Tailoring=3;MetalWelding=1,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Slippers
@@ -737,6 +798,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Flip Flops
@@ -750,6 +812,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Tie
@@ -764,6 +827,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Clip-on Tie
@@ -779,6 +843,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Bow Tie
@@ -793,6 +858,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Clip-on Bow Tie
@@ -808,6 +874,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Bath Robe
@@ -822,6 +889,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Chef Jacket
@@ -837,6 +905,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Chef Pants
@@ -852,6 +921,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Chef Pants
@@ -866,6 +936,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Suit Pants
@@ -883,6 +954,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Textured Suit Pants
@@ -900,6 +972,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Denim Shorts
@@ -915,6 +988,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Long Denim Shorts
@@ -930,6 +1004,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Cloth Jacket
@@ -946,6 +1021,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Suit Jacket
@@ -964,6 +1040,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Wedding Jacket
@@ -982,6 +1059,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get6TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Wedding Dress
@@ -997,6 +1075,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get6TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor White Suit Pants
@@ -1014,6 +1093,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Black Pants
@@ -1031,6 +1111,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Long Johns
@@ -1046,6 +1127,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Formal Shirt
@@ -1061,6 +1143,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Workman Shirt
@@ -1076,6 +1159,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Denim Jeans
@@ -1091,6 +1175,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Jeans
@@ -1106,6 +1191,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Baggy Jeans
@@ -1121,6 +1207,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Padded Jacket
@@ -1137,6 +1224,7 @@ module Apocraft
       SkillRequired:Tailoring=4,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Padded Pants
@@ -1153,6 +1241,7 @@ module Apocraft
       SkillRequired:Tailoring=4,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Overalls
@@ -1168,6 +1257,7 @@ module Apocraft
       SkillRequired:Tailoring=4,
       Category:Tailoring,
       OnGiveXP:Get6TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Denim Shirt
@@ -1183,6 +1273,7 @@ module Apocraft
       SkillRequired:Tailoring=4,
       Category:Tailoring,
       OnGiveXP:Get6TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Lumberjack Shirt
@@ -1198,6 +1289,7 @@ module Apocraft
       SkillRequired:Tailoring=4,
       Category:Tailoring,
       OnGiveXP:Get6TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Animal Skin Jacket
@@ -1227,6 +1319,7 @@ module Apocraft
       SkillRequired:Tailoring=5,
       Category:Tailoring,
       OnGiveXP:Get11TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Animal Skin Jacket
@@ -1256,6 +1349,7 @@ module Apocraft
       SkillRequired:Tailoring=5,
       Category:Tailoring,
       OnGiveXP:Get11TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Spiffo Suit
@@ -1274,6 +1368,7 @@ module Apocraft
       SkillRequired:Tailoring=5,
       Category:Tailoring,
       OnGiveXP:Get11TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Spiffo Suit Head
@@ -1292,6 +1387,7 @@ module Apocraft
       SkillRequired:Tailoring=5,
       Category:Tailoring,
       OnGiveXP:Get11TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    /*********************Tailor Shoes & Boots*********************/
@@ -1314,6 +1410,7 @@ module Apocraft
       SkillRequired:Tailoring=5,
       Category:Tailoring,
       OnGiveXP:Get11TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Black Boots
@@ -1335,6 +1432,7 @@ module Apocraft
       SkillRequired:Tailoring=5,
       Category:Tailoring,
       OnGiveXP:Get11TailoringXP,
+      NearItem:Tailoring Table,
    }
    /*********************Tailor Bags*********************/
    recipe Tailor School Bag
@@ -1348,6 +1446,7 @@ module Apocraft
       CanBeDoneFromFloor : True,
       Category : Survivalist,
       OnGiveXP : Get11TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Fanny Pack Front
@@ -1363,6 +1462,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Fanny Pack Back
@@ -1378,6 +1478,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Duffelbag
@@ -1394,6 +1495,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Duffelbag
@@ -1410,6 +1512,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Handbag
@@ -1424,6 +1527,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Purse
@@ -1439,6 +1543,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Hiking Bag
@@ -1455,6 +1560,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Satchel
@@ -1470,6 +1576,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Big Hiking Bag
@@ -1487,6 +1594,7 @@ module Apocraft
       SkillRequired:Tailoring=4,
       Category:Tailoring,
       OnGiveXP:Get6TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Survior Bag
@@ -1505,6 +1613,7 @@ module Apocraft
       SkillRequired:Tailoring=4,
       Category:Tailoring,
       OnGiveXP:Get11TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Survior Bag
@@ -1521,6 +1630,7 @@ module Apocraft
       SkillRequired:Tailoring=4,
       Category:Tailoring,
       OnGiveXP:Get11TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Survior Bag
@@ -1535,6 +1645,7 @@ module Apocraft
       SkillRequired:Tailoring=5,
       Category:Tailoring,
       OnGiveXP:Get11TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Survior Bag
@@ -1549,6 +1660,7 @@ module Apocraft
       SkillRequired:Tailoring=5,
       Category:Tailoring,
       OnGiveXP:Get11TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Survior Bag
@@ -1564,6 +1676,7 @@ module Apocraft
       SkillRequired:Tailoring=5,
       Category:Tailoring,
       OnGiveXP:Get11TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Tote Bag
@@ -1578,6 +1691,7 @@ module Apocraft
       Time:200.0,
       Category:Tailoring,
       OnGiveXP:Get1TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Schoolbag
@@ -1594,6 +1708,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Seed Bag
@@ -1609,6 +1724,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get1TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    /*********************Miscallenous Tailoring*********************/
@@ -1622,6 +1738,7 @@ module Apocraft
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       OnGiveXP : Get6TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Bandage
@@ -1634,6 +1751,7 @@ module Apocraft
       CanBeDoneFromFloor : True,
       Category : Survivalist,
       OnGiveXP : Get6TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Rope
@@ -1643,6 +1761,7 @@ module Apocraft
       Time : 320.0,
       Category : Survivalist,
       OnGiveXP : Get8TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor RecoilPad
@@ -1658,6 +1777,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Bath Towel
@@ -1671,6 +1791,8 @@ module Apocraft
       Sound:PZ_ClothesRipping,
       Time:250.0,
       Category:Tailoring,
+      OnGiveXP : Get8TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Dish Cloth
@@ -1682,6 +1804,7 @@ module Apocraft
       Time : 220.0,
       Category : Survivalist,
       OnGiveXP : Get6TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Sheet
@@ -1695,6 +1818,7 @@ module Apocraft
       Time:350.0,
       Category:Tailoring,
       OnGiveXP:Get2TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor a Sack
@@ -1710,6 +1834,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Recipe.OnGiveXP.Tailoring5,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor a Sack
@@ -1725,6 +1850,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Recipe.OnGiveXP.Tailoring5,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor a Sack
@@ -1741,6 +1867,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Recipe.OnGiveXP.Tailoring5,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Black Wallet
@@ -1755,6 +1882,7 @@ module Apocraft
       Sound: ClothesRipping,
       Time: 185.0,
       OnGiveExp: Recipe.OnGiveXP.Tailoring5,
+      NearItem:Tailoring Table,
       AnimNode: Disassemble,
       Category: Survivalist,
    }
@@ -1771,6 +1899,7 @@ module Apocraft
       Sound: ClothesRipping,
       Time: 185.0,
       OnGiveExp: Recipe.OnGiveXP.Tailoring5,
+      NearItem:Tailoring Table,
       AnimNode: Disassemble,
       Category: Survivalist,
    }
@@ -1787,6 +1916,7 @@ module Apocraft
       Sound: ClothesRipping,
       Time: 185.0,
       OnGiveExp: Recipe.OnGiveXP.Tailoring5,
+      NearItem:Tailoring Table,
       AnimNode: Disassemble,
       Category: Survivalist,
    }
@@ -1803,6 +1933,7 @@ module Apocraft
       Sound: ClothesRipping,
       Time: 185.0,
       OnGiveExp: Recipe.OnGiveXP.Tailoring5,
+      NearItem:Tailoring Table,
       AnimNode: Disassemble,
       Category: Survivalist,
    }
@@ -1820,6 +1951,7 @@ module Apocraft
       Time:650.0,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Plush Beaver
@@ -1835,6 +1967,7 @@ module Apocraft
       Time:650.0,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Plush Fox
@@ -1850,6 +1983,7 @@ module Apocraft
       Time:650.0,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Plush Hedgehog
@@ -1865,6 +1999,7 @@ module Apocraft
       Time:650.0,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Plush Mole
@@ -1880,6 +2015,7 @@ module Apocraft
       Time:650.0,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Plush Bunny
@@ -1895,6 +2031,7 @@ module Apocraft
       Time:650.0,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Tailor Plush Squirrel
@@ -1910,6 +2047,7 @@ module Apocraft
       Time:650.0,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    /*********************Knitting Items*********************/
@@ -1923,6 +2061,7 @@ module Apocraft
       Time:650.0,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Knit Open Balaclava
@@ -1938,6 +2077,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Knit Winter Gloves
@@ -1953,6 +2093,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Knit Balaclava
@@ -1967,6 +2108,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Knit Beany
@@ -1980,6 +2122,7 @@ module Apocraft
       SkillRequired:Tailoring=1,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Knit Winter Hat
@@ -1996,6 +2139,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Knit Woolly Hat
@@ -2009,6 +2153,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Knit Long Socks
@@ -2022,6 +2167,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Knit Sweater Vest
@@ -2037,6 +2183,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get4TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Knit Fancy Sweater Vest
@@ -2052,6 +2199,7 @@ module Apocraft
       SkillRequired:Tailoring=2,
       Category:Tailoring,
       OnGiveXP:Get6TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Knit Hoodie
@@ -2067,6 +2215,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get6TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Knit Hoodie
@@ -2082,6 +2231,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get6TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Knit V-Neck Sweater
@@ -2097,6 +2247,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get6TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Knit Round Neck Sweater
@@ -2112,6 +2263,7 @@ module Apocraft
       SkillRequired:Tailoring=3,
       Category:Tailoring,
       OnGiveXP:Get6TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Knit Polo Neck Sweater
@@ -2127,6 +2279,7 @@ module Apocraft
       SkillRequired:Tailoring=4,
       Category:Tailoring,
       OnGiveXP:Get6TailoringXP,
+      NearItem:Tailoring Table,
    }
 
    recipe Knit Diamond Pattened Sweater
@@ -2142,6 +2295,7 @@ module Apocraft
       SkillRequired:Tailoring=4,
       Category:Tailoring,
       OnGiveXP:Get8TailoringXP,
+      NearItem:Tailoring Table,
    }
 
 }

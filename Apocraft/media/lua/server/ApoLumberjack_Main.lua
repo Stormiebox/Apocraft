@@ -13,26 +13,14 @@ local Apocraft = Apocraft or {}
 -- This table stores weapon lengths, as there's no getter function for this in the game API.
 loggingOnWeapon.lengths = {}
 
--- Store the locations of special trees in cells.
-local specialTreeCells = Lumberjack_SpecialTrees.getSpecialTreeCells()
-
 --- Calculate bonus planks based on the Lumberjack skill and player strength.
---- @param player -Player object to calculate the bonus for.
---- @return number -The calculated bonus planks.
 function Apocraft.calculateBonusPlanks(player)
-    -- Validate the player object and the possession of required perks
-    assert(player, "Player object cannot be null")
-    assert(player:HasTrait(Perks.Lumberjack) and player:HasTrait(Perks.Strength),
-        "Player must have perks: Lumberjack and Strength")
-    local loggingSkill = player:getPerkLevel(Perks.Lumberjack)
-    local strengthSkill = player:getPerkLevel(Perks.Strength)
-    local bonus = math.floor(loggingSkill / 2) + math.floor(strengthSkill / 3)
-    return bonus
-end
+    -- Everyone "has" the perk, they just have different levels. No need for HasTrait assert here.
+    local loggingSkill = player:getPerkLevel(Perks.Lumberjack) or 0
+    local strengthSkill = player:getPerkLevel(Perks.Strength) or 0
 
---- Display a halo message to the player to notify them of the special tree.
-local function displaySpecialTreeMessage(player, treeType)
-    player:setHaloNote("You've hit a " .. treeType .. " tree!")
+    local bonus = math.floor(loggingSkill / 2) + math.floor(strengthSkill / 4)
+    return bonus
 end
 
 --- Handle the conversion of logs in the player's inventory to planks.
@@ -69,19 +57,17 @@ end
 function loggingOnWeapon.hit(owner, weapon)
     if weapon:getScriptItem():getCategories():contains("Axe") then
         owner:getXp():AddXP(Perks.Lumberjack, 2.5)
-        local square, tree = owner:getSquare()
-        local cellX, cellY = square:getCellX(), square:getCellY()
 
-        if specialTreeCells[cellX] and specialTreeCells[cellX][cellY] then
-            displaySpecialTreeMessage(owner, specialTreeCells[cellX][cellY].treeType)
-        end
+        local square = nil
+        local tree = nil
 
         local wepLength = loggingOnWeapon.grabLengthOf(weapon) + 0.5
         local ownerForwardDir = owner:getForwardDirection()
         local ownerX, ownerY = owner:getX(), owner:getY()
         local attackX, attackY = ownerForwardDir:getX(), ownerForwardDir:getY()
 
-        for i = 1, 10 do -- Removed the unnecessary third argument for incrementing by 1.
+        -- Raycast to find the exact tree the player is hitting
+        for i = 1, 10 do
             local iDiv = i / 10
             local attackSquare = getSquare(ownerX + attackX * wepLength * iDiv, ownerY + attackY * wepLength * iDiv,
                 owner:getZ())
@@ -93,14 +79,49 @@ function loggingOnWeapon.hit(owner, weapon)
                     if treeSquare then
                         square = treeSquare
                     end
+                    break -- We found the tree, no need to keep raycasting
                 end
             end
         end
 
-        if not tree then
+        -- We only want to drop logs if we ACTUALLY hit a tree!
+        if tree then
             local loggingLevel = owner:getPerkLevel(Perks.Lumberjack)
             local strengthLevel = owner:getPerkLevel(Perks.Strength)
-            local totalLogs = math.min(loggingLevel + strengthLevel, 10)
+
+            -- 1. Calculate the standard base logs (Includes the Lumberjack/Strength bonuses)
+            local baseLogs = math.min(loggingLevel + math.floor(strengthLevel / 2), 10)
+            if baseLogs < 1 then baseLogs = 1 end
+
+            -- 2. Check for Procedural Special Trees and determine their flat bonus
+            local specialTreeType = Lumberjack_SpecialTrees.getTreeType(square)
+            local specialBonus = 0
+
+            if specialTreeType == "SuperOak" then
+                specialBonus = 12 -- Massive jackpot
+                if owner:isLocalPlayer() then
+                    owner:setHaloNote(getText("IGUI_Found_SuperOak"), 0, 255, 0, 300)
+                end
+            elseif specialTreeType == "MagicPine" then
+                specialBonus = 8
+                if owner:isLocalPlayer() then
+                    owner:setHaloNote(getText("IGUI_Found_MagicPine"), 0, 255, 255, 300)
+                end
+            elseif specialTreeType == "GoldenBirch" then
+                specialBonus = 5
+                if owner:isLocalPlayer() then
+                    owner:setHaloNote(getText("IGUI_Found_GoldenBirch"), 255, 215, 0, 300)
+                end
+            elseif specialTreeType == "SilverCedar" then
+                specialBonus = 3
+                if owner:isLocalPlayer() then
+                    owner:setHaloNote(getText("IGUI_Found_SilverCedar"), 200, 200, 200, 300)
+                end
+            end
+
+            -- 3. Combine them and spawn only vanilla Base.Logs
+            local totalLogs = baseLogs + specialBonus
+
             for i = 1, totalLogs do
                 square:AddWorldInventoryItem("Base.Log", 0, 0, 0)
             end

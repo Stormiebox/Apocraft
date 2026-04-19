@@ -14,7 +14,7 @@ module Apocraft
 
       Result:GlassMold,
       Time:700.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=3,
@@ -30,7 +30,7 @@ module Apocraft
       Result:GlassPane,
       RemoveResultItem:true,
       Time:1000.0,
-      Category:Recycling,
+      Category:ApoRecycle,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       Sound:MakePlaster,
@@ -44,7 +44,7 @@ module Apocraft
 
       Result:GlassShard=4,
       Time:300.0,
-      Category:Recycling,
+      Category:ApoRecycle,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       Sound:BreakGlassItem,

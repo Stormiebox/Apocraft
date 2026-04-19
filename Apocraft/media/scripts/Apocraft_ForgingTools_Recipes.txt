@@ -14,10 +14,10 @@ module Apocraft
       keep [Recipe.GetItemTypes.Screwdriver],
       keep Tongs,
       keep Bellows,
-
+      NeedToBeLearn:true
       Result:BlowTorch,
       Time:600.0,
-      Category:Welding,
+      Category:ApoForging,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -31,10 +31,10 @@ module Apocraft
       keep [Recipe.GetItemTypes.Screwdriver],
       keep Tongs,
       keep Bellows,
-
+      NeedToBeLearn:true
       Result:BlowTorch,
       Time:600.0,
-      Category:Welding,
+      Category:ApoForging,
       SkillRequired:MetalWelding=2,
    }
 
@@ -47,10 +47,10 @@ module Apocraft
       keep [Recipe.GetItemTypes.Screwdriver],
       keep Tongs,
       keep Bellows,
-
+      NeedToBeLearn:true
       Result:BlowTorch,
       Time:600.0,
-      Category:Welding,
+      Category:ApoForging,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -64,10 +64,10 @@ module Apocraft
       keep [Recipe.GetItemTypes.Screwdriver],
       keep Tongs,
       keep Bellows,
-
+      NeedToBeLearn:true
       Result:BlowTorch,
       Time:600.0,
-      Category:Welding,
+      Category:ApoForging,
       SkillRequired:MetalWelding=2,
    }
 
@@ -80,10 +80,10 @@ module Apocraft
       keep [Recipe.GetItemTypes.Screwdriver],
       keep Tongs,
       keep Bellows,
-
+      NeedToBeLearn:true
       Result:BlowTorch,
       Time:600.0,
-      Category:Welding,
+      Category:ApoForging,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -97,17 +97,48 @@ module Apocraft
       keep [Recipe.GetItemTypes.Screwdriver],
       keep [Recipe.GetItemTypes.WeldingMask],
       keep [Recipe.GetItemTypes.Hammer],
-      keep Tongs,
       keep Bellows,
       keep LeadPipe,
-
+      NeedToBeLearn:true
       Result:Tongs,
       CanBeDoneFromFloor:true,
       Time:200.0,
-      Category:Welding,
-      SkillRequired:MetalWelding=3,
+      Category:ApoForging,
+      SkillRequired:MetalWelding=1,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
+
+   recipe Forge Shovel
+    {
+       IronIngot=30,
+       Handle,
+       keep Hammer/BallPeenHammer,
+       keep SmithTongs,
+
+       Result:Shovel,
+       Time:200.0,
+       Category:ApoForging,
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
+       SkillRequired:MetalWelding=3,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+       NeedToBeLearn:true,
+    }
+
+    recipe Forge Hand Shovel
+    {
+       IronIngot=10,
+       keep Hammer/BallPeenHammer,
+       keep SmithTongs,
+
+       Result:HandShovel,
+       Time:200.0,
+       Category:ApoForging,
+       OnCanPerform:AnvilCheck,
+       SkillRequired:MetalWelding=3,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+       NeedToBeLearn:true,
+    }
 
    recipe Craft A Car Jack
    {
@@ -120,7 +151,7 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       Result:Jack,
       Time:120.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=3,
@@ -138,7 +169,7 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       Result:LugWrench,
       Time:120.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=3,
@@ -156,7 +187,7 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       Result:Wrench,
       Time:120.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=3,
@@ -175,7 +206,7 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       Result:TirePump,
       Time:120.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=3,
@@ -193,7 +224,7 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       Result:Screwdriver,
       Time:120.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=3,
@@ -210,7 +241,7 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       Result:Scissors,
       Time:120.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=3,
@@ -228,7 +259,7 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       Result:PipeWrench,
       Time:120.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=3,
@@ -246,7 +277,7 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       Result:Scissors,
       Time:120.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=3,
@@ -264,7 +295,7 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       Result:Scissors,
       Time:120.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=3,
@@ -282,7 +313,7 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       Result:Hammer,
       Time:120.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=3,
@@ -298,9 +329,9 @@ module Apocraft
       keep [Recipe.GetItemTypes.Scissors],
 
       Result:ForgeNeedle,
-      Time:800.0,
+      Time:500.0,
       SkillRequired:MetalWelding=1,
-      Category:Welding,
+      Category:ApoForging,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
 
@@ -313,9 +344,10 @@ module Apocraft
       keep [Recipe.GetItemTypes.Screwdriver],
 
       Result:ForgeNeedleHolder,
-      Time:800.0,
+      Time:500.0,
       SkillRequired:MetalWelding=1,
-      Category:Welding,
+      Category:ApoForging,
+      NeedToBeLearn:false
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
 
@@ -329,7 +361,8 @@ module Apocraft
       Result:Tweezers,
       Time:600.0,
       SkillRequired:MetalWelding=1,
-      Category:Welding,
+      Category:ApoForging,
+      NeedToBeLearn:false
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
 
@@ -341,9 +374,9 @@ module Apocraft
         DuctTape=4,
         Result:PaintbucketEmpty,
         Time:250.0,
-        NeedToBeLearn:True,
+        NeedToBeLearn:false,
         SkillRequired:MetalWelding=1,
-        Category:Welding,
+        Category:ApoForging,
         OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
         AnimNode:BuildLow,
         Prop1:Hammer,
@@ -356,9 +389,9 @@ module Apocraft
       ScrapMetal=2,
       BlowTorch=2,
       keep [Recipe.GetItemTypes.WeldingMask],
-      Result : Saw,
-      Category : Welding,
-      OnGiveXP : Recipe.OnGiveXP.MetalWelding20,
+      Result:Saw,
+      Category:ApoForging,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding20,
       Time : 500.0,
       Sound : BlowTorch,
    }

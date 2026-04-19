@@ -8,18 +8,20 @@ module Apocraft
    recipe Steam Bourbon for Disinfectant
    {
       WhiskeyFull,
-      CampfireKit,
+      BlowTorch=1,
       PopBottleEmpty/WaterBottleEmpty,
       keep Pot,
       keep Rope,
       keep WoodenStick,
       keep BucketEmpty,
       keep Plasticbag/Garbagebag/Tarp,
-
+      NearItem:Laboratory Table,
+      Sound:WaterLabSFX,
       Result:Disinfectant,
       Time:1600.0,
       SkillRequired:Doctor=3,
-      Category:Health,
+      Category:ApoMedical,
+      NeedToBeLearn:true,
       OnGiveXP:Get6DoctorXP,
    }
 
@@ -30,11 +32,12 @@ module Apocraft
       AlcoholRippedSheets,
       keep Bowl,
       keep [Recipe.GetItemTypes.HuntingKnife],
-
+      NearItem:Laboratory Table,
       Result:Antibiotics=2,
       Time:1800.0,
       SkillRequired:Doctor=4,
-      Category:Health,
+      Category:ApoMedical,
+      NeedToBeLearn:true,
       OnGiveXP:Get6DoctorXP,
    }
 
@@ -47,11 +50,13 @@ module Apocraft
       keep [Recipe.GetItemTypes.HuntingKnife],
       keep RollingPin,
       keep MortarPestle,
-
+      NearItem:Laboratory Table,
+      Sound:MortarPrestleSFX,
       Result:Antibiotics=2,
       Time:1600.0,
       SkillRequired:Doctor=3,
-      Category:Health,
+      Category:ApoMedical,
+      NeedToBeLearn:true,
       OnGiveXP:Get8DoctorXP,
    }
 
@@ -70,11 +75,13 @@ module Apocraft
       keep [Recipe.GetItemTypes.Hammer],
       keep Pot,
       keep MortarPestle,
-
+      NearItem:Laboratory Table,
+      Sound:MortarPrestleSFX,
       Result:PillsVitamins=2,
       Time:1600.0,
       SkillRequired:Doctor=3,
-      Category:Health,
+      Category:ApoMedical,
+      NeedToBeLearn:true,
       OnGiveXP:Get8DoctorXP,
    }
 
@@ -90,11 +97,13 @@ module Apocraft
       keep [Recipe.GetItemTypes.HuntingKnife],
       keep RollingPin,
       keep MortarPestle,
-
+      NearItem:Laboratory Table,
+      Sound:MortarPrestleSFX,
       Result:PillsAntiDep,
       Time:1600.0,
       SkillRequired:Doctor=2,
-      Category:Health,
+      Category:ApoMedical,
+      NeedToBeLearn:true,
       OnGiveXP:Get8DoctorXP,
    }
 
@@ -112,11 +121,13 @@ module Apocraft
       keep [Recipe.GetItemTypes.HuntingKnife],
       keep RollingPin,
       keep MortarPestle,
-
+      NearItem:Laboratory Table,
+      Sound:MortarPrestleSFX,
       Result:PillsBeta,
       Time:1600.0,
       SkillRequired:Doctor=3,
-      Category:Health,
+      Category:ApoMedical,
+      NeedToBeLearn:true,
       OnGiveXP:Get8DoctorXP,
    }
 
@@ -125,15 +136,17 @@ module Apocraft
       WildGarlicCataplasm=2,
       PlantainCataplasm=2,
       Water=10,
-      CampfireKit,
+      BlowTorch=1,
       PopBottleEmpty/WaterBottleEmpty,
       keep Sheet,
       keep Pot,
-
+      NearItem:Laboratory Table,
+      Sound:WaterLabSFX,
       Result:Disinfectant,
       Time:1000.0,
       SkillRequired:Doctor=1,
-      Category:Health,
+      Category:ApoMedical,
+      NeedToBeLearn:true,
       OnGiveXP:Get4DoctorXP,
    }
 
@@ -141,11 +154,10 @@ module Apocraft
    {
       WhiskeyFull,
       keep Coldpack,
-
       Result:Disinfectant,
       Time:1600.0,
       SkillRequired:Doctor=1,
-      Category:Health,
+      Category:ApoMedical,
       OnGiveXP:Get1DoctorXP,
    }
 
@@ -153,11 +165,14 @@ module Apocraft
    {
       WhiskeyFull,
       Salt;2,
-
+      BlowTorch=1,
+      NearItem:Laboratory Table,
+      Sound:MortarPrestleSFX,
       Result:Disinfectant,
       Time:600.0,
       SkillRequired:Doctor=3,
-      Category:Health,
+      Category:ApoMedical,
+      NeedToBeLearn:true,
       OnGiveXP:Get2DoctorXP,
    }
 
@@ -169,11 +184,11 @@ module Apocraft
       Lighter,
       keep [Recipe.GetItemTypes.HuntingKnife],
       keep [Recipe.GetItemTypes.Scissors],
-
+      NearItem:Laboratory Table,
       Result:AlcoholWipes=2,
       SkillRequired:Doctor=2,
       Time:800.0,
-      Category:Health,
+      Category:ApoMedical,
       OnGiveXP:Get1DoctorXP,
    }
 
@@ -185,11 +200,11 @@ module Apocraft
       Lighter,
       keep [Recipe.GetItemTypes.HuntingKnife],
       keep [Recipe.GetItemTypes.Scissors],
-
+      NearItem:Laboratory Table,
       Result:AlcoholWipes=2,
       SkillRequired:Doctor=2,
       Time:800.0,
-      Category:Health,
+      Category:ApoMedical,
       OnGiveXP:Get1DoctorXP,
    }
 

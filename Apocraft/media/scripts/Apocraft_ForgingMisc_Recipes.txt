@@ -6,35 +6,79 @@ module Apocraft
     }
 
    /*********************Iron Ingot Forging*********************/
-   recipe Forge Iron Ingots
+   recipe Forge Iron Ingot
    {
-      BlowTorch=1,
       UnusableMetal=5,
-      Charcoal,
-      keep Pot,
+      Charcoal=2,
+      keep IngotMold,
+      keep Tongs,
+      keep Bellows,
       keep [Recipe.GetItemTypes.WeldingMask],
       keep [Recipe.GetItemTypes.Hammer],
-
+      NeedToBeLearn:true
       Result:IronIngot,
-      Time:400.0,
-      Category:Welding,
-      SkillRequired:MetalWelding=1,
+      Time:200.0,
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
+      Category:ApoForging,
+      SkillRequired:MetalWelding=3,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Forge Iron Ingot
+   {
+      ScrapMetal=5,
+      Charcoal=2,
+      keep IngotMold,
+      keep Tongs,
+      keep Bellows,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Hammer],
+      NeedToBeLearn:true
+      Result:IronIngot,
+      Time:200.0,
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
+      Category:ApoForging,
+      SkillRequired:MetalWelding=3,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
 
    recipe Forge Iron Ingots
    {
-      BlowTorch=1,
-      ScrapMetal=10,
-      Charcoal,
-      keep Pot,
+      UnusableMetal=20,
+      Charcoal=8,
+      keep IngotMold2,
+      keep Tongs,
+      keep Bellows,
       keep [Recipe.GetItemTypes.WeldingMask],
       keep [Recipe.GetItemTypes.Hammer],
+      NeedToBeLearn:true
+      Result:IronIngot=4,
+      Time:800.0,
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
+      Category:ApoForging,
+      SkillRequired:MetalWelding=4,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
 
-      Result:IronIngot,
-      Time:200.0,
-      Category:Welding,
-      SkillRequired:MetalWelding=1,
+   recipe Forge Iron Ingots
+   {
+      ScrapMetal=20,
+      Charcoal=8,
+      keep IngotMold2,
+      keep Tongs,
+      keep Bellows,
+      keep [Recipe.GetItemTypes.WeldingMask],
+      keep [Recipe.GetItemTypes.Hammer],
+      NeedToBeLearn:true
+      Result:IronIngot=4,
+      Time:800.0,
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
+      Category:ApoForging,
+      SkillRequired:MetalWelding=4,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
 
@@ -46,7 +90,7 @@ module Apocraft
       SkillRequired:MetalWelding=1,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding5,
       Time:30.0,
-      Category:Welding,
+      Category:ApoForging,
    }
 
    recipe Forge Fishing Tackles
@@ -62,7 +106,7 @@ module Apocraft
 
       Result:FishingTackle2,
       Time:200.0,
-      Category:Welding,
+      Category:ApoForging,
       SkillRequired:MetalWelding=1,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -80,7 +124,7 @@ module Apocraft
 
       Result:FishingTackle,
       Time:200.0,
-      Category:Welding,
+      Category:ApoForging,
       SkillRequired:MetalWelding=1,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -98,7 +142,7 @@ module Apocraft
 
       Result:GardeningSprayEmpty,
       Time:1200.0,
-      Category:Welding,
+      Category:ApoForging,
       SkillRequired:MetalWelding=4,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
    }
@@ -120,7 +164,7 @@ module Apocraft
 
       Result:Doorknob=2,
       Time:1200.0,
-      Category:Welding,
+      Category:ApoForging,
       SkillRequired:MetalWelding=4,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
    }
@@ -136,7 +180,7 @@ module Apocraft
 
       Result:Hinge=3,
       Time:400.0,
-      Category:Welding,
+      Category:ApoForging,
       SkillRequired:MetalWelding=1,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -151,7 +195,7 @@ module Apocraft
       SkillRequired:MetalWelding=3,
       Sound:Hammering,
       Time:500.0,
-      Category:Welding,
+      Category:ApoForging,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding5,
    }
 
@@ -165,7 +209,7 @@ module Apocraft
 
       Result:BarbedWire,
       Time:1200.0,
-      Category:Welding,
+      Category:ApoForging,
    }
 
    recipe Forge Miner Hat
@@ -191,11 +235,12 @@ module Apocraft
       keep Tongs,
       keep Bellows,
       keep BlowTorch,
-
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
       Result:NailsBox,
       Time:1200.0,
       SkillRequired:MetalWelding=1,
-      Category:Welding,
+      Category:ApoForging,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
    }
 
@@ -209,11 +254,12 @@ module Apocraft
       keep Tongs,
       keep Bellows,
       keep BlowTorch,
-
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
       Result:NailsBox,
       Time:1200.0,
       SkillRequired:MetalWelding=1,
-      Category:Welding,
+      Category:ApoForging,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
    }
 
@@ -223,11 +269,12 @@ module Apocraft
       keep [Recipe.GetItemTypes.Saw],
       keep Tongs,
       keep Bellows,
-
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
       Result:MetalBar,
       Time:600.0,
       SkillRequired:MetalWelding=1,
-      Category:Welding,
+      Category:ApoForging,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
    }
 
@@ -246,7 +293,7 @@ module Apocraft
       Result:Hat_HockeyMask,
       Time:800.0,
       SkillRequired:MetalWelding=2,
-      Category:Welding,
+      Category:ApoForging,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
    }
 
@@ -261,11 +308,12 @@ module Apocraft
       keep [Recipe.GetItemTypes.Saw],
       keep [Recipe.GetItemTypes.Scissors],
       keep [Recipe.GetItemTypes.Hammer],
-
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
       Result:WeldingMask,
       Time:800.0,
       SkillRequired:MetalWelding=2,
-      Category:Welding,
+      Category:ApoForging,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
    }
 
@@ -283,7 +331,7 @@ module Apocraft
       CanBeDoneFromFloor:true,
       Result:BoxOfJars,
       Time:1250.0,
-      Category:Welding,
+      Category:ApoForging,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
    }
 
@@ -305,7 +353,7 @@ module Apocraft
 
       Result:WeldingRods,
       Time:500.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=3,
@@ -318,10 +366,11 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       PopEmpty/Pop2Empty/Pop3Empty=5,
       BlowTorch=1,
-
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
       Result:Aluminum,
       Time:250.0,
-      Category:Recycling,
+      Category:ApoRecycle,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       Sound:Hammering,
@@ -335,10 +384,11 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       TinCanEmpty=5,
       BlowTorch=1,
-
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
       Result:Aluminum,
       Time:250.0,
-      Category:Recycling,
+      Category:ApoRecycle,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       Sound:Hammering,
@@ -352,10 +402,11 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       BeerCanEmpty=5,
       BlowTorch=1,
-
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
       Result:Aluminum,
       Time:250.0,
-      Category:Recycling,
+      Category:ApoRecycle,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       Sound:Hammering,
@@ -369,10 +420,11 @@ module Apocraft
       ScrapMetal=12,
       WeldingRods=2,
       BlowTorch=1,
-
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
       Result:SmallSheetMetal,
       Time:500.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=3,
@@ -385,10 +437,11 @@ module Apocraft
       ScrapMetal=30,
       WeldingRods=2,
       BlowTorch=1,
-
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
       Result:SheetMetal,
       Time:500.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=3,
@@ -402,10 +455,11 @@ module Apocraft
       SmallSheetMetal=1,
       ScrapMetal=3,
       BlowTorch=1,
-
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
       Result:Wire,
       Time:200.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=1,
@@ -419,10 +473,11 @@ module Apocraft
       ScrapMetal=10,
       WeldingRods=2,
       BlowTorch=1,
-
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
       Result:MetalBar,
       Time:350.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=2,
@@ -436,10 +491,11 @@ module Apocraft
       ScrapMetal=10,
       WeldingRods=2,
       BlowTorch=1,
-
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
       Result:MetalPipe,
       Time:350.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=2,
@@ -450,10 +506,11 @@ module Apocraft
    {
       keep [Recipe.GetItemTypes.Hammer],
       ScrapMetal=2,
-
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
       Result:Screws=2,
       Time:150.0,
-      Category:Recycling,
+      Category:ApoRecycle,
       SkillRequired:MetalWelding=1,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding01,
    }
@@ -486,7 +543,7 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       Result:Pot,
       Time:80.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=1,
@@ -500,7 +557,7 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       Result:Saucepan,
       Time:80.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=1,
@@ -514,7 +571,7 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       Result:GridlePan,
       Time:80.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=1,
@@ -528,7 +585,7 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       Result:RoastingPan,
       Time:80.0,
-      Category:Welding,
+      Category:ApoForging,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       SkillRequired:MetalWelding=1,
@@ -545,10 +602,11 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       keep [Recipe.GetItemTypes.Saw],
       keep [Recipe.GetItemTypes.Hammer],
-
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
       Result:IronSight,
       Time:800.0,
-      Category:Welding,
+      Category:ApoForging,
       SkillRequired:MetalWelding=3,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
    }
@@ -563,10 +621,11 @@ module Apocraft
       keep [Recipe.GetItemTypes.Saw],
       keep [Recipe.GetItemTypes.Hammer],
       keep [Recipe.GetItemTypes.HuntingKnife],
-
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
       Result:ChokeTubeFull,
       Time:800.0,
-      Category:Welding,
+      Category:ApoForging,
       SkillRequired:MetalWelding=3,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
    }
@@ -581,10 +640,11 @@ module Apocraft
       keep [Recipe.GetItemTypes.Saw],
       keep [Recipe.GetItemTypes.Hammer],
       keep [Recipe.GetItemTypes.HuntingKnife],
-
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
       Result:ChokeTubeImproved,
       Time:800.0,
-      Category:Welding,
+      Category:ApoForging,
       SkillRequired:MetalWelding=3,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
    }
@@ -599,10 +659,11 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       keep [Recipe.GetItemTypes.Saw],
       keep [Recipe.GetItemTypes.HuntingKnife],
-
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
       Result:x2Scope,
       Time:800.0,
-      Category:Welding,
+      Category:ApoForging,
       SkillRequired:MetalWelding=3,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
    }
@@ -617,10 +678,11 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       keep [Recipe.GetItemTypes.Saw],
       keep [Recipe.GetItemTypes.HuntingKnife],
-
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
       Result:x4Scope,
       Time:800.0,
-      Category:Welding,
+      Category:ApoForging,
       SkillRequired:MetalWelding=3,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
    }
@@ -635,10 +697,11 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       keep [Recipe.GetItemTypes.Saw],
       keep [Recipe.GetItemTypes.HuntingKnife],
-
+      Sound:ForgeTableSFX,
+      NearItem:ForgeTable,
       Result:x8Scope,
       Time:1200.0,
-      Category:Welding,
+      Category:ApoForging,
       SkillRequired:MetalWelding=3,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
    }

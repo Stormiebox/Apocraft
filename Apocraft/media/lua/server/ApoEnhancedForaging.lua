@@ -1,80 +1,78 @@
 -- ApoEnhancedForaging.lua
--- This script introduces a more rewarding foraging system where players can find
--- more items based on their foraging skill. Additionally, certain areas in the map
--- are designated as "hotspots" where the foraging yield is doubled.
+-- Introduces a rewarding foraging system using Procedural Hotspots and Search Mode hooks.
 
--- Import the external module.
-require "!_TargetSquare_OnLoad.lua"
+require "TimedActions/ISScavengeAction"
 
--- List to store known foraging hotspots.
-local hotspots = {}
+local ApoEnhancedForaging = {}
 
--- Function to handle when a chunk of the map is loaded. It will determine if the
--- chunk is a foraging hotspot.
-function OnChunkLoadedHandler(wx, wy)
-    -- Get the chance from SandboxVars. If not set, default to 10%.
+-- 1. PROCEDURAL HOTSPOT CHECKER
+-- We divide the map into 10x10 tile "zones" and hash them.
+-- No save data or chunk-loading APIs required!
+local function isForagingHotspot(x, y)
+    local zoneX = math.floor(x / 10)
+    local zoneY = math.floor(y / 10)
+
+    -- Procedural Hash
+    local hash = (zoneX * 374761393) + (zoneY * 668265263)
+    local roll = math.abs(hash) % 100 -- Roll from 0 to 99
+
     local hotspotChance = SandboxVars.ApoEnhancedForaging.HotspotChance or 10.0
 
-    if ZombRand(100) < hotspotChance then
-        local hotspot = { x = wx, y = wy }
-        table.insert(hotspots, hotspot)
-
-        -- Use the TargetSquare OnLoad API to remember this hotspot across game loads.
-        System.addCommand(wx, wy, 0, { command = "MarkForagingHotspot", x = wx, y = wy })
-    end
+    return roll < hotspotChance
 end
 
--- Function from our !_TargetSquare_OnLoad.lua API to process saved foraging hotspot data
--- and add them back to the game when the chunk is loaded.
-function System.OnLoadCommands.MarkForagingHotspot(square, command)
-    table.insert(hotspots, { x = command.x, y = command.y })
-end
+-- 2. HOOKING INTO VANILLA SEARCH MODE
+-- We wait for the game to boot, then wrap the vanilla foraging action.
+local function InjectEnhancedForaging()
+    if not ISScavengeAction then return end
 
--- Function to handle when a player initiates foraging. The yield and type of items
--- they find will be influenced by their foraging skill and whether they're in a hotspot.
-function OnPlayerForageHandler(player)
-    local skillLevel = player:getPerkLevel(Perks.Foraging)
-    local multiplier = 1
+    -- Save the original vanilla function
+    local original_perform = ISScavengeAction.perform
 
-    -- Check if the player is within a foraging hotspot.
-    local playerX, playerY = player:getX(), player:getY()
-    for _, hotspot in pairs(hotspots) do
-        if math.abs(hotspot.x - playerX) <= 10 and math.abs(hotspot.y - playerY) <= 10 then
-            multiplier = 2 -- Double the yield if in a hotspot.
-            break
+    -- Overwrite it with our custom wrapper
+    function ISScavengeAction:perform()
+        -- 1. Call the original function so the player gets the vanilla item normally
+        original_perform(self)
+
+        -- 2. Run our Apocraft Bonus Logic
+        local character = self.character
+        if not character then return end
+
+        -- Give a 15% chance for a foraging "Jackpot" so we don't flood the server economy on every single twig pickup.
+        if ZombRand(100) < 15 then
+            local skillLevel = character:getPerkLevel(Perks.Foraging)
+            local multiplier = 1
+
+            -- Check if this specific square is in a procedural hotspot
+            if isForagingHotspot(character:getX(), character:getY()) then
+                multiplier = 2
+            end
+
+            local bonusItems = {
+                "Base.Twigs", "Base.Stone", "Base.WildGarlic", "Base.Ginseng",
+                "Base.HerbsCommon", "Base.BerryBlue", "Base.BerryBlack",
+                "Base.MushroomGeneric1", "Base.MushroomGeneric3", "Base.MushroomGeneric4",
+                "Base.MushroomGeneric5", "Base.MushroomGeneric6", "Base.MushroomGeneric7"
+            }
+
+            local item = bonusItems[ZombRand(1, #bonusItems + 1)]
+            local itemCount = (skillLevel + 1) * multiplier
+
+            character:getInventory():AddItems(item, itemCount)
+
+            -- Inform the player of their jackpot!
+            if character:isLocalPlayer() then
+                if multiplier == 2 then
+                    character:setHaloNote(getText("IGUI_Found_Foraging_Hotspot"), 0, 255, 0, 300)
+                else
+                    character:setHaloNote(getText("IGUI_Found_Extra_Stash"), 200, 200, 200, 300)
+                end
+            end
         end
     end
-
-    -- Determine the number of items player finds based on the new enhanced foraging system.
-    local bonusItems = {
-        "Base.Twigs",
-        "Base.Stone",
-        "Base.WildGarlic",
-        "Base.Ginseng",
-        "Base.HerbsCommon",
-        "Base.BerryBlue",
-        "Base.BerryBlack",
-        "Base.MushroomGeneric1",
-        "Base.MushroomGeneric3",
-        "Base.MushroomGeneric4",
-        "Base.MushroomGeneric5",
-        "Base.MushroomGeneric6",
-        "Base.MushroomGeneric7"
-    }
-
-    local item = bonusItems[ZombRand(1, #bonusItems + 1)]
-    local itemCount = (skillLevel + 1) * multiplier
-    player:getInventory():AddItems(item, itemCount)
-
-    -- Inform the player they found something.
-    player:setHaloNote("I've found something interesting!")
 end
 
--- Attach the handlers to the appropriate events.
-Events.OnChunkLoaded.Add(OnChunkLoadedHandler)
-Events.OnPlayerForage.Add(OnPlayerForageHandler)
+-- Inject our custom code right as the game sets up actions
+Events.OnGameBoot.Add(InjectEnhancedForaging)
 
-return {
-    OnChunkLoadedHandler = OnChunkLoadedHandler,
-    OnPlayerForageHandler = OnPlayerForageHandler
-}
+return ApoEnhancedForaging

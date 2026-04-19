@@ -5,17 +5,6 @@ module Apocraft
         Base
     }
 
-   recipe Make Duct Tape
-   {
-      DenimStrips,
-      Aluminum,
-      Glue/Woodglue,
-      Water=2,
-      keep [Recipe.GetItemTypes.Scissors],
-      Result:DuctTape,
-      Time:130.0,
-   }
-
    /*************************Remove Paint From Light Bulbs*********************/
    recipe Clean Paint From Light Bulb
    {
@@ -26,7 +15,7 @@ module Apocraft
 
       Result:LightBulb,
       Time:250.0,
-      Category:Paints,
+      Category:ApoPaints,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       Sound:MakePlaster,
@@ -41,7 +30,7 @@ module Apocraft
 
       Result:LightBulbRed,
       Time:150.0,
-      Category:Paints,
+      Category:ApoPaints,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       Sound:MakePlaster,
@@ -55,7 +44,7 @@ module Apocraft
 
       Result:LightBulbYellow,
       Time:150.0,
-      Category:Paints,
+      Category:ApoPaints,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       Sound:MakePlaster,
@@ -69,7 +58,7 @@ module Apocraft
 
       Result:LightBulbGreen,
       Time:150.0,
-      Category:Paints,
+      Category:ApoPaints,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       Sound:MakePlaster,
@@ -83,7 +72,7 @@ module Apocraft
 
       Result:LightBulbPurple,
       Time:150.0,
-      Category:Paints,
+      Category:ApoPaints,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       Sound:MakePlaster,
@@ -97,7 +86,7 @@ module Apocraft
 
       Result:LightBulbPink,
       Time:150.0,
-      Category:Paints,
+      Category:ApoPaints,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       Sound:MakePlaster,
@@ -111,7 +100,7 @@ module Apocraft
 
       Result:LightBulbOrange,
       Time:150.0,
-      Category:Paints,
+      Category:ApoPaints,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       Sound:MakePlaster,
@@ -125,7 +114,7 @@ module Apocraft
 
       Result:LightBulbCyan,
       Time:150.0,
-      Category:Paints,
+      Category:ApoPaints,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       Sound:MakePlaster,
@@ -139,7 +128,7 @@ module Apocraft
 
       Result:LightBulbBlue,
       Time:150.0,
-      Category:Paints,
+      Category:ApoPaints,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
       Sound:MakePlaster,

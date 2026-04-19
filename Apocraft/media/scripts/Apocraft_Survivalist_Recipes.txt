@@ -10,8 +10,7 @@ module Apocraft
       keep [Recipe.GetItemTypes.Hammer],
       keep [Recipe.GetItemTypes.Scissors],
       PopEmpty/Pop2Empty/Pop3Empty/TinCanEmpty/BeerCanEmpty,
-
-
+      NeedToBeLearn:true
       Result:Aluminum,
       Sound:Hammering,
       Time:250.0,
@@ -130,33 +129,6 @@ module Apocraft
       Override:true,
    }
 
-   recipe Make Plaster Powder
-   {
-      Plasticbag/Garbagebag,
-      Water=10,
-      [Recipe.GetItemTypes.Flour],
-      keep Pot,
-      keep WoodenStick,
-
-      Result:PlasterPowder,
-      Time:800.0,
-      Category:Survivalist,
-   }
-
-   recipe Make Plaster Powder
-   {
-      Plasticbag/Garbagebag,
-      Stone=5,
-      Water=10,
-      Glue=2,
-      keep Pot,
-      keep WoodenStick,
-
-      Result:PlasterPowder,
-      Time:800.0,
-      Category:Survivalist,
-   }
-
    recipe Make Bag of Gravel
    {
       EmptySandbag,
@@ -185,21 +157,6 @@ module Apocraft
       keep [Recipe.GetItemTypes.Hammer],
 
       Result:Sandbag,
-      Time:1600.0,
-      Category:Survivalist,
-   }
-
-   recipe Make Concrete Powder
-   {
-      EmptySandbag=3,
-      Gravelbag=4,
-      Dirtbag=1,
-      Sandbag=2,
-      keep Pot,
-      keep MetalBar,
-      keep CampfireKit,
-
-      Result:ConcretePowder=3,
       Time:1600.0,
       Category:Survivalist,
    }
@@ -282,8 +239,8 @@ module Apocraft
       BlowTorch=1,
       keep [Recipe.GetItemTypes.WeldingMask],
       keep [Recipe.GetItemTypes.Hammer],
-
       CanBeDoneFromFloor:true,
+      NeedToBeLearn:true
       Result:TentPeg=4,
       Time:1800.0,
       Category:Survivalist,
@@ -297,57 +254,9 @@ module Apocraft
       Glue/Woodglue,
       keep Pot,
       keep [Recipe.GetItemTypes.Scissors],
-
+      CanBeDoneFromFloor:true,
       Result:EggCarton,
       Time:900.0,
-   }
-
-   recipe Make Charcoal From Twigs
-   {
-      Twigs=10,
-      CampfireKit,
-      Lighter,
-      Dirtbag=4,
-      Water=10,
-      keep BucketEmpty,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-
-      CanBeDoneFromFloor:true,
-      Result:Charcoal=4,
-      Time:900.0,
-      Category:Survivalist,
-   }
-
-   recipe Make Charcoal From Tree Branch
-   {
-      TreeBranch=8,
-      CampfireKit,
-      Lighter,
-      Dirtbag=4,
-      Water=10,
-      keep BucketEmpty,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-
-      CanBeDoneFromFloor:true,
-      Result:Charcoal=6,
-      Time:900.0,
-      Category:Survivalist,
-   }
-
-   recipe Make Charcoal From Log
-   {
-      Log=1,
-      CampfireKit,
-      Lighter,
-      Dirtbag=4,
-      Water=10,
-      keep BucketEmpty,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-
-      CanBeDoneFromFloor:true,
-      Result:Charcoal=8,
-      Time:900.0,
-      Category:Survivalist,
    }
 
    recipe Straighten Suture Needle for Needle
@@ -355,9 +264,81 @@ module Apocraft
       SutureNeedle,
       keep [Recipe.GetItemTypes.Hammer],
       keep [Recipe.GetItemTypes.Scissors],
-
+      CanBeDoneFromFloor:true,
       Result:Needle,
       Time:600.0,
+      Category:Survivalist,
+   }
+
+   recipe Bend Needle for Suture Needle
+   {
+      Needle,
+      keep [Recipe.GetItemTypes.Hammer],
+      keep [Recipe.GetItemTypes.Scissors],
+      CanBeDoneFromFloor:true,
+      Result:SutureNeedle,
+      Time:600.0,
+      Category:Survivalist,
+   }
+
+    /************************ Charcoal ************************/
+   recipe Make Charcoal From Twigs
+   {
+      Twigs=8,
+      Dirtbag=2,
+      Water=2,
+      keep BucketEmpty,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      NearItem:Campfire,
+      CanBeDoneFromFloor:true,
+      Result:Charcoal=6,
+      NeedToBeLearn:true
+      Time:100.0,
+      Category:Survivalist,
+   }
+
+   recipe Make Charcoal From Tree Branch
+   {
+      TreeBranch=6,
+      Dirtbag=2,
+      Water=2,
+      keep BucketEmpty,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      NearItem:Campfire,
+      CanBeDoneFromFloor:true,
+      Result:Charcoal=8,
+      NeedToBeLearn:true
+      Time:200.0,
+      Category:Survivalist,
+   }
+
+   recipe Make Charcoal From Log
+   {
+      Log=1,
+      Dirtbag=2,
+      Water=4,
+      keep BucketEmpty,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      NearItem:Campfire,
+      CanBeDoneFromFloor:true,
+      Result:Charcoal=12,
+      NeedToBeLearn:true
+      Time:300.0,
+      Category:Survivalist,
+   }
+
+   recipe Make Charcoal From Plank
+   {
+      Plank=1,
+      Dirtbag=2,
+      Water=2,
+      keep BucketEmpty,
+      keep [Recipe.GetItemTypes.HuntingKnife],
+      NearItem:Campfire,
+      CanBeDoneFromFloor:true,
+      Result:Charcoal=4,
+      NeedToBeLearn:true
+      Time:80.0,
       Category:Survivalist,
    }
 

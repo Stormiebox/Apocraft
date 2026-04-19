@@ -19,6 +19,7 @@ module Apocraft
       Category:Tailoring,
       AnimNode:RipSheets,
       Time:200.0,
+      NearItem:Tailoring Table,
    }
 
    /*********************Seed Extraction*********************/

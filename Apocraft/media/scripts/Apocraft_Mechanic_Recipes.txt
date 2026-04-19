@@ -5,19 +5,6 @@ module Apocraft
       Base
    }
 
-   item Book_AuntRayasEngineParts
-   {
-      Weight=0.1,
-      Type=Literature,
-      DisplayName=AuntRayaBook,
-      Icon=Book_AuntRayasEngineParts,
-      TeachedRecipes=Create 5 Spare Engine Parts;Create 10 Spare Engine Parts;Create 15 Spare Engine Parts;Create 20 Spare Engine Parts;Create 25 Spare Engine Parts;Create 30 Spare Engine Parts;Create 35 Spare Engine Parts;Create 40 Spare Engine Parts;Create 45 Spare Engine Parts;Create 50 Spare Engine Parts,
-      ReplaceOnUse=Book_AuntRayasEngineParts,
-      StaticModel=Book,
-      WorldStaticModel=BookClosedGrey_Ground,
-      Tooltip=Tooltip_AuntRaya,
-   }
-
    recipe Create 5 Spare Engine Parts
    {
       keep [Recipe.GetItemTypes.WeldingMask],
@@ -34,15 +21,16 @@ module Apocraft
 
       SkillRequired:MetalWelding=1,
       AnimNode:BlowTorchFloor,
-      Sound:RayaWelding,
+      Sound:MetalWeldingSFX,
       NeedToBeLearn:true,
       Result:EngineParts=5,
       Time:100.0,
-      Category:AuntRaya,
+      Category:ApoForging,
       CanBeDoneFromFloor:true,
       OnGiveXP:Get10MetalWeldingXP,
       Prop1:BlowTorch,
       Prop2:EngineParts,
+      NearItem:Mechanic Table,
    }
 
    recipe Create 10 Spare Engine Parts
@@ -61,15 +49,16 @@ module Apocraft
 
       SkillRequired:MetalWelding=2,
       AnimNode:BlowTorchFloor,
-      Sound:RayaWelding,
+      Sound:MetalWeldingSFX,
       NeedToBeLearn:true,
       Result:EngineParts=10,
       Time:150.0,
-      Category:AuntRaya,
+      Category:ApoForging,
       CanBeDoneFromFloor:true,
       OnGiveXP:Get10MetalWeldingXP,
       Prop1:BlowTorch,
       Prop2:EngineParts,
+      NearItem:Mechanic Table,
    }
 
    recipe Create 15 Spare Engine Parts
@@ -88,15 +77,16 @@ module Apocraft
 
       SkillRequired:MetalWelding=3,
       AnimNode:BlowTorchFloor,
-      Sound:RayaWelding,
+      Sound:MetalWeldingSFX,
       NeedToBeLearn:true,
       Result:EngineParts=15,
       Time:200.0,
-      Category:AuntRaya,
+      Category:ApoForging,
       CanBeDoneFromFloor:true,
       OnGiveXP:Get10MetalWeldingXP,
       Prop1:BlowTorch,
       Prop2:EngineParts,
+      NearItem:Mechanic Table,
    }
 
    recipe Create 20 Spare Engine Parts
@@ -115,15 +105,16 @@ module Apocraft
 
       SkillRequired:MetalWelding=4,
       AnimNode:BlowTorchFloor,
-      Sound:RayaWelding,
+      Sound:MetalWeldingSFX,
       NeedToBeLearn:true,
       Result:EngineParts=20,
       Time:250.0,
-      Category:AuntRaya,
+      Category:ApoForging,
       CanBeDoneFromFloor:true,
       OnGiveXP:Get10MetalWeldingXP,
       Prop1:BlowTorch,
       Prop2:EngineParts,
+      NearItem:Mechanic Table,
    }
 
    recipe Create 25 Spare Engine Parts
@@ -142,15 +133,16 @@ module Apocraft
 
       SkillRequired:MetalWelding=5,
       AnimNode:BlowTorchFloor,
-      Sound:RayaWelding,
+      Sound:MetalWeldingSFX,
       NeedToBeLearn:true,
       Result:EngineParts=25,
       Time:300.0,
-      Category:AuntRaya,
+      Category:ApoForging,
       CanBeDoneFromFloor:true,
       OnGiveXP:Get10MetalWeldingXP,
       Prop1:BlowTorch,
       Prop2:EngineParts,
+      NearItem:Mechanic Table,
    }
 
    recipe Create 30 Spare Engine Parts
@@ -169,15 +161,16 @@ module Apocraft
 
       SkillRequired:MetalWelding=6,
       AnimNode:BlowTorchFloor,
-      Sound:RayaWelding,
+      Sound:MetalWeldingSFX,
       NeedToBeLearn:true,
       Result:EngineParts=30,
       Time:350.0,
-      Category:AuntRaya,
+      Category:ApoForging,
       CanBeDoneFromFloor:true,
       OnGiveXP:Get20MetalWeldingXP,
       Prop1:BlowTorch,
       Prop2:EngineParts,
+      NearItem:Mechanic Table,
    }
 
    recipe Create 35 Spare Engine Parts
@@ -196,15 +189,16 @@ module Apocraft
 
       SkillRequired:MetalWelding=7,
       AnimNode:BlowTorchFloor,
-      Sound:RayaWelding,
+      Sound:MetalWeldingSFX,
       NeedToBeLearn:true,
       Result:EngineParts=35,
       Time:400.0,
-      Category:AuntRaya,
+      Category:ApoForging,
       CanBeDoneFromFloor:true,
       OnGiveXP:Get20MetalWeldingXP,
       Prop1:BlowTorch,
       Prop2:EngineParts,
+      NearItem:Mechanic Table,
    }
 
    recipe Create 40 Spare Engine Parts
@@ -223,15 +217,16 @@ module Apocraft
 
       SkillRequired:MetalWelding=8,
       AnimNode:BlowTorchFloor,
-      Sound:RayaWelding,
+      Sound:MetalWeldingSFX,
       NeedToBeLearn:true,
       Result:EngineParts=40,
       Time:450.0,
-      Category:AuntRaya,
+      Category:ApoForging,
       CanBeDoneFromFloor:true,
       OnGiveXP:Get20MetalWeldingXP,
       Prop1:BlowTorch,
       Prop2:EngineParts,
+      NearItem:Mechanic Table,
    }
 
    recipe Create 45 Spare Engine Parts
@@ -250,15 +245,16 @@ module Apocraft
 
       SkillRequired:MetalWelding=9,
       AnimNode:BlowTorchFloor,
-      Sound:RayaWelding,
+      Sound:MetalWeldingSFX,
       NeedToBeLearn:true,
       Result:EngineParts=45,
       Time:500.0,
-      Category:AuntRaya,
+      Category:ApoForging,
       CanBeDoneFromFloor:true,
       OnGiveXP:Get20MetalWeldingXP,
       Prop1:BlowTorch,
       Prop2:EngineParts,
+      NearItem:Mechanic Table,
    }
 
    recipe Create 50 Spare Engine Parts
@@ -277,14 +273,15 @@ module Apocraft
 
       SkillRequired:MetalWelding=10,
       AnimNode:BlowTorchFloor,
-      Sound:RayaWelding,
+      Sound:MetalWeldingSFX,
       NeedToBeLearn:true,
       Result:EngineParts=50,
       Time:550.0,
-      Category:AuntRaya,
+      Category:ApoForging,
       CanBeDoneFromFloor:true,
       OnGiveXP:Get20MetalWeldingXP,
       Prop1:BlowTorch,
       Prop2:EngineParts,
+      NearItem:Mechanic Table,
    }
 }

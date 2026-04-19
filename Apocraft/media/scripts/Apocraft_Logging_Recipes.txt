@@ -14,11 +14,12 @@ module Apocraft
 	   Result:Plank=5,
 	   Sound:Sawing,
 	   Time:230.0,
-	   Category:ApoLogging,
-      NeedToBeLearn:true,
+	   Category:ApoCarpentry,
+      NeedToBeLearn:false,
       SkillRequired:Logging=3,
       NearItem:Armory Table,
 	   OnGiveXP:Recipe.OnGiveXP.SawLogs,
+      OnCreate:Apocraft.OnCreate.SawLogsWoodworkerBonus,
 	   AnimNode:SawLog,
 	   Prop1:Source=2,
 	   Prop2:Log,
@@ -33,11 +34,12 @@ module Apocraft
 	   Result:Plank=7,
 	   Sound:Sawing,
 	   Time:230.0,
-	   Category:ApoLogging,
-      NeedToBeLearn:true,
+	   Category:ApoCarpentry,
+      NeedToBeLearn:false,
       SkillRequired:Logging=5,
       NearItem:Armory Table,
 	   OnGiveXP:Recipe.OnGiveXP.SawLogs,
+      OnCreate:Apocraft.OnCreate.SawLogsWoodworkerBonus,
 	   AnimNode:SawLog,
 	   Prop1:Source=2,
 	   Prop2:Log,
@@ -52,11 +54,12 @@ module Apocraft
 	   Result:Plank=9,
 	   Sound:Sawing,
 	   Time:230.0,
-	   Category:ApoLogging,
-      NeedToBeLearn:true,
+	   Category:ApoCarpentry,
+      NeedToBeLearn:false,
       SkillRequired:Logging=7,
       NearItem:Armory Table,
 	   OnGiveXP:Recipe.OnGiveXP.SawLogs,
+      OnCreate:Apocraft.OnCreate.SawLogsWoodworkerBonus,
 	   AnimNode:SawLog,
 	   Prop1:Source=2,
 	   Prop2:Log,
@@ -71,11 +74,12 @@ module Apocraft
 	   Result:Plank=9,
 	   Sound:Sawing,
 	   Time:230.0,
-	   Category:ApoLogging,
-      NeedToBeLearn:true,
+	   Category:ApoCarpentry,
+      NeedToBeLearn:false,
       SkillRequired:Logging=9,
       NearItem:Armory Table,
 	   OnGiveXP:Recipe.OnGiveXP.SawLogs,
+      OnCreate:Apocraft.OnCreate.SawLogsWoodworkerBonus,
 	   AnimNode:SawLog,
 	   Prop1:Source=2,
 	   Prop2:Log,
@@ -89,7 +93,7 @@ module Apocraft
 
       Result:LogStacks2,
       Time:200.0,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       CanBeDoneFromFloor:true,
       NeedToBeLearn:false,
    }
@@ -101,7 +105,7 @@ module Apocraft
 
       Result:LogStacks2,
       Time:200.0,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       CanBeDoneFromFloor:true,
       NeedToBeLearn:false,
    }
@@ -113,7 +117,7 @@ module Apocraft
 
       Result:LogStacks3,
       Time:300.0,
-      Category:Carpentry,
+      Category:ApoCarpentry,
       CanBeDoneFromFloor:true,
       NeedToBeLearn:false,
    }
@@ -126,7 +130,7 @@ module Apocraft
       CanBeDoneFromFloor:true,
       Result:LogStacks3,
       Time:300.0,
-      Category:Carpentry,
+      Category:ApoCarpentry,
    }
 
    recipe Bind Four Logs with SheetRopes
@@ -138,7 +142,7 @@ module Apocraft
       NeedToBeLearn:false,
       Result:LogStacks4,
       Time:400.0,
-      Category:Carpentry,
+      Category:ApoCarpentry,
    }
 
    recipe Bind Four Logs with Ropes on the Ground
@@ -150,6 +154,6 @@ module Apocraft
       NeedToBeLearn:false,
       Result:LogStacks4,
       Time:400.0,
-      Category:Carpentry,
+      Category:ApoCarpentry,
    }
 }

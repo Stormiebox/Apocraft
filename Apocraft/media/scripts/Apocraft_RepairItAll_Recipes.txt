@@ -5,21 +5,29 @@ module Apocraft
 		Base
 	}
 	
-	fixing Fix Katana
+fixing Fix Katana
 	{
 		Require : Katana,
-	
-	Fixer : DuctTape=2,
-    Fixer : Glue=2,
-    Fixer : Scotchtape=4,
+		
+		GlobalItem : BlowTorch=5,
+		GlobalItem : [Recipe.GetItemTypes.WeldingMask],
+
+		Fixer : ScrapMetal=20,
+		Fixer : MetalBar=3,
+		Fixer : SheetMetal=2,
+		Category:ApoRepairs
 	}
 	fixing Fix Crowbar
 	{
 		Require : Crowbar,
 		
-	Fixer : DuctTape=2,
-    Fixer : Glue=2,
-    Fixer : Scotchtape=4,
+		GlobalItem : BlowTorch=5,
+		GlobalItem : [Recipe.GetItemTypes.WeldingMask],
+
+		Fixer : ScrapMetal=15,
+		Fixer : MetalBar=1,
+		Fixer : SheetMetal=1,
+		Category:ApoRepairs
 	}
 	fixing Fix Nightstick
 	{
@@ -28,21 +36,38 @@ module Apocraft
 	Fixer : DuctTape=2,
     Fixer : Glue=2,
     Fixer : Scotchtape=4,
+	Category:ApoRepairs
 	}
 	fixing Fix Meat Cleaver
 	{
 		Require : MeatCleaver,
 		
-	Fixer : DuctTape,
-    Fixer : Glue,
-    Fixer : Scotchtape=2,
+		GlobalItem : BlowTorch=5,
+		GlobalItem : [Recipe.GetItemTypes.WeldingMask],
+		Category:ApoRepairs
+		Fixer : ScrapMetal=2,
+		Fixer : Glue=2,
 	}
 	fixing Fix Pipe Wrench
 	{
 		Require : PipeWrench,
 		
-	Fixer : DuctTape,
-	Fixer : Glue,
-    Fixer : Scotchtape=2,
+		GlobalItem : BlowTorch=5,
+		GlobalItem : [Recipe.GetItemTypes.WeldingMask],
+		Category:ApoRepairs
+		Fixer : ScrapMetal=3,
+		Fixer : MetalBar=1,
 	}
+
+   recipe Make Duct Tape
+   {
+      DenimStrips,
+      Aluminum,
+      Glue/Woodglue,
+      Water=2,
+      keep [Recipe.GetItemTypes.Scissors],
+      Result:DuctTape,
+	  Category:ApoRepairs
+      Time:130.0,
+   }
 }

@@ -12,13 +12,13 @@ local gatherWoodQuest = {
     awardsitem = "Base.WoodenPlank;20", -- Receive 20 wooden planks as a reward
 }
 
--- Quest 2: Craft a Weapon
+-- Quest 2: Wish For Fish
 local craftWeaponQuest = {
-    guid = "Apocraft_CraftWeapon",
-    text = "Craft a Weapon",
+    guid = "Apocraft_WishFish",
+    text = "Well as you can see survivor. I am in need of some fish.",
     texture = "Item_BaseballBat",
-    title = "IGUI_QuestTitle_CraftWeapon",
-    lore = { "IGUI_QuestLore_CraftWeapon" },
+    title = "IGUI_QuestTitle_WishFish",
+    lore = { "IGUI_QuestLore_WishFish" },
     needsitem = "Base.WoodenPlank;5;Base.Nails;3", -- Craft with planks and nails
     awardsitem = "Base.BaseballBat;1",             -- Receive a baseball bat as a reward
 }

@@ -5,49 +5,49 @@ module Apocraft
         Base
     }
 
-   /******Teaches recipes for forging various items under metalworking category.*********/
+   /******Teaches recipes for forging various items under forging category.*********/
     item ApoForgingMagazine
     {
         DisplayCategory = SkillBook,
         Weight	=	0.1,
         Type	=	Literature,
-        DisplayName	=	The Smithing Magazine Vol. 1,
+        DisplayName	=	Apocraft Forging Series,
         Icon	=	ApoForgingMagazine,
-        TeachedRecipes  =   Make Fork;Make Spoon;Make Cooking Pot;Make Roasting Pan;Make Saucepan;Make Baking Tray;Make Baking Pan;Make Pan,
+        TeachedRecipes  =   Forge 9mm Bullets Mold;Forge 308 Bullets Mold;Forge 223 Bullets Mold;Forge Shotgun Shells Mold;Homemade Gunpowder;Improvised Homemade Gunpowder;Forge Propane Torch;Forge Tongs;Forge Shovel;Forge Hand Shovel;Forge Iron Ingot;Forge Iron Ingots,
         ReplaceOnUse    =   ApoForingMagazine,
         Tooltip = Tooltip_ApoForgingMagazine,
         StaticModel = Magazine,
-        WorldStaticModel = MagazineGround,
+        WorldStaticModel = ApoForgingTXT,
     }
 
-   /******Teaches recipes for recycling various items under metalworking category.*********/
+   /******Teaches recipes for recycling various items under Recycle It All category.*********/
     item ApoRecycleItAllMagazine
     {
         DisplayCategory = SkillBook,
         Weight	=	0.1,
         Type	=	Literature,
-        DisplayName	=	The Smithing Magazine Vol. 1,
-        Icon	=	MagazineBlacksmith1,
-        TeachedRecipes  =   Make Fork;Make Spoon;Make Cooking Pot;Make Roasting Pan;Make Saucepan;Make Baking Tray;Make Baking Pan;Make Pan,
-        ReplaceOnUse    =   SmithingMag1,
+        DisplayName	=	Apocraft Recycle It All Series,
+        Icon	=	ApoRecycleItAllMagazine,
+        TeachedRecipes  = Dismantle Car Hood;Dismantle Car Trunk Lid;Dismantle Car Gas Tank;Dismantle Car Brake;Dismantle Car Suspension;Dismantle Car Muffler;Dismantle Car Door;Get 160 Nails From 1 Metal Sheet;Get 40 Nails From 1 Small Metal Sheet;Get 10 Nails From 1 Metal Scrap,
+        ReplaceOnUse    =   ApoRecycleItAllMagazine,
         Tooltip = Tooltip_ApoRecycleItAllMagazine,
         StaticModel = Magazine,
-        WorldStaticModel = MagazineGround,
+        WorldStaticModel = ApoRecycleItAllTXT,
     }
 
-   /******Teaches recipes for teaches recipes for carpentry and logging.*********/
+   /******Teaches recipes for teaches recipes for carpentry.*********/
     item ApoCarpenterMagazine
     {
         DisplayCategory = SkillBook,
         Weight	=	0.1,
         Type	=	Literature,
-        DisplayName	=	The Smithing Magazine Vol. 1,
-        Icon	=	MagazineBlacksmith1,
-        TeachedRecipes  =   Make Fork;Make Spoon;Make Cooking Pot;Make Roasting Pan;Make Saucepan;Make Baking Tray;Make Baking Pan;Make Pan,
-        ReplaceOnUse    =   SmithingMag1,
+        DisplayName	=	Apocraft Carpenter Series,
+        Icon	=	ApoCarpenterMagazine,
+        TeachedRecipes  =   Make Concrete Powder;Mix Up A Batch of Plaster;Combine Canoe Paddles;Craft WoodenPlank From UnusableWood;Carve Mouse Trap;Carve Out Mortar Pestles;Carve Out Mortar Pestle;Carve Hockey Stick;Carve Ice Hockey Stick;Carve Baseball Bat;Carve Canoe Paddle;Carve Canoe Paddle Double,
+        ReplaceOnUse    =   ApoCarpenterMagazine,
         Tooltip = Tooltip_ApoCarpenterMagazine,
         StaticModel = Magazine,
-        WorldStaticModel = MagazineGround,
+        WorldStaticModel = ApoCarpenterTXT,
     }
 
    /******Teaches recipes for canning various cannable food items.*********/
@@ -56,13 +56,13 @@ module Apocraft
         DisplayCategory = SkillBook,
         Weight	=	0.1,
         Type	=	Literature,
-        DisplayName	=	The Smithing Magazine Vol. 1,
-        Icon	=	MagazineBlacksmith1,
+        DisplayName	=	Apocraft Canning Series,
+        Icon	=	ApoCanningMagazine,
         TeachedRecipes  =   Make Fork;Make Spoon;Make Cooking Pot;Make Roasting Pan;Make Saucepan;Make Baking Tray;Make Baking Pan;Make Pan,
-        ReplaceOnUse    =   SmithingMag1,
+        ReplaceOnUse    =   ApoCanningMagazine,
         Tooltip = Tooltip_ApoCanningMagazine,
         StaticModel = Magazine,
-        WorldStaticModel = MagazineGround,
+        WorldStaticModel = ApoCanningTXT,
     }
 
    /******Teaches recipes for cooking food items.*********/
@@ -71,13 +71,13 @@ module Apocraft
         DisplayCategory = SkillBook,
         Weight	=	0.1,
         Type	=	Literature,
-        DisplayName	=	The Smithing Magazine Vol. 1,
-        Icon	=	MagazineBlacksmith1,
+        DisplayName	=	Apocraft Culinary Series,
+        Icon	=	ApoCulinaryMagazine,
         TeachedRecipes  =   Make Fork;Make Spoon;Make Cooking Pot;Make Roasting Pan;Make Saucepan;Make Baking Tray;Make Baking Pan;Make Pan,
-        ReplaceOnUse    =   SmithingMag1,
+        ReplaceOnUse    =   ApoCulinaryMagazine,
         Tooltip = Tooltip_ApoCulinaryMagazine,
         StaticModel = Magazine,
-        WorldStaticModel = MagazineGround,
+        WorldStaticModel = ApoCulinaryTXT,
     }
 
    /******Teaches recipes for teaches recipes for electronics.*********/
@@ -86,13 +86,13 @@ module Apocraft
         DisplayCategory = SkillBook,
         Weight	=	0.1,
         Type	=	Literature,
-        DisplayName	=	The Smithing Magazine Vol. 1,
-        Icon	=	MagazineBlacksmith1,
-        TeachedRecipes  =   Make Fork;Make Spoon;Make Cooking Pot;Make Roasting Pan;Make Saucepan;Make Baking Tray;Make Baking Pan;Make Pan,
-        ReplaceOnUse    =   SmithingMag1,
+        DisplayName	=	Apocraft Electrician Series,
+        Icon	=	ApoElectricianMagazine,
+        TeachedRecipes  =   Make Generator;Make Car Battery Charger;Make Solar Panel;Make Inverter,
+        ReplaceOnUse    =   ApoElectricianMagazine,
         Tooltip = Tooltip_ApoElectricianMagazine,
         StaticModel = Magazine,
-        WorldStaticModel = MagazineGround,
+        WorldStaticModel = ApoElectricianTXT,
     }
 
    /******Teaches recipes for farming.*********/
@@ -101,13 +101,13 @@ module Apocraft
         DisplayCategory = SkillBook,
         Weight	=	0.1,
         Type	=	Literature,
-        DisplayName	=	The Smithing Magazine Vol. 1,
-        Icon	=	MagazineBlacksmith1,
+        DisplayName	=	Apocraft Farmer Series,
+        Icon	=	ApoFarmerMagazine,
         TeachedRecipes  =   Make Fork;Make Spoon;Make Cooking Pot;Make Roasting Pan;Make Saucepan;Make Baking Tray;Make Baking Pan;Make Pan,
-        ReplaceOnUse    =   SmithingMag1,
+        ReplaceOnUse    =   ApoFarmerMagazine,
         Tooltip = Tooltip_ApoFarmerMagazine,
         StaticModel = Magazine,
-        WorldStaticModel = MagazineGround,
+        WorldStaticModel = ApoFarmerTXT,
     }
 
    /******Teaches recipes for mechanic related content.*********/
@@ -116,13 +116,13 @@ module Apocraft
         DisplayCategory = SkillBook,
         Weight	=	0.1,
         Type	=	Literature,
-        DisplayName	=	The Smithing Magazine Vol. 1,
-        Icon	=	MagazineBlacksmith1,
-        TeachedRecipes  =   Make Fork;Make Spoon;Make Cooking Pot;Make Roasting Pan;Make Saucepan;Make Baking Tray;Make Baking Pan;Make Pan,
-        ReplaceOnUse    =   SmithingMag1,
+        DisplayName	= Apocraft Mechanic Series,
+        Icon	=	ApoMechanicMagazine,
+        TeachedRecipes  =   Create 5 Spare Engine Parts;Create 10 Spare Engine Parts;Create 15 Spare Engine Parts;Create 20 Spare Engine Parts;Create 25 Spare Engine Parts;Create 30 Spare Engine Parts;Create 35 Spare Engine Parts;Create 40 Spare Engine Parts;Create 45 Spare Engine Parts;Create 50 Spare Engine Parts,
+        ReplaceOnUse    =   ApoMechanicMagazine,
         Tooltip = Tooltip_ApoMechanicMagazine,
         StaticModel = Magazine,
-        WorldStaticModel = MagazineGround,
+        WorldStaticModel = ApoMechanicTXT,
     }
 
    /******Teaches recipes for various first  aid items.*********/
@@ -131,13 +131,13 @@ module Apocraft
         DisplayCategory = SkillBook,
         Weight	=	0.1,
         Type	=	Literature,
-        DisplayName	=	The Smithing Magazine Vol. 1,
-        Icon	=	MagazineBlacksmith1,
-        TeachedRecipes  =   Make Fork;Make Spoon;Make Cooking Pot;Make Roasting Pan;Make Saucepan;Make Baking Tray;Make Baking Pan;Make Pan,
-        ReplaceOnUse    =   SmithingMag1,
+        DisplayName	=	Apocraft Medical Series,
+        Icon	=	ApoMedicalMagazine,
+        TeachedRecipes  =   Steam Bourbon for Disinfectant;Extract Antibiotics from Moldy Bread;Make Herbal Antibiotics;Make Vitamins;Make Natural Antidepressants;Make Natural Beta Blockers;Make Homemade Disinfectant from Poultice;Make Disinfectant from Bourbon with Salt,
+        ReplaceOnUse    =   ApoMedicalMagazine,
         Tooltip = Tooltip_ApoMedicalMagazine,
         StaticModel = Magazine,
-        WorldStaticModel = MagazineGround,
+        WorldStaticModel = ApoMedicalTXT,
     }
 
    /******Teaches recipes for paint crafting and mixing. As well as coloring light bulbs.*********/
@@ -146,13 +146,12 @@ module Apocraft
         DisplayCategory = SkillBook,
         Weight	=	0.1,
         Type	=	Literature,
-        DisplayName	=	The Smithing Magazine Vol. 1,
-        Icon	=	MagazineBlacksmith1,
-        TeachedRecipes  =   Make Fork;Make Spoon;Make Cooking Pot;Make Roasting Pan;Make Saucepan;Make Baking Tray;Make Baking Pan;Make Pan,
-        ReplaceOnUse    =   SmithingMag1,
+        DisplayName	=	Apocraft Paint It All Series,
+        Icon	=	ApoPaintItAllMagazine,
+        TeachedRecipes  =   Craft White Paint;Mix Bleach and Paint For Color White,
         Tooltip = Tooltip_ApoPaintItAllMagazine,
         StaticModel = Magazine,
-        WorldStaticModel = MagazineGround,
+        WorldStaticModel = ApoPaintItAllTXT,
     }
 
    /******Teaches recipes for repairing various tools, weapons and other items.*********/
@@ -161,13 +160,13 @@ module Apocraft
         DisplayCategory = SkillBook,
         Weight	=	0.1,
         Type	=	Literature,
-        DisplayName	=	The Smithing Magazine Vol. 1,
-        Icon	=	MagazineBlacksmith1,
+        DisplayName	=	Apocraft Repair It All Series,
+        Icon	=	ApoRepairItAllMagazine,
         TeachedRecipes  =   Make Fork;Make Spoon;Make Cooking Pot;Make Roasting Pan;Make Saucepan;Make Baking Tray;Make Baking Pan;Make Pan,
-        ReplaceOnUse    =   SmithingMag1,
+        ReplaceOnUse    =   ApoRepairItAllMagazine,
         Tooltip = Tooltip_ApoRepairItAllMagazine,
         StaticModel = Magazine,
-        WorldStaticModel = MagazineGround,
+        WorldStaticModel = ApoRepairItAllTXT,
     }
 
    /******Teaches recipes for surviving in the wilderness of Kentucky.*********/
@@ -176,12 +175,27 @@ module Apocraft
         DisplayCategory = SkillBook,
         Weight	=	0.1,
         Type	=	Literature,
-        DisplayName	=	The Smithing Magazine Vol. 1,
-        Icon	=	MagazineBlacksmith1,
-        TeachedRecipes  =   Make Fork;Make Spoon;Make Cooking Pot;Make Roasting Pan;Make Saucepan;Make Baking Tray;Make Baking Pan;Make Pan,
-        ReplaceOnUse    =   SmithingMag1,
+        DisplayName	=	Apocraft Survivalist Series,
+        Icon	=	ApoSurvivalistMagazine,
+        TeachedRecipes  =   Make Charcoal From Twigs;Make Charcoal From Tree Branch;Make Charcoal From Log;Make Charcoal From Plank; Make Tent Pegs;Make Aluminum,
+        ReplaceOnUse    =   ApoSurvivalistMagazine,
         Tooltip = Tooltip_AposurvivalistMagazine,
         StaticModel = Magazine,
-        WorldStaticModel = MagazineGround,
+        WorldStaticModel = ApoSurvivalTXT,
+    }
+
+   /******Teaches recipes for Logging.*********/
+    item ApoLoggingMagazine
+    {
+        DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Apocraft Logging Series,
+        Icon	=	ApoLoggingMagazine,
+        TeachedRecipes  =   Make Fork;Make Spoon;Make Cooking Pot;Make Roasting Pan;Make Saucepan;Make Baking Tray;Make Baking Pan;Make Pan,
+        ReplaceOnUse    =   ApoLoggingMagazine,
+        Tooltip = Tooltip_ApoLoggingMagazine,
+        StaticModel = Magazine,
+        WorldStaticModel = ApoLoggingTXT,
     }
 }

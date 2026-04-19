@@ -1,5 +1,5 @@
 name=Apocraft
 id=Apocraft
-require=ISA_41
+require=ISA_41, craftingEnhancedCore, TargetSquareOnLoad, TraitTagFramework
 description=A WIP mod that adds plenty of recipes for vanilla items as well as for other mods.
 poster=ApocraftPoster.png
