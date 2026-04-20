@@ -15,7 +15,7 @@ module Apocraft
       keep Bellows,
       keep [Recipe.GetItemTypes.WeldingMask],
       keep [Recipe.GetItemTypes.Hammer],
-      NeedToBeLearn:true
+      NeedToBeLearn:true,
       Result:IronIngot,
       Time:200.0,
       Sound:ForgeTableSFX,
@@ -34,7 +34,7 @@ module Apocraft
       keep Bellows,
       keep [Recipe.GetItemTypes.WeldingMask],
       keep [Recipe.GetItemTypes.Hammer],
-      NeedToBeLearn:true
+      NeedToBeLearn:true,
       Result:IronIngot,
       Time:200.0,
       Sound:ForgeTableSFX,
@@ -53,7 +53,7 @@ module Apocraft
       keep Bellows,
       keep [Recipe.GetItemTypes.WeldingMask],
       keep [Recipe.GetItemTypes.Hammer],
-      NeedToBeLearn:true
+      NeedToBeLearn:true,
       Result:IronIngot=4,
       Time:800.0,
       Sound:ForgeTableSFX,
@@ -72,7 +72,7 @@ module Apocraft
       keep Bellows,
       keep [Recipe.GetItemTypes.WeldingMask],
       keep [Recipe.GetItemTypes.Hammer],
-      NeedToBeLearn:true
+      NeedToBeLearn:true,
       Result:IronIngot=4,
       Time:800.0,
       Sound:ForgeTableSFX,

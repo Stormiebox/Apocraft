@@ -4,57 +4,87 @@ module Apocraft
 	{
 		Base
 	}
-	
+
+	fixing Fix Sledgehammer
+	{
+		Require:Sledgehammer,
+		BlowTorch=5,
+		WeldingRods=2,
+		ScrapMetal=30,
+		MetalBars=2,
+		SheetMetal=4,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		NearItem:Armory Table,
+		Sound:MetalWeldingSFX,
+		Category:ApoRepairs,
+		NeedToBeLearn:true,
+	}
+
 fixing Fix Katana
 	{
-		Require : Katana,
-		
-		GlobalItem : BlowTorch=5,
-		GlobalItem : [Recipe.GetItemTypes.WeldingMask],
-
-		Fixer : ScrapMetal=20,
-		Fixer : MetalBar=3,
-		Fixer : SheetMetal=2,
+		Require : Katana,	
+		BlowTorch=5,
+		WeldingRods=2,
+		ScrapMetal=20,
+		MetalBar=3,
+		SheetMetal=2,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		NearItem:Armory Table,
+		Sound:MetalWeldingSFX,
 		Category:ApoRepairs
+		NeedToBeLearn:true,
 	}
+
 	fixing Fix Crowbar
 	{
-		Require : Crowbar,
-		
-		GlobalItem : BlowTorch=5,
-		GlobalItem : [Recipe.GetItemTypes.WeldingMask],
-
-		Fixer : ScrapMetal=15,
-		Fixer : MetalBar=1,
-		Fixer : SheetMetal=1,
-		Category:ApoRepairs
+		Require : Crowbar,		
+		BlowTorch=5,
+		WeldingRods=2,
+		ScrapMetal=15,
+		MetalBar=1,
+		SheetMetal=1,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		NearItem:Armory Table,
+		Sound:MetalWeldingSFX,
+		Category:ApoRepairs,
+		NeedToBeLearn:true,
 	}
+
 	fixing Fix Nightstick
 	{
-		Require : Nightstick,
-		
+	Require : Nightstick,
+	NearItem:Armory Table,
+	Sound:QuickDuctTapeSFX,
 	Fixer : DuctTape=2,
     Fixer : Glue=2,
     Fixer : Scotchtape=4,
-	Category:ApoRepairs
+	Category:ApoRepairs,
+	NeedToBeLearn:true,
+
 	}
+
 	fixing Fix Meat Cleaver
 	{
 		Require : MeatCleaver,
-		
+		NearItem:Armory Table,
+		Sound:MetalWeldingSFX,
 		GlobalItem : BlowTorch=5,
 		GlobalItem : [Recipe.GetItemTypes.WeldingMask],
-		Category:ApoRepairs
+		Category:ApoRepairs,
+		NeedToBeLearn:true,
 		Fixer : ScrapMetal=2,
 		Fixer : Glue=2,
 	}
+
 	fixing Fix Pipe Wrench
 	{
 		Require : PipeWrench,
-		
+		NearItem:Armory Table,
+		Sound:MetalWeldingSFX,
 		GlobalItem : BlowTorch=5,
 		GlobalItem : [Recipe.GetItemTypes.WeldingMask],
-		Category:ApoRepairs
+		Category:ApoRepairs,
+		NeedToBeLearn:true,
 		Fixer : ScrapMetal=3,
 		Fixer : MetalBar=1,
 	}
@@ -67,7 +97,8 @@ fixing Fix Katana
       Water=2,
       keep [Recipe.GetItemTypes.Scissors],
       Result:DuctTape,
-	  Category:ApoRepairs
+	  Category:ApoRepairs,
+	  Sound:QuickDuctTapeSFX,
       Time:130.0,
    }
 }

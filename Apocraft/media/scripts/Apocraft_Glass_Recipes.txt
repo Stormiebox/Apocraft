@@ -15,8 +15,10 @@ module Apocraft
       Result:GlassMold,
       Time:700.0,
       Category:ApoForging,
-      NeedToBeLearn:false,
+      NeedToBeLearn:true,
+      NearItem:Mechanic Table,
       CanBeDoneFromFloor:true,
+      Sound:MetalWeldingSFX,
       SkillRequired:MetalWelding=3,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -24,17 +26,22 @@ module Apocraft
    recipe Make Glass Pane
    {
       keep GlassMold,
-      CampfireKit=1,
+      Charcoal=2,
       GlassShard=4,
+      keep Bellows,
+      keep Tongs,
 
       Result:GlassPane,
       RemoveResultItem:true,
       Time:1000.0,
-      Category:ApoRecycle,
-      NeedToBeLearn:false,
+      Category:ApoForging,
+      NeedToBeLearn:true,
       CanBeDoneFromFloor:true,
-      Sound:MakePlaster,
+      Sound:ForgeTableSFX,
+      NearItem:Forge Table,
       OnCreate:Recipe.OnCreate.TryMakeGlass,
+      SkillRequired:MetalWelding=3,
+      OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
 
    recipe Break Car Window

@@ -19,7 +19,9 @@ function Apocraft.calculateBonusPlanks(player)
     local loggingSkill = player:getPerkLevel(Perks.Lumberjack) or 0
     local strengthSkill = player:getPerkLevel(Perks.Strength) or 0
 
-    local bonus = math.floor(loggingSkill / 2) + math.floor(strengthSkill / 4)
+    -- Give a flat +2 plank bonus if they actually have the Lumberjack trait
+    local traitBonus = player:HasTrait("LumberjackTrait") and 2 or 0
+    local bonus = math.floor(loggingSkill / 2) + math.floor(strengthSkill / 4) + traitBonus
     return bonus
 end
 
@@ -28,9 +30,7 @@ function Apocraft.handleLogs(player)
     local logItem = player:getInventory():FindAndReturn("Base.Log")
     if logItem then
         local totalPlanks = 5 + Apocraft.calculateBonusPlanks(player)
-        for i = 1, totalPlanks do
-            player:getInventory():AddItem("Base.Plank")
-        end
+        player:getInventory():AddItems("Base.Plank", totalPlanks)
     end
 end
 
@@ -56,8 +56,6 @@ end
 --- Handle the weapon hit action, checking if the weapon is an axe and applying Lumberjack logic.
 function loggingOnWeapon.hit(owner, weapon)
     if weapon:getScriptItem():getCategories():contains("Axe") then
-        owner:getXp():AddXP(Perks.Lumberjack, 2.5)
-
         local square = nil
         local tree = nil
 
@@ -86,14 +84,22 @@ function loggingOnWeapon.hit(owner, weapon)
 
         -- We only want to drop logs if we ACTUALLY hit a tree!
         if tree then
+            -- 1. Determine Trait Bonuses
+            local hasLumberjackTrait = owner:HasTrait("LumberjackTrait")
+            local xpReward = hasLumberjackTrait and 5.0 or 2.5
+            local traitLogBonus = hasLumberjackTrait and 1 or 0
+
+            -- Give XP now that we know a tree was struck
+            owner:getXp():AddXP(Perks.Lumberjack, xpReward)
+
             local loggingLevel = owner:getPerkLevel(Perks.Lumberjack)
             local strengthLevel = owner:getPerkLevel(Perks.Strength)
 
-            -- 1. Calculate the standard base logs (Includes the Lumberjack/Strength bonuses)
-            local baseLogs = math.min(loggingLevel + math.floor(strengthLevel / 2), 10)
+            -- 2. Calculate the standard base logs (Includes the Lumberjack/Strength bonuses + Trait Bonus)
+            local baseLogs = math.min(loggingLevel + math.floor(strengthLevel / 2) + traitLogBonus, 10)
             if baseLogs < 1 then baseLogs = 1 end
 
-            -- 2. Check for Procedural Special Trees and determine their flat bonus
+            -- 3. Check for Procedural Special Trees and determine their flat bonus
             local specialTreeType = Lumberjack_SpecialTrees.getTreeType(square)
             local specialBonus = 0
 
@@ -119,11 +125,11 @@ function loggingOnWeapon.hit(owner, weapon)
                 end
             end
 
-            -- 3. Combine them and spawn only vanilla Base.Logs
+            -- 4. Combine them and spawn only vanilla Base.Logs
             local totalLogs = baseLogs + specialBonus
 
             for i = 1, totalLogs do
-                square:AddWorldInventoryItem("Base.Log", 0, 0, 0)
+                square:AddWorldInventoryItem("Base.Log", ZombRandFloat(0.1, 0.9), ZombRandFloat(0.1, 0.9), 0)
             end
 
             Apocraft.handleLogs(owner)

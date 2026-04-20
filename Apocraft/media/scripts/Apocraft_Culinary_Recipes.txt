@@ -21,7 +21,7 @@ module Apocraft
       Sound:AddItemInRecipe,
       AnimNode:Craft,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -56,7 +56,7 @@ module Apocraft
       Sound:AddItemInRecipe,
       AnimNode:Craft,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -74,7 +74,7 @@ module Apocraft
       Sound:AddItemInRecipe,
       AnimNode:Craft,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -95,7 +95,7 @@ module Apocraft
       Sound:AddItemInRecipe,
       AnimNode:Craft,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -116,7 +116,7 @@ module Apocraft
       Sound:AddItemInRecipe,
       AnimNode:Craft,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -139,7 +139,7 @@ module Apocraft
       AnimNode:Craft,
       NearItem:Mov_GreyOven/Mov_ModernOven/Mov_GreenOven/Mov_RedOven,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -156,7 +156,7 @@ module Apocraft
       Sound:AddItemInRecipe,
       AnimNode:Craft,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -176,7 +176,7 @@ module Apocraft
       Sound:AddItemInRecipe,
       AnimNode:Craft,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -196,7 +196,7 @@ module Apocraft
       Sound:AddItemInRecipe,
       AnimNode:Craft,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -222,7 +222,7 @@ module Apocraft
       Sound:AddItemInRecipe,
       AnimNode:Craft,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -244,7 +244,7 @@ module Apocraft
       Sound:AddItemInRecipe,
       AnimNode:Craft,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -284,7 +284,7 @@ module Apocraft
       Sound:AddItemInRecipe,
       AnimNode:Craft,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -306,7 +306,7 @@ module Apocraft
       Sound:AddItemInRecipe,
       AnimNode:Craft,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -368,7 +368,7 @@ module Apocraft
       Sound:AddItemInRecipe,
       AnimNode:Craft,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -406,7 +406,7 @@ module Apocraft
       Sound:AddItemInRecipe,
       AnimNode:Craft,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -423,7 +423,7 @@ module Apocraft
       Sound:AddItemInRecipe,
       AnimNode:Craft,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -479,7 +479,7 @@ module Apocraft
       Sound:AddItemInRecipe,
       AnimNode:Craft,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -590,7 +590,7 @@ module Apocraft
       Sound:AddItemInRecipe,
       AnimNode:Craft,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -625,7 +625,7 @@ module Apocraft
       Sound:AddItemInRecipe,
       AnimNode:Craft,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -744,7 +744,7 @@ module Apocraft
       Sound:AddItemInRecipe,
       AnimNode:Craft,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       OnGiveXP:Recipe.OnGiveXP.Cooking10,
    }
 
@@ -1644,7 +1644,7 @@ module Apocraft
       keep RollingPin,
       keep [Recipe.GetItemTypes.Hammer],Stone/BallPeenHammer/Sledgehammer/Hammer,
       keep BakingTray/RoastingPan,
-
+      NeedToBeLearn:true,
       Result:Cornflour=2,
       Time:1800.0,
       SkillRequired:Cooking=7,
@@ -1661,7 +1661,7 @@ module Apocraft
       keep RollingPin,
       keep [Recipe.GetItemTypes.Hammer],Stone/BallPeenHammer/Sledgehammer/Hammer,
       keep BakingTray/RoastingPan,
-
+     NeedToBeLearn:true,
       Result:Flour=2,
       Time:1800.0,
       SkillRequired:Cooking=7,
@@ -1678,7 +1678,7 @@ module Apocraft
       keep RollingPin,
       keep [Recipe.GetItemTypes.Hammer],Stone/BallPeenHammer/Sledgehammer/Hammer,
       keep BakingTray/RoastingPan,
-
+     NeedToBeLearn:true,
       Result:Flour=2,
       Time:1800.0,
       SkillRequired:Cooking=7,
@@ -1712,7 +1712,7 @@ module Apocraft
       keep Spoon,
       keep Mugl/MugRed/MugWhite/MugSpiffo/Bowl,
       keep BakingTray,
-
+     NeedToBeLearn:true,
       Result:CookieChocolateChip=12,
       Time:700.0,
       SkillRequired:Cooking=8,
@@ -1732,7 +1732,7 @@ module Apocraft
       keep Spoon,
       keep Mugl/MugRed/MugWhite/MugSpiffo/Bowl,
       keep BakingTray,
-
+     NeedToBeLearn:true,
       Result:CookiesChocolate=12,
       Time:700.0,
       SkillRequired:Cooking=8,
@@ -1753,7 +1753,7 @@ module Apocraft
       keep Spoon,
       keep Mugl/MugRed/MugWhite/MugSpiffo/Bowl,
       keep BakingTray,
-
+     NeedToBeLearn:true,
       Result:CookiesOatmeal=12,
       Time:700.0,
       SkillRequired:Cooking=8,
@@ -1770,7 +1770,7 @@ module Apocraft
       keep Spoon,
       keep Mugl/MugRed/MugWhite/MugSpiffo/Bowl,
       keep BakingTray,
-
+     NeedToBeLearn:true,
       Result:CookiesShortbread=12,
       Time:700.0,
       SkillRequired:Cooking=8,
@@ -1789,7 +1789,7 @@ module Apocraft
       keep Spoon,
       keep Mugl/MugRed/MugWhite/MugSpiffo/Bowl,
       keep BakingTray,
-
+     NeedToBeLearn:true,
       Result:CookieJelly=12,
       Time:700.0,
       SkillRequired:Cooking=8,
@@ -1806,7 +1806,7 @@ module Apocraft
       Icing=6,
       Milk;10,
       keep MuffinTray=2,
-
+     NeedToBeLearn:true,
       Result:Cupcake=12,
       Time:800.0,
       SkillRequired:Cooking=8,
@@ -1923,7 +1923,7 @@ module Apocraft
       JarLid=2,
       keep Pot/BucketEmpty,
       keep Spoon,
-
+      NeedToBeLearn:true,
       Result:Icecream=2,
       Time:1600.0,
       SkillRequired:Cooking=9,

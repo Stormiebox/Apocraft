@@ -4,7 +4,7 @@ module Apocraft
    {
       Base
    }
-   /*********************Carving Carepntry*********************/
+   /*********************Carving Carpentry*********************/
    recipe Carve Mouse Trap
    {
       Plank,

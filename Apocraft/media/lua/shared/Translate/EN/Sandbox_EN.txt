@@ -2,4 +2,8 @@ Sandbox_EN = {
     Sandbox_ApoEnhancedForaging = "Apocraft's Enhanced Foraging",
     Sandbox_ApoEnhancedForaging_HotspotChance = "Hotspot % Chance",
     Sandbox_ApoEnhancedForaging_HotspotChance_tooltip = "Determines the percentage chance for a map chunk to generate a 'Foraging Hotspot' when loaded. Players foraging inside a hotspot will receive double yields and find rare items.",
+    
+    Sandbox_Apocraft = "Apocraft Main Settings",
+    Sandbox_Apocraft_SpecialTreeChanceMultiplier = "Special Tree Chance Multiplier",
+    Sandbox_Apocraft_SpecialTreeChanceMultiplier_tooltip = "Multiplies the chance for a Special Tree (SuperOak, MagicPine, GoldenBirch, SilverCedar) to spawn when chopping. 1.0 is default, 2.0 doubles the chances.",
 }

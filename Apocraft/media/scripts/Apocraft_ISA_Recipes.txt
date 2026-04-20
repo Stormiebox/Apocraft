@@ -13,7 +13,7 @@ module Apocraft
       destroy Base.ElectronicsScrap=8,
       destroy Radio.ElectricWire=2,
       destroy Base.Screws=7,
-      NeedToBeLearn:true
+      NeedToBeLearn:true,
       Result:ISA.SolarPanel,
       SkillRequired:Electricity=6,
       Time:250.0,
@@ -30,7 +30,7 @@ module Apocraft
       destroy Base.ElectronicsScrap=18,
       destroy Radio.ElectricWire=3,
       destroy Base.Screws=8,
-      NeedToBeLearn:true
+      NeedToBeLearn:true,
       Result:ISA.ISAInverter,
       SkillRequired:Electricity=6,
       Time:250.0,

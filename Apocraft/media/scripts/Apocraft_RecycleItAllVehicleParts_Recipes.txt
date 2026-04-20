@@ -20,7 +20,7 @@ module Apocraft
 		CanBeDoneFromFloor:true,
 		Sound:BlowTorch,
 		SkillRequired:MetalWelding=2,		
-		OnCreate:Recipe.OnCreate.RecycleToScrapMetalVHC,
+		OnCreate:Recipe.OnCreate.ApocraftRecycleToScrapMetal,
 		AllowDestroyedItem:true,
 	}
 
@@ -37,7 +37,7 @@ module Apocraft
 		CanBeDoneFromFloor:true,
 		Sound:BlowTorch,
 		SkillRequired:MetalWelding=2,
-		OnCreate:Recipe.OnCreate.RecycleToScrapMetalVHC,
+		OnCreate:Recipe.OnCreate.ApocraftRecycleToScrapMetal,
 		AllowDestroyedItem:true,
 	}
 	
@@ -54,7 +54,7 @@ module Apocraft
 		CanBeDoneFromFloor:true,
 		Sound:BlowTorch,
 		SkillRequired:MetalWelding=3,
-		OnCreate:Recipe.OnCreate.RecycleToScrapMetalVHC,
+		OnCreate:Recipe.OnCreate.ApocraftRecycleToScrapMetal,
 		AllowDestroyedItem:true,
 	}
 
@@ -71,7 +71,7 @@ module Apocraft
 		CanBeDoneFromFloor:true,
 		Sound:BlowTorch,
 		SkillRequired:MetalWelding=3,
-		OnCreate:Recipe.OnCreate.RecycleToScrapMetalVHC,
+		OnCreate:Recipe.OnCreate.ApocraftRecycleToScrapMetal,
 		AllowDestroyedItem:true,
 	}
 	
@@ -88,7 +88,7 @@ module Apocraft
 		CanBeDoneFromFloor:true,
 		Sound:BlowTorch,
 		SkillRequired:MetalWelding=3,
-		OnCreate:Recipe.OnCreate.RecycleToScrapMetalVHC,
+		OnCreate:Recipe.OnCreate.ApocraftRecycleToScrapMetal,
 		AllowDestroyedItem:true,
 	}
 	
@@ -105,7 +105,7 @@ module Apocraft
 		CanBeDoneFromFloor:true,
 		Sound:BlowTorch,
 		SkillRequired:MetalWelding=3,
-		OnCreate:Recipe.OnCreate.RecycleToScrapMetalVHC,
+		OnCreate:Recipe.OnCreate.ApocraftRecycleToScrapMetal,
 		AllowDestroyedItem:true,
 	}
 	
@@ -122,7 +122,7 @@ module Apocraft
 		CanBeDoneFromFloor:true,
 		Sound:BlowTorch,
 		SkillRequired:MetalWelding=3,
-		OnCreate:Recipe.OnCreate.RecycleToScrapMetalVHC,
+		OnCreate:Recipe.OnCreate.ApocraftRecycleToScrapMetal,
 		AllowDestroyedItem:true,
 	}
 }

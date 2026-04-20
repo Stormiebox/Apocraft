@@ -385,7 +385,7 @@ module Apocraft
       Prop1:BlowTorch,
       Prop2:CannedTomatoOpen,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -407,7 +407,7 @@ module Apocraft
       Prop1:BlowTorch,
       Prop2:CannedPotatoOpen,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -429,7 +429,7 @@ module Apocraft
       Prop1:BlowTorch,
       Prop2:CannedPeasOpen,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -451,7 +451,7 @@ module Apocraft
       Prop1:BlowTorch,
       Prop2:CannedCarrotsOpen,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -473,7 +473,7 @@ module Apocraft
       Prop1:BlowTorch,
       Prop2:CannedCornOpen,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -494,7 +494,7 @@ module Apocraft
       Prop1:BlowTorch,
       Prop2:TinnedSoupOpen,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -516,7 +516,7 @@ module Apocraft
       Prop1:BlowTorch,
       Prop2:CannedMushroomSoupOpen,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -538,7 +538,7 @@ module Apocraft
       Prop1:BlowTorch,
       Prop2:CannedSardinesOpen,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -560,7 +560,7 @@ module Apocraft
       Prop1:BlowTorch,
       Prop2:TunaTinOpen,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -582,7 +582,7 @@ module Apocraft
       Prop1:BlowTorch,
       Prop2:CannedChiliOpen,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -604,7 +604,7 @@ module Apocraft
       Prop1:BlowTorch,
       Prop2:CannedBologneseOpen,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -626,7 +626,7 @@ module Apocraft
       Prop1:BlowTorch,
       Prop2:CannedCornedBeefOpen,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -648,7 +648,7 @@ module Apocraft
       Prop1:BlowTorch,
       Prop2:CannedPeachesOpen,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -670,7 +670,7 @@ module Apocraft
       Prop1:BlowTorch,
       Prop2:CannedPineappleOpen,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -692,7 +692,7 @@ module Apocraft
       Prop1:BlowTorch,
       Prop2:OpenBeans,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       SkillRequired:MetalWelding=2,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
@@ -714,7 +714,7 @@ module Apocraft
       Prop1:BlowTorch,
       Prop2:CannedFruitCocktailOpen,
       CanBeDoneFromFloor:true,
-      NeedToBeLearn:true,
+      NeedToBeLearn:false,
       SkillRequired:MetalWelding=3,
       OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }

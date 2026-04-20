@@ -15,10 +15,8 @@ function Apocraft.OnCreate.GetThreadAndXP(items, result, player)
         local max = ZombRand(2, 6) -- Maximum value is set to 6
         local thread = InventoryItemFactory.CreateItem("Base.Thread")
 
-        -- Adjust the amount of thread based on the random max value
-        for i = 1, 10 - max do
-            thread:Use()
-        end
+        -- Safely adjust the amount of thread remaining based on the random max value
+        thread:setUsedDelta(thread:getUseDelta() * max)
 
         player:getInventory():AddItem(thread)
         player:getXp():AddXP(Perks.Tailoring, 1)

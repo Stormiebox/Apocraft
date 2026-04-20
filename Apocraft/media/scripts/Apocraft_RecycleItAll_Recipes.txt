@@ -327,7 +327,7 @@ module Apocraft
    recipe Pull Thread From Clothing
    {
       Hat_Sweatband/Bracelet_RightFriendshipTINT/Bracelet_LeftFriendshipTINT,
-      keep [Recipe.GetItemTypes.Scissors],
+      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
 
       Sound:ClothesRipping,
       AnimNode:RipSheets,
@@ -344,7 +344,7 @@ module Apocraft
    recipe Pull Yarn From Clothing
    {
       Jumper_TankTopTINT/Jumper_TankTopDiamondTINT/Jumper_VNeck/Jumper_RoundNeck/Jumper_PoloNeck/HoodieUP_WhiteTINT/HoodieDOWN_WhiteTINT,
-      keep [Recipe.GetItemTypes.Scissors],
+      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
 
       Result:Yarn=4,
       Time:500.0,
@@ -359,7 +359,7 @@ module Apocraft
       Bra_Straps_Black/Bra_Straps_White/Bra_Strapless_Black/Bra_Strapless_White/Bra_Straps_FrillyRed/
       /Bra_Straps_FrillyPink/Bra_Strapless_RedSpots/Bra_Straps_AnimalPrint/Bra_Straps_FrillyBlack/
       /Bra_Strapless_FrillyRed/Bra_Strapless_FrillyPink/Bra_Strapless_AnimalPrint/Bra_Strapless_FrillyBlack,
-      keep [Recipe.GetItemTypes.Scissors],
+      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
       Sound:ClothesRipping,
       AnimNode:RipSheets,
       Time:100.0,
@@ -387,7 +387,7 @@ module Apocraft
       /Hat_Sweatband/Hat_BandanaMask/Hat_BandanaTINT/Hat_BandanaTied/Hat_BaseballCap/Hat_GolfHatTINT/Hat_Police_Grey/Hat_WeddingVeil/
       /Tie_BowTieFull/Tie_BowTieWorn/Tie_Worn_Spiffo/Tie_Worn/Tie_Full_Spiffo/Tie_Full/
       /Corset/Corset_Red/Corset_Black/Corset_Medical/TightsBlack/TightsBlackTrans/TightsBlackSemiTrans/BathTowel/BathTowelWet/DishCloth/DishClothWet,
-      keep [Recipe.GetItemTypes.Scissors],
+      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
 
       Sound:ClothesRipping,
       AnimNode:RipSheets,
@@ -403,10 +403,8 @@ module Apocraft
 
    recipe Rip Leather Clothing
    {
-      Hat_Cowboy/Shoes_Black/Shoes_Brown/Shoes_Fancy/Shoes_Random/Shoes_Bowling/Shoes_Sandals/
-      /Shoes_Strapped/Shoes_ArmyBoots/Shoes_BlackBoots/Shoes_RidingBoots/Shoes_ArmyBootsDesert/
-      /HolsterSimple/HolsterDouble,
-      keep [Recipe.GetItemTypes.Scissors],
+      Hat_Cowboy/HolsterSimple/HolsterDouble/Handbag/Purse/Basketball/Football/Football2/SoccerBall/Shoes_RidingBoots/Shoes_BlackBoots/Shoes_ArmyBoots/Shoes_ArmyBootsDesert/Shoes_Black/Shoes_Brown/Shoes_Random/Shoes_Strapped/Shoes_Sandals/Shoes_Fancy/Shoes_Bowling/Shoes_Wellies/Belt2/Shoes_RedTrainers/Shoes_BlueTrainers/Shoes_TrainerTINT,
+      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
 
       Sound:ClothesRipping,
       AnimNode:RipSheets,
@@ -423,13 +421,14 @@ module Apocraft
 
    recipe Rip Wallet
    {
-      Wallet/Wallet2/Wallet3/Wallet4,
+      Wallet/Wallet2/Wallet3/Wallet4/DogChew/Shoes_FlipFlop/Necklace_Choker/Necklace_Choker_Sapphire/Necklace_Choker_Amber/Necklace_Choker_Diamond,
+      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
 
       Sound:ClothesRipping,
       AnimNode:RipSheets,
       Time:50.0,
 
-      Result:LeatherStrips,
+      Result:LeatherStrips=2,
       RemoveResultItem:false,
       InSameInventory:false,
       CanBeDoneFromFloor:true,
@@ -441,7 +440,8 @@ module Apocraft
       Bag_MoneyBag/Bag_DuffelBag/Bag_WeaponBag/Bag_WorkerBag/Bag_ShotgunBag/
       /Bag_DuffelBagTINT/Bag_ShotgunDblBag/Bag_GolfBag/Bag_NormalHikingBag/
       /Bag_InmateEscapedBag/Bag_WorkerBag/Bag_ShotgunSawnoffBag/Bag_BowlingBallBag/Bag_Schoolbag/Bag_Satchel/Bag_BigHikingBag/Bag_SurvivorBag/Bag_ALICEpack/Bag_ALICEpack_Army/Purse/Handbag/Bag_FannyPackFront/Bag_FannyPackBack,
-      keep [Recipe.GetItemTypes.Scissors],
+      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+
 
       Sound:ClothesRipping,
       AnimNode:RipSheets,
@@ -458,7 +458,8 @@ module Apocraft
    recipe Rip Bag
    {
       Tote/PaperBag_Jays/PaperBag_Spiffos/PaperBag/Lunchbag,
-      keep [Recipe.GetItemTypes.Scissors],
+      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+
 
       Sound:ClothesRipping,
       AnimNode:RipSheets,
@@ -472,6 +473,7 @@ module Apocraft
    recipe Rip Paper Napkins
    {
       PaperNapkins,
+      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
 
       Sound:ClothesRipping,
       AnimNode:RipSheets,
@@ -485,6 +487,7 @@ module Apocraft
    recipe Rip Book
    {
       Notebook/Book,
+      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
 
       Sound:ClothesRipping,
       AnimNode:RipSheets,
@@ -498,6 +501,7 @@ module Apocraft
    recipe Rip Magazine
    {
       ComicBook/HottieZ/Magazine/Newspaper,
+      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
 
       Sound:ClothesRipping,
       AnimNode:RipSheets,

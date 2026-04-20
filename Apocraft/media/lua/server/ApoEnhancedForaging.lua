@@ -16,7 +16,10 @@ local function isForagingHotspot(x, y)
     local hash = (zoneX * 374761393) + (zoneY * 668265263)
     local roll = math.abs(hash) % 100 -- Roll from 0 to 99
 
-    local hotspotChance = SandboxVars.ApoEnhancedForaging.HotspotChance or 10.0
+    local hotspotChance = 10.0
+    if SandboxVars.ApoEnhancedForaging and SandboxVars.ApoEnhancedForaging.HotspotChance then
+        hotspotChance = SandboxVars.ApoEnhancedForaging.HotspotChance
+    end
 
     return roll < hotspotChance
 end

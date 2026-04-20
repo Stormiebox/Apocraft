@@ -23,7 +23,7 @@ module Apocraft
       [Recipe.GetItemTypes.Petrol]=1,
 
       Result:Lighter,
-      Time:150.0,
+      Time:180.0,
       Category:Survivalist,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:false,
@@ -35,7 +35,7 @@ module Apocraft
       [Recipe.GetItemTypes.Petrol]=1,
 
       Result:Lighter,
-      Time:150.0,
+      Time:180.0,
       Category:Survivalist,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:false,

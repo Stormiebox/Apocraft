@@ -28,7 +28,7 @@ local function modifyItemParameters()
         item:DoParam("ReplaceOnDeplete = " .. ITEMS.EMPTY_LIGHTER)
     end
 end
-modifyItemParameters()
+Events.OnGameBoot.Add(modifyItemParameters)
 
 -- Dismantling Functions
 function Recipe.OnTest.DismantleFavs(item)

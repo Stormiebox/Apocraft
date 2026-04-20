@@ -18,18 +18,25 @@ function Lumberjack_SpecialTrees.getTreeType(square)
     local y = square:getY()
     -- Get our roll from 0 to 9999 (10000 total outcomes, meaning 100 = 1%)
     local roll = getProceduralHash(x, y)
+
+    -- Optional: Allow server admins to scale the chance of special trees
+    local multiplier = 1.0
+    if SandboxVars.Apocraft and SandboxVars.Apocraft.SpecialTreeChanceMultiplier then
+        multiplier = SandboxVars.Apocraft.SpecialTreeChanceMultiplier
+    end
+
     -- THE SPAWN CHANCES (Out of 10,000. 100 = 1%)
     -- SuperOak:    1.00% chance (Rolls 0 to 99)
     -- MagicPine:   0.50% chance (Rolls 100 to 149)
     -- GoldenBirch: 0.25% chance (Rolls 150 to 174)
     -- SilverCedar: 0.10% chance (Rolls 175 to 184)
-    if roll < 100 then
+    if roll < (100 * multiplier) then
         return "SuperOak"
-    elseif roll < 150 then
+    elseif roll < (150 * multiplier) then
         return "MagicPine"
-    elseif roll < 175 then
+    elseif roll < (175 * multiplier) then
         return "GoldenBirch"
-    elseif roll < 185 then
+    elseif roll < (185 * multiplier) then
         return "SilverCedar"
     end
     -- If the roll is 185 or higher (98.15% of the time), it's a normal tree.

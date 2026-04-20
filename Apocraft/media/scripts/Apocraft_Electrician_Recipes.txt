@@ -15,7 +15,8 @@ module Apocraft
       keep [Recipe.GetItemTypes.WeldingMask],
       SkillRequired:Electricity=5,
       SkillRequired:MetalWelding=5,
-      OnGiveXP:Give25MWXP,
+      Recipe.OnGiveXP.MetalWelding10,
+      Recipe.OnGiveXP.Electricity10,
       Result:ElectricWire=5,
       AnimNode:Disassemble,
       Time:100.0,
@@ -36,12 +37,14 @@ module Apocraft
       SmallSheetMetal=4,
       keep [Recipe.GetItemTypes.Hammer],
       keep [Recipe.GetItemTypes.Screwdriver],
-      NeedToBeLearn:true
+      NeedToBeLearn:true,
       Result:Generator,
       Time:300.0,
       Category:ApoElectrical,
       SkillRequired:Electricity=8,
       NearItem:Mechanic Table,
+      Recipe.OnGiveXP.MetalWelding20,
+      Recipe.OnGiveXP.Electricity20,
    }
 
    recipe Make Car Battery Charger
@@ -54,12 +57,13 @@ module Apocraft
       Screws=10,
       keep [Recipe.GetItemTypes.Hammer],
       keep [Recipe.GetItemTypes.Screwdriver],
-      NeedToBeLearn:true
+      NeedToBeLearn:true,
       Result:CarBatteryCharger,
       Time:150.0,
       Category:ApoElectrical,
       SkillRequired:Electricity=6,
       NearItem:Mechanic Table,
+      Recipe.OnGiveXP.Electricity20,
    }
 
    recipe Make Hand Torch
@@ -68,24 +72,37 @@ module Apocraft
       ElectricWire=1,
       LightBulb=1,
       keep [Recipe.GetItemTypes.Screwdriver],
-
+      SkillRequired:Electricity=2,
+      Recipe.OnGiveXP.Electricity10,
       Result:HandTorch,
       Time:50.0,
       Category:ApoElectrical,
-      SkillRequired:Electricity=3,
    }
 
    recipe Make Flashlight
    {
-      ElectronicsScrap=8,
+      ElectronicsScrap=5,
       ElectricWire=1,
-      LightBulb=2,
+      LightBulb=1,
       keep [Recipe.GetItemTypes.Screwdriver],
-
+      SkillRequired:Electricity=2,
+      Recipe.OnGiveXP.Electricity10,
       Result:Torch,
       Time:75.0,
       Category:ApoElectrical,
-      SkillRequired:Electricity=4,
+   }
+
+   recipe Make Radio
+   {
+      ElectronicsScrap=4,
+      ElectricWire=1,
+      Speaker,
+      keep [Recipe.GetItemTypes.Screwdriver],
+      SkillRequired:Electricity=2,
+      Recipe.OnGiveXP.Electricity10,
+      Result:Radio,
+      Time:100.0,
+      Category:ApoElectrical,
    }
 
 }

@@ -95,8 +95,8 @@ function Recipe.OnCreate.MufflerStandard(items, result, player, selectedItem)
     end
 
     if MufflerType then
-        player:getInventory():AddItem(MufflerType)
-        player:getInventory():FindAndReturn(MufflerType):setCondition(conditionMax)
+        local newItem = player:getInventory():AddItem(MufflerType)
+        if newItem then newItem:setCondition(conditionMax) end
         player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
         player:getXp():AddXP(Perks.Mechanics, MechSkill)
         player:getXp():AddXP(Perks.Strength, 8)
@@ -118,8 +118,8 @@ function Recipe.OnCreate.MufflerHeavy(items, result, player, selectedItem)
     end
 
     if MufflerType then
-        player:getInventory():AddItem(MufflerType)
-        player:getInventory():FindAndReturn(MufflerType):setCondition(conditionMax)
+        local newItem = player:getInventory():AddItem(MufflerType)
+        if newItem then newItem:setCondition(conditionMax) end
         player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
         player:getXp():AddXP(Perks.Mechanics, MechSkill)
         player:getXp():AddXP(Perks.Strength, 8)
@@ -141,8 +141,8 @@ function Recipe.OnCreate.MufflerSport(items, result, player, selectedItem)
     end
 
     if MufflerType then
-        player:getInventory():AddItem(MufflerType)
-        player:getInventory():FindAndReturn(MufflerType):setCondition(conditionMax)
+        local newItem = player:getInventory():AddItem(MufflerType)
+        if newItem then newItem:setCondition(conditionMax) end
         player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
         player:getXp():AddXP(Perks.Mechanics, MechSkill)
         player:getXp():AddXP(Perks.Strength, 8)
@@ -163,8 +163,8 @@ function Recipe.OnCreate.SuspensionStandard(items, result, player, selectedItem)
     end
 
     if SuspensionType then
-        player:getInventory():AddItem(SuspensionType)
-        player:getInventory():FindAndReturn(SuspensionType):setCondition(conditionMax)
+        local newItem = player:getInventory():AddItem(SuspensionType)
+        if newItem then newItem:setCondition(conditionMax) end
         player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
         player:getXp():AddXP(Perks.Mechanics, MechSkill)
         player:getXp():AddXP(Perks.Strength, 8)
@@ -184,8 +184,8 @@ function Recipe.OnCreate.SuspensionHeavy(items, result, player, selectedItem)
     end
 
     if SuspensionType then
-        player:getInventory():AddItem(SuspensionType)
-        player:getInventory():FindAndReturn(SuspensionType):setCondition(conditionMax)
+        local newItem = player:getInventory():AddItem(SuspensionType)
+        if newItem then newItem:setCondition(conditionMax) end
         player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
         player:getXp():AddXP(Perks.Mechanics, MechSkill)
         player:getXp():AddXP(Perks.Strength, 8)
@@ -205,8 +205,8 @@ function Recipe.OnCreate.SuspensionSport(items, result, player, selectedItem)
     end
 
     if SuspensionType then
-        player:getInventory():AddItem(SuspensionType)
-        player:getInventory():FindAndReturn(SuspensionType):setCondition(conditionMax)
+        local newItem = player:getInventory():AddItem(SuspensionType)
+        if newItem then newItem:setCondition(conditionMax) end
         player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
         player:getXp():AddXP(Perks.Mechanics, MechSkill)
         player:getXp():AddXP(Perks.Strength, 8)
@@ -229,8 +229,8 @@ function Recipe.OnCreate.GasTankStandard(items, result, player, selectedItem)
     end
 
     if GasTankType then
-        player:getInventory():AddItem(GasTankType)
-        player:getInventory():FindAndReturn(GasTankType):setCondition(conditionMax)
+        local newItem = player:getInventory():AddItem(GasTankType)
+        if newItem then newItem:setCondition(conditionMax) end
         player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
         player:getXp():AddXP(Perks.Mechanics, MechSkill)
         player:getXp():AddXP(Perks.Strength, 8)
@@ -252,8 +252,8 @@ function Recipe.OnCreate.GasTankHeavy(items, result, player, selectedItem)
     end
 
     if GasTankType then
-        player:getInventory():AddItem(GasTankType)
-        player:getInventory():FindAndReturn(GasTankType):setCondition(conditionMax)
+        local newItem = player:getInventory():AddItem(GasTankType)
+        if newItem then newItem:setCondition(conditionMax) end
         player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
         player:getXp():AddXP(Perks.Mechanics, MechSkill)
         player:getXp():AddXP(Perks.Strength, 8)
@@ -275,8 +275,8 @@ function Recipe.OnCreate.GasTankSport(items, result, player, selectedItem)
     end
 
     if GasTankType then
-        player:getInventory():AddItem(GasTankType)
-        player:getInventory():FindAndReturn(GasTankType):setCondition(conditionMax)
+        local newItem = player:getInventory():AddItem(GasTankType)
+        if newItem then newItem:setCondition(conditionMax) end
         player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
         player:getXp():AddXP(Perks.Mechanics, MechSkill)
         player:getXp():AddXP(Perks.Strength, 8)
@@ -298,9 +298,9 @@ function Recipe.OnCreate.BrakeStandard(items, result, player, selectedItem)
         BrakeType = "OldBrake1"
     end
 
-    if BrakeType then
-        player:getInventory():AddItem(BrakeType)
-        player:getInventory():FindAndReturn(BrakeType):setCondition(conditionMax)
+if BrakeType then
+        local newItem = player:getInventory():AddItem(BrakeType)
+        if newItem then newItem:setCondition(conditionMax) end
         player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
         player:getXp():AddXP(Perks.Mechanics, MechSkill)
         player:getXp():AddXP(Perks.Strength, 8)
@@ -321,9 +321,9 @@ function Recipe.OnCreate.BrakeHeavy(items, result, player, selectedItem)
         BrakeType = "OldBrake2"
     end
 
-    if BrakeType then
-        player:getInventory():AddItem(BrakeType)
-        player:getInventory():FindAndReturn(BrakeType):setCondition(conditionMax)
+if BrakeType then
+        local newItem = player:getInventory():AddItem(BrakeType)
+        if newItem then newItem:setCondition(conditionMax) end
         player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
         player:getXp():AddXP(Perks.Mechanics, MechSkill)
         player:getXp():AddXP(Perks.Strength, 8)
@@ -344,9 +344,9 @@ function Recipe.OnCreate.BrakeSport(items, result, player, selectedItem)
         BrakeType = "OldBrake3"
     end
 
-    if BrakeType then
-        player:getInventory():AddItem(BrakeType)
-        player:getInventory():FindAndReturn(BrakeType):setCondition(conditionMax)
+if BrakeType then
+        local newItem = player:getInventory():AddItem(BrakeType)
+        if newItem then newItem:setCondition(conditionMax) end
         player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
         player:getXp():AddXP(Perks.Mechanics, MechSkill)
         player:getXp():AddXP(Perks.Strength, 8)

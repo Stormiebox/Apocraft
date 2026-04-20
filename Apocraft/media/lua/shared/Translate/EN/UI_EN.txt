@@ -1,0 +1,6 @@
+UI_EN =
+{
+    UI_trait_Lumberjack = "Lumberjack",
+    UI_trait_Lumberjack_desc = "Has strength, axe and logging knowledge!<br>+2 Axe<br>+1 Strength<br>+1 Logging",
+    UI_Perk_Lumberjack = "Logging",
+}
