@@ -13,7 +13,7 @@ module Apocraft
         Type	=	Literature,
         DisplayName	=	Apocraft Forging Series,
         Icon	=	ApoForgingMagazine,
-        TeachedRecipes  =   Forge 9mm Bullets Mold;Forge 308 Bullets Mold;Forge 223 Bullets Mold;Forge Shotgun Shells Mold;Homemade Gunpowder;Improvised Homemade Gunpowder;Forge Propane Torch;Forge Tongs;Forge Shovel;Forge Hand Shovel;Forge Iron Ingot;Forge Iron Ingots;Make Glass Mold;Make Glass Pane,
+        TeachedRecipes  =   Forge 9mm Bullets Mold;Forge 308 Bullets Mold;Forge 223 Bullets Mold;Forge Shotgun Shells Mold;Forge 38 Bullets Mold;Forge 44 Bullets Mold;Forge 45 Bullets Mold;Forge 556 Bullets Mold;Homemade Gunpowder;Improvised Homemade Gunpowder;Forge Propane Torch;Forge Tongs;Forge Shovel;Forge Hand Shovel;Forge Iron Ingot;Forge Iron Ingots;Make Glass Mold;Make Glass Pane,
         ReplaceOnUse    =   ApoForingMagazine,
         Tooltip = Tooltip_ApoForgingMagazine,
         StaticModel = Magazine,

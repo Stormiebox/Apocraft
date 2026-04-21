@@ -314,10 +314,12 @@ module Apocraft
    {
       UnusableWood=2,
       Woodglue=1,
-
+      Nails=2
+      keep [Recipe.GetItemTypes.Hammer]
       Result:Plank,
       Time:300.0,
       Category:ApoCarpentry,
+      Sound:HammerOnWoodSFX,
       CanBeDoneFromFloor:true,
       NeedToBeLearn:true,
       NearItem:Armory Table,
@@ -330,13 +332,13 @@ module Apocraft
       Log,
       CanoePadel=2,
       DuctTape=1,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-
+      Nails=2
+      keep [Recipe.GetItemTypes.Hammer]
       Result:CanoePadelX2,
       Time:800.0,
       SkillRequired:Woodwork=2,
       Category:ApoCarpentry,
-      Sound:WoodCarvingSFX,
+      Sound:HammerOnWoodSFX,,
       CanBeDoneFromFloor:true,
       NeedToBeLearn:true,
       NearItem:Armory Table,

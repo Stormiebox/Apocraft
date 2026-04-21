@@ -22,6 +22,7 @@ module Apocraft
       Time:100.0,
       Category:ApoElectrical,
       NearItem:Mechanic Table,
+      Sound:MechanicTableSFX,
    }
 
    /************************Generator Battery Charges and Flashlights************************/
@@ -43,6 +44,7 @@ module Apocraft
       Category:ApoElectrical,
       SkillRequired:Electricity=8,
       NearItem:Mechanic Table,
+      Sound:MechanicTableSFX,
       Recipe.OnGiveXP.MetalWelding20,
       Recipe.OnGiveXP.Electricity20,
    }
@@ -63,6 +65,7 @@ module Apocraft
       Category:ApoElectrical,
       SkillRequired:Electricity=6,
       NearItem:Mechanic Table,
+      Sound:MechanicTableSFX,
       Recipe.OnGiveXP.Electricity20,
    }
 

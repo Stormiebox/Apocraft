@@ -1,0 +1,95 @@
+module Apocraft
+{
+    imports
+    {
+        Base
+    }
+
+    item 9mmBulletsMold
+    {
+        DisplayCategory = Ammo,
+        Weight = 0.5,
+        Type = Normal,
+        DisplayName = 9mm Bullets Mold,
+        Icon = BulletMold,
+        MetalValue = 15,
+        WorldStaticModel = ShotGunShellsMold_Ground,
+    }
+
+    item 308BulletsMold
+    {
+        DisplayCategory = Ammo,
+        Weight = 0.5,
+        Type = Normal,
+        DisplayName = .308 Bullets Mold,
+        Icon = BulletMold,
+        MetalValue = 15,
+        WorldStaticModel = ShotGunShellsMold_Ground,
+    }
+
+    item 223BulletsMold
+    {
+        DisplayCategory = Ammo,
+        Weight = 0.5,
+        Type = Normal,
+        DisplayName = .223 Bullets Mold,
+        Icon = BulletMold,
+        MetalValue = 15,
+        WorldStaticModel = ShotGunShellsMold_Ground,
+    }
+
+    item ShotgunShellsMold
+    {
+        DisplayCategory = Ammo,
+        Weight = 0.5,
+        Type = Normal,
+        DisplayName = Shotgun Shells Mold,
+        Icon = BulletMold,
+        MetalValue = 15,
+        WorldStaticModel = ShotGunShellsMold_Ground,
+    }
+
+    item 38BulletsMold
+    {
+        DisplayCategory = Ammo,
+        Weight = 0.5,
+        Type = Normal,
+        DisplayName = .38 Bullets Mold,
+        Icon = BulletMold,
+        MetalValue = 15,
+        WorldStaticModel = ShotGunShellsMold_Ground,
+    }
+
+    item 44BulletsMold
+    {
+        DisplayCategory = Ammo,
+        Weight = 0.5,
+        Type = Normal,
+        DisplayName = .44 Bullets Mold,
+        Icon = BulletMold,
+        MetalValue = 15,
+        WorldStaticModel = ShotGunShellsMold_Ground,
+    }
+
+    item 45BulletsMold
+    {
+        DisplayCategory = Ammo,
+        Weight = 0.5,
+        Type = Normal,
+        DisplayName = .45 Bullets Mold,
+        Icon = BulletMold,
+        MetalValue = 15,
+        WorldStaticModel = ShotGunShellsMold_Ground,
+    }
+
+    item 556BulletsMold
+    {
+        DisplayCategory = Ammo,
+        Weight = 0.5,
+        Type = Normal,
+        DisplayName = 5.56 Bullets Mold,
+        Icon = BulletMold,
+        MetalValue = 15,
+        WorldStaticModel = ShotGunShellsMold_Ground,
+    }
+}

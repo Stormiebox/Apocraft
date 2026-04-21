@@ -36,7 +36,7 @@ module Apocraft
       Category:Recycling,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
-      Sound:Hammering,
+      Sound:RecyclingMetalworkSFX,
       OnCreate:Recipe.OnCreate.RecycleToScrapMetal,
       AllowDestroyedItem:true,
    }
@@ -53,7 +53,7 @@ module Apocraft
       Category:Recycling,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
-      Sound:Hammering,
+      Sound:RecyclingMetalworkSFX,
       OnTest:Recipe.OnTest.DismantleFavs,
       OnGiveXP:Recipe.OnGiveXP.BreakStr,
       AllowDestroyedItem:true,
@@ -82,7 +82,7 @@ module Apocraft
       Time : 150.0,
       Category : Welding,
       OnGiveXP : Recipe.OnGiveXP.MetalWelding10,
-      Sound : BlowTorch,
+      Sound:RecyclingMetalworkSFX,
       NearItem:Mechanic Table,
    }
 
@@ -98,7 +98,7 @@ module Apocraft
       Category:Recycling,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
-      Sound:BlowTorch,
+      Sound:RecyclingMetalworkSFX,
       OnTest:Recipe.OnTest.DismantleFavs,
       OnCreate:Recipe.OnCreate.RecycleToScrapMetal,
       AllowDestroyedItem:true,
@@ -116,6 +116,7 @@ module Apocraft
       Time : 30,
       Category : Welding,
       OnGiveXP : Recipe.OnGiveXP.MetalWelding5,
+      Sound:RecyclingMetalworkSFX,
    }
 
    recipe Get 1 Metal Scrap From 4 Pop Cans
@@ -129,6 +130,7 @@ module Apocraft
       Time : 30,
       Category : Welding,
       OnGiveXP : Recipe.OnGiveXP.MetalWelding5,
+      Sound:RecyclingMetalworkSFX,
    }
 
    recipe Convert Pop Cans To The Same Type
@@ -148,7 +150,7 @@ module Apocraft
       Category : Welding,
       OnGiveXP : Recipe.OnGiveXP.MetalWelding5,
       Time : 50.0,
-      Sound : BlowTorch,
+      Sound:RecyclingMetalworkSFX,
       NearItem:Mechanic Table,
       NeedToBeLearn:true
    }
@@ -162,7 +164,7 @@ module Apocraft
       Category : Welding,
       OnGiveXP : Recipe.OnGiveXP.MetalWelding20,
       Time : 200.0,
-      Sound : BlowTorch,
+      Sound:RecyclingMetalworkSFX,
       NearItem:Mechanic Table,
       NeedToBeLearn:true
    }
@@ -176,7 +178,7 @@ module Apocraft
       Category : Welding,
       OnGiveXP : Recipe.OnGiveXP.MetalWelding80,
       Time : 800.0,
-      Sound : BlowTorch,
+      Sound:RecyclingMetalworkSFX,
       NearItem:Mechanic Table,
       NeedToBeLearn:true
    }
@@ -193,7 +195,7 @@ module Apocraft
       Category:Recycling,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
-      Sound:BlowTorch,
+      Sound:RecyclingMetalworkSFX,
       OnTest:Recipe.OnTest.DismantleFavs,
       OnCreate:Recipe.OnCreate.RecycleToScrapMetal,
       AllowDestroyedItem:true,
@@ -212,7 +214,7 @@ module Apocraft
       Category:Recycling,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
-      Sound:BlowTorch,
+      Sound:RecyclingMetalworkSFX,
       OnTest:Recipe.OnTest.DismantleFavs,
       OnCreate:Recipe.OnCreate.RecycleToScrapMetal,
       AllowDestroyedItem:true,
@@ -230,7 +232,7 @@ module Apocraft
       Category:Recycling,
       NeedToBeLearn:false,
       CanBeDoneFromFloor:true,
-      Sound:BlowTorch,
+      Sound:RecyclingMetalworkSFX,
       OnTest:Recipe.OnTest.DismantleFavs,
       OnCreate:Recipe.OnCreate.RecycleToScrapMetal,
       AllowDestroyedItem:true,

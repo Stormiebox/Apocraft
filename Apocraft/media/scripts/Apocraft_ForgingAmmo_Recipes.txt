@@ -193,6 +193,200 @@ module Apocraft
        OnGiveXP:Recipe.OnGiveXP.MetalWelding15,
        NeedToBeLearn:false,
     }
+   
+       /************************ Missing Vanilla Bullet Molds ************************/
+    recipe Forge 38 Bullets Mold
+    {
+       IronIngot=10,
+       keep [Recipe.GetItemTypes.Hammer],
+       keep Tongs,
+       keep Bellows,
+       Sound:ForgeTableSFX,
+       NearItem:Forge Table,
+       Result:38BulletsMold,
+       Time:200.0,
+       Category:ApoForging,
+       SkillRequired:MetalWelding=5,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+       NeedToBeLearn:true,
+    }
+
+    recipe Forge 44 Bullets Mold
+    {
+       IronIngot=10,
+       keep [Recipe.GetItemTypes.Hammer],
+       keep Tongs,
+       keep Bellows,
+       Sound:ForgeTableSFX,
+       NearItem:Forge Table,
+       Result:44BulletsMold,
+       Time:200.0,
+       Category:ApoForging,
+       SkillRequired:MetalWelding=5,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+       NeedToBeLearn:true,
+    }
+
+    recipe Forge 45 Bullets Mold
+    {
+       IronIngot=10,
+       keep [Recipe.GetItemTypes.Hammer],
+       keep Tongs,
+       keep Bellows,
+       Sound:ForgeTableSFX,
+       NearItem:Forge Table,
+       Result:45BulletsMold,
+       Time:200.0,
+       Category:ApoForging,
+       SkillRequired:MetalWelding=5,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+       NeedToBeLearn:true,
+    }
+
+    recipe Forge 556 Bullets Mold
+    {
+       IronIngot=10,
+       keep [Recipe.GetItemTypes.Hammer],
+       keep Tongs,
+       keep Bellows,
+       Sound:ForgeTableSFX,
+       NearItem:Forge Table,
+       Result:556BulletsMold,
+       Time:200.0,
+       Category:ApoForging,
+       SkillRequired:MetalWelding=5,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+       NeedToBeLearn:true,
+    }
+
+    /************************ Missing Vanilla Ammunition ************************/
+    recipe Forge .38 Bullets
+    {
+       IronIngot=1,
+       GunPowder=2,
+       keep 38BulletsMold,
+       keep Tongs,
+       Sound:AmmoMakingSFX,
+       NearItem:Forge Table,
+       Result:Bullets38,
+       Time:50.0,
+       Category:ApoForging,
+       SkillRequired:MetalWelding=6,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding15,
+       NeedToBeLearn:false,
+    }
+
+    recipe Forge Bulk .38 Bullets
+    {
+       IronIngot=22,
+       GunPowder=60,
+       keep 38BulletsMold,
+       keep Tongs,
+       Sound:AmmoMakingSFX,
+       NearItem:Forge Table,
+       Result:Bullets38Box,
+       Time:180.0,
+       Category:ApoForging,
+       SkillRequired:MetalWelding=8,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding15,
+       NeedToBeLearn:false,
+    }
+
+    recipe Forge .44 Bullets
+    {
+       IronIngot=2,
+       GunPowder=3,
+       keep 44BulletsMold,
+       keep Tongs,
+       Sound:AmmoMakingSFX,
+       NearItem:Forge Table,
+       Result:Bullets44,
+       Time:50.0,
+       Category:ApoForging,
+       SkillRequired:MetalWelding=6,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding15,
+       NeedToBeLearn:false,
+    }
+
+    recipe Forge Bulk .44 Bullets
+    {
+       IronIngot=30,
+       GunPowder=80,
+       keep 44BulletsMold,
+       keep Tongs,
+       Sound:AmmoMakingSFX,
+       NearItem:Forge Table,
+       Result:Bullets44Box,
+       Time:180.0,
+       Category:ApoForging,
+       SkillRequired:MetalWelding=8,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding15,
+       NeedToBeLearn:false,
+    }
+
+    recipe Forge .45 Bullets
+    {
+       IronIngot=1,
+       GunPowder=3,
+       keep 45BulletsMold,
+       keep Tongs,
+       Sound:AmmoMakingSFX,
+       NearItem:Forge Table,
+       Result:Bullets45,
+       Time:50.0,
+       Category:ApoForging,
+       SkillRequired:MetalWelding=6,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding15,
+       NeedToBeLearn:false,
+    }
+
+    recipe Forge Bulk .45 Bullets
+    {
+       IronIngot=25,
+       GunPowder=70,
+       keep 45BulletsMold,
+       keep Tongs,
+       Sound:AmmoMakingSFX,
+       NearItem:Forge Table,
+       Result:Bullets45Box,
+       Time:180.0,
+       Category:ApoForging,
+       SkillRequired:MetalWelding=8,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding15,
+       NeedToBeLearn:false,
+    }
+
+    recipe Forge 5.56 Bullets
+    {
+       IronIngot=2,
+       GunPowder=4,
+       keep 556BulletsMold,
+       keep Tongs,
+       Sound:AmmoMakingSFX,
+       NearItem:Forge Table,
+       Result:556Bullets=2,
+       Time:50.0,
+       Category:ApoForging,
+       SkillRequired:MetalWelding=6,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding15,
+       NeedToBeLearn:false,
+    }
+
+    recipe Forge Bulk 5.56 Bullets
+    {
+       IronIngot=100,
+       GunPowder=200,
+       keep 556BulletsMold,
+       keep Tongs,
+       Sound:AmmoMakingSFX,
+       NearItem:Forge Table,
+       Result:556Box,
+       Time:180.0,
+       Category:ApoForging,
+       SkillRequired:MetalWelding=8,
+       OnGiveXP:Recipe.OnGiveXP.MetalWelding15,
+       NeedToBeLearn:false,
+    }
 
     /************************ Gunpowder ************************/
    recipe Homemade Gunpowder
