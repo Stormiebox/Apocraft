@@ -4,4 +4,423 @@ module Apocraft
     {
         Base
     }
+
+   /********************* Forge Materials *********************/
+    recipe Forge Sheet Metal
+    {
+        ScrapMetal=4,
+        BlowTorch=3,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:SheetMetal,
+        Time:600.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=3,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding15,
+    }
+
+    recipe Forge Small Sheet Metal
+    {
+        ScrapMetal=2,
+        BlowTorch=2,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:SmallSheetMetal,
+        Time:300.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=2,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    }
+
+    recipe Forge Metal Pipe
+    {
+        ScrapMetal=3,
+        BlowTorch=2,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:MetalPipe,
+        Time:400.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=2,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    }
+
+    recipe Forge Metal Bar
+    {
+        ScrapMetal=2,
+        BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:MetalBar,
+        Time:300.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=2,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding5,
+    }
+
+    recipe Forge Wire
+    {
+        ScrapMetal=1,
+        BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Wire=5,
+        Time:200.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=1,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding5,
+    }
+
+    recipe Forge Screws
+    {
+        ScrapMetal=1,
+        BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Screws=10,
+        Time:200.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=1,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding5,
+    }
+
+    recipe Forge Hinge
+    {
+        ScrapMetal=1,
+        BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Hinge=2,
+        Time:250.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=2,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding5,
+    }
+
+    recipe Forge Doorknob
+    {
+        ScrapMetal=1,
+        BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Doorknob=2,
+        Time:250.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=2,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding5,
+    }
+
+   /********************* Forge Tools *********************/
+    recipe Forge Hammer
+    {
+        ScrapMetal=2,
+        WoodenStick=1,
+        BlowTorch=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Hammer,
+        Time:400.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=2,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    }
+
+    recipe Forge Screwdriver
+    {
+        ScrapMetal=1,
+        Plasticbag/LeatherStrips=1,
+        BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Screwdriver,
+        Time:300.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=2,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding5,
+    }
+
+    recipe Forge Wrench
+    {
+        ScrapMetal=3,
+        BlowTorch=2,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Wrench,
+        Time:500.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=3,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    }
+
+    recipe Forge Pipe Wrench
+    {
+        ScrapMetal=4,
+        BlowTorch=3,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:PipeWrench,
+        Time:600.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=3,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    }
+
+    recipe Forge Saw
+    {
+        ScrapMetal=2,
+        WoodenStick=1,
+        BlowTorch=2,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Saw,
+        Time:500.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=3,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    }
+
+    recipe Forge Scissors
+    {
+        ScrapMetal=1,
+        Screws=1,
+        BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Scissors,
+        Time:300.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=2,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding5,
+    }
+
+   /********************* Forge Weapons *********************/
+    recipe Forge Crowbar
+    {
+        ScrapMetal=6,
+        BlowTorch=4,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Crowbar,
+        Time:900.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=4,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding20,
+    }
+
+    recipe Forge Sledgehammer
+    {
+        ScrapMetal=8,
+        WoodenStick=2,
+        BlowTorch=5,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Sledgehammer,
+        Time:1200.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=5,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding30,
+    }
+
+    recipe Forge Hunting Knife
+    {
+        ScrapMetal=2,
+        LeatherStrips=1,
+        BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:HuntingKnife,
+        Time:400.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=3,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    }
+
+    recipe Forge Machete
+    {
+        ScrapMetal=5,
+        LeatherStrips=2,
+        BlowTorch=3,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Machete,
+        Time:800.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=4,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding20,
+    }
+
+    recipe Forge Meat Cleaver
+    {
+        ScrapMetal=3,
+        WoodenStick=1,
+        BlowTorch=2,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:MeatCleaver,
+        Time:500.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=3,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    }
+
+   /********************* Forge Cooking & Household *********************/
+    recipe Forge Pot
+    {
+        ScrapMetal=3,
+        BlowTorch=2,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Pot,
+        Time:500.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=2,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    }
+
+    recipe Forge Frying Pan
+    {
+        ScrapMetal=3,
+        BlowTorch=2,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Pan,
+        Time:500.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=2,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    }
+
+    recipe Forge Saucepan
+    {
+        ScrapMetal=2,
+        BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Saucepan,
+        Time:400.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=2,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    }
+
+    recipe Forge Baking Pan
+    {
+        ScrapMetal=2,
+        BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:BakingPan,
+        Time:350.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=2,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    }
+
+    recipe Forge Roasting Pan
+    {
+        ScrapMetal=3,
+        BlowTorch=2,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:RoastingPan,
+        Time:450.0,
+        Category:ApoMetalwork,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        SkillRequired:MetalWelding=2,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    }
 }

@@ -1,18 +1,8 @@
 -- Initialization
-Apocraft = {}
-Apocraft.OnCreate = {}
-
--- Destroys ingredients on create
-function Apocraft.OnCreate.DestroyIngredients(items, result, player)
-    for i = 0, items:size() - 1 do
-        player:getInventory():Remove(items:get(i))
-    end
-end
-
 -- Get thread (sometimes, depending on tailoring level) and add XP
-function Apocraft.OnCreate.GetThreadAndXP(items, result, player)
+local function GetThreadAndXP(player)
     if ZombRand(7) < player:getPerkLevel(Perks.Tailoring) + 1 then
-        local max = ZombRand(2, 6) -- Maximum value is set to 6
+        local max = ZombRand(2, 7) -- Generates 2 through 6
         local thread = InventoryItemFactory.CreateItem("Base.Thread")
 
         -- Safely adjust the amount of thread remaining based on the random max value
@@ -23,16 +13,15 @@ function Apocraft.OnCreate.GetThreadAndXP(items, result, player)
     end
 end
 
--- Destroy ingredients and give thread depending on tailoring level
-function Apocraft.OnCreate.RipTowel(items, result, player)
-    Apocraft.OnCreate.DestroyIngredients(items, result, player)
-    Apocraft.OnCreate.GetThreadAndXP(items, result, player)
+-- Gives thread depending on tailoring level
+function Recipe.OnCreate.ApoRipClothing(items, result, player)
+    GetThreadAndXP(player)
 end
 
 -- Rip Bra's and Clothing Items
-function Apocraft.OnCreate.RipBra(items, result, player)
+function Recipe.OnCreate.ApoRipBra(items, result, player)
     player:getInventory():AddItem("Base.RippedSheets")
-    Apocraft.OnCreate.GetThreadAndXP(items, result, player)
+    GetThreadAndXP(player)
 end
 
 -- Produce Sacks
@@ -44,12 +33,15 @@ function Recipe.OnTest.WholeProduce(item)
     return not ((baseHunger * 0.75) > hungerChange)
 end
 
-local TTF = require("TraitTagFramework")
+-- Safely load TraitTagFramework only if it is activated
+local TTF = nil
+if getActivatedMods():contains("TraitTagFramework") then
+    TTF = require("TraitTagFramework")
+end
 
 -- Gives an extra plank to anyone with the "Woodworker" tag when sawing logs
-function Apocraft.OnCreate.SawLogsWoodworkerBonus(items, result, player, selectedItem)
-    -- Check if the player has the TTF tag
-    if TTF.PlayerHasTag(player, "Woodworker") then
+function Recipe.OnCreate.SawLogsWoodworkerBonus(items, result, player, selectedItem)
+    if TTF and TTF.PlayerHasTag(player, "Woodworker") then
         -- Add an extra plank directly to their inventory
         player:getInventory():AddItem("Base.Plank")
 

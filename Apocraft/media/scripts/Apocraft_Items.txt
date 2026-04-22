@@ -7,136 +7,144 @@ module Apocraft
    /******Empty Lighter*********/
    item EmptyLighter
    {
-      DisplayCategory = LightSource,
-      Weight	=	0.1,
-      DisplayName	=	Empty Lighter,
-      Icon	=	EmptyLighter,
-      StaticModel = Zippo,
-      WorldStaticModel = ZippoGround,
+        DisplayCategory  = LightSource,
+        Type             = Normal,
+        Weight           = 0.1,
+        DisplayName      = Empty Lighter,
+        Icon             = EmptyLighter,
+        StaticModel      = Zippo,
+        WorldStaticModel = ZippoGround,
    }
 
    /******Smelting Molds*********/
    item SmeltingMold
    {
-      DisplayCategory = Material,
-      Weight	=	3.0,
-      Type	=	Normal,
-      DisplayName	=	Smelting Mold,
-      Icon	=	SmeltingMold,
-      WorldStaticModel = SmeltingMold,
+        DisplayCategory  = Material,
+        Type             = Normal,
+        Weight           = 3.0,
+        DisplayName      = Smelting Mold,
+        Icon             = SmeltingMold,
+        WorldStaticModel = SmeltingMold,
    }
 
    item SmeltingMold2
    {
-      DisplayCategory = Material,
-      Weight	=	3.0,
-      Type	=	Normal,
-      DisplayName	=	Bulk Smelting Mold,
-      Icon	=	SmeltingMold2,
-      WorldStaticModel = SmeltingMold2,
+        DisplayCategory  = Material,
+        Type             = Normal,
+        Weight           = 3.0,
+        DisplayName      = Bulk Smelting Mold,
+        Icon             = SmeltingMold2,
+        WorldStaticModel = SmeltingMold2,
    }
 
    /******Ingot Molds*********/
    item IngotMold
    {
-      DisplayCategory = Material,
-      Weight	=	3.0,
-      Type	=	Normal,
-      DisplayName	=	Ingot Mold,
-      Icon	=	IngotMold,
-      WorldStaticModel = IngotMold,
+        DisplayCategory  = Material,
+        Type             = Normal,
+        Weight           = 3.0,
+        DisplayName      = Ingot Mold,
+        Icon             = IngotMold,
+        WorldStaticModel = IngotMold,
    }
 
    item IngotMold2
    {
-      DisplayCategory = Material,
-      Weight	=	3.0,
-      Type	=	Normal,
-      DisplayName	=	Bulk Ingot Mold,
-      Icon	=	IngotMold2,
-      WorldStaticModel = IngotMold2,
+        DisplayCategory  = Material,
+        Type             = Normal,
+        Weight           = 3.0,
+        DisplayName      = Bulk Ingot Mold,
+        Icon             = IngotMold2,
+        WorldStaticModel = IngotMold2,
    }
 
    /******Glass Pane Mold*********/
    item GlassPaneMold
    {
-      DisplayCategory = Material,
-      Weight	=	3.0,
-      Type	=	Normal,
-      DisplayName	=	Glass Pane Mold,
-      Icon	=	GlassPaneMold,
-      WorldStaticModel = GlassPaneMold,
+        DisplayCategory  = Material,
+        Type             = Normal,
+        Weight           = 3.0,
+        DisplayName      = Glass Pane Mold,
+        Icon             = GlassPaneMold,
+        WorldStaticModel = GlassPaneMold,
    }
 
    /******Glass Pane*********/
    item GlassPane
    {
-      DisplayCategory = Material,
-      Weight	=	1.5,
-      Type	=	Normal,
-      DisplayName	=	Glass Pane,
-      Icon	=	GlassPane,
-      WorldStaticModel = GlassPane,
+        DisplayCategory  = Material,
+        Type             = Normal,
+        Weight           = 1.5,
+        DisplayName      = Glass Pane,
+        Icon             = GlassPane,
+        WorldStaticModel = GlassPane,
    }
 
    /******Shards of Glass*********/
    item ShardsOfGlass
    {
-      DisplayCategory = Material,
-      Weight	=	0.1,
-      Type	=	Normal,
-      DisplayName	=	Shards of Glass,
-      Icon	=	ShardsOfGlass,
-      WorldStaticModel = ShardsOfGlass,
+        DisplayCategory  = Material,
+        Type             = Normal,
+        Weight           = 0.1,
+        DisplayName      = Shards of Glass,
+        Icon             = ShardsOfGlass,
+        WorldStaticModel = ShardsOfGlass,
    }
 
    /******Chisel Item Tool*********/
    item Chisel
    {
-      DisplayCategory = ToolWeapon,
-      MaxRange	=	0.85,
-      WeaponSprite	=	Screwdriver,
-      MinAngle	=	0.65,
-      Type	=	Weapon,
-      MinimumSwingTime	=	2,
-      KnockBackOnNoDeath	=	FALSE,
-      SwingAmountBeforeImpact	=	0.02,
-      Categories	=	Improvised;SmallBlade,
-      ConditionLowerChanceOneIn	=	6,
-      Weight	=	0.4,
-      SplatNumber	=	1,
-      PushBackMod	=	0.3,
-      SubCategory	=	Stab,
-      AimingMod	=	0.8,
-      ConditionMax	=	10,
-      MaxHitCount	=	1,
-      IsAimedHandWeapon	=	TRUE,
-      DoorDamage	=	1,
-      SwingAnim	=	Stab,
-      DisplayName	=	Chisel,
-      MinRange	=	0.61,
-      SwingTime	=	2,
-      KnockdownMod	=	0,
-      SplatBloodOnNoDeath	=	FALSE,
-      Icon	=	ChiselTool,
-      RunAnim	=	Run_Weapon2,
-      IdleAnim	=	Idle_Weapon2,
-      CloseKillMove = Jaw_Stab,
-      BreakSound  =   ScrewdriverBreak,
-      TreeDamage  =   1,
-      EnduranceMod = 0.5,
-      MetalValue = 5,
-      CriticalChance	=	10,
-      CritDmgMultiplier = 10,
-      MinDamage	=	0.3,
-      MaxDamage	=	0.7,
-      WeaponLength = 0.19,
-      HitFloorSound	=	ScrewdriverHit,
-      ImpactSound	=	ScrewdriverHit,
-      DoorHitSound = ScrewdriverHit,
-      HitSound	=	ScrewdriverHit,
-      SwingSound = ScrewdriverSwing,
-      AttachmentType = Screwdriver,
-      Tags = Screwdriver,
+        DisplayCategory         = ToolWeapon,
+        Type                    = Weapon,
+        SubCategory             = Stab,
+        Categories              = Improvised;SmallBlade,
+        DisplayName             = Chisel,
+        Icon                    = ChiselTool,
+        Weight                  = 0.4,
+        MetalValue              = 5,
+
+        WeaponSprite            = Screwdriver,
+        AttachmentType          = Screwdriver,
+        Tags                    = Screwdriver,
+
+        MinDamage               = 0.3,
+        MaxDamage               = 0.7,
+        MinRange                = 0.61,
+        MaxRange                = 0.85,
+        MinAngle                = 0.65,
+        WeaponLength            = 0.19,
+
+        CriticalChance          = 10,
+        CritDmgMultiplier       = 10,
+        KnockdownMod            = 0,
+        PushBackMod             = 0.3,
+        AimingMod               = 0.8,
+        EnduranceMod            = 0.5,
+
+        SwingTime               = 2,
+        MinimumSwingTime        = 2,
+        SwingAmountBeforeImpact = 0.02,
+        SwingAnim               = Stab,
+        RunAnim                 = Run_Weapon2,
+        IdleAnim                = Idle_Weapon2,
+        CloseKillMove           = Jaw_Stab,
+
+        ConditionMax            = 10,
+        ConditionLowerChanceOneIn = 6,
+        MaxHitCount             = 1,
+        DoorDamage              = 1,
+        TreeDamage              = 1,
+
+        IsAimedHandWeapon       = TRUE,
+        KnockBackOnNoDeath      = FALSE,
+        SplatBloodOnNoDeath     = FALSE,
+        SplatNumber             = 1,
+
+        HitFloorSound           = ScrewdriverHit,
+        ImpactSound             = ScrewdriverHit,
+        DoorHitSound            = ScrewdriverHit,
+        HitSound                = ScrewdriverHit,
+        SwingSound              = ScrewdriverSwing,
+        BreakSound              = ScrewdriverBreak,
    }
 }

@@ -7,153 +7,160 @@ module Apocraft
 
 	recipe Saw Logs (x5 Planks)
 	{
-	   Log,
-	   keep [Recipe.GetItemTypes.Saw],
+        Log,
+        keep [Recipe.GetItemTypes.Saw],
 
-	   CanBeDoneFromFloor:true,
-	   Result:Plank=5,
-	   Sound:Sawing,
-	   Time:250.0,
-	   Category:ApoCarpentry,
-      NeedToBeLearn:true,
-      SkillRequired:Logging=3,
-      NearItem:Armory Table,
-	   OnGiveXP:Recipe.OnGiveXP.SawLogs,
-      OnCreate:Apocraft.OnCreate.SawLogsWoodworkerBonus,
-	   AnimNode:SawLog,
-	   Prop1:Source=2,
-	   Prop2:Log,
+        Result:Plank=5,
+        Time:250.0,
+        Category:ApoCarpentry,
+        Sound:Sawing,
+        AnimNode:SawLog,
+        Prop1:Source=2,
+        Prop2:Log,
+        NearItem:Armory Table,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:true,
+        SkillRequired:Lumberjack=3,
+        OnGiveXP:Recipe.OnGiveXP.SawLogs,
+        OnCreate:OnCreateChopLogs,
 	}
 
 	recipe Saw Logs (x7 Planks)
 	{
-	   Log,
-	   keep [Recipe.GetItemTypes.Saw],
+        Log,
+        keep [Recipe.GetItemTypes.Saw],
 
-	   CanBeDoneFromFloor:true,
-	   Result:Plank=7,
-	   Sound:Sawing,
-	   Time:600.0,
-	   Category:ApoCarpentry,
-      NeedToBeLearn:true,
-      SkillRequired:Logging=5,
-      NearItem:Armory Table,
-	   OnGiveXP:Recipe.OnGiveXP.SawLogs,
-      OnCreate:Apocraft.OnCreate.SawLogsWoodworkerBonus,
-	   AnimNode:SawLog,
-	   Prop1:Source=2,
-	   Prop2:Log,
+        Result:Plank=7,
+        Time:600.0,
+        Category:ApoCarpentry,
+        Sound:Sawing,
+        AnimNode:SawLog,
+        Prop1:Source=2,
+        Prop2:Log,
+        NearItem:Armory Table,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:true,
+        SkillRequired:Lumberjack=5,
+        OnGiveXP:Recipe.OnGiveXP.SawLogs,
+        OnCreate:OnCreateChopLogs,
 	}
 
 	recipe Saw Logs (x9 Planks)
 	{
-	   Log,
-	   keep [Recipe.GetItemTypes.Saw],
+        Log,
+        keep [Recipe.GetItemTypes.Saw],
 
-	   CanBeDoneFromFloor:true,
-	   Result:Plank=9,
-	   Sound:Sawing,
-	   Time:800.0,
-	   Category:ApoCarpentry,
-      NeedToBeLearn:true,
-      SkillRequired:Logging=7,
-      NearItem:Armory Table,
-	   OnGiveXP:Recipe.OnGiveXP.SawLogs,
-      OnCreate:Apocraft.OnCreate.SawLogsWoodworkerBonus,
-	   AnimNode:SawLog,
-	   Prop1:Source=2,
-	   Prop2:Log,
+        Result:Plank=9,
+        Time:800.0,
+        Category:ApoCarpentry,
+        Sound:Sawing,
+        AnimNode:SawLog,
+        Prop1:Source=2,
+        Prop2:Log,
+        NearItem:Armory Table,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:true,
+        SkillRequired:Lumberjack=7,
+        OnGiveXP:Recipe.OnGiveXP.SawLogs,
+        OnCreate:OnCreateChopLogs,
 	}
 
 	recipe Saw Logs (x11 Planks)
 	{
-	   Log,
-	   keep [Recipe.GetItemTypes.Saw],
+        Log,
+        keep [Recipe.GetItemTypes.Saw],
 
-	   CanBeDoneFromFloor:true,
-	   Result:Plank=11,
-	   Sound:Sawing,
-	   Time:1000.0,
-	   Category:ApoCarpentry,
-      NeedToBeLearn:true,
-      SkillRequired:Logging=9,
-      NearItem:Armory Table,
-	   OnGiveXP:Recipe.OnGiveXP.SawLogs,
-      OnCreate:Apocraft.OnCreate.SawLogsWoodworkerBonus,
-	   AnimNode:SawLog,
-	   Prop1:Source=2,
-	   Prop2:Log,
+        Result:Plank=11,
+        Time:1000.0,
+        Category:ApoCarpentry,
+        Sound:Sawing,
+        AnimNode:SawLog,
+        Prop1:Source=2,
+        Prop2:Log,
+        NearItem:Armory Table,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:true,
+        SkillRequired:Lumberjack=9,
+        OnGiveXP:Recipe.OnGiveXP.SawLogs,
+        OnCreate:OnCreateChopLogs,
 	}
 
    /*********************Bind Logs Together*********************/
    recipe Bind Two Logs with SheetRopes
    {
-      Log=2,
-      SheetRope=2,
+        Log=2,
+        SheetRope=2,
 
-      Result:LogStacks2,
-      Time:200.0,
-      Category:ApoCarpentry,
-      CanBeDoneFromFloor:true,
-      NeedToBeLearn:false,
+        Result:LogStacks2,
+        Time:200.0,
+        Category:ApoCarpentry,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
    }
 
    recipe Bind Two Logs with Ropes on the Ground
    {
-      Log=2,
-      Rope=2,
+        Log=2,
+        Rope=2,
 
-      Result:LogStacks2,
-      Time:200.0,
-      Category:ApoCarpentry,
-      CanBeDoneFromFloor:true,
-      NeedToBeLearn:false,
+        Result:LogStacks2,
+        Time:200.0,
+        Category:ApoCarpentry,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
    }
 
    recipe Bind Three Logs with SheetRopes
    {
-      Log=3,
-      SheetRope=2,
+        Log=3,
+        SheetRope=2,
 
-      Result:LogStacks3,
-      Time:300.0,
-      Category:ApoCarpentry,
-      CanBeDoneFromFloor:true,
-      NeedToBeLearn:false,
+        Result:LogStacks3,
+        Time:300.0,
+        Category:ApoCarpentry,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
    }
 
    recipe Bind Three Logs with Ropes on the Ground
    {
-      Log=3,
-      Rope=2,
+        Log=3,
+        Rope=2,
 
-      CanBeDoneFromFloor:true,
-      Result:LogStacks3,
-      Time:300.0,
-      Category:ApoCarpentry,
+        Result:LogStacks3,
+        Time:300.0,
+        Category:ApoCarpentry,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
    }
 
    recipe Bind Four Logs with SheetRopes
    {
-      Log=4,
-      SheetRope=2,
+        Log=4,
+        SheetRope=2,
 
-      CanBeDoneFromFloor:true,
-      NeedToBeLearn:false,
-      Result:LogStacks4,
-      Time:400.0,
-      Category:ApoCarpentry,
+        Result:LogStacks4,
+        Time:400.0,
+        Category:ApoCarpentry,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
    }
 
    recipe Bind Four Logs with Ropes on the Ground
    {
-      Log=4,
-      Rope=2,
+        Log=4,
+        Rope=2,
 
-      CanBeDoneFromFloor:true,
-      NeedToBeLearn:false,
-      Result:LogStacks4,
-      Time:400.0,
-      Category:ApoCarpentry,
+        Result:LogStacks4,
+        Time:400.0,
+        Category:ApoCarpentry,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
    }
 }

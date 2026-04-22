@@ -54,7 +54,7 @@ local function calculateWeight(items)
     return weight
 end
 
-function calculateScrapMetal(items, player, weightMultiplier, strengthXpMultiplier, minScrapRewardXP)
+local function calculateScrapMetal(items, player, weightMultiplier, strengthXpMultiplier, minScrapRewardXP)
     local weight = calculateWeight(items)
     local scrapQuantity = math.floor(weight * 10 * weightMultiplier)
 
@@ -69,11 +69,11 @@ function calculateScrapMetal(items, player, weightMultiplier, strengthXpMultipli
     player:getXp():AddXP(Perks.Strength, scrapQuantity * strengthXpMultiplier)
 end
 
-function Recipe.OnCreate.RecycleToScrapMetal_A(items, result, player)
+function Recipe.OnCreate.RecycleToScrapMetal(items, result, player)
     calculateScrapMetal(items, player, 0.25, 8, 4)
 end
 
-function Recipe.OnCreate.RecycleToScrapMetal_B(items, result, player)
+function Recipe.OnCreate.ApocraftRecycleToScrapMetal(items, result, player)
     calculateScrapMetal(items, player, 0.5, 4, 4)
 end
 

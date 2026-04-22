@@ -7,339 +7,397 @@ module Apocraft
 
    recipe Make Aluminum
    {
-      keep [Recipe.GetItemTypes.Hammer],
-      keep [Recipe.GetItemTypes.Scissors],
-      PopEmpty/Pop2Empty/Pop3Empty/TinCanEmpty/BeerCanEmpty,
-      NeedToBeLearn:true
-      Result:Aluminum,
-      Sound:Hammering,
-      Time:250.0,
-      Category:Survivalist,
+        PopEmpty/Pop2Empty/Pop3Empty/TinCanEmpty/BeerCanEmpty,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Scissors],
+
+        Result:Aluminum,
+        Time:250.0,
+        Category:ApoSurvivalist,
+        Sound:Hammering,
+        AnimNode:Craft,
+        NeedToBeLearn:true,
    }
 
    recipe Refill Lighter
    {
-      destroy Lighter=1,
-      [Recipe.GetItemTypes.Petrol]=1,
+        [Recipe.GetItemTypes.Petrol]=1,
+        destroy Lighter=1,
 
-      Result:Lighter,
-      Time:180.0,
-      Category:Survivalist,
-      NeedToBeLearn:false,
-      CanBeDoneFromFloor:false,
+        Result:Lighter,
+        Time:180.0,
+        Category:ApoSurvivalist,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:false,
+        NeedToBeLearn:false,
    }
 
    recipe Refill Lighter (Empty)
    {
-      EmptyLighter=1,
-      [Recipe.GetItemTypes.Petrol]=1,
+        EmptyLighter=1,
+        [Recipe.GetItemTypes.Petrol]=1,
 
-      Result:Lighter,
-      Time:180.0,
-      Category:Survivalist,
-      NeedToBeLearn:false,
-      CanBeDoneFromFloor:false,
+        Result:Lighter,
+        Time:180.0,
+        Category:ApoSurvivalist,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:false,
+        NeedToBeLearn:false,
    }
 
    recipe Chip a Stone
    {
-      Stone,
-      keep Stone,
+        Stone,
+        keep Stone,
 
-      Result:SharpedStone,
-      Time:300.0,
-      Category:Survivalist,
+        Result:SharpedStone,
+        Time:300.0,
+        Category:ApoSurvivalist,
+        Sound:Hammering,
+        AnimNode:Craft,
    }
 
    recipe Make Wooden Stake
    {
-      WoodenStick,
-      keep KitchenKnife/HuntingKnife/FlintKnife,
+        WoodenStick,
+        keep KitchenKnife/HuntingKnife/FlintKnife,
 
-      Result:Stake,
-      Time:100.0,
-      Category:Survivalist,
+        Result:Stake,
+        Time:100.0,
+        Category:ApoSurvivalist,
+        Sound:WoodCarvingSFX,
+        AnimNode:Craft,
    }
 
    recipe Make Wooden Stake
    {
-      Log,
-      keep [Recipe.GetItemTypes.Saw],
-      keep KitchenKnife/HuntingKnife/FlintKnife,
+        Log,
+        keep [Recipe.GetItemTypes.Saw],
+        keep KitchenKnife/HuntingKnife/FlintKnife,
 
-      Result:Stake=12,
-      Time:400.0,
-      Category:Survivalist,
+        Result:Stake=12,
+        Time:400.0,
+        Category:ApoSurvivalist,
+        Sound:WoodCarvingSFX,
+        AnimNode:Craft,
    }
 
    recipe Make Dog Leash
    {
-      Rope,
-      Belt/Belt2,
-      keep [Recipe.GetItemTypes.Scissors],
+        Rope,
+        Belt/Belt2,
+        keep [Recipe.GetItemTypes.Scissors],
 
-      Result:Leash,
-      Time:200.0,
-      Category:Survivalist,
+        Result:Leash,
+        Time:200.0,
+        Category:ApoSurvivalist,
+        Sound:ScissorsSFX,
+        AnimNode:Craft,
    }
 
    recipe Make SheetRope from Sheet
    {
-      Sheet,
+        Sheet,
 
-      Result:SheetRope,
-      Time:10.0,
-      Category:Survivalist,
+        Result:SheetRope,
+        Time:10.0,
+        Category:ApoSurvivalist,
+        Sound:PZ_ClothesRipping,
+        AnimNode:RipSheets,
    }
 
    recipe Make Tarp
    {
-      Garbagebag=2,
-      DuctTape=2,
-      keep [Recipe.GetItemTypes.Scissors],
-      keep [Recipe.GetItemTypes.Screwdriver],
+        Garbagebag=2,
+        DuctTape=2,
+        keep [Recipe.GetItemTypes.Scissors],
+        keep [Recipe.GetItemTypes.Screwdriver],
 
-      Result:Tarp,
-      Time:800.0,
-      Category:Survivalist,
+        Result:Tarp,
+        Time:800.0,
+        Category:ApoSurvivalist,
+        Sound:QuickDuctTapeSFX,
+        AnimNode:Craft,
    }
 
    recipe Make Gas Can
    {
-      Garbagebag,
-      DuctTape=2,
-      BleachEmpty,
-      keep [Recipe.GetItemTypes.Scissors],
+        Garbagebag,
+        DuctTape=2,
+        BleachEmpty,
+        keep [Recipe.GetItemTypes.Scissors],
 
-      Result:EmptyPetrolCan,
-      Time:1000.0,
-      Category:Survivalist,
+        Result:EmptyPetrolCan,
+        Time:1000.0,
+        Category:ApoSurvivalist,
+        Sound:QuickDuctTapeSFX,
+        AnimNode:Craft,
    }
 
    recipe Make Bucket of Plaster
    {
-      destroy BucketEmpty/BucketWaterFull,
-      Water=5,
-      PlasterPowder/ConcretePowder,
+        Water=5,
+        PlasterPowder/ConcretePowder,
+        destroy BucketEmpty/BucketWaterFull,
 
-      Result:BucketPlasterFull,
-      Time:150.0,
-      Category:Survivalist,
-      Sound:MakePlaster,
-      Override:true,
+        Result:BucketPlasterFull,
+        Time:150.0,
+        Category:ApoSurvivalist,
+        Sound:MakePlaster,
+        AnimNode:Craft,
+        Override:true,
    }
 
    recipe Make Bag of Gravel
    {
-      EmptySandbag,
-      Stone=10,
-      keep [Recipe.GetItemTypes.Hammer],
+        EmptySandbag,
+        Stone=10,
+        keep [Recipe.GetItemTypes.Hammer],
 
-      Result:Gravelbag,
-      Time:1600.0,
-      Category:Survivalist,
+        Result:Gravelbag,
+        Time:1600.0,
+        Category:ApoSurvivalist,
+        Sound:StuffingSackSFX,
+        AnimNode:Craft,
    }
 
    recipe Make Bag of Sand
    {
-      EmptySandbag,
-      Stone=10,
-      keep [Recipe.GetItemTypes.Hammer],
+        EmptySandbag,
+        Stone=10,
+        keep [Recipe.GetItemTypes.Hammer],
 
-      Result:Sandbag,
-      Time:3200.0,
-      Category:Survivalist,
+        Result:Sandbag,
+        Time:3200.0,
+        Category:ApoSurvivalist,
+        Sound:StuffingSackSFX,
+        AnimNode:Craft,
    }
 
    recipe Make Bag of Sand
    {
-      Gravelbag,
-      keep [Recipe.GetItemTypes.Hammer],
+        Gravelbag,
+        keep [Recipe.GetItemTypes.Hammer],
 
-      Result:Sandbag,
-      Time:1600.0,
-      Category:Survivalist,
+        Result:Sandbag,
+        Time:1600.0,
+        Category:ApoSurvivalist,
+        Sound:StuffingSackSFX,
+        AnimNode:Craft,
    }
 
    recipe Worm Grunting
    {
-      keep Stake,
-      keep MetalBar,
+        keep Stake,
+        keep MetalBar,
 
-      Result:Worm=5,
-      Time:400.0,
-      Category:Survivalist,
+        Result:Worm=5,
+        Time:400.0,
+        Category:ApoSurvivalist,
+        Sound:HammerOnWoodSFX,
+        AnimNode:Craft,
    }
 
    recipe Make Glue
    {
-      PopBottleEmpty/WaterBottleEmpty,
-      Water=20,
-      Rice;10,
-      keep MortarPestle,
+        PopBottleEmpty/WaterBottleEmpty,
+        Water=20,
+        Rice=10,
+        keep MortarPestle,
 
-      Result:Glue,
-      Time:300.0,
-      Category:Survivalist,
+        Result:Glue,
+        Time:300.0,
+        Category:ApoSurvivalist,
+        Sound:MortarPrestleSFX,
+        AnimNode:Craft,
    }
 
    recipe Make Notebook
    {
-      Journal=1,
-      Result : Notebook=2,
-      Time : 150.0,
-      Category : Survivalist,
-      Sound : PageFlipBook,
+        Journal=1,
+
+        Result:Notebook=2,
+        Time:150.0,
+        Category:ApoSurvivalist,
+        Sound:PageFlipBook,
+        AnimNode:Craft,
    }
 
    recipe Make Journal
    {
-      Notebook=2,
-      Result : Journal,
-      Time : 150.0,
-      Category : Survivalist,
-      Sound : PageFlipBook,
-      AnimNode : RipSheets,
+        Notebook=2,
+
+        Result:Journal,
+        Time:150.0,
+        Category:ApoSurvivalist,
+        Sound:PageFlipBook,
+        AnimNode:Craft,
    }
 
    recipe Make Garbagebag
    {
-      Plasticbag,
-      keep [Recipe.GetItemTypes.Scissors],
+        Plasticbag,
+        keep [Recipe.GetItemTypes.Scissors],
 
-      Result:Garbagebag,
-      Time:200.0,
-      Category:Survivalist,
+        Result:Garbagebag,
+        Time:200.0,
+        Category:ApoSurvivalist,
+        Sound:ScissorsSFX,
+        AnimNode:Craft,
    }
 
    recipe Make Garbagebag
    {
-      Tarp,
-      keep [Recipe.GetItemTypes.Scissors],
+        Tarp,
+        keep [Recipe.GetItemTypes.Scissors],
 
-      Result:Garbagebag=6,
-      Time:200.0,
-      Category:Survivalist,
+        Result:Garbagebag=6,
+        Time:200.0,
+        Category:ApoSurvivalist,
+        Sound:ScissorsSFX,
+        AnimNode:Craft,
    }
 
    recipe Make Sheet From SheetRope
    {
-      SheetRope,
+        SheetRope,
 
-      Result:Sheet,
-      Time:20.0,
-      Category:Survivalist,
+        Result:Sheet,
+        Time:20.0,
+        Category:ApoSurvivalist,
+        AnimNode:Craft,
    }
 
    recipe Make Tent Pegs
    {
-      ScrapMetal=16,
-      Charcoal=1,
-      CampfireKit,
-      BlowTorch=1,
-      keep [Recipe.GetItemTypes.WeldingMask],
-      keep [Recipe.GetItemTypes.Hammer],
-      CanBeDoneFromFloor:true,
-      NeedToBeLearn:true
-      Result:TentPeg=4,
-      Time:1800.0,
-      Category:Survivalist,
+        ScrapMetal=16,
+        Charcoal=1,
+        CampfireKit,
+        BlowTorch=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
+        keep [Recipe.GetItemTypes.Hammer],
+
+        Result:TentPeg=4,
+        Time:1800.0,
+        Category:ApoSurvivalist,
+        Sound:MetalWeldingSFX,
+        AnimNode:BlowTorchFloor,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:true,
    }
 
    recipe Put Wild Eggs into Carton
    {
-      WildEggs=12,
-      Newspaper,
-      Water=10,
-      Glue/Woodglue,
-      keep Pot,
-      keep [Recipe.GetItemTypes.Scissors],
-      CanBeDoneFromFloor:true,
-      Result:EggCarton,
-      Time:900.0,
+        WildEggs=12,
+        Newspaper,
+        Water=10,
+        Glue/Woodglue,
+        keep Pot,
+        keep [Recipe.GetItemTypes.Scissors],
+
+        Result:EggCarton,
+        Time:900.0,
+        Category:ApoSurvivalist,
+        Sound:StuffingSackSFX,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:true,
    }
 
    recipe Straighten Suture Needle for Needle
    {
-      SutureNeedle,
-      keep [Recipe.GetItemTypes.Hammer],
-      keep [Recipe.GetItemTypes.Scissors],
-      CanBeDoneFromFloor:true,
-      Result:Needle,
-      Time:600.0,
-      Category:Survivalist,
+        SutureNeedle,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Scissors],
+
+        Result:Needle,
+        Time:600.0,
+        Category:ApoSurvivalist,
+        Sound:Hammering,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:true,
    }
 
    recipe Bend Needle for Suture Needle
    {
-      Needle,
-      keep [Recipe.GetItemTypes.Hammer],
-      keep [Recipe.GetItemTypes.Scissors],
-      CanBeDoneFromFloor:true,
-      Result:SutureNeedle,
-      Time:600.0,
-      Category:Survivalist,
+        Needle,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Scissors],
+
+        Result:SutureNeedle,
+        Time:600.0,
+        Category:ApoSurvivalist,
+        Sound:Hammering,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:true,
    }
 
     /************************ Charcoal ************************/
    recipe Make Charcoal From Twigs
    {
-      Twigs=8,
-      Dirtbag=2,
-      Water=2,
-      keep BucketEmpty,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-      NearItem:Campfire,
-      CanBeDoneFromFloor:true,
-      Result:Charcoal=6,
-      NeedToBeLearn:true
-      Time:100.0,
-      Category:Survivalist,
+        Twigs=8,
+        Dirtbag=2,
+        Water=2,
+        keep BucketEmpty,
+        keep [Recipe.GetItemTypes.HuntingKnife],
+
+        Result:Charcoal=6,
+        Time:100.0,
+        Category:ApoSurvivalist,
+        AnimNode:Craft,
+        NearItem:Campfire,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:true,
    }
 
    recipe Make Charcoal From Tree Branch
    {
-      TreeBranch=6,
-      Dirtbag=2,
-      Water=2,
-      keep BucketEmpty,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-      NearItem:Campfire,
-      CanBeDoneFromFloor:true,
-      Result:Charcoal=8,
-      NeedToBeLearn:true
-      Time:200.0,
-      Category:Survivalist,
+        TreeBranch=6,
+        Dirtbag=2,
+        Water=2,
+        keep BucketEmpty,
+        keep [Recipe.GetItemTypes.HuntingKnife],
+
+        Result:Charcoal=8,
+        Time:200.0,
+        Category:ApoSurvivalist,
+        AnimNode:Craft,
+        NearItem:Campfire,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:true,
    }
 
    recipe Make Charcoal From Log
    {
-      Log=1,
-      Dirtbag=2,
-      Water=4,
-      keep BucketEmpty,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-      NearItem:Campfire,
-      CanBeDoneFromFloor:true,
-      Result:Charcoal=12,
-      NeedToBeLearn:true
-      Time:300.0,
-      Category:Survivalist,
+        Log=1,
+        Dirtbag=2,
+        Water=4,
+        keep BucketEmpty,
+        keep [Recipe.GetItemTypes.HuntingKnife],
+
+        Result:Charcoal=12,
+        Time:300.0,
+        Category:ApoSurvivalist,
+        AnimNode:Craft,
+        NearItem:Campfire,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:true,
    }
 
    recipe Make Charcoal From Plank
    {
-      Plank=1,
-      Dirtbag=2,
-      Water=2,
-      keep BucketEmpty,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-      NearItem:Campfire,
-      CanBeDoneFromFloor:true,
-      Result:Charcoal=4,
-      NeedToBeLearn:true
-      Time:80.0,
-      Category:Survivalist,
+        Plank=1,
+        Dirtbag=2,
+        Water=2,
+        keep BucketEmpty,
+        keep [Recipe.GetItemTypes.HuntingKnife],
+
+        Result:Charcoal=4,
+        Time:80.0,
+        Category:ApoSurvivalist,
+        AnimNode:Craft,
+        NearItem:Campfire,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:true,
    }
 
 }

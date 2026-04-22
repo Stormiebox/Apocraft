@@ -9,350 +9,416 @@ module Apocraft
    /*********************Empty Sack Craft*********************/
    recipe Make Empty Sack
    {
-      keep [Recipe.GetItemTypes.Scissors],
-      keep Needle,
-      Twine=2,
-      Sheet=2,
-      Result:EmptySandbag,
-      Sound:ClothesRipping,
-      SkillRequired:Tailoring=1,
-      Category:Tailoring,
-      AnimNode:RipSheets,
-      Time:200.0,
-      NearItem:Tailoring Table,
-      Sound:TailoringTable1SFX,
-      NeedToBeLearn:true,
-      OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+        Twine=2,
+        Sheet=2,
+        keep [Recipe.GetItemTypes.Scissors],
+        keep Needle,
+
+        Result:EmptySandbag,
+        Time:200.0,
+        Category:Tailoring,
+        Sound:TailoringTable1SFX,
+        AnimNode:RipSheets,
+        NearItem:Tailoring Table,
+        NeedToBeLearn:true,
+        SkillRequired:Tailoring=1,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring10,
    }
 
    /*********************Seed Extraction*********************/
 
    recipe Extract Seeds from Potatoes
    {
-      Potato,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-      Result:PotatoSeed=5,
-      Time:30.0,
-      Category:Farming,
-      OnGiveXP:Get1FarmingXP,
-      NeedToBeLearn:true,
+        Potato,
+        keep [Recipe.GetItemTypes.HuntingKnife],
+
+        Result:PotatoSeed=5,
+        Time:30.0,
+        Category:ApoFarming,
+        AnimNode:Craft,
+        NeedToBeLearn:true,
+        OnGiveXP:Get1FarmingXP,
    }
 
    recipe Extract Seeds from Strawberry
    {
-      Strewberrie,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-      Result:StrewberrieSeed=15,
-      Time:50.0,
-      Category:Farming,
-      OnGiveXP:Get1FarmingXP,
-      NeedToBeLearn:true,
+        Strewberrie,
+        keep [Recipe.GetItemTypes.HuntingKnife],
+
+        Result:StrewberrieSeed=15,
+        Time:50.0,
+        Category:ApoFarming,
+        AnimNode:Craft,
+        NeedToBeLearn:true,
+        OnGiveXP:Get1FarmingXP,
    }
 
    recipe Extract Seeds from Tomato
    {
-      Tomato,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-      Result:TomatoSeed=15,
-      Time:50.0,
-      Category:Farming,
-      OnGiveXP:Get1FarmingXP,
-      NeedToBeLearn:true,
+        Tomato,
+        keep [Recipe.GetItemTypes.HuntingKnife],
+
+        Result:TomatoSeed=15,
+        Time:50.0,
+        Category:ApoFarming,
+        AnimNode:Craft,
+        NeedToBeLearn:true,
+        OnGiveXP:Get1FarmingXP,
    }
 
    /*********************Stuff Sacks With Produce*********************/
    recipe Stuff Sack With Apples
    {
-      keep Needle,
-      Thread=1,
-      EmptySandbag=1,
-      Apple=12,
-      Result:SackProduce_Apple,
-      Sound:StuffingSackSFX,
-      Time:200.0,
-      OnTest:Recipe.OnTest.WholeProduce,
-      OnGiveXP:Recipe.OnGiveXP.None,
-      CanBeDoneFromFloor:true,
+        Apple=12,
+        EmptySandbag=1,
+        Thread=1,
+        keep Needle,
+
+        Result:SackProduce_Apple,
+        Time:200.0,
+        Category:ApoFarming,
+        Sound:StuffingSackSFX,
+        AnimNode:Sew,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.WholeProduce,
+        OnGiveXP:Recipe.OnGiveXP.None,
    }
 
    recipe Stuff Sack With Bell Peppers
    {
-      keep Needle,
-      Thread=1,
-      EmptySandbag=1,
-      BellPepper=12,
-      Result:SackProduce_BellPepper,
-      Sound:StuffingSackSFX,
-      Time:200.0,
-      OnTest:Recipe.OnTest.WholeProduce,
-      OnGiveXP:Recipe.OnGiveXP.None,
-      CanBeDoneFromFloor:true,
+        BellPepper=12,
+        EmptySandbag=1,
+        Thread=1,
+        keep Needle,
+
+        Result:SackProduce_BellPepper,
+        Time:200.0,
+        Category:ApoFarming,
+        Sound:StuffingSackSFX,
+        AnimNode:Sew,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.WholeProduce,
+        OnGiveXP:Recipe.OnGiveXP.None,
    }
 
    recipe Stuff Sack With Broccoli
    {
-      keep Needle,
-      Thread=1,
-      EmptySandbag=1,
-      Broccoli=12,
-      Result:SackProduce_Broccoli,
-      Sound:StuffingSackSFX,
-      Time:200.0,
-      OnTest:Recipe.OnTest.WholeProduce,
-      OnGiveXP:Recipe.OnGiveXP.None,
-      CanBeDoneFromFloor:true,
+        Broccoli=12,
+        EmptySandbag=1,
+        Thread=1,
+        keep Needle,
+
+        Result:SackProduce_Broccoli,
+        Time:200.0,
+        Category:ApoFarming,
+        Sound:StuffingSackSFX,
+        AnimNode:Sew,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.WholeProduce,
+        OnGiveXP:Recipe.OnGiveXP.None,
    }
 
    recipe Stuff Sack With Cabbages
    {
-      keep Needle,
-      Thread=1,
-      EmptySandbag=1,
-      farming.Cabbage=8,
-      Result:SackProduce_Cabbage,
-      Sound:StuffingSackSFX,
-      Time:200.0,
-      OnTest:Recipe.OnTest.WholeProduce,
-      OnGiveXP:Recipe.OnGiveXP.None,
-      CanBeDoneFromFloor:true,
+        farming.Cabbage=8,
+        EmptySandbag=1,
+        Thread=1,
+        keep Needle,
+
+        Result:SackProduce_Cabbage,
+        Time:200.0,
+        Category:ApoFarming,
+        Sound:StuffingSackSFX,
+        AnimNode:Sew,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.WholeProduce,
+        OnGiveXP:Recipe.OnGiveXP.None,
    }
 
    recipe Stuff Sack With Carrots
    {
-      keep Needle,
-      Thread=1,
-      EmptySandbag=1,
-      Carrots=12,
-      Result:SackProduce_Carrot,
-      Sound:StuffingSackSFX,
-      Time:200.0,
-      OnTest:Recipe.OnTest.WholeProduce,
-      OnGiveXP:Recipe.OnGiveXP.None,
-      CanBeDoneFromFloor:true,
+        Carrots=12,
+        EmptySandbag=1,
+        Thread=1,
+        keep Needle,
+
+        Result:SackProduce_Carrot,
+        Time:200.0,
+        Category:ApoFarming,
+        Sound:StuffingSackSFX,
+        AnimNode:Sew,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.WholeProduce,
+        OnGiveXP:Recipe.OnGiveXP.None,
    }
 
    recipe Stuff Sack With Cherries
    {
-      keep Needle,
-      Thread=1,
-      EmptySandbag=1,
-      Cherry=16,
-      Result:SackProduce_Cherry,
-      Sound:StuffingSackSFX,
-      Time:200.0,
-      OnTest:Recipe.OnTest.WholeProduce,
-      OnGiveXP:Recipe.OnGiveXP.None,
-      CanBeDoneFromFloor:true,
+        Cherry=16,
+        EmptySandbag=1,
+        Thread=1,
+        keep Needle,
+
+        Result:SackProduce_Cherry,
+        Time:200.0,
+        Category:ApoFarming,
+        Sound:StuffingSackSFX,
+        AnimNode:Sew,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.WholeProduce,
+        OnGiveXP:Recipe.OnGiveXP.None,
    }
 
    recipe Stuff Sack With Corn
    {
-      keep Needle,
-      Thread=1,
-      EmptySandbag=1,
-      Corn=12,
-      Result:SackProduce_Corn,
-      Sound:StuffingSackSFX,
-      Time:200.0,
-      OnTest:Recipe.OnTest.WholeProduce,
-      OnGiveXP:Recipe.OnGiveXP.None,
-      CanBeDoneFromFloor:true,
+        Corn=12,
+        EmptySandbag=1,
+        Thread=1,
+        keep Needle,
+
+        Result:SackProduce_Corn,
+        Time:200.0,
+        Category:ApoFarming,
+        Sound:StuffingSackSFX,
+        AnimNode:Sew,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.WholeProduce,
+        OnGiveXP:Recipe.OnGiveXP.None,
    }
 
    recipe Stuff Sack With Eggplants
    {
-      keep Needle,
-      Thread=1,
-      EmptySandbag=1,
-      Eggplant=12,
-      Result:SackProduce_Eggplant,
-      Sound:StuffingSackSFX,
-      Time:200.0,
-      OnTest:Recipe.OnTest.WholeProduce,
-      OnGiveXP:Recipe.OnGiveXP.None,
-      CanBeDoneFromFloor:true,
+        Eggplant=12,
+        EmptySandbag=1,
+        Thread=1,
+        keep Needle,
+
+        Result:SackProduce_Eggplant,
+        Time:200.0,
+        Category:ApoFarming,
+        Sound:StuffingSackSFX,
+        AnimNode:Sew,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.WholeProduce,
+        OnGiveXP:Recipe.OnGiveXP.None,
    }
 
    recipe Stuff Sack With Grapes
    {
-      keep Needle,
-      Thread=1,
-      EmptySandbag=1,
-      Grapes=12,
-      Result:SackProduce_Grapes,
-      Sound:StuffingSackSFX,
-      Time:200.0,
-      OnTest:Recipe.OnTest.WholeProduce,
-      OnGiveXP:Recipe.OnGiveXP.None,
-      CanBeDoneFromFloor:true,
+        Grapes=12,
+        EmptySandbag=1,
+        Thread=1,
+        keep Needle,
+
+        Result:SackProduce_Grapes,
+        Time:200.0,
+        Category:ApoFarming,
+        Sound:StuffingSackSFX,
+        AnimNode:Sew,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.WholeProduce,
+        OnGiveXP:Recipe.OnGiveXP.None,
    }
 
    recipe Stuff Sack With Leeks
    {
-      keep Needle,
-      Thread=1,
-      EmptySandbag=1,
-      Leek=12,
-      Result:SackProduce_Leek,
-      Sound:StuffingSackSFX,
-      Time:200.0,
-      OnTest:Recipe.OnTest.WholeProduce,
-      OnGiveXP:Recipe.OnGiveXP.None,
-      CanBeDoneFromFloor:true,
+        Leek=12,
+        EmptySandbag=1,
+        Thread=1,
+        keep Needle,
+
+        Result:SackProduce_Leek,
+        Time:200.0,
+        Category:ApoFarming,
+        Sound:StuffingSackSFX,
+        AnimNode:Sew,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.WholeProduce,
+        OnGiveXP:Recipe.OnGiveXP.None,
    }
 
    recipe Stuff Sack With Lettuce
    {
-      keep Needle,
-      Thread=1,
-      EmptySandbag=1,
-      Lettuce=8,
-      Result:SackProduce_Lettuce,
-      Sound:StuffingSackSFX,
-      Time:200.0,
-      OnTest:Recipe.OnTest.WholeProduce,
-      OnGiveXP:Recipe.OnGiveXP.None,
-      CanBeDoneFromFloor:true,
+        Lettuce=8,
+        EmptySandbag=1,
+        Thread=1,
+        keep Needle,
+
+        Result:SackProduce_Lettuce,
+        Time:200.0,
+        Category:ApoFarming,
+        Sound:StuffingSackSFX,
+        AnimNode:Sew,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.WholeProduce,
+        OnGiveXP:Recipe.OnGiveXP.None,
    }
 
    recipe Stuff Sack With Onions
    {
-      keep Needle,
-      Thread=1,
-      EmptySandbag=1,
-      Onion=12,
-      Result:SackProduce_Onion,
-      Sound:StuffingSackSFX,
-      Time:200.0,
-      OnTest:Recipe.OnTest.WholeProduce,
-      OnGiveXP:Recipe.OnGiveXP.None,
-      CanBeDoneFromFloor:true,
+        Onion=12,
+        EmptySandbag=1,
+        Thread=1,
+        keep Needle,
+
+        Result:SackProduce_Onion,
+        Time:200.0,
+        Category:ApoFarming,
+        Sound:StuffingSackSFX,
+        AnimNode:Sew,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.WholeProduce,
+        OnGiveXP:Recipe.OnGiveXP.None,
    }
 
    recipe Stuff Sack With Peaches
    {
-      keep Needle,
-      Thread=1,
-      EmptySandbag=1,
-      Peach=12,
-      Result:SackProduce_Peach,
-      Sound:StuffingSackSFX,
-      Time:200.0,
-      OnTest:Recipe.OnTest.WholeProduce,
-      OnGiveXP:Recipe.OnGiveXP.None,
-      CanBeDoneFromFloor:true,
+        Peach=12,
+        EmptySandbag=1,
+        Thread=1,
+        keep Needle,
+
+        Result:SackProduce_Peach,
+        Time:200.0,
+        Category:ApoFarming,
+        Sound:StuffingSackSFX,
+        AnimNode:Sew,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.WholeProduce,
+        OnGiveXP:Recipe.OnGiveXP.None,
    }
 
    recipe Stuff Sack With Pears
    {
-      keep Needle,
-      Thread=1,
-      EmptySandbag=1,
-      Pear=12,
-      Result:SackProduce_Pear,
-      Sound:StuffingSackSFX,
-      Time:200.0,
-      OnTest:Recipe.OnTest.WholeProduce,
-      OnGiveXP:Recipe.OnGiveXP.None,
-      CanBeDoneFromFloor:true,
+        Pear=12,
+        EmptySandbag=1,
+        Thread=1,
+        keep Needle,
+
+        Result:SackProduce_Pear,
+        Time:200.0,
+        Category:ApoFarming,
+        Sound:StuffingSackSFX,
+        AnimNode:Sew,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.WholeProduce,
+        OnGiveXP:Recipe.OnGiveXP.None,
    }
 
    recipe Stuff Sack With Potatoes
    {
-      keep Needle,
-      Thread=1,
-      EmptySandbag=1,
-      farming.Potato=12,
-      Result:SackProduce_Potato,
-      Sound:StuffingSackSFX,
-      Time:200.0,
-      OnTest:Recipe.OnTest.WholeProduce,
-      OnGiveXP:Recipe.OnGiveXP.None,
-      CanBeDoneFromFloor:true,
+        farming.Potato=12,
+        EmptySandbag=1,
+        Thread=1,
+        keep Needle,
+
+        Result:SackProduce_Potato,
+        Time:200.0,
+        Category:ApoFarming,
+        Sound:StuffingSackSFX,
+        AnimNode:Sew,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.WholeProduce,
+        OnGiveXP:Recipe.OnGiveXP.None,
    }
 
    recipe Stuff Sack With Radishes
    {
-      keep Needle,
-      Thread=1,
-      EmptySandbag=1,
-      farming.RedRadish=12,
-      Result:SackProduce_RedRadish,
-      Sound:StuffingSackSFX,
-      Time:200.0,
-      OnTest:Recipe.OnTest.WholeProduce,
-      OnGiveXP:Recipe.OnGiveXP.None,
-      CanBeDoneFromFloor:true,
+        farming.RedRadish=12,
+        EmptySandbag=1,
+        Thread=1,
+        keep Needle,
+
+        Result:SackProduce_RedRadish,
+        Time:200.0,
+        Category:ApoFarming,
+        Sound:StuffingSackSFX,
+        AnimNode:Sew,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.WholeProduce,
+        OnGiveXP:Recipe.OnGiveXP.None,
    }
 
    recipe Stuff Sack With Strawberries
    {
-      keep Needle,
-      Thread=1,
-      EmptySandbag=1,
-      farming.Strewberrie=16,
-      Result:SackProduce_Strawberry,
-      Sound:StuffingSackSFX,
-      Time:200.0,
-      OnTest:Recipe.OnTest.WholeProduce,
-      OnGiveXP:Recipe.OnGiveXP.None,
-      CanBeDoneFromFloor:true,
+        farming.Strewberrie=16,
+        EmptySandbag=1,
+        Thread=1,
+        keep Needle,
+
+        Result:SackProduce_Strawberry,
+        Time:200.0,
+        Category:ApoFarming,
+        Sound:StuffingSackSFX,
+        AnimNode:Sew,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.WholeProduce,
+        OnGiveXP:Recipe.OnGiveXP.None,
    }
 
    recipe Stuff Sack With Tomatoes
    {
-      keep Needle,
-      Thread=1,
-      EmptySandbag=1,
-      farming.Tomato=12,
-      Result:SackProduce_Tomato,
-      Sound:StuffingSackSFX,
-      Time:200.0,
-      OnTest:Recipe.OnTest.WholeProduce,
-      OnGiveXP:Recipe.OnGiveXP.None,
-      CanBeDoneFromFloor:true,
+        farming.Tomato=12,
+        EmptySandbag=1,
+        Thread=1,
+        keep Needle,
+
+        Result:SackProduce_Tomato,
+        Time:200.0,
+        Category:ApoFarming,
+        Sound:StuffingSackSFX,
+        AnimNode:Sew,
+        CanBeDoneFromFloor:true,
+        OnTest:Recipe.OnTest.WholeProduce,
+        OnGiveXP:Recipe.OnGiveXP.None,
    }
 
    /*********************Compost Crafting*********************/
    recipe Make Compost from Coffee
    {
-      Coffee2,
-      Dirtbag=3,
-      EmptySandbag,
-      keep Shovel/Shovel2,
-      NeedToBeLearn:true,
-      Result:CompostBag,
-      Time:300.0,
-      Category:Farming,
-      OnGiveXP:Get1FarmingXP,
+        Coffee2,
+        Dirtbag=3,
+        EmptySandbag,
+        keep Shovel/Shovel2,
+
+        Result:CompostBag,
+        Time:300.0,
+        Category:ApoFarming,
+        AnimNode:Craft,
+        NeedToBeLearn:true,
+        OnGiveXP:Get1FarmingXP,
    }
 
    recipe Make Compost from Banana
    {
-      Banana=3,
-      Dirtbag=3,
-      EmptySandbag,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-      keep Shovel/Shovel2,
-      NeedToBeLearn:true,
-      Result:CompostBag,
-      Time:600.0,
-      Category:Farming,
-      OnGiveXP:Get1FarmingXP,
+        Banana=3,
+        Dirtbag=3,
+        EmptySandbag,
+        keep [Recipe.GetItemTypes.HuntingKnife],
+        keep Shovel/Shovel2,
+
+        Result:CompostBag,
+        Time:600.0,
+        Category:ApoFarming,
+        AnimNode:Craft,
+        NeedToBeLearn:true,
+        OnGiveXP:Get1FarmingXP,
    }
 
    recipe Make Compost from Fish
    {
-      BaitFish=10,
-      Dirtbag=3,
-      EmptySandbag,
-      keep [Recipe.GetItemTypes.HuntingKnife],
-      keep Shovel/Shovel2,
-      NeedToBeLearn:true,
-      Result:CompostBag,
-      Time:600.0,
-      Category:Farming,
-      OnGiveXP:Get1FarmingXP,
+        BaitFish=10,
+        Dirtbag=3,
+        EmptySandbag,
+        keep [Recipe.GetItemTypes.HuntingKnife],
+        keep Shovel/Shovel2,
+
+        Result:CompostBag,
+        Time:600.0,
+        Category:ApoFarming,
+        AnimNode:Craft,
+        NeedToBeLearn:true,
+        OnGiveXP:Get1FarmingXP,
    }
 
 }

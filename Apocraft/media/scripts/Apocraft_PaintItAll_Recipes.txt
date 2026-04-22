@@ -7,945 +7,1056 @@ module Apocraft
    /*********************Craft White Paint*********************/
     recipe Craft White Paint
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintbucketEmpty,
         BucketWaterFull=5,
         Salt=2,
         Flour=2,
-	    Result:PaintWhite,    
-	    Time:250.0,
-	    NeedToBeLearn:true,
-        Category:Carpentry,
-        AnimMode:Craft,
-        Prop1:Spoon,
+        destroy PaintbucketEmpty,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintWhite,
+        Time:250.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:true,
+        Prop1:Spoon,
     }
 
     recipe Mix Bleach and Paint For Color White
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    Bleach=3,
+        Bleach=3,
         PaintBlack/PaintBlue/PaintBrown/PaintCyan/PaintGrey/PaintGreen/PaintLightBlue/PaintLightBrown/PaintOrange/PaintPink/PaintPurple/PaintRed/PaintTurquoise/PaintYellow=2,
         destroy PaintbucketEmpty,
-	    Result:PaintWhite,
-	    Time:180.0,
-	    NeedToBeLearn:true,
-        Category:Carpentry,
-        AnimMode:Craft,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintWhite,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:true,
         OnGiveXP:Give5WoodworkXP,
     }
 
    /*********************Craft Hair Dyes*********************/
     recipe Craft Dye Color Of Black
     {
-        keep MortarPestle,
         Water=5,
         DriedBlackBeans/Charcoal/BlackSage,
         OilVegetable/OilOlive,
         destroy WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/BeerEmpty/WineEmpty/WineEmpty2/MayonnaiseEmpty,
-	    OnGiveXP:Give5WoodworkXP,
+        keep MortarPestle,
+
         Result:HairDyeBlack,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
+        Time:180.0,
+        Category:ApoPaints,
+        Sound:MortarPrestleSFX,
+        AnimNode:Craft,
+        NearItem:Laboratory Table,
+        NeedToBeLearn:false,
+        OnGiveXP:Give5WoodworkXP,
     } 
 
     recipe Craft Dye Color Of Blonde
     {
-        keep MortarPestle,
         Water=5,
         DriedLentils/LemonGrass,
         OilVegetable/OilOlive,
         destroy WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/BeerEmpty/WineEmpty/WineEmpty2/MayonnaiseEmpty,
-	    OnGiveXP:Give5WoodworkXP,
+        keep MortarPestle,
+
         Result:HairDyeBlonde,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
+        Time:180.0,
+        Category:ApoPaints,
+        Sound:MortarPrestleSFX,
+        AnimNode:Craft,
+        NearItem:Laboratory Table,
+        NeedToBeLearn:false,
+        OnGiveXP:Give5WoodworkXP,
     } 
 
     recipe Craft Dye Color Of Blue
     {
-        keep MortarPestle,
         PillsSleepingTablets=5,
         Water=5,
         OilVegetable/OilOlive,
         destroy WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/BeerEmpty/WineEmpty/WineEmpty2/MayonnaiseEmpty,
-	    OnGiveXP:Give5WoodworkXP,
+        keep MortarPestle,
+
         Result:HairDyeBlue,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
+        Time:180.0,
+        Category:ApoPaints,
+        Sound:MortarPrestleSFX,
+        AnimNode:Craft,
+        NearItem:Laboratory Table,
+        NeedToBeLearn:false,
+        OnGiveXP:Give5WoodworkXP,
     } 
 
     recipe Craft Dye Color Of Ginger
     {
-        keep MortarPestle,
         farming.CarrotSeed=25,
         farming.StrewberrieSeed=25,
         Water=5,
         OilVegetable/OilOlive,
         destroy WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/BeerEmpty/WineEmpty/WineEmpty2/MayonnaiseEmpty,
-	    OnGiveXP:Give5WoodworkXP,
+        keep MortarPestle,
+
         Result:HairDyeGinger,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
+        Time:180.0,
+        Category:ApoPaints,
+        Sound:MortarPrestleSFX,
+        AnimNode:Craft,
+        NearItem:Laboratory Table,
+        NeedToBeLearn:false,
+        OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Craft Dye Color Of Green
     {
-        keep MortarPestle,
         Water=5,
         farming.BroccoliSeed/farming.CabbageSeed=50,
         OilVegetable/OilOlive,
         destroy WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/BeerEmpty/WineEmpty/WineEmpty2/MayonnaiseEmpty,
-	    OnGiveXP:Give5WoodworkXP,
+        keep MortarPestle,
+
         Result:HairDyeGreen,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
+        Time:180.0,
+        Category:ApoPaints,
+        Sound:MortarPrestleSFX,
+        AnimNode:Craft,
+        NearItem:Laboratory Table,
+        NeedToBeLearn:false,
+        OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Craft Dye Color Of Light Brown
     {
-        keep MortarPestle,
         farming.PotatoSeed=50,
         Water=5,
         OilVegetable/OilOlive,
         destroy WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/BeerEmpty/WineEmpty/WineEmpty2/MayonnaiseEmpty,
-	    OnGiveXP:Give5WoodworkXP,
+        keep MortarPestle,
+
         Result:HairDyeLightBrown,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
+        Time:180.0,
+        Category:ApoPaints,
+        Sound:MortarPrestleSFX,
+        AnimNode:Craft,
+        NearItem:Laboratory Table,
+        NeedToBeLearn:false,
+        OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Craft Dye Color Of Pink
     {
-        keep MortarPestle,
         farming.StrewberrieSeed=50,
         Water=5,
         OilVegetable/OilOlive,
         destroy WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/BeerEmpty/WineEmpty/WineEmpty2/MayonnaiseEmpty,
-	    OnGiveXP:Give5WoodworkXP,
+        keep MortarPestle,
+
         Result:HairDyePink,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
+        Time:180.0,
+        Category:ApoPaints,
+        Sound:MortarPrestleSFX,
+        AnimNode:Craft,
+        NearItem:Laboratory Table,
+        NeedToBeLearn:false,
+        OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Craft Dye Color Of Red
     {
-        keep MortarPestle,
         Water=5,
         farming.RedRadishSeed/farming.TomatoSeed=50,
         OilVegetable/OilOlive,
         destroy WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/BeerEmpty/WineEmpty/WineEmpty2/MayonnaiseEmpty,
-	    OnGiveXP:Give5WoodworkXP,
+        keep MortarPestle,
+
         Result:HairDyeRed,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
+        Time:180.0,
+        Category:ApoPaints,
+        Sound:MortarPrestleSFX,
+        AnimNode:Craft,
+        NearItem:Laboratory Table,
+        NeedToBeLearn:false,
+        OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Craft Dye Color Of White
     {
-        keep MortarPestle,
         Water=5,
         Bleach,
         OilVegetable/OilOlive,
         destroy WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/BeerEmpty/WineEmpty/WineEmpty2/MayonnaiseEmpty,
-	    OnGiveXP:Give5WoodworkXP,
+        keep MortarPestle,
+
         Result:HairDyeWhite,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
+        Time:180.0,
+        Category:ApoPaints,
+        Sound:MortarPrestleSFX,
+        AnimNode:Craft,
+        NearItem:Laboratory Table,
+        NeedToBeLearn:false,
+        OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Craft Dye Color Of Yellow
     {
-        keep MortarPestle,
         Water=5,
         Bleach,
         DriedLentils/LemonGrass,
         OilVegetable/OilOlive,
         destroy WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/BeerEmpty/WineEmpty/WineEmpty2/MayonnaiseEmpty,
-	    OnGiveXP:Give5WoodworkXP,
+        keep MortarPestle,
+
         Result:HairDyeYellow,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
+        Time:180.0,
+        Category:ApoPaints,
+        Sound:MortarPrestleSFX,
+        AnimNode:Craft,
+        NearItem:Laboratory Table,
+        NeedToBeLearn:false,
+        OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Craft Dye Color Of Blue
     {
-        keep MortarPestle,
         Violets/BerryBlue/BerryGeneric2,
         Water=5,
         OilVegetable/OilOlive,
         destroy WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/BeerEmpty/WineEmpty/WineEmpty2/MayonnaiseEmpty,
-	    OnGiveXP:Give5WoodworkXP,
+        keep MortarPestle,
+
         Result:HairDyeBlue,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
+        Time:180.0,
+        Category:ApoPaints,
+        Sound:MortarPrestleSFX,
+        AnimNode:Craft,
+        NearItem:Laboratory Table,
+        NeedToBeLearn:false,
+        OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Craft Dye Color Of Ginger
     {
-        keep MortarPestle,
         BerryGeneric4,
         Water=5,
         OilVegetable/OilOlive,
         destroy WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/BeerEmpty/WineEmpty/WineEmpty2/MayonnaiseEmpty,
-	    OnGiveXP:Give5WoodworkXP,
+        keep MortarPestle,
+
         Result:HairDyeGinger,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
+        Time:180.0,
+        Category:ApoPaints,
+        Sound:MortarPrestleSFX,
+        AnimNode:Craft,
+        NearItem:Laboratory Table,
+        NeedToBeLearn:false,
+        OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Craft Dye Color Of Green
     {
-        keep MortarPestle,
         CommonMallow,
         Water=5,
         OilVegetable/OilOlive,
         destroy WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/BeerEmpty/WineEmpty/WineEmpty2/MayonnaiseEmpty,
-	    OnGiveXP:Give5WoodworkXP,
+        keep MortarPestle,
+
         Result:HairDyeGreen,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
+        Time:180.0,
+        Category:ApoPaints,
+        Sound:MortarPrestleSFX,
+        AnimNode:Craft,
+        NearItem:Laboratory Table,
+        NeedToBeLearn:false,
+        OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Craft Dye Color Of Light Brown
     {
-        keep MortarPestle,
         Ginseng,
         Water=5,
         OilVegetable/OilOlive,
         destroy WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/BeerEmpty/WineEmpty/WineEmpty2/MayonnaiseEmpty,
-	    OnGiveXP:Give5WoodworkXP,
+        keep MortarPestle,
+
         Result:HairDyeLightBrown,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
+        Time:180.0,
+        Category:ApoPaints,
+        Sound:MortarPrestleSFX,
+        AnimNode:Craft,
+        NearItem:Laboratory Table,
+        NeedToBeLearn:false,
+        OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Craft Dye Color Of Red
     {
-        keep MortarPestle,
         Water=5,
         Rosehips/BerryGeneric1,
         OilVegetable/OilOlive,
         destroy WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/BeerEmpty/WineEmpty/WineEmpty2/MayonnaiseEmpty,
-	    OnGiveXP:Give5WoodworkXP,
+        keep MortarPestle,
+
         Result:HairDyeRed,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
+        Time:180.0,
+        Category:ApoPaints,
+        Sound:MortarPrestleSFX,
+        AnimNode:Craft,
+        NearItem:Laboratory Table,
+        NeedToBeLearn:false,
+        OnGiveXP:Give5WoodworkXP,
     }
 
    /*********************Mix Paint For Other Paint Colors*********************/
     recipe Trio Mix Paint For Color Black
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    PaintGreen=2,
+        PaintGreen=2,
         PaintRed=2,
         PaintBlue=2,
         destroy PaintbucketEmpty,
-	    Result:PaintBlack,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintBlack,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Dual Mix Paint For Color Blue
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    PaintPurple=3,
+        PaintPurple=3,
         PaintCyan=2,
         destroy PaintbucketEmpty,
-	    Result:PaintBlue,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintBlue,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Dual Mix Paint For Color Brown
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    PaintGreen=3,
+        PaintGreen=3,
         PaintRed=2,
         destroy PaintbucketEmpty,
-	    Result:PaintBrown,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintBrown,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Dual Mix Paint For Color Cyan
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    PaintGreen=2,
+        PaintGreen=2,
         PaintBlue=3,
         destroy PaintbucketEmpty,
-	    Result:PaintCyan,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintCyan,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Dual Mix Paint For Color Grey
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    PaintBlack=3,
+        PaintBlack=3,
         PaintWhite=2,
         destroy PaintbucketEmpty,
-	    Result:PaintGrey,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintGrey,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Dual Mix Paint For Color Green
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    PaintBlue=3,
+        PaintBlue=3,
         PaintYellow=2,
         destroy PaintbucketEmpty,
-	    Result:PaintGreen,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintGreen,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Dual Mix Paint For Color Light Blue
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    PaintBlue=3,
+        PaintBlue=3,
         PaintWhite=2,
         destroy PaintbucketEmpty,
-	    Result:PaintLightBlue,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintLightBlue,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Dual Mix Paint For Color Light Brown
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    PaintBrown=3,
+        PaintBrown=3,
         PaintWhite=2,
         destroy PaintbucketEmpty,
-	    Result:PaintLightBrown,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintLightBrown,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Dual Mix Paint For Color Orange
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    PaintRed=3,
+        PaintRed=3,
         PaintYellow=2,
         destroy PaintbucketEmpty,
-	    Result:PaintOrange,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintOrange,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Dual Mix Paint For Color Pink
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    PaintRed=3,
+        PaintRed=3,
         PaintWhite=2,
         destroy PaintbucketEmpty,
-	    Result:PaintPink,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintPink,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Dual Mix Paint For Color Purple
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    PaintRed=3,
+        PaintRed=3,
         PaintBlue=2,
         destroy PaintbucketEmpty,
-	    Result:PaintPurple,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintPurple,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Dual Mix Paint For Color Red
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    PaintYellow=3,
+        PaintYellow=3,
         PaintPurple=2,
         destroy PaintbucketEmpty,
-	    Result:PaintRed,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintRed,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Dual Mix Paint For Color Turquoise
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    PaintGreen=2,
+        PaintGreen=2,
         PaintBlue=2,
         PaintWhite,
         destroy PaintbucketEmpty,
-	    Result:PaintTurquoise,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintTurquoise,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Dual Mix Paint For Color Yellow
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    PaintGreen=2,
+        PaintGreen=2,
         PaintRed=2,
         PaintWhite,
         destroy PaintbucketEmpty,
-	    Result:PaintYellow,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintYellow,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
    /*********************Mixing Hairy Dye Into White Paint*********************/
     recipe Mix Dye Into Paint For Color Black
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    destroy PaintWhite,
         HairDyeBlack=2,
-	    Result:PaintBlack,    
-	    Time:180.0,
-	    NeedToBeLearn:False,
-        Category:Carpentry,
-        AnimMode:Craft,
+        destroy PaintWhite,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintBlack,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Dye Into Paint For Color Blue
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    destroy PaintWhite,
         HairDyeBlue=2,
-	    Result:PaintBlue,
-	    Time:180.0,
-	    NeedToBeLearn:False,
-        Category:Carpentry,
-        AnimMode:Craft,
+        destroy PaintWhite,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintBlue,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Dye Into Paint For Color Green
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    destroy PaintWhite,
         HairDyeGreen=2,
-	    Result:PaintGreen,
-	    Time:180.0,
-	    NeedToBeLearn:False,
-        Category:Carpentry,
-        AnimMode:Craft,
+        destroy PaintWhite,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintGreen,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Dye Into Paint For Color Grey
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintWhite,
         HairDyeBlack=1,
+        destroy PaintWhite,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintGrey,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Dye Into Paint For Color Light Blue
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintWhite,
         HairDyeBlue=1,
+        destroy PaintWhite,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintLightBlue,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Dye Into Paint For Color Light Brown
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    destroy PaintWhite,
         HairDyeLightBrown=2,
-	    Result:PaintLightBrown,
-	    Time:180.0,
-	    NeedToBeLearn:False,
-        Category:Carpentry,
-        AnimMode:Craft,
+        destroy PaintWhite,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintLightBrown,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Dye Into Paint For Color Orange
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    destroy PaintWhite,
         HairDyeGinger=2,
-	    Result:PaintOrange,
-	    Time:180.0,
-	    NeedToBeLearn:False,
-        Category:Carpentry,
-        AnimMode:Craft,
+        destroy PaintWhite,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintOrange,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Dye Into Paint For Color Pink
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    destroy PaintWhite,
         HairDyePink=2,
-	    Result:PaintPink,
-	    Time:180.0,
-	    NeedToBeLearn:False,
-        Category:Carpentry,
-        AnimMode:Craft,
+        destroy PaintWhite,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintPink,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Dye Into Paint For Color Red
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    destroy PaintWhite,
         HairDyeRed=2,
-	    Result:PaintRed,
-	    Time:180.0,
-	    NeedToBeLearn:False,
-        Category:Carpentry,
-        AnimMode:Craft,
+        destroy PaintWhite,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintRed,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Dye Into Paint For Color White
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    destroy PaintBlack/PaintBlue/PaintBrown/PaintCyan/PaintGrey/PaintGreen/PaintLightBlue/PaintLightBrown/PaintOrange/PaintPink/PaintPurple/PaintRed/PaintTurquoise/PaintYellow,
         HairDyeWhite=2,
-	    Result:PaintWhite,
-	    Time:180.0,
-	    NeedToBeLearn:False,
-        Category:Carpentry,
-        AnimMode:Craft,
+        destroy PaintBlack/PaintBlue/PaintBrown/PaintCyan/PaintGrey/PaintGreen/PaintLightBlue/PaintLightBrown/PaintOrange/PaintPink/PaintPurple/PaintRed/PaintTurquoise/PaintYellow,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintWhite,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Dye Into Paint For Color Yellow
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    destroy PaintWhite,
         HairDyeYellow/HairDyeBlonde,
-	    Result:PaintYellow,
-	    Time:180.0,
-	    NeedToBeLearn:False,
-        Category:Carpentry,
-        AnimMode:Craft,
+        destroy PaintWhite,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintYellow,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Dye Into Paint For Color Brown
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-	    destroy PaintWhite,
         HairDyeLightBrown=1,
         HairDyeBlack=1,
-	    Result:PaintBrown,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        destroy PaintWhite,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
+        Result:PaintBrown,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Dye Into Paint For Color Cyan
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintWhite,
         HairDyeBlue=1,
         HairDyeGreen=1,
+        destroy PaintWhite,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintCyan,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
     
     recipe Mix Dye Into Paint For Color Green
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintWhite,
         HairDyeBlue=1,
         HairDyeYellow=1,
+        destroy PaintWhite,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintGreen,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Dye Into Paint For Color Orange
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintWhite,
         HairDyeRed=1,
         HairDyeYellow/HairDyeBlonde=1,
+        destroy PaintWhite,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintOrange,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Dye Into Paint For Color Purple
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintWhite,
         HairDyePink=1,
         HairDyeBlack=1,
+        destroy PaintWhite,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintPurple,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Dye Into Paint For Color Turquoise
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintWhite,
         HairDyeGreen=1,
         HairDyeBlue=1,
+        HairDyeWhite=1,
+        destroy PaintWhite,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintTurquoise,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
    /*********************Mixing Hair Dye and Paint Buckets*********************/
     recipe Mix Paint and Dye Into Color Brown (Green Base)
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintGreen,
         HairDyeRed,
+        destroy PaintGreen,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintBrown,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Paint and Dye Into Color Brown (Red Base)
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintRed,
         HairDyeGreen,
+        destroy PaintRed,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintBrown,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Paint and Dye Into Color Cyan (Blue Base)
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintBlue,
         HairDyeGreen,
+        destroy PaintBlue,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintCyan,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Paint and Dye Into Color Cyan (Green Base)
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintGreen,
         HairDyeBlue,
+        destroy PaintGreen,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintCyan,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Paint and Dye Into Color Grey (Black Base)
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintBlack,
         HairDyeWhite,
+        destroy PaintBlack,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintGrey,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Paint and Dye Into Color Green (Blue Base)
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintBlue,
         HairDyeYellow,
+        destroy PaintBlue,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintGreen,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Paint and Dye Into Color Green (Yellow Base)
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintYellow,
         HairDyeBlue,
+        destroy PaintYellow,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintGreen,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Paint and Dye Into Color Light Blue (Blue Base)
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintBlue,
         HairDyeWhite,
+        destroy PaintBlue,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintLightBlue,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Paint and Dye Into Color Light Brown (Brown Base)
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintBrown,
         HairDyeWhite,
+        destroy PaintBrown,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintLightBrown,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Paint and Dye Into Color Orange (Red Base)
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintRed,
         HairDyeYellow,
+        destroy PaintRed,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintOrange,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Paint and Dye Into Color Orange (Yellow Base)
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintYellow,
         HairDyeRed,
+        destroy PaintYellow,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintOrange,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Paint and Dye Into Color Pink (Red Base)
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintRed,
         HairDyeWhite,
+        destroy PaintRed,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintPink,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Paint and Dye Into Color Purple (Blue Base)
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintBlue,
         HairDyeRed,
+        destroy PaintBlue,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintPurple,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Paint and Dye Into Color Purple (Red Base)
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintRed,
         HairDyeBlue,
+        destroy PaintRed,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintPurple,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Paint and Dye Into Color Red (Purple Base)
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintPurple,
         HairDyeYellow,
+        destroy PaintPurple,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintRed,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Paint and Dye Into Color Turquoise (Green Base)
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintGreen,
         HairDyeBlue,
         HairDyeWhite=1,
+        destroy PaintGreen,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintTurquoise,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 
     recipe Mix Paint and Dye Into Color Turquoise (Blue Base)
     {
-        keep TreeBranch/WoodenStick/Plank/Nightstick,
-        destroy PaintBlue,
         HairDyeGreen,
         HairDyeWhite=1,
+        destroy PaintBlue,
+        keep TreeBranch/WoodenStick/Plank/Nightstick,
+
         Result:PaintTurquoise,
-	    Time:180.0,
-	    NeedToBeLearn:false,
-        Category:Carpentry,
-        AnimMode:Craft,
+        Time:180.0,
+        Category:ApoPaints,
         Sound:PaintMixingSFX,
+        AnimNode:Craft,
+        NeedToBeLearn:false,
         OnGiveXP:Give5WoodworkXP,
     }
 

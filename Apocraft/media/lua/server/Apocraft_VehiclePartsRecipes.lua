@@ -21,351 +21,78 @@ function Recipe.OnCreate.PartQuality(items, result, player, selectedItem)
     player:getXp():AddXP(Perks.Strength, 8)
 end
 
---This is used for tires
-function Recipe.OnCreate.TireStandard(items, result, player, selectedItem)
-    local comboskill = (player:getPerkLevel(Perks.Mechanics) + player:getPerkLevel(Perks.MetalWelding)) / 2
-    local TireType = nil
-    if comboskill >= 9 then
-        TireType = "ModernTire1"
-    elseif comboskill >= 6 then
-        TireType = "NormalTire1"
-    elseif comboskill >= 3 then
-        TireType = "OldTire1"
-    end
+-- Helper for Tire creation
+local function createTire(player, suffix)
+    local comboSkill = (player:getPerkLevel(Perks.Mechanics) + player:getPerkLevel(Perks.MetalWelding)) / 2
+    local prefix = comboSkill >= 9 and "ModernTire" or (comboSkill >= 6 and "NormalTire" or (comboSkill >= 3 and "OldTire" or nil))
 
-    if TireType then
-        player:getInventory():AddItem(TireType)
+    if prefix then
+        player:getInventory():AddItem(prefix .. suffix)
         player:getXp():AddXP(Perks.MetalWelding, 4)
         player:getXp():AddXP(Perks.Mechanics, 4)
         player:getXp():AddXP(Perks.Strength, 8)
     end
 end
 
-function Recipe.OnCreate.TireHeavy(items, result, player, selectedItem)
-    local comboskill = (player:getPerkLevel(Perks.Mechanics) + player:getPerkLevel(Perks.MetalWelding)) / 2
-    local TireType = nil
-    if comboskill >= 9 then
-        TireType = "ModernTire2"
-    elseif comboskill >= 6 then
-        TireType = "NormalTire2"
-    elseif comboskill >= 3 then
-        TireType = "OldTire2"
-    end
+-- Tires
+function Recipe.OnCreate.TireStandard(items, result, player) createTire(player, "1") end
+function Recipe.OnCreate.TireHeavy(items, result, player) createTire(player, "2") end
+function Recipe.OnCreate.TireSport(items, result, player) createTire(player, "3") end
 
-    if TireType then
-        player:getInventory():AddItem(TireType)
-        player:getXp():AddXP(Perks.MetalWelding, 4)
-        player:getXp():AddXP(Perks.Mechanics, 4)
+-- Helper for other vehicle parts
+local function createVehiclePart(player, high, med, low)
+    local mechSkill = player:getPerkLevel(Perks.Mechanics)
+    local weldSkill = player:getPerkLevel(Perks.MetalWelding)
+    local partType = mechSkill >= 9 and high or (mechSkill >= 6 and med or (mechSkill >= 3 and low or nil))
+
+    if partType then
+        local conditionMax = math.min(100, weldSkill * 15 + ZombRand(-5, 5))
+        local newItem = player:getInventory():AddItem(partType)
+        if newItem then 
+            newItem:setCondition(conditionMax) 
+        end
+        player:getXp():AddXP(Perks.MetalWelding, weldSkill)
+        player:getXp():AddXP(Perks.Mechanics, mechSkill)
         player:getXp():AddXP(Perks.Strength, 8)
     end
 end
 
-function Recipe.OnCreate.TireSport(items, result, player, selectedItem)
-    local comboskill = (player:getPerkLevel(Perks.Mechanics) + player:getPerkLevel(Perks.MetalWelding)) / 2
-    local TireType = nil
-    if comboskill >= 9 then
-        TireType = "ModernTire3"
-    elseif comboskill >= 6 then
-        TireType = "NormalTire3"
-    elseif comboskill >= 3 then
-        TireType = "OldTire3"
-    end
+-- Mufflers
+function Recipe.OnCreate.MufflerStandard(items, result, player) createVehiclePart(player, "ModernCarMuffler1", "NormalCarMuffler1", "OldCarMuffler1") end
+function Recipe.OnCreate.MufflerHeavy(items, result, player) createVehiclePart(player, "ModernCarMuffler2", "NormalCarMuffler2", "OldCarMuffler2") end
+function Recipe.OnCreate.MufflerSport(items, result, player) createVehiclePart(player, "ModernCarMuffler3", "NormalCarMuffler3", "OldCarMuffler3") end
 
-    if TireType then
-        player:getInventory():AddItem(TireType)
-        player:getXp():AddXP(Perks.MetalWelding, 4)
-        player:getXp():AddXP(Perks.Mechanics, 4)
-        player:getXp():AddXP(Perks.Strength, 8)
-    end
-end
+-- Suspensions
+function Recipe.OnCreate.SuspensionStandard(items, result, player) createVehiclePart(player, "ModernSuspension1", "NormalSuspension1", nil) end
+function Recipe.OnCreate.SuspensionHeavy(items, result, player) createVehiclePart(player, "ModernSuspension2", "NormalSuspension2", nil) end
+function Recipe.OnCreate.SuspensionSport(items, result, player) createVehiclePart(player, "ModernSuspension3", "NormalSuspension3", nil) end
 
---This is used for mufflers
-function Recipe.OnCreate.MufflerStandard(items, result, player, selectedItem)
-    local MechSkill = player:getPerkLevel(Perks.Mechanics)
-    local WeldSkill = player:getPerkLevel(Perks.MetalWelding)
-    local MufflerType = nil
+-- Gas Tanks
+function Recipe.OnCreate.GasTankStandard(items, result, player) createVehiclePart(player, "BigGasTank1", "NormalGasTank1", "SmallGasTank1") end
+function Recipe.OnCreate.GasTankHeavy(items, result, player) createVehiclePart(player, "BigGasTank2", "NormalGasTank2", "SmallGasTank2") end
+function Recipe.OnCreate.GasTankSport(items, result, player) createVehiclePart(player, "BigGasTank3", "NormalGasTank3", "SmallGasTank3") end
 
-    local conditionMax = math.min(100, (WeldSkill * 15 + ZombRand(-5, 5)))
-    if MechSkill >= 9 then
-        MufflerType = "ModernCarMuffler1"
-    elseif MechSkill >= 6 then
-        MufflerType = "NormalCarMuffler1"
-    elseif MechSkill >= 3 then
-        MufflerType = "OldCarMuffler1"
-    end
+-- Brakes
+function Recipe.OnCreate.BrakeStandard(items, result, player) createVehiclePart(player, "ModernBrake1", "NormalBrake1", "OldBrake1") end
+function Recipe.OnCreate.BrakeHeavy(items, result, player) createVehiclePart(player, "ModernBrake2", "NormalBrake2", "OldBrake2") end
+function Recipe.OnCreate.BrakeSport(items, result, player) createVehiclePart(player, "ModernBrake3", "NormalBrake3", "OldBrake3") end
 
-    if MufflerType then
-        local newItem = player:getInventory():AddItem(MufflerType)
-        if newItem then newItem:setCondition(conditionMax) end
-        player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
-        player:getXp():AddXP(Perks.Mechanics, MechSkill)
-        player:getXp():AddXP(Perks.Strength, 8)
-    end
-end
-
-function Recipe.OnCreate.MufflerHeavy(items, result, player, selectedItem)
-    local MechSkill = player:getPerkLevel(Perks.Mechanics)
-    local WeldSkill = player:getPerkLevel(Perks.MetalWelding)
-    local MufflerType = nil
-
-    local conditionMax = math.min(100, (WeldSkill * 15 + ZombRand(-5, 5)))
-    if MechSkill >= 9 then
-        MufflerType = "ModernCarMuffler2"
-    elseif MechSkill >= 6 then
-        MufflerType = "NormalCarMuffler2"
-    elseif MechSkill >= 3 then
-        MufflerType = "OldCarMuffler2"
-    end
-
-    if MufflerType then
-        local newItem = player:getInventory():AddItem(MufflerType)
-        if newItem then newItem:setCondition(conditionMax) end
-        player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
-        player:getXp():AddXP(Perks.Mechanics, MechSkill)
-        player:getXp():AddXP(Perks.Strength, 8)
-    end
-end
-
-function Recipe.OnCreate.MufflerSport(items, result, player, selectedItem)
-    local MechSkill = player:getPerkLevel(Perks.Mechanics)
-    local WeldSkill = player:getPerkLevel(Perks.MetalWelding)
-    local MufflerType = nil
-
-    local conditionMax = math.min(100, (WeldSkill * 15 + ZombRand(-5, 5)))
-    if MechSkill >= 9 then
-        MufflerType = "ModernCarMuffler3"
-    elseif MechSkill >= 6 then
-        MufflerType = "NormalCarMuffler3"
-    elseif MechSkill >= 3 then
-        MufflerType = "OldCarMuffler3"
-    end
-
-    if MufflerType then
-        local newItem = player:getInventory():AddItem(MufflerType)
-        if newItem then newItem:setCondition(conditionMax) end
-        player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
-        player:getXp():AddXP(Perks.Mechanics, MechSkill)
-        player:getXp():AddXP(Perks.Strength, 8)
-    end
-end
-
---This is used for suspensions
-function Recipe.OnCreate.SuspensionStandard(items, result, player, selectedItem)
-    local MechSkill = player:getPerkLevel(Perks.Mechanics)
-    local WeldSkill = player:getPerkLevel(Perks.MetalWelding)
-    local SuspensionType = nil
-
-    local conditionMax = math.min(100, (WeldSkill * 15 + ZombRand(-5, 5)))
-    if MechSkill >= 9 then
-        SuspensionType = "ModernSuspension1"
-    elseif MechSkill >= 6 then
-        SuspensionType = "NormalSuspension1"
-    end
-
-    if SuspensionType then
-        local newItem = player:getInventory():AddItem(SuspensionType)
-        if newItem then newItem:setCondition(conditionMax) end
-        player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
-        player:getXp():AddXP(Perks.Mechanics, MechSkill)
-        player:getXp():AddXP(Perks.Strength, 8)
-    end
-end
-
-function Recipe.OnCreate.SuspensionHeavy(items, result, player, selectedItem)
-    local MechSkill = player:getPerkLevel(Perks.Mechanics)
-    local WeldSkill = player:getPerkLevel(Perks.MetalWelding)
-    local SuspensionType = nil
-
-    local conditionMax = math.min(100, (WeldSkill * 15 + ZombRand(-5, 5)))
-    if MechSkill >= 9 then
-        SuspensionType = "ModernSuspension2"
-    elseif MechSkill >= 6 then
-        SuspensionType = "NormalSuspension2"
-    end
-
-    if SuspensionType then
-        local newItem = player:getInventory():AddItem(SuspensionType)
-        if newItem then newItem:setCondition(conditionMax) end
-        player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
-        player:getXp():AddXP(Perks.Mechanics, MechSkill)
-        player:getXp():AddXP(Perks.Strength, 8)
-    end
-end
-
-function Recipe.OnCreate.SuspensionSport(items, result, player, selectedItem)
-    local MechSkill = player:getPerkLevel(Perks.Mechanics)
-    local WeldSkill = player:getPerkLevel(Perks.MetalWelding)
-    local SuspensionType = nil
-
-    local conditionMax = math.min(100, (WeldSkill * 15 + ZombRand(-5, 5)))
-    if MechSkill >= 9 then
-        SuspensionType = "ModernSuspension3"
-    elseif MechSkill >= 6 then
-        SuspensionType = "NormalSuspension3"
-    end
-
-    if SuspensionType then
-        local newItem = player:getInventory():AddItem(SuspensionType)
-        if newItem then newItem:setCondition(conditionMax) end
-        player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
-        player:getXp():AddXP(Perks.Mechanics, MechSkill)
-        player:getXp():AddXP(Perks.Strength, 8)
-    end
-end
-
---This is used for gas tanks
-function Recipe.OnCreate.GasTankStandard(items, result, player, selectedItem)
-    local MechSkill = player:getPerkLevel(Perks.Mechanics)
-    local WeldSkill = player:getPerkLevel(Perks.MetalWelding)
-    local GasTankType = nil
-
-    local conditionMax = math.min(100, (WeldSkill * 15 + ZombRand(-5, 5)))
-    if MechSkill >= 9 then
-        GasTankType = "BigGasTank1"
-    elseif MechSkill >= 6 then
-        GasTankType = "NormalGasTank1"
-    elseif MechSkill >= 3 then
-        GasTankType = "SmallGasTank1"
-    end
-
-    if GasTankType then
-        local newItem = player:getInventory():AddItem(GasTankType)
-        if newItem then newItem:setCondition(conditionMax) end
-        player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
-        player:getXp():AddXP(Perks.Mechanics, MechSkill)
-        player:getXp():AddXP(Perks.Strength, 8)
-    end
-end
-
-function Recipe.OnCreate.GasTankHeavy(items, result, player, selectedItem)
-    local MechSkill = player:getPerkLevel(Perks.Mechanics)
-    local WeldSkill = player:getPerkLevel(Perks.MetalWelding)
-    local GasTankType = nil
-
-    local conditionMax = math.min(100, (WeldSkill * 15 + ZombRand(-5, 5)))
-    if MechSkill >= 9 then
-        GasTankType = "BigGasTank2"
-    elseif MechSkill >= 6 then
-        GasTankType = "NormalGasTank2"
-    elseif MechSkill >= 3 then
-        GasTankType = "SmallGasTank2"
-    end
-
-    if GasTankType then
-        local newItem = player:getInventory():AddItem(GasTankType)
-        if newItem then newItem:setCondition(conditionMax) end
-        player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
-        player:getXp():AddXP(Perks.Mechanics, MechSkill)
-        player:getXp():AddXP(Perks.Strength, 8)
-    end
-end
-
-function Recipe.OnCreate.GasTankSport(items, result, player, selectedItem)
-    local MechSkill = player:getPerkLevel(Perks.Mechanics)
-    local WeldSkill = player:getPerkLevel(Perks.MetalWelding)
-    local GasTankType = nil
-
-    local conditionMax = math.min(100, (WeldSkill * 15 + ZombRand(-5, 5)))
-    if MechSkill >= 9 then
-        GasTankType = "BigGasTank3"
-    elseif MechSkill >= 6 then
-        GasTankType = "NormalGasTank3"
-    elseif MechSkill >= 3 then
-        GasTankType = "SmallGasTank3"
-    end
-
-    if GasTankType then
-        local newItem = player:getInventory():AddItem(GasTankType)
-        if newItem then newItem:setCondition(conditionMax) end
-        player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
-        player:getXp():AddXP(Perks.Mechanics, MechSkill)
-        player:getXp():AddXP(Perks.Strength, 8)
-    end
-end
-
---This is used for brakes
-function Recipe.OnCreate.BrakeStandard(items, result, player, selectedItem)
-    local MechSkill = player:getPerkLevel(Perks.Mechanics)
-    local WeldSkill = player:getPerkLevel(Perks.MetalWelding)
-    local BrakeType = nil
-
-    local conditionMax = math.min(100, (WeldSkill * 15 + ZombRand(-5, 5)))
-    if MechSkill >= 9 then
-        BrakeType = "ModernBrake1"
-    elseif MechSkill >= 6 then
-        BrakeType = "NormalBrake1"
-    elseif MechSkill >= 3 then
-        BrakeType = "OldBrake1"
-    end
-
-if BrakeType then
-        local newItem = player:getInventory():AddItem(BrakeType)
-        if newItem then newItem:setCondition(conditionMax) end
-        player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
-        player:getXp():AddXP(Perks.Mechanics, MechSkill)
-        player:getXp():AddXP(Perks.Strength, 8)
-    end
-end
-
-function Recipe.OnCreate.BrakeHeavy(items, result, player, selectedItem)
-    local MechSkill = player:getPerkLevel(Perks.Mechanics)
-    local WeldSkill = player:getPerkLevel(Perks.MetalWelding)
-    local BrakeType = nil
-
-    local conditionMax = math.min(100, (WeldSkill * 15 + ZombRand(-5, 5)))
-    if MechSkill >= 9 then
-        BrakeType = "ModernBrake2"
-    elseif MechSkill >= 6 then
-        BrakeType = "NormalBrake2"
-    elseif MechSkill >= 3 then
-        BrakeType = "OldBrake2"
-    end
-
-if BrakeType then
-        local newItem = player:getInventory():AddItem(BrakeType)
-        if newItem then newItem:setCondition(conditionMax) end
-        player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
-        player:getXp():AddXP(Perks.Mechanics, MechSkill)
-        player:getXp():AddXP(Perks.Strength, 8)
-    end
-end
-
-function Recipe.OnCreate.BrakeSport(items, result, player, selectedItem)
-    local MechSkill = player:getPerkLevel(Perks.Mechanics)
-    local WeldSkill = player:getPerkLevel(Perks.MetalWelding)
-    local BrakeType = nil
-
-    local conditionMax = math.min(100, (WeldSkill * 15 + ZombRand(-5, 5)))
-    if MechSkill >= 9 then
-        BrakeType = "ModernBrake3"
-    elseif MechSkill >= 6 then
-        BrakeType = "NormalBrake3"
-    elseif MechSkill >= 3 then
-        BrakeType = "OldBrake3"
-    end
-
-if BrakeType then
-        local newItem = player:getInventory():AddItem(BrakeType)
-        if newItem then newItem:setCondition(conditionMax) end
-        player:getXp():AddXP(Perks.MetalWelding, WeldSkill)
-        player:getXp():AddXP(Perks.Mechanics, MechSkill)
-        player:getXp():AddXP(Perks.Strength, 8)
-    end
-end
-
+-- Engine Parts
 function Recipe.OnCreate.EngineParts(items, result, player, selectedItem)
-    local ComboSkill = player:getPerkLevel(Perks.Mechanics) + player:getPerkLevel(Perks.MetalWelding) +
-    player:getPerkLevel(Perks.Electricity)
-    local PartsNum = math.floor(ComboSkill / 1.5)
+    local comboSkill = player:getPerkLevel(Perks.Mechanics) + player:getPerkLevel(Perks.MetalWelding) + player:getPerkLevel(Perks.Electricity)
+    local partsNum = math.floor(comboSkill / 1.5)
 
-    player:getInventory():AddItems("EngineParts", PartsNum)
-    player:getXp():AddXP(Perks.MetalWelding, PartsNum)
-    player:getXp():AddXP(Perks.Mechanics, PartsNum)
-    player:getXp():AddXP(Perks.Electricity, PartsNum)
+    if partsNum > 0 then
+        player:getInventory():AddItems("EngineParts", partsNum)
+        player:getXp():AddXP(Perks.MetalWelding, partsNum)
+        player:getXp():AddXP(Perks.Mechanics, partsNum)
+        player:getXp():AddXP(Perks.Electricity, partsNum)
+    end
 end
 
+-- XP Scaling
 function Recipe.OnGiveXP.MechWeldScaled(recipe, ingredients, result, player)
-    player:getXp():AddXP(Perks.Mechanics, player:getPerkLevel(Perks.Mechanics) * 5);
-    player:getXp():AddXP(Perks.MetalWelding, player:getPerkLevel(Perks.MetalWelding) * 5);
-    player:getXp():AddXP(Perks.Strength, 12);
+    player:getXp():AddXP(Perks.Mechanics, player:getPerkLevel(Perks.Mechanics) * 5)
+    player:getXp():AddXP(Perks.MetalWelding, player:getPerkLevel(Perks.MetalWelding) * 5)
+    player:getXp():AddXP(Perks.Strength, 12)
 end

@@ -1,266 +1,218 @@
 module Apocraft
 {
-   sound AmmoMakingSFX
-   {
-
-      clip
-      {
-         file = media/sound/AmmoMakingSFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound ChoppingFoodSFX
-   {
-
-      clip
-      {
-         file = media/sound/ChoppingFoodSFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound ClothesRipping1SFX
-   {
-
-      clip
-      {
-         file = media/sound/ClothesRipping1SFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound ClothesRipping2SFX
-   {
-
-      clip
-      {
-         file = media/sound/ClothesRipping2SFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound ClothesRipping3SFX
-   {
-
-      clip
-      {
-         file = media/sound/ClothesRipping3SFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound ForgeTableSFX
-   {
-
-      clip
-      {
-         file = media/sound/ForgeTableSFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound HammerOnWoodSFX
-   {
-
-      clip
-      {
-         file = media/sound/HammerOnWoodSFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound LaboratoryTableSFX
-   {
-
-      clip
-      {
-         file = media/sound/LaboratoryTableSFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound LoggingSFX
-   {
-
-      clip
-      {
-         file = media/sound/LoggingSFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound MechanicTableSFX
-   {
-
-      clip
-      {
-         file = media/sound/MechanicTableSFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound MetalWeldingSFX
-   {
-
-      clip
-      {
-         file = media/sound/MetalWeldingSFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound MortarPrestlePaintSFX
-   {
-
-      clip
-      {
-         file = media/sound/MortarPrestlePaintSFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-   sound MortarPrestleSFX
-   {
-
-      clip
-      {
-         file = media/sound/MortarPrestleSFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound PaintBrushSFX
-   {
-
-      clip
-      {
-         file = media/sound/PaintBrushSFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound PaintMixingSFX
-   {
-
-      clip
-      {
-         file = media/sound/PaintMixingSFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound QuickDuctTapeSFX
-   {
-
-      clip
-      {
-         file = media/sound/QuickDuctTapeSFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound RecyclingMetalworkSFX
-   {
-
-      clip
-      {
-         file = media/sound/RecyclingMetalworkSFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound RepairSFX
-   {
-
-      clip
-      {
-         file = media/sound/RepairSFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound ScissorsSFX
-   {
-
-      clip
-      {
-         file = media/sound/ScissorsSFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound StuffingSackSFX
-   {
-
-      clip
-      {
-         file = media/sound/StuffingSackSFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound TailoringTable1SFX
-   {
-
-      clip
-      {
-         file = media/sound/TailoringTable1SFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound TailoringTable2SFX
-   {
-
-      clip
-      {
-         file = media/sound/TailoringTable2SFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-         sound WaterLabSFX
-   {
-
-      clip
-      {
-         file = media/sound/WaterLabSFX.wav,
-         volume = 0.7,
-      }
-
-   }
-
-      sound WoodCarvingSFX
-   {
-
-      clip
-      {
-         file = media/sound/WoodCarvingSFX.wav,
-         volume = 0.7,
-      }
-
-   }
+    sound AmmoMakingSFX
+    {
+        clip
+        {
+            file = media/sound/AmmoMakingSFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound ChoppingFoodSFX
+    {
+        clip
+        {
+            file = media/sound/ChoppingFoodSFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound ClothesRipping1SFX
+    {
+        clip
+        {
+            file = media/sound/ClothesRipping1SFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound ClothesRipping2SFX
+    {
+        clip
+        {
+            file = media/sound/ClothesRipping2SFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound ClothesRipping3SFX
+    {
+        clip
+        {
+            file = media/sound/ClothesRipping3SFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound ForgeTableSFX
+    {
+        clip
+        {
+            file = media/sound/ForgeTableSFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound HammerOnWoodSFX
+    {
+        clip
+        {
+            file = media/sound/HammerOnWoodSFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound LaboratoryTableSFX
+    {
+        clip
+        {
+            file = media/sound/LaboratoryTableSFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound LoggingSFX
+    {
+        clip
+        {
+            file = media/sound/LoggingSFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound MechanicTableSFX
+    {
+        clip
+        {
+            file = media/sound/MechanicTableSFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound MetalWeldingSFX
+    {
+        clip
+        {
+            file = media/sound/MetalWeldingSFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound MortarPrestlePaintSFX
+    {
+        clip
+        {
+            file = media/sound/MortarPrestlePaintSFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound MortarPrestleSFX
+    {
+        clip
+        {
+            file = media/sound/MortarPrestleSFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound PaintBrushSFX
+    {
+        clip
+        {
+            file = media/sound/PaintBrushSFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound PaintMixingSFX
+    {
+        clip
+        {
+            file = media/sound/PaintMixingSFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound QuickDuctTapeSFX
+    {
+        clip
+        {
+            file = media/sound/QuickDuctTapeSFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound RecyclingMetalworkSFX
+    {
+        clip
+        {
+            file = media/sound/RecyclingMetalworkSFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound RepairSFX
+    {
+        clip
+        {
+            file = media/sound/RepairSFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound ScissorsSFX
+    {
+        clip
+        {
+            file = media/sound/ScissorsSFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound StuffingSackSFX
+    {
+        clip
+        {
+            file = media/sound/StuffingSackSFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound TailoringTable1SFX
+    {
+        clip
+        {
+            file = media/sound/TailoringTable1SFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound TailoringTable2SFX
+    {
+        clip
+        {
+            file = media/sound/TailoringTable2SFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound WaterLabSFX
+    {
+        clip
+        {
+            file = media/sound/WaterLabSFX.wav,
+            volume = 0.7,
+        }
+    }
+
+    sound WoodCarvingSFX
+    {
+        clip
+        {
+            file = media/sound/WoodCarvingSFX.wav,
+            volume = 0.7,
+        }
+    }
 }

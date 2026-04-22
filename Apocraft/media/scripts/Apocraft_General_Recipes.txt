@@ -8,130 +8,139 @@ module Apocraft
    /*************************Remove Paint From Light Bulbs*********************/
    recipe Clean Paint From Light Bulb
    {
-      keep Sponge/DishCloth/RippedSheets,
-      Water=1,
-      Soap2=1,
-      LightBulbYellow/LightBulbRed/LightBulbGreen/LightBulbPurple/LightBulbPink/LightBulbOrange/LightBulbCyan/LightBulbBlue,
+        LightBulbYellow/LightBulbRed/LightBulbGreen/LightBulbPurple/LightBulbPink/LightBulbOrange/LightBulbCyan/LightBulbBlue,
+        Water=1,
+        Soap2=1,
+        keep Sponge/DishCloth/RippedSheets,
 
-      Result:LightBulb,
-      Time:250.0,
-      Category:ApoPaints,
-      NeedToBeLearn:false,
-      CanBeDoneFromFloor:true,
-      Sound:MakePlaster,
+        Result:LightBulb,
+        Time:250.0,
+        Category:ApoPaints,
+        Sound:MakePlaster,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
    }
 
    /*********************Craft Colored Lightbulbs*********************/
    recipe Paint Light Bulb (Red)
    {
-      keep PaintRed,
-      keep Paintbrush,
-      LightBulb,
+        LightBulb,
+        keep PaintRed,
+        keep Paintbrush,
 
-      Result:LightBulbRed,
-      Time:150.0,
-      Category:ApoPaints,
-      NeedToBeLearn:false,
-      CanBeDoneFromFloor:true,
-      Sound:MakePlaster,
+        Result:LightBulbRed,
+        Time:150.0,
+        Category:ApoPaints,
+        Sound:PaintBrushSFX,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
    }
 
    recipe Paint Light Bulb (Yellow)
    {
-      keep PaintYellow,
-      keep Paintbrush,
-      LightBulb,
+        LightBulb,
+        keep PaintYellow,
+        keep Paintbrush,
 
-      Result:LightBulbYellow,
-      Time:150.0,
-      Category:ApoPaints,
-      NeedToBeLearn:false,
-      CanBeDoneFromFloor:true,
-      Sound:MakePlaster,
+        Result:LightBulbYellow,
+        Time:150.0,
+        Category:ApoPaints,
+        Sound:PaintBrushSFX,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
    }
 
    recipe Paint Light Bulb (Green)
    {
-      keep PaintGreen,
-      keep Paintbrush,
-      LightBulb,
+        LightBulb,
+        keep PaintGreen,
+        keep Paintbrush,
 
-      Result:LightBulbGreen,
-      Time:150.0,
-      Category:ApoPaints,
-      NeedToBeLearn:false,
-      CanBeDoneFromFloor:true,
-      Sound:MakePlaster,
+        Result:LightBulbGreen,
+        Time:150.0,
+        Category:ApoPaints,
+        Sound:PaintBrushSFX,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
    }
 
    recipe Paint Light Bulb (Purple)
    {
-      keep PaintPurple,
-      keep Paintbrush,
-      LightBulb,
+        LightBulb,
+        keep PaintPurple,
+        keep Paintbrush,
 
-      Result:LightBulbPurple,
-      Time:150.0,
-      Category:ApoPaints,
-      NeedToBeLearn:false,
-      CanBeDoneFromFloor:true,
-      Sound:MakePlaster,
+        Result:LightBulbPurple,
+        Time:150.0,
+        Category:ApoPaints,
+        Sound:PaintBrushSFX,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
    }
 
    recipe Paint Light Bulb (Pink)
    {
-      keep PaintPink,
-      keep Paintbrush,
-      LightBulb,
+        LightBulb,
+        keep PaintPink,
+        keep Paintbrush,
 
-      Result:LightBulbPink,
-      Time:150.0,
-      Category:ApoPaints,
-      NeedToBeLearn:false,
-      CanBeDoneFromFloor:true,
-      Sound:MakePlaster,
+        Result:LightBulbPink,
+        Time:150.0,
+        Category:ApoPaints,
+        Sound:PaintBrushSFX,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
    }
 
    recipe Paint Light Bulb (Orange)
    {
-      keep PaintOrange,
-      keep Paintbrush,
-      LightBulb,
+        LightBulb,
+        keep PaintOrange,
+        keep Paintbrush,
 
-      Result:LightBulbOrange,
-      Time:150.0,
-      Category:ApoPaints,
-      NeedToBeLearn:false,
-      CanBeDoneFromFloor:true,
-      Sound:MakePlaster,
+        Result:LightBulbOrange,
+        Time:150.0,
+        Category:ApoPaints,
+        Sound:PaintBrushSFX,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
    }
 
    recipe Paint Light Bulb (Cyan)
    {
-      keep PaintCyan,
-      keep Paintbrush,
-      LightBulb,
+        LightBulb,
+        keep PaintCyan,
+        keep Paintbrush,
 
-      Result:LightBulbCyan,
-      Time:150.0,
-      Category:ApoPaints,
-      NeedToBeLearn:false,
-      CanBeDoneFromFloor:true,
-      Sound:MakePlaster,
+        Result:LightBulbCyan,
+        Time:150.0,
+        Category:ApoPaints,
+        Sound:PaintBrushSFX,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
    }
 
    recipe Paint Light Bulb (Blue)
    {
-      keep PaintBlue,
-      keep Paintbrush,
-      LightBulb,
+        LightBulb,
+        keep PaintBlue,
+        keep Paintbrush,
 
-      Result:LightBulbBlue,
-      Time:150.0,
-      Category:ApoPaints,
-      NeedToBeLearn:false,
-      CanBeDoneFromFloor:true,
-      Sound:MakePlaster,
+        Result:LightBulbBlue,
+        Time:150.0,
+        Category:ApoPaints,
+        Sound:PaintBrushSFX,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
    }
 
 }

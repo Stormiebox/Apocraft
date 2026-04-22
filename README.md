@@ -1,5 +1,5 @@
 ## Table of Contents
-- [Apocraft Introduction](#apocraft)
+- [Apocraft Introduction](#apocraft-introduction)
 - [Guide](#guide)
 - [Skills & Professions](#skills--professions)
 - [Enhanced Forage](#enhanced-forage)
@@ -10,7 +10,7 @@
 - [Feedback & Support](#feedback--support)
 
 
-## Apocraft
+## Apocraft Introduction
 Welcome to Apocraft, a vanilla-friendly crafting overhaul for Project Zomboid! Delve into over 1,000 diverse crafting recipes, complemented by unique SFX for a heightened experience. Along with the foundational support from the "Crafting Enhanced Core" mod, Apocraft now also integrates with the "Target Square: On Load Commands" API mod, introducing dynamic in-game environmental interactions and additional crafting capabilities. Tailored for compatibility with other mods, Apocraft is poised to redefine and enhance your survival journey!
 
 ## Guide
@@ -30,6 +30,7 @@ Welcome to Apocraft, a vanilla-friendly crafting overhaul for Project Zomboid! D
 - Diverse Paint Crafting
 - Canning Galore
 - Hair Dye Crafting
+- Extensive Metalworking & Forging
 - Extensive Recycling
 - Weapon/Tool Repair
 - Glass Molding
@@ -63,18 +64,26 @@ Delve deeper into the environment with the Enhanced Forage system. As your forag
 
 ## FAQs
 - **Q: Can I use this mod alongside XYZ mod?**
-  - A: Apocraft is compatible with most Project Zomboid mods. Check the compatibility list or test first.
+  > **A:** Apocraft is compatible with most Project Zomboid mods. Check the compatibility list or test first.
   
 - **Q: How do I repair tools?**
-  - A: Gather required materials as per the crafting menu and proceed with the crafting process.
+  > **A:** Gather required materials as per the crafting menu and proceed with the crafting process.
 
 - **Q: About the "Lumberjack" skill?**
-  - A: Engage in woodworking activities to boost the Lumberjack skill. As it levels up, you'll achieve increased logging efficiency, yielding more wood and resources.
+  > **A:** Engage in woodworking activities to boost the Lumberjack skill. As it levels up, you'll achieve increased logging efficiency, yielding more wood and resources.
 
 - **Q: How does the new "Lumberjack" skill work with special trees like the "Heartwood Trees"?**
-  - A: As players hone their Lumberjack skills, they can more efficiently identify and extract valuable resources from these unique trees. The higher the skill level, the better the chances of harvesting special lumber from the "Heartwood Trees".
+  > **A:** As players hone their Lumberjack skills, they can more efficiently identify and extract valuable resources from these unique trees. The higher the skill level, the better the chances of harvesting special lumber from the "Heartwood Trees".
 
 ## Changelog
+### Version 1.5.0
+- **Overhaul:** Complete code and script audit across all recipe, item, and translation files. Standardized formatting, syntax, and engine hooks for maximum stability.
+- **Added:** Over 20 new Metalworking recipes! You can now forge base materials (pipes, wire, sheet metal), tools (hammers, saws, wrenches), weapons (crowbars, machetes), and cooking supplies using the Forge Table.
+- **Enhanced:** Jewelry recycling is now dynamically driven by Lua, allowing any combination of 3 watches or accessories to be melted down into Scrap Metal.
+- **Fixed:** Critical bug where reusable tools (like scissors, needles, etc.) were incorrectly consumed and destroyed during crafting.
+- **Fixed:** Realigned and fully translated UI categories under the unified "Apocraft" umbrella (e.g., Apocraft Metalworking, Apocraft Farming, Apocraft Survivalist).
+- **Refactored:** Vastly optimized vehicle part crafting and Lua scripts for cleaner performance and safe mod compatibility (e.g., TraitTagFramework dependency is now safely checked).
+
 ### Version 1.4.0
 - **Added:** Enhanced Forage system, introducing dynamic foraging hotspots where players can find a more diverse range of items based on their foraging skill. In these zones, foraging yields are doubled.
 - **Integrated:** "Target Square: On Load Commands" API mod to support the Enhanced Forage system.
@@ -91,7 +100,7 @@ Delve deeper into the environment with the Enhanced Forage system. As your forag
 - **Fixed:** Bug related to glass molding.
 
 ### Version 1.0.0
-- Initial commit and upload of the Aporcraft mod project.
+- Initial commit and upload of the Apocraft mod project.
 
 ## Feedback & Support
 Share your feedback to refine Apocraft! For issues or suggestions, reach out or comment on the workshop page.

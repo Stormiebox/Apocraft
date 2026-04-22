@@ -7,92 +7,92 @@ module Apocraft
 
     model ApoCanningTXT
     {
-        mesh = WorldItems/Magazine,
+        mesh    = WorldItems/Magazine,
         texture = Apo/ApoCanningTXT,
-        scale = 0.4,
+        scale   = 0.4,
     }
 
     model ApoCarpenterTXT
     {
-        mesh = WorldItems/Magazine,
+        mesh    = WorldItems/Magazine,
         texture = Apo/ApoCarpenterTXT,
-        scale = 0.4,
+        scale   = 0.4,
     }
 
     model ApoCulinaryTXT
     {
-        mesh = WorldItems/Magazine,
+        mesh    = WorldItems/Magazine,
         texture = Apo/ApoCulinaryTXT,
-        scale = 0.4,
+        scale   = 0.4,
     }
 
     model ApoElectricianTXT
     {
-        mesh = WorldItems/Magazine,
+        mesh    = WorldItems/Magazine,
         texture = Apo/ApoElectricianTXT,
-        scale = 0.4,
+        scale   = 0.4,
     }
 
     model ApoFarmerTXT
     {
-        mesh = WorldItems/Magazine,
+        mesh    = WorldItems/Magazine,
         texture = Apo/ApoFarmerTXT,
-        scale = 0.4,
+        scale   = 0.4,
     }
 
     model ApoForgingTXT
     {
-        mesh = WorldItems/Magazine,
+        mesh    = WorldItems/Magazine,
         texture = Apo/ApoForgingTXT,
-        scale = 0.4,
+        scale   = 0.4,
     }
 
     model ApoLoggingTXT
     {
-        mesh = WorldItems/Magazine,
+        mesh    = WorldItems/Magazine,
         texture = Apo/ApoLoggingTXT,
-        scale = 0.4,
+        scale   = 0.4,
     }
 
     model ApoMechanicTXT
     {
-        mesh = WorldItems/Magazine,
+        mesh    = WorldItems/Magazine,
         texture = Apo/ApoMechanicTXT,
-        scale = 0.4,
+        scale   = 0.4,
     }
 
     model ApoMedicalTXT
     {
-        mesh = WorldItems/Magazine,
+        mesh    = WorldItems/Magazine,
         texture = Apo/ApoMedicalTXT,
-        scale = 0.4,
+        scale   = 0.4,
     }
 
     model ApoPaintItAllTXT
     {
-        mesh = WorldItems/Magazine,
+        mesh    = WorldItems/Magazine,
         texture = Apo/ApoPaintItAllTXT,
-        scale = 0.4,
+        scale   = 0.4,
     }
 
     model ApoRecycleItAllTXT
     {
-        mesh = WorldItems/Magazine,
+        mesh    = WorldItems/Magazine,
         texture = Apo/ApoRecycleItAllTXT,
-        scale = 0.4,
+        scale   = 0.4,
     }
 
     model ApoRepairItAllTXT
     {
-        mesh = WorldItems/Magazine,
+        mesh    = WorldItems/Magazine,
         texture = Apo/ApoRepairItAllTXT,
-        scale = 0.4,
+        scale   = 0.4,
     }
 
     model ApoSurvivalTXT
     {
-        mesh = WorldItems/Magazine,
+        mesh    = WorldItems/Magazine,
         texture = Apo/ApoSurvivalTXT,
-        scale = 0.4,
+        scale   = 0.4,
     }
 }

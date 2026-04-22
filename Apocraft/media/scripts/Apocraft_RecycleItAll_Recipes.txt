@@ -10,522 +10,568 @@ module Apocraft
    /*******Dismantle Electronics*******/
    recipe Dismantle Electronics
    {
-      keep [Recipe.GetItemTypes.Screwdriver],
-      RadioTransmitter/RadioReceiver/Receiver/GuitarElectricBlack/GuitarElectricBassBlack/GuitarElectricBlue/GuitarElectricBassBlue/GuitarElectricRed/GuitarElectricBassRed/MotionSensor/RemoteCraftedV1/RemoteCraftedV2/RemoteCraftedV3/Amplifier,
+        RadioTransmitter/RadioReceiver/Receiver/GuitarElectricBlack/GuitarElectricBassBlack/GuitarElectricBlue/GuitarElectricBassBlue/GuitarElectricRed/GuitarElectricBassRed/MotionSensor/RemoteCraftedV1/RemoteCraftedV2/RemoteCraftedV3/Amplifier,
+        keep [Recipe.GetItemTypes.Screwdriver],
 
-      Result:ElectronicsScrap=2,
-      Time:150.0,
-      Category:Recycling,
-      NeedToBeLearn:false,
-      CanBeDoneFromFloor:true,
-      Sound:Screwdriver,
-      OnGiveXP:Recipe.OnGiveXP.Electricity03,
+        Result:ElectronicsScrap=2,
+        Time:150.0,
+        Category:ApoRecycle,
+        Sound:Screwdriver,
+        AnimNode:Disassemble,
+        NearItem:Mechanic Table,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
+        OnGiveXP:Recipe.OnGiveXP.Electricity03,
    }
 
    /************************Metal Parts Recycling***********************/
    recipe Forge Scrap Metal From Unusable Metal
    {
-      keep [Recipe.GetItemTypes.Hammer],
-      keep [Recipe.GetItemTypes.WeldingMask],
-      UnusableMetal=1,
-      BlowTorch=1,
+        UnusableMetal=1,
+        BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
 
-      Result:ScrapMetal,
-      RemoveResultItem:true,
-      Time:500.0,
-      Category:Recycling,
-      NeedToBeLearn:false,
-      CanBeDoneFromFloor:true,
-      Sound:RecyclingMetalworkSFX,
-      OnCreate:Recipe.OnCreate.RecycleToScrapMetal,
-      AllowDestroyedItem:true,
+        Result:ScrapMetal,
+        RemoveResultItem:true,
+        Time:500.0,
+        Category:ApoRecycle,
+        Sound:RecyclingMetalworkSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Forge Table,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
+        AllowDestroyedItem:true,
+        OnCreate:Recipe.OnCreate.RecycleToScrapMetal,
    }
 
    /************************Metalwork Recycling************************/
    recipe Break Small Metal Item
    {
-      keep [Recipe.GetItemTypes.Hammer],
-      BreadKnife/ButterKnife/Fork/Spoon/LetterOpener/CombinationPadlock/Padlock/SutureNeedleHolder/Tongs/HandShovel/Hinge/Bell/Wire/ElectricWire/AlarmClock2/HandScythe/PaintbucketEmpty/HandFork/CarvingFork/Spatula/BakingPan/GrillBrush,
+        BreadKnife/ButterKnife/Fork/Spoon/LetterOpener/CombinationPadlock/Padlock/SutureNeedleHolder/Tongs/HandShovel/Hinge/Bell/Wire/ElectricWire/AlarmClock2/HandScythe/PaintbucketEmpty/HandFork/CarvingFork/Spatula/BakingPan/GrillBrush,
+        keep [Recipe.GetItemTypes.Hammer],
 
-      Result:ScrapMetal,
-      RemoveResultItem:true,
-      Time:200.0,
-      Category:Recycling,
-      NeedToBeLearn:false,
-      CanBeDoneFromFloor:true,
-      Sound:RecyclingMetalworkSFX,
-      OnTest:Recipe.OnTest.DismantleFavs,
-      OnGiveXP:Recipe.OnGiveXP.BreakStr,
-      AllowDestroyedItem:true,
+        Result:ScrapMetal,
+        RemoveResultItem:true,
+        Time:200.0,
+        Category:ApoRecycle,
+        Sound:RecyclingMetalworkSFX,
+        AnimNode:Craft,
+        NearItem:Mechanic Table,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
+        AllowDestroyedItem:true,
+        OnTest:Recipe.OnTest.DismantleFavs,
+        OnGiveXP:Recipe.OnGiveXP.BreakStr,
    }
 
-   recipe Get 1 Metal Scrap
+   recipe Get 1 Metal Scrap From Accessories
    {
-      KeyRing/Necklace_Silver/Necklace_SilverSapphire/Necklace_SilverCrucifix/Necklace_SilverDiamond/NecklaceLong_Silver/NecklaceLong_SilverEmerald/NecklaceLong_SilverSapphire/NecklaceLong_SilverDiamond/NoseRing_Silver/NoseStud_Silver/Earring_LoopLrg_Silver/Earring_LoopMed_Silver/Earring_LoopSmall_Silver_Both/Earring_LoopSmall_Silver_Top/Earring_Stud_Silver/Ring_Right_MiddleFinger_Silver/Ring_Left_MiddleFinger_Silver/Ring_Right_RingFinger_Silver/Ring_Left_RingFinger_Silver/Ring_Right_MiddleFinger_SilverDiamond/Ring_Left_MiddleFinger_SilverDiamond/Ring_Right_RingFinger_SilverDiamond/Ring_Left_RingFinger_SilverDiamond/Bracelet_BangleRightSilver/Bracelet_BangleLeftSilver/Bracelet_ChainRightSilver/Bracelet_ChainLeftSilver/BellyButton_DangleSilver/BellyButton_DangleSilverDiamond/BellyButton_RingSilver/BellyButton_RingSilverAmethyst/BellyButton_RingSilverDiamond/BellyButton_RingSilverRuby/BellyButton_StudSilver/BellyButton_StudSilverDiamond/Necklace_Gold/Necklace_GoldRuby/Necklace_GoldDiamond/NecklaceLong_Gold/NecklaceLong_GoldDiamond/NoseRing_Gold/NoseStud_Gold/Earring_LoopLrg_Gold/Earring_LoopMed_Gold/Earring_LoopSmall_Gold_Both/Earring_LoopSmall_Gold_Top/Earring_Stud_Gold/Ring_Right_MiddleFinger_Gold/Ring_Left_MiddleFinger_Gold/Ring_Right_RingFinger_Gold/Ring_Left_RingFinger_Gold/Ring_Right_MiddleFinger_GoldRuby/Ring_Left_MiddleFinger_GoldRuby/Ring_Right_RingFinger_GoldRuby/Ring_Left_RingFinger_GoldRuby/Ring_Right_MiddleFinger_GoldDiamond/Ring_Left_MiddleFinger_GoldDiamond/Ring_Right_RingFinger_GoldDiamond/Ring_Left_RingFinger_GoldDiamond/WristWatch_Right_ClassicGold/WristWatch_Left_ClassicGold/Bracelet_BangleRightGold/Bracelet_BangleLeftGold/Bracelet_ChainRightGold/Bracelet_ChainLeftGold/BellyButton_DangleGoldRuby/BellyButton_DangleGold/BellyButton_RingGold/BellyButton_RingGoldDiamond/BellyButton_RingGoldRuby/BellyButton_StudGold/BellyButton_StudGoldDiamond/Necklace_DogTag/Necklace_Crucifix/Necklace_YingYang/Necklace_Pearl/NecklaceLong_Amber/Necklace_Choker/Necklace_Choker_Sapphire/Necklace_Choker_Amber/Necklace_Choker_Diamond/Earring_Stone_Sapphire/Earring_Stone_Emerald/Earring_Stone_Ruby/Earring_Pearl/Earring_Dangly_Sapphire/Earring_Dangly_Emerald/Earring_Dangly_Ruby/Earring_Dangly_Diamond/Earring_Dangly_Pearl/WristWatch_Left_ClassicBlack/WristWatch_Right_ClassicBlack/WristWatch_Right_ClassicBrown/WristWatch_Left_ClassicBrown/WristWatch_Right_ClassicMilitary,
+        keep [Recipe.GetItemTypes.Hammer],
 
-      keep [Recipe.GetItemTypes.Hammer],
-      Time:100.0,
-      Result:ScrapMetal,
-      RemoveResultItem:false,
-      InSameInventory:false,
-      CanBeDoneFromFloor:true,
-      Category : Welding,
-      OnGiveXP : Recipe.OnGiveXP.MetalWelding10,
+        Result:ScrapMetal,
+        Time:100.0,
+        Category:ApoRecycle,
+        Sound:RecyclingMetalworkSFX,
+        AnimNode:Craft,
+        NearItem:Mechanic Table,
+        CanBeDoneFromFloor:false,
+        OnCanPerform:Recipe.OnCanPerform.AnyAccessory3,
+        OnCreate:Recipe.OnCreate.ScrapMetalFromAnyAccessory3,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+   }
+
+   recipe Get 1 Metal Scrap From Watches
+   {
+        keep [Recipe.GetItemTypes.Hammer],
+
+        Result:ScrapMetal,
+        Time:100.0,
+        Category:ApoRecycle,
+        Sound:RecyclingMetalworkSFX,
+        AnimNode:Craft,
+        NearItem:Mechanic Table,
+        CanBeDoneFromFloor:false,
+        OnCanPerform:Recipe.OnCanPerform.AnyWristWatch3,
+        OnCreate:Recipe.OnCreate.ScrapMetalFromAnyWristWatch3,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
 
    recipe Get 4 Metal Scrap
    {
-      SmallSheetMetal=1,
-      BlowTorch=4,
-      keep [Recipe.GetItemTypes.WeldingMask],
-      Result : ScrapMetal=4,
-      Time : 150.0,
-      Category : Welding,
-      OnGiveXP : Recipe.OnGiveXP.MetalWelding10,
-      Sound:RecyclingMetalworkSFX,
-      NearItem:Mechanic Table,
+        SmallSheetMetal=1,
+        BlowTorch=4,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:ScrapMetal=4,
+        Time:150.0,
+        Category:ApoRecycle,
+        Sound:RecyclingMetalworkSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
    }
 
    recipe Dismantle Metal (Tool)
    {
-      keep [Recipe.GetItemTypes.WeldingMask],
-      BlowTorch=1,
-      Hammer/ClubHammer/BallPeenHammer/Crowbar/GardenSaw/Saw/HandAxe/LugWrench/PipeWrench/Wrench/Axe/WoodAxe/Shovel/Shovel2/Golfclub/TirePump/Jack/MetalBar/Pipe/MetalPipe,
+        Hammer/ClubHammer/BallPeenHammer/Crowbar/GardenSaw/Saw/HandAxe/LugWrench/PipeWrench/Wrench/Axe/WoodAxe/Shovel/Shovel2/Golfclub/TirePump/Jack/MetalBar/Pipe/MetalPipe,
+        BlowTorch=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
 
-      Result:ScrapMetal,
-      RemoveResultItem:true,
-      Time:400.0,
-      Category:Recycling,
-      NeedToBeLearn:false,
-      CanBeDoneFromFloor:true,
-      Sound:RecyclingMetalworkSFX,
-      OnTest:Recipe.OnTest.DismantleFavs,
-      OnCreate:Recipe.OnCreate.RecycleToScrapMetal,
-      AllowDestroyedItem:true,
-      NearItem:Mechanic Table,
+        Result:ScrapMetal,
+        RemoveResultItem:true,
+        Time:400.0,
+        Category:ApoRecycle,
+        Sound:RecyclingMetalworkSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
+        AllowDestroyedItem:true,
+        OnTest:Recipe.OnTest.DismantleFavs,
+        OnCreate:Recipe.OnCreate.RecycleToScrapMetal,
    }
 
    recipe Get 1 Metal Scrap From 4 Tin Cans
    {
-      TinCanEmpty=4,
-      keep [Recipe.GetItemTypes.WeldingMask],
-      Result : ScrapMetal,
-      RemoveResultItem:false,
-      InSameInventory:false,
-      CanBeDoneFromFloor:true,
-      Time : 30,
-      Category : Welding,
-      OnGiveXP : Recipe.OnGiveXP.MetalWelding5,
-      Sound:RecyclingMetalworkSFX,
+        TinCanEmpty=4,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:ScrapMetal,
+        RemoveResultItem:false,
+        Time:30.0,
+        Category:ApoRecycle,
+        Sound:RecyclingMetalworkSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        InSameInventory:false,
+        CanBeDoneFromFloor:true,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding5,
    }
 
    recipe Get 1 Metal Scrap From 4 Pop Cans
    {
-      PopEmpty/Pop2Empty/Pop3Empty=4,
-      keep [Recipe.GetItemTypes.WeldingMask],
-      Result : ScrapMetal,
-      RemoveResultItem:false,
-      InSameInventory:false,
-      CanBeDoneFromFloor:true,
-      Time : 30,
-      Category : Welding,
-      OnGiveXP : Recipe.OnGiveXP.MetalWelding5,
-      Sound:RecyclingMetalworkSFX,
+        PopEmpty/Pop2Empty/Pop3Empty=4,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:ScrapMetal,
+        RemoveResultItem:false,
+        Time:30.0,
+        Category:ApoRecycle,
+        Sound:RecyclingMetalworkSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        InSameInventory:false,
+        CanBeDoneFromFloor:true,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding5,
    }
 
    recipe Convert Pop Cans To The Same Type
    {
-      Pop2Empty/Pop3Empty=1,
-      Result : PopEmpty=1,
-      Time : 30,
-      Category : Welding,
+        Pop2Empty/Pop3Empty=1,
+
+        Result:PopEmpty=1,
+        Time:30.0,
+        Category:ApoRecycle,
+        AnimNode:Craft,
    }
 
    recipe Get 10 Nails From 1 Metal Scrap
    {
-      ScrapMetal=1,
-      BlowTorch=1,
-      keep [Recipe.GetItemTypes.WeldingMask],
-      Result : Nails=2,
-      Category : Welding,
-      OnGiveXP : Recipe.OnGiveXP.MetalWelding5,
-      Time : 50.0,
-      Sound:RecyclingMetalworkSFX,
-      NearItem:Mechanic Table,
-      NeedToBeLearn:true
+        ScrapMetal=1,
+        BlowTorch=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Nails=2,
+        Time:50.0,
+        Category:ApoRecycle,
+        Sound:RecyclingMetalworkSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        NeedToBeLearn:true,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding5,
    }
 
    recipe Get 40 Nails From 1 Small Metal Sheet
    {
-      SmallSheetMetal=1,
-      BlowTorch=4,
-      keep [Recipe.GetItemTypes.WeldingMask],
-      Result : Nails=8,
-      Category : Welding,
-      OnGiveXP : Recipe.OnGiveXP.MetalWelding20,
-      Time : 200.0,
-      Sound:RecyclingMetalworkSFX,
-      NearItem:Mechanic Table,
-      NeedToBeLearn:true
+        SmallSheetMetal=1,
+        BlowTorch=4,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Nails=8,
+        Time:200.0,
+        Category:ApoRecycle,
+        Sound:RecyclingMetalworkSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        NeedToBeLearn:true,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding20,
    }
 
    recipe Get 160 Nails From 1 Metal Sheet
    {
-      SheetMetal=1,
-      BlowTorch=8,
-      keep [Recipe.GetItemTypes.WeldingMask],
-      Result : Nails=32,
-      Category : Welding,
-      OnGiveXP : Recipe.OnGiveXP.MetalWelding80,
-      Time : 800.0,
-      Sound:RecyclingMetalworkSFX,
-      NearItem:Mechanic Table,
-      NeedToBeLearn:true
+        SheetMetal=1,
+        BlowTorch=8,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Nails=32,
+        Time:800.0,
+        Category:ApoRecycle,
+        Sound:RecyclingMetalworkSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        NeedToBeLearn:true,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding80,
    }
 
    recipe Dismantle Metal (Kitchen)
    {
-      keep [Recipe.GetItemTypes.WeldingMask],
-      BlowTorch=1,
-      MeatCleaver/KitchenKnife/Pan/Pot/GridlePan/RoastingPan/BakingTray/Saucepan/MuffinTray/TinOpener/,
+        MeatCleaver/KitchenKnife/Pan/Pot/GridlePan/RoastingPan/BakingTray/Saucepan/MuffinTray/TinOpener,
+        BlowTorch=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
 
-      Result:ScrapMetal,
-      RemoveResultItem:true,
-      Time:400.0,
-      Category:Recycling,
-      NeedToBeLearn:false,
-      CanBeDoneFromFloor:true,
-      Sound:RecyclingMetalworkSFX,
-      OnTest:Recipe.OnTest.DismantleFavs,
-      OnCreate:Recipe.OnCreate.RecycleToScrapMetal,
-      AllowDestroyedItem:true,
-      NearItem:Mechanic Table,
+        Result:ScrapMetal,
+        RemoveResultItem:true,
+        Time:400.0,
+        Category:ApoRecycle,
+        Sound:RecyclingMetalworkSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
+        AllowDestroyedItem:true,
+        OnTest:Recipe.OnTest.DismantleFavs,
+        OnCreate:Recipe.OnCreate.RecycleToScrapMetal,
    }
 
    recipe Dismantle Metal (Weights)
    {
-      keep [Recipe.GetItemTypes.WeldingMask],
-      BlowTorch=1,
-      DumbBell/BarBell/Mov_FitnessContraption,
+        DumbBell/BarBell/Mov_FitnessContraption,
+        BlowTorch=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
 
-      Result:ScrapMetal,
-      RemoveResultItem:true,
-      Time:400.0,
-      Category:Recycling,
-      NeedToBeLearn:false,
-      CanBeDoneFromFloor:true,
-      Sound:RecyclingMetalworkSFX,
-      OnTest:Recipe.OnTest.DismantleFavs,
-      OnCreate:Recipe.OnCreate.RecycleToScrapMetal,
-      AllowDestroyedItem:true,
-      NearItem:Mechanic Table,
+        Result:ScrapMetal,
+        RemoveResultItem:true,
+        Time:400.0,
+        Category:ApoRecycle,
+        Sound:RecyclingMetalworkSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
+        AllowDestroyedItem:true,
+        OnTest:Recipe.OnTest.DismantleFavs,
+        OnCreate:Recipe.OnCreate.RecycleToScrapMetal,
    }
 
    recipe Dismantle Metal (Container)
    {
-      keep [Recipe.GetItemTypes.WeldingMask],
-      BlowTorch=1,
-      Toolbox/RifleCase1/RifleCase2/RifleCase3/ShotgunCase1/ShotgunCase2/RevolverCase1/RevolverCase2/RevolverCase3/PistolCase1/PistolCase2/PistolCase3/Flightcase/Lunchbox/Lunchbox2,
+        Toolbox/RifleCase1/RifleCase2/RifleCase3/ShotgunCase1/ShotgunCase2/RevolverCase1/RevolverCase2/RevolverCase3/PistolCase1/PistolCase2/PistolCase3/Flightcase/Lunchbox/Lunchbox2,
+        BlowTorch=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
 
-      Result:SmallSheetMetal,
-      Time:500.0,
-      Category:Recycling,
-      NeedToBeLearn:false,
-      CanBeDoneFromFloor:true,
-      Sound:RecyclingMetalworkSFX,
-      OnTest:Recipe.OnTest.DismantleFavs,
-      OnCreate:Recipe.OnCreate.RecycleToScrapMetal,
-      AllowDestroyedItem:true,
-      NearItem:Mechanic Table,
+        Result:SmallSheetMetal,
+        Time:500.0,
+        Category:ApoRecycle,
+        Sound:RecyclingMetalworkSFX,
+        AnimNode:BlowTorchFloor,
+        NearItem:Mechanic Table,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
+        AllowDestroyedItem:true,
+        OnTest:Recipe.OnTest.DismantleFavs,
+        OnCreate:Recipe.OnCreate.RecycleToScrapMetal,
    }
 
    /*******Other Recycling Stuff*******/
    recipe Make Twine From Thread
    {
-      Thread=8,
-      keep [Recipe.GetItemTypes.Scissors],
+        Thread=8,
+        keep [Recipe.GetItemTypes.Scissors],
 
-      Result:Twine,
-      Time:250.0,
-      SkillRequired:Tailoring=1,
-      Category:Tailoring,
-      Sound:PZ_ClothesRipping,
-      OnGiveXP:Get1TailoringXP,
+        Result:Twine,
+        Time:250.0,
+        Category:Tailoring,
+        Sound:PZ_ClothesRipping,
+        AnimNode:RipSheets,
+        NearItem:Tailoring Table,
+        SkillRequired:Tailoring=1,
+        OnGiveXP:Get1TailoringXP,
    }
 
    recipe Make Thread From Ripped Sheets
    {
-      RippedSheets=4,
-      keep [Recipe.GetItemTypes.Scissors],
+        RippedSheets=4,
+        keep [Recipe.GetItemTypes.Scissors],
 
-      Result:Thread,
-      Time:250.0,
-      SkillRequired:Tailoring=1,
-      Category:Tailoring,
-      Sound:PZ_ClothesRipping,
-      OnGiveXP:Get1TailoringXP,
+        Result:Thread,
+        Time:250.0,
+        Category:Tailoring,
+        Sound:PZ_ClothesRipping,
+        AnimNode:RipSheets,
+        NearItem:Tailoring Table,
+        SkillRequired:Tailoring=1,
+        OnGiveXP:Get1TailoringXP,
    }
 
    recipe Make Thread From Denim Strips
    {
-      DenimStrips=4,
-      keep [Recipe.GetItemTypes.Scissors],
+        DenimStrips=4,
+        keep [Recipe.GetItemTypes.Scissors],
 
-      Result:Thread,
-      Time:250.0,
-      SkillRequired:Tailoring=1,
-      Category:Tailoring,
-      Sound:PZ_ClothesRipping,
-      OnGiveXP:Get1TailoringXP,
+        Result:Thread,
+        Time:250.0,
+        Category:Tailoring,
+        Sound:PZ_ClothesRipping,
+        AnimNode:RipSheets,
+        NearItem:Tailoring Table,
+        SkillRequired:Tailoring=1,
+        OnGiveXP:Get1TailoringXP,
    }
 
    recipe Make Thread From Leather Strips
    {
-      LeatherStrips=4,
-      keep [Recipe.GetItemTypes.Scissors],
+        LeatherStrips=4,
+        keep [Recipe.GetItemTypes.Scissors],
 
-      Result:Thread,
-      Time:250.0,
-      SkillRequired:Tailoring=1,
-      Category:Tailoring,
-      Sound:PZ_ClothesRipping,
-      OnGiveXP:Get1TailoringXP,
+        Result:Thread,
+        Time:250.0,
+        Category:Tailoring,
+        Sound:PZ_ClothesRipping,
+        AnimNode:RipSheets,
+        NearItem:Tailoring Table,
+        SkillRequired:Tailoring=1,
+        OnGiveXP:Get1TailoringXP,
    }
 
    recipe Pull Cotton Balls from Pillow
    {
-      Pillow,
-      keep [Recipe.GetItemTypes.Scissors],
+        Pillow,
+        keep [Recipe.GetItemTypes.Scissors],
 
-      Result:CottonBalls=60,
-      Time:200.0,
-      Category:Tailoring,
-      OnGiveXP:Get1TailoringXP,
+        Result:CottonBalls=60,
+        Time:200.0,
+        Category:Tailoring,
+        Sound:PZ_ClothesRipping,
+        AnimNode:RipSheets,
+        NearItem:Tailoring Table,
+        OnGiveXP:Get1TailoringXP,
    }
 
    recipe Reclaim Belt From Single Holster
    {
-      HolsterSimple,
+        HolsterSimple,
 
-      Result:Belt2,
-      Time:100.0,
-      SkillRequired:Tailoring=2,
-      Category:Tailoring,
-      OnGiveXP:Get1TailoringXP,
+        Result:Belt2,
+        Time:100.0,
+        Category:Tailoring,
+        Sound:PZ_ClothesRipping,
+        AnimNode:RipSheets,
+        NearItem:Tailoring Table,
+        SkillRequired:Tailoring=2,
+        OnGiveXP:Get1TailoringXP,
    }
 
    recipe Reclaim Belt From Double Holster
    {
-      HolsterDouble,
+        HolsterDouble,
 
-      Result:Belt2,
-      Time:100.0,
-      SkillRequired:Tailoring=2,
-      Category:Tailoring,
-      OnGiveXP:Get1TailoringXP,
+        Result:Belt2,
+        Time:100.0,
+        Category:Tailoring,
+        Sound:PZ_ClothesRipping,
+        AnimNode:RipSheets,
+        NearItem:Tailoring Table,
+        SkillRequired:Tailoring=2,
+        OnGiveXP:Get1TailoringXP,
    }
 
    /*******Pull Thread From Clothing*****/
    recipe Pull Thread From Clothing
    {
-      Hat_Sweatband/Bracelet_RightFriendshipTINT/Bracelet_LeftFriendshipTINT,
-      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+        Hat_Sweatband/Bracelet_RightFriendshipTINT/Bracelet_LeftFriendshipTINT,
+        keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
 
-      Sound:ClothesRipping,
-      AnimNode:RipSheets,
-      Time:200.0,
-
-      Result:Thread;5,
-      RemoveResultItem:false,
-      InSameInventory:false,
-      CanBeDoneFromFloor:true,
-      OnGiveXP:Recipe.OnGiveXP.Tailoring5,
+        Result:Thread=5,
+        RemoveResultItem:false,
+        Time:200.0,
+        Category:Tailoring,
+        Sound:ClothesRipping,
+        AnimNode:RipSheets,
+        InSameInventory:false,
+        CanBeDoneFromFloor:true,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring5,
    }
 
    /*******Pull Yarn From Clothing*****/
    recipe Pull Yarn From Clothing
    {
-      Jumper_TankTopTINT/Jumper_TankTopDiamondTINT/Jumper_VNeck/Jumper_RoundNeck/Jumper_PoloNeck/HoodieUP_WhiteTINT/HoodieDOWN_WhiteTINT,
-      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+        Jumper_TankTopTINT/Jumper_TankTopDiamondTINT/Jumper_VNeck/Jumper_RoundNeck/Jumper_PoloNeck/HoodieUP_WhiteTINT/HoodieDOWN_WhiteTINT,
+        keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
 
-      Result:Yarn=4,
-      Time:500.0,
-      Category:Tailoring,
-      OnGiveXP:Get1TailoringXP,
+        Result:Yarn=4,
+        Time:500.0,
+        Category:Tailoring,
+        Sound:ClothesRipping,
+        AnimNode:RipSheets,
+        OnGiveXP:Get1TailoringXP,
    }
 
    /*******Rip Clothing and Other Things*****/
    /* Bras */
    recipe Rip Out Wire From Bra
    {
-      Bra_Straps_Black/Bra_Straps_White/Bra_Strapless_Black/Bra_Strapless_White/Bra_Straps_FrillyRed/
-      /Bra_Straps_FrillyPink/Bra_Strapless_RedSpots/Bra_Straps_AnimalPrint/Bra_Straps_FrillyBlack/
-      /Bra_Strapless_FrillyRed/Bra_Strapless_FrillyPink/Bra_Strapless_AnimalPrint/Bra_Strapless_FrillyBlack,
-      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
-      Sound:ClothesRipping,
-      AnimNode:RipSheets,
-      Time:100.0,
+        Bra_Straps_Black/Bra_Straps_White/Bra_Strapless_Black/Bra_Strapless_White/Bra_Straps_FrillyRed/Bra_Straps_FrillyPink/Bra_Strapless_RedSpots/Bra_Straps_AnimalPrint/Bra_Straps_FrillyBlack/Bra_Strapless_FrillyRed/Bra_Strapless_FrillyPink/Bra_Strapless_AnimalPrint/Bra_Strapless_FrillyBlack,
+        keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
 
-      Result:Wire=1,
-      Time:100.0,
-      RemoveResultItem:false,
-      InSameInventory:false,
-      CanBeDoneFromFloor:true,
-      OnGiveXP:Recipe.OnGiveXP.Tailoring2,
-      OnCreate:zapRipBra,
+        Result:Wire=1,
+        RemoveResultItem:false,
+        Time:100.0,
+        Category:Tailoring,
+        Sound:ClothesRipping,
+        AnimNode:RipSheets,
+        InSameInventory:false,
+        CanBeDoneFromFloor:true,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring2,
+        OnCreate:Recipe.OnCreate.ApoRipBra,
    }
 
    recipe Rip Clothing
    {
-      Underpants_Black/Underpants_White/Underpants_RedSpots/FrillyUnderpants_Red/FrillyUnderpants_Pink/
-      /FrillyUnderpants_Black/Underpants_AnimalPrint/Briefs_White/Briefs_AnimalPrints/Briefs_SmallTrunks_Red/Briefs_SmallTrunks_Blue/
-      /Briefs_SmallTrunks_Black/Briefs_SmallTrunks_WhiteTINT/Boxers_White/Boxers_Hearts/Boxers_RedStripes/
-      /Hat_Beany/Hat_Beret/Hat_Fedora/Hat_Police/Hat_Ranger/Hat_BalaclavaFace/Hat_BalaclavaFull/Hat_BaseballCapKY/
-      /Hat_PeakedCapArmy/Hat_SantaHatGreen/Hat_BaseballCapRed/Hat_BandanaMaskTINT/Hat_BandanaTiedTINT/Hat_BaseballCapArmy/
-      /Hat_BaseballCapBlue/Hat_FastFood_Spiffo/Hat_Fedora_Delmonte/Hat_BaseballCapGreen/Hat_BaseballCapKY_Red/
-      /Hat_FastFood_IceCream/Hat_SurgicalMask_Blue/Hat_SurgicalMask_Green/Hat_BonnieHat_CamoGreen/Hat_BaseballCapArmy_Reverse/
-      /Hat_BaseballCapBlue_Reverse/Hat_BaseballCapRed_Reverse/Hat_BaseballCapKY_Reverse/Hat_BaseballCapGreen_Reverse/
-      /Hat_Bandana/Hat_ChefHat/Hat_SantaHat/Hat_BeretArmy/Hat_BonnieHat/Hat_BucketHat/Hat_SuSmmerHat/
-      /Hat_Sweatband/Hat_BandanaMask/Hat_BandanaTINT/Hat_BandanaTied/Hat_BaseballCap/Hat_GolfHatTINT/Hat_Police_Grey/Hat_WeddingVeil/
-      /Tie_BowTieFull/Tie_BowTieWorn/Tie_Worn_Spiffo/Tie_Worn/Tie_Full_Spiffo/Tie_Full/
-      /Corset/Corset_Red/Corset_Black/Corset_Medical/TightsBlack/TightsBlackTrans/TightsBlackSemiTrans/BathTowel/BathTowelWet/DishCloth/DishClothWet,
-      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+        Underpants_Black/Underpants_White/Underpants_RedSpots/FrillyUnderpants_Red/FrillyUnderpants_Pink/FrillyUnderpants_Black/Underpants_AnimalPrint/Briefs_White/Briefs_AnimalPrints/Briefs_SmallTrunks_Red/Briefs_SmallTrunks_Blue/Briefs_SmallTrunks_Black/Briefs_SmallTrunks_WhiteTINT/Boxers_White/Boxers_Hearts/Boxers_RedStripes/Hat_Beany/Hat_Beret/Hat_Fedora/Hat_Police/Hat_Ranger/Hat_BalaclavaFace/Hat_BalaclavaFull/Hat_BaseballCapKY/Hat_PeakedCapArmy/Hat_SantaHatGreen/Hat_BaseballCapRed/Hat_BandanaMaskTINT/Hat_BandanaTiedTINT/Hat_BaseballCapArmy/Hat_BaseballCapBlue/Hat_FastFood_Spiffo/Hat_Fedora_Delmonte/Hat_BaseballCapGreen/Hat_BaseballCapKY_Red/Hat_FastFood_IceCream/Hat_SurgicalMask_Blue/Hat_SurgicalMask_Green/Hat_BonnieHat_CamoGreen/Hat_BaseballCapArmy_Reverse/Hat_BaseballCapBlue_Reverse/Hat_BaseballCapRed_Reverse/Hat_BaseballCapKY_Reverse/Hat_BaseballCapGreen_Reverse/Hat_Bandana/Hat_ChefHat/Hat_SantaHat/Hat_BeretArmy/Hat_BonnieHat/Hat_BucketHat/Hat_SuSmmerHat/Hat_Sweatband/Hat_BandanaMask/Hat_BandanaTINT/Hat_BandanaTied/Hat_BaseballCap/Hat_GolfHatTINT/Hat_Police_Grey/Hat_WeddingVeil/Tie_BowTieFull/Tie_BowTieWorn/Tie_Worn_Spiffo/Tie_Worn/Tie_Full_Spiffo/Tie_Full/Corset/Corset_Red/Corset_Black/Corset_Medical/TightsBlack/TightsBlackTrans/TightsBlackSemiTrans/BathTowel/BathTowelWet/DishCloth/DishClothWet,
+        keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
 
-      Sound:ClothesRipping,
-      AnimNode:RipSheets,
-      Time:100.0,
-
-      Result:RippedSheets,
-      RemoveResultItem:false,
-      InSameInventory:false,
-      CanBeDoneFromFloor:true,
-      OnGiveXP:Recipe.OnGiveXP.Tailoring1,
-      OnCreate:zapRipClothing,
+        Result:RippedSheets,
+        RemoveResultItem:false,
+        Time:100.0,
+        Category:Tailoring,
+        Sound:ClothesRipping,
+        AnimNode:RipSheets,
+        InSameInventory:false,
+        CanBeDoneFromFloor:true,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring1,
+        OnCreate:Recipe.OnCreate.ApoRipClothing,
    }
 
    recipe Rip Leather Clothing
    {
-      Hat_Cowboy/HolsterSimple/HolsterDouble/Handbag/Purse/Basketball/Football/Football2/SoccerBall/Shoes_RidingBoots/Shoes_BlackBoots/Shoes_ArmyBoots/Shoes_ArmyBootsDesert/Shoes_Black/Shoes_Brown/Shoes_Random/Shoes_Strapped/Shoes_Sandals/Shoes_Fancy/Shoes_Bowling/Shoes_Wellies/Belt2/Shoes_RedTrainers/Shoes_BlueTrainers/Shoes_TrainerTINT,
-      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+        Hat_Cowboy/HolsterSimple/HolsterDouble/Handbag/Purse/Basketball/Football/Football2/SoccerBall/Shoes_RidingBoots/Shoes_BlackBoots/Shoes_ArmyBoots/Shoes_ArmyBootsDesert/Shoes_Black/Shoes_Brown/Shoes_Random/Shoes_Strapped/Shoes_Sandals/Shoes_Fancy/Shoes_Bowling/Shoes_Wellies/Belt2/Shoes_RedTrainers/Shoes_BlueTrainers/Shoes_TrainerTINT,
+        keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
 
-      Sound:ClothesRipping,
-      AnimNode:RipSheets,
-      Time:100.0,
-
-      Result:LeatherStrips=2,
-      RemoveResultItem:false,
-      InSameInventory:false,
-      CanBeDoneFromFloor:true,
-      OnGiveXP:Recipe.OnGiveXP.Tailoring3,
-      OnCreate:zapRipClothing,
+        Result:LeatherStrips=2,
+        RemoveResultItem:false,
+        Time:100.0,
+        Category:Tailoring,
+        Sound:ClothesRipping,
+        AnimNode:RipSheets,
+        InSameInventory:false,
+        CanBeDoneFromFloor:true,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
+        OnCreate:Recipe.OnCreate.ApoRipClothing,
    }
-
 
    recipe Rip Wallet
    {
-      Wallet/Wallet2/Wallet3/Wallet4/DogChew/Shoes_FlipFlop/Necklace_Choker/Necklace_Choker_Sapphire/Necklace_Choker_Amber/Necklace_Choker_Diamond,
-      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+        Wallet/Wallet2/Wallet3/Wallet4/DogChew/Shoes_FlipFlop/Necklace_Choker/Necklace_Choker_Sapphire/Necklace_Choker_Amber/Necklace_Choker_Diamond,
+        keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
 
-      Sound:ClothesRipping,
-      AnimNode:RipSheets,
-      Time:50.0,
-
-      Result:LeatherStrips=2,
-      RemoveResultItem:false,
-      InSameInventory:false,
-      CanBeDoneFromFloor:true,
-      OnGiveXP:Recipe.OnGiveXP.Tailoring1,
+        Result:LeatherStrips=2,
+        RemoveResultItem:false,
+        Time:50.0,
+        Category:Tailoring,
+        Sound:ClothesRipping,
+        AnimNode:RipSheets,
+        InSameInventory:false,
+        CanBeDoneFromFloor:true,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring1,
    }
 
-  recipe Rip Bag
+   recipe Rip Bag
    {
-      Bag_MoneyBag/Bag_DuffelBag/Bag_WeaponBag/Bag_WorkerBag/Bag_ShotgunBag/
-      /Bag_DuffelBagTINT/Bag_ShotgunDblBag/Bag_GolfBag/Bag_NormalHikingBag/
-      /Bag_InmateEscapedBag/Bag_WorkerBag/Bag_ShotgunSawnoffBag/Bag_BowlingBallBag/Bag_Schoolbag/Bag_Satchel/Bag_BigHikingBag/Bag_SurvivorBag/Bag_ALICEpack/Bag_ALICEpack_Army/Purse/Handbag/Bag_FannyPackFront/Bag_FannyPackBack,
-      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+        Bag_MoneyBag/Bag_DuffelBag/Bag_WeaponBag/Bag_WorkerBag/Bag_ShotgunBag/Bag_DuffelBagTINT/Bag_ShotgunDblBag/Bag_GolfBag/Bag_NormalHikingBag/Bag_InmateEscapedBag/Bag_WorkerBag/Bag_ShotgunSawnoffBag/Bag_BowlingBallBag/Bag_Schoolbag/Bag_Satchel/Bag_BigHikingBag/Bag_SurvivorBag/Bag_ALICEpack/Bag_ALICEpack_Army/Purse/Handbag/Bag_FannyPackFront/Bag_FannyPackBack,
+        keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
 
-
-      Sound:ClothesRipping,
-      AnimNode:RipSheets,
-      Time:100.0,
-
-      Result:RippedSheets=10,
-      RemoveResultItem:false,
-      InSameInventory:false,
-      OnGiveXP:Recipe.OnGiveXP.Tailoring5,
-      OnCreate:zapRipClothing,
+        Result:RippedSheets=10,
+        RemoveResultItem:false,
+        Time:100.0,
+        Category:Tailoring,
+        Sound:ClothesRipping,
+        AnimNode:RipSheets,
+        InSameInventory:false,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring5,
+        OnCreate:Recipe.OnCreate.ApoRipClothing,
    }
 
    /* Paper Stuff */
    recipe Rip Bag
    {
-      Tote/PaperBag_Jays/PaperBag_Spiffos/PaperBag/Lunchbag,
-      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+        Tote/PaperBag_Jays/PaperBag_Spiffos/PaperBag/Lunchbag,
+        keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
 
-
-      Sound:ClothesRipping,
-      AnimNode:RipSheets,
-      Time:100.0,
-
-      Result:SheetPaper2=3,
-      RemoveResultItem:false,
-      InSameInventory:false,
+        Result:SheetPaper2=3,
+        RemoveResultItem:false,
+        Time:100.0,
+        Category:Tailoring,
+        Sound:ClothesRipping,
+        AnimNode:RipSheets,
+        InSameInventory:false,
    }
 
    recipe Rip Paper Napkins
    {
-      PaperNapkins,
-      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+        PaperNapkins,
+        keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
 
-      Sound:ClothesRipping,
-      AnimNode:RipSheets,
-      Time:100.0,
-
-      Result:SheetPaper2=1,
-      RemoveResultItem:false,
-      InSameInventory:false,
+        Result:SheetPaper2=1,
+        RemoveResultItem:false,
+        Time:100.0,
+        Category:Tailoring,
+        Sound:ClothesRipping,
+        AnimNode:RipSheets,
+        InSameInventory:false,
    }
 
    recipe Rip Book
    {
-      Notebook/Book,
-      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+        Notebook/Book,
+        keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
 
-      Sound:ClothesRipping,
-      AnimNode:RipSheets,
-      Time:100.0,
-
-      Result:SheetPaper2=50,
-      RemoveResultItem:false,
-      InSameInventory:false,
+        Result:SheetPaper2=50,
+        RemoveResultItem:false,
+        Time:100.0,
+        Category:Tailoring,
+        Sound:ClothesRipping,
+        AnimNode:RipSheets,
+        InSameInventory:false,
    }
 
    recipe Rip Magazine
    {
-      ComicBook/HottieZ/Magazine/Newspaper,
-      keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+        ComicBook/HottieZ/Magazine/Newspaper,
+        keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
 
-      Sound:ClothesRipping,
-      AnimNode:RipSheets,
-      Time:100.0,
-
-      Result:SheetPaper2=25,
-      RemoveResultItem:false,
-      InSameInventory:false,
+        Result:SheetPaper2=25,
+        RemoveResultItem:false,
+        Time:100.0,
+        Category:Tailoring,
+        Sound:ClothesRipping,
+        AnimNode:RipSheets,
+        InSameInventory:false,
    }
 
-/********************Broken Glass*********************/
+   /********************Broken Glass*********************/
    recipe Break Glass items
    {
-      keep [Recipe.GetItemTypes.Hammer]/[Recipe.GetItemTypes.Sledgehammer],
-      SmashedBottle/GlassWine/GlassTumbler/WineEmpty/WineEmpty2/WhiskeyEmpty/BeerEmpty/[Recipe.GetItemTypes.BrokenGlass]/Moveables.brokenglass_1_0/Moveables.brokenglass_1_1/Moveables.brokenglass_1_2/Moveables.brokenglass_1_3,
+        SmashedBottle/GlassWine/GlassTumbler/WineEmpty/WineEmpty2/WhiskeyEmpty/BeerEmpty/[Recipe.GetItemTypes.BrokenGlass]/Moveables.brokenglass_1_0/Moveables.brokenglass_1_1/Moveables.brokenglass_1_2/Moveables.brokenglass_1_3,
+        keep [Recipe.GetItemTypes.Hammer]/[Recipe.GetItemTypes.Sledgehammer],
 
-      Result:GlassShard=1,
-      Time:100.0,
-      Category:Recycling,
-      NeedToBeLearn:false,
-      CanBeDoneFromFloor:false,
-      Sound:BreakGlassItem,
+        Result:GlassShard=1,
+        Time:100.0,
+        Category:ApoRecycle,
+        Sound:BreakGlassItem,
+        AnimNode:Craft,
+        CanBeDoneFromFloor:false,
+        NeedToBeLearn:false,
    }
 
 }

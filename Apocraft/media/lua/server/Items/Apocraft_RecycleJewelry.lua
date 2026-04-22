@@ -73,7 +73,6 @@ local function convertItemsToScrap(inventory, typesSet)
     local craftableItems = getCraftableItemsFromTypes(inventory, typesSet, 3)
     if #craftableItems == 3 then
         removeInventoryItems(craftableItems)
-        inventory:AddItem(SCRAP_METAL)
         return true
     end
     return false

@@ -8,97 +8,107 @@ module Apocraft
 	fixing Fix Sledgehammer
 	{
 		Require:Sledgehammer,
-		BlowTorch=5,
-		WeldingRods=2,
-		ScrapMetal=30,
-		MetalBars=2,
-		SheetMetal=4,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		NearItem:Armory Table,
-		Sound:MetalWeldingSFX,
+		GlobalItem:BlowTorch,
+		GlobalItem:[Recipe.GetItemTypes.WeldingMask],
+		Fixer:WeldingRods=2,
+		Fixer:ScrapMetal=30,
+		Fixer:MetalBar=2,
+		Fixer:SheetMetal=4,
 		Category:ApoRepairs,
+		Sound:MetalWeldingSFX,
+		AnimNode:BlowTorchFloor,
+		NearItem:Armory Table,
 		NeedToBeLearn:true,
 	}
 
-fixing Fix Katana
+	fixing Fix Katana
 	{
-		Require : Katana,	
-		BlowTorch=5,
-		WeldingRods=2,
-		ScrapMetal=20,
-		MetalBar=3,
-		SheetMetal=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		NearItem:Armory Table,
+		Require:Katana,
+		GlobalItem:BlowTorch,
+		GlobalItem:[Recipe.GetItemTypes.WeldingMask],
+		Fixer:WeldingRods=2,
+		Fixer:ScrapMetal=20,
+		Fixer:MetalBar=3,
+		Fixer:SheetMetal=2,
+		Category:ApoRepairs,
 		Sound:MetalWeldingSFX,
-		Category:ApoRepairs
+		AnimNode:BlowTorchFloor,
+		NearItem:Armory Table,
 		NeedToBeLearn:true,
 	}
 
 	fixing Fix Crowbar
 	{
-		Require : Crowbar,		
-		BlowTorch=5,
-		WeldingRods=2,
-		ScrapMetal=15,
-		MetalBar=1,
-		SheetMetal=1,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		NearItem:Armory Table,
-		Sound:MetalWeldingSFX,
+		Require:Crowbar,
+		GlobalItem:BlowTorch,
+		GlobalItem:[Recipe.GetItemTypes.WeldingMask],
+		Fixer:WeldingRods=2,
+		Fixer:ScrapMetal=15,
+		Fixer:MetalBar=1,
+		Fixer:SheetMetal=1,
 		Category:ApoRepairs,
+		Sound:MetalWeldingSFX,
+		AnimNode:BlowTorchFloor,
+		NearItem:Armory Table,
 		NeedToBeLearn:true,
 	}
 
 	fixing Fix Nightstick
 	{
-	Require : Nightstick,
-	NearItem:Armory Table,
-	Sound:QuickDuctTapeSFX,
-	Fixer : DuctTape=2,
-    Fixer : Glue=2,
-    Fixer : Scotchtape=4,
-	Category:ApoRepairs,
-	NeedToBeLearn:true,
-
+		Require:Nightstick,
+		Fixer:DuctTape=2,
+		Fixer:Glue=2,
+		Fixer:Scotchtape=4,
+		Category:ApoRepairs,
+		Sound:QuickDuctTapeSFX,
+		AnimNode:Craft,
+		NearItem:Armory Table,
+		NeedToBeLearn:true,
 	}
 
 	fixing Fix Meat Cleaver
 	{
-		Require : MeatCleaver,
-		NearItem:Armory Table,
-		Sound:MetalWeldingSFX,
-		GlobalItem : BlowTorch=5,
-		GlobalItem : [Recipe.GetItemTypes.WeldingMask],
+		Require:MeatCleaver,
+		GlobalItem:BlowTorch,
+		GlobalItem:[Recipe.GetItemTypes.WeldingMask],
+		Fixer:ScrapMetal=2,
+		Fixer:Glue=2,
 		Category:ApoRepairs,
+		Sound:MetalWeldingSFX,
+		AnimNode:BlowTorchFloor,
+		NearItem:Armory Table,
 		NeedToBeLearn:true,
-		Fixer : ScrapMetal=2,
-		Fixer : Glue=2,
 	}
 
 	fixing Fix Pipe Wrench
 	{
-		Require : PipeWrench,
-		NearItem:Armory Table,
-		Sound:MetalWeldingSFX,
-		GlobalItem : BlowTorch=5,
-		GlobalItem : [Recipe.GetItemTypes.WeldingMask],
+		Require:PipeWrench,
+		GlobalItem:BlowTorch,
+		GlobalItem:[Recipe.GetItemTypes.WeldingMask],
+		Fixer:ScrapMetal=3,
+		Fixer:MetalBar=1,
 		Category:ApoRepairs,
+		Sound:MetalWeldingSFX,
+		AnimNode:BlowTorchFloor,
+		NearItem:Armory Table,
 		NeedToBeLearn:true,
-		Fixer : ScrapMetal=3,
-		Fixer : MetalBar=1,
 	}
 
    recipe Make Duct Tape
    {
-      DenimStrips,
-      Aluminum,
-      Glue/Woodglue,
-      Water=2,
-      keep [Recipe.GetItemTypes.Scissors],
-      Result:DuctTape,
-	  Category:ApoRepairs,
-	  Sound:QuickDuctTapeSFX,
-      Time:130.0,
+		DenimStrips,
+		Aluminum,
+		Glue/Woodglue,
+		Water=2,
+		keep [Recipe.GetItemTypes.Scissors],
+
+		Result:DuctTape,
+		Time:130.0,
+		Category:ApoRepairs,
+		Sound:QuickDuctTapeSFX,
+		AnimNode:Craft,
+		NearItem:Tailoring Table,
+		CanBeDoneFromFloor:true,
+		NeedToBeLearn:false,
    }
 }

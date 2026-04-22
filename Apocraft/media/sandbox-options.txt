@@ -1,19 +1,19 @@
 VERSION = 1,
 
 option ApoEnhancedForaging.HotspotChance {
-   type = integer,
-   default = 10,
-   min = 0,
-   max = 100,
-   page = ApoEnhancedForaging,
-   translation = Sandbox_ApoEnhancedForaging_HotspotChance,
+    type = integer,
+    default = 10,
+    min = 0,
+    max = 100,
+    page = ApoEnhancedForaging,
+    translation = Sandbox_ApoEnhancedForaging_HotspotChance,
 }
 
 option Apocraft.SpecialTreeChanceMultiplier {
-   type = double,
-   default = 1.0,
-   min = 0.0,
-   max = 100.0,
-   page = Apocraft,
-   translation = Sandbox_Apocraft_SpecialTreeChanceMultiplier,
+    type = double,
+    default = 1.0,
+    min = 0.0,
+    max = 100.0,
+    page = Apocraft,
+    translation = Sandbox_Apocraft_SpecialTreeChanceMultiplier,
 }
