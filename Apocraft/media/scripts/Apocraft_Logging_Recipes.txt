@@ -20,7 +20,7 @@ module Apocraft
         NearItem:Armory Table,
         CanBeDoneFromFloor:true,
         NeedToBeLearn:true,
-        SkillRequired:Lumberjack=3,
+        SkillRequired:Woodwork=4,
         OnGiveXP:Recipe.OnGiveXP.SawLogs,
         OnCreate:OnCreateChopLogs,
 	}
@@ -40,7 +40,7 @@ module Apocraft
         NearItem:Armory Table,
         CanBeDoneFromFloor:true,
         NeedToBeLearn:true,
-        SkillRequired:Lumberjack=5,
+        SkillRequired:Woodwork=6,
         OnGiveXP:Recipe.OnGiveXP.SawLogs,
         OnCreate:OnCreateChopLogs,
 	}
@@ -60,7 +60,7 @@ module Apocraft
         NearItem:Armory Table,
         CanBeDoneFromFloor:true,
         NeedToBeLearn:true,
-        SkillRequired:Lumberjack=7,
+        SkillRequired:Woodwork=8,
         OnGiveXP:Recipe.OnGiveXP.SawLogs,
         OnCreate:OnCreateChopLogs,
 	}
@@ -80,7 +80,7 @@ module Apocraft
         NearItem:Armory Table,
         CanBeDoneFromFloor:true,
         NeedToBeLearn:true,
-        SkillRequired:Lumberjack=9,
+        SkillRequired:Woodwork=10,
         OnGiveXP:Recipe.OnGiveXP.SawLogs,
         OnCreate:OnCreateChopLogs,
 	}

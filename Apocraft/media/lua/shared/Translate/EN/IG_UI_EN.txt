@@ -12,7 +12,6 @@ IGUI_EN =
 	IGUI_CraftCategory_ApoMetalwork = "Apocraft Metalworking",
 	IGUI_CraftCategory_ApoFarming = "Apocraft Farming",
 	IGUI_CraftCategory_ApoSurvivalist = "Apocraft Survivalist",
-	IGUI_perks_Lumberjack = "Lumberjack",
 	IGUI_Woodworker_Bonus = "Woodworker Bonus: +1 Plank!",
 	IGUI_Found_SuperOak = "Found Super Oak Heartwood!",
 	IGUI_Found_MagicPine = "Found Magic Pine Heartwood!",

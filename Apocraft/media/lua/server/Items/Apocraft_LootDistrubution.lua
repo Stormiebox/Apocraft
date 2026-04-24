@@ -53,18 +53,6 @@ local function ApocraftLootDistributions()
     -- Materials
     insertLoot("CrateMaterials", "Apocraft.GlassPane", 10)
     insertLoot("CrateMaterials", "Apocraft.ShardsOfGlass", 15)
-
-    -- Lumberjack Skill Books
-    local lumberjackBooks = {
-        "Apocraft.BookLumberjack1", "Apocraft.BookLumberjack2",
-        "Apocraft.BookLumberjack3", "Apocraft.BookLumberjack4",
-        "Apocraft.BookLumberjack5"
-    }
-    for _, book in ipairs(lumberjackBooks) do
-        insertLoot("LibraryBooks", book, 10)
-        insertLoot("BookstoreBooks", book, 10)
-        insertLoot("CrateMagazines", book, 5)
-    end
 end
 
 Events.OnPreDistributionMerge.Add(ApocraftLootDistributions)

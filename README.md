@@ -1,7 +1,6 @@
 ## Table of Contents
 - [Apocraft Introduction](#apocraft-introduction)
 - [Guide](#guide)
-- [Skills & Professions](#skills--professions)
 - [Enhanced Forage](#enhanced-forage)
 - [Vanilla-Friendly & Compatibility](#vanilla-friendly--compatibility)
 - [Crafting Tables & Required Mod](#crafting-tables--required-mod)
@@ -24,7 +23,6 @@ Welcome to Apocraft, a vanilla-friendly crafting overhaul for Project Zomboid! D
 - Metalworking
 - Tailoring
 - Survivalist
-- Lumberjack: Master the art of woodworking and logging, leveraging both strength and skill to harvest more resources and craft intricate woodworks.
 
 ### Enhanced Crafting Features include:
 - Diverse Paint Crafting
@@ -34,11 +32,8 @@ Welcome to Apocraft, a vanilla-friendly crafting overhaul for Project Zomboid! D
 - Extensive Recycling
 - Weapon/Tool Repair
 - Glass Molding
-- Advanced Logging System: As you master the Lumberjack skill, gain the ability to efficiently identify and extract resources from specialized trees like the "Heartwood Trees".
+- Advanced Logging System: Leverage your character's Strength to efficiently identify and extract resources from specialized trees like the "Heartwood Trees", featuring a balanced extraction system and bonus log drops.
 - Bio-Fuel Distillation & Refining: Convert wood mulch into crude bio-oil, and distill it further into usable gasoline and propane using custom-built laboratory equipment.
-
-### Skills & Professions
-- Lumberjack Skill: Delve deeper into the art of woodworking and logging. Boosting this skill allows for better identification of unique trees and improved efficiency in extracting rare materials. Harness strength and finesse to gather more resources and construct intricate woodworks. As the skill levels up, integrate with advanced toolkits to maximize resource acquisition.
 
 ### Additional Features include:
 - Unique SFX for Crafting
@@ -70,16 +65,21 @@ Delve deeper into the environment with the Enhanced Forage system. As your forag
 - **Q: How do I repair tools?**
   > **A:** Gather required materials as per the crafting menu and proceed with the crafting process.
 
-- **Q: About the "Lumberjack" skill?**
-  > **A:** Engage in woodworking activities to boost the Lumberjack skill. As it levels up, you'll achieve increased logging efficiency, yielding more wood and resources.
+- **Q: Where did the custom "Lumberjack" skill go?**
+  > **A:** To ensure maximum compatibility and server stability, the custom Lumberjack skill, traits, and skill books have been separated into a dedicated submod! The core Apocraft mod now natively uses your character's vanilla Strength perk to calculate logging bonuses.
 
-- **Q: How does the new "Lumberjack" skill work with special trees like the "Heartwood Trees"?**
-  > **A:** As players hone their Lumberjack skills, they can more efficiently identify and extract valuable resources from these unique trees. The higher the skill level, the better the chances of harvesting special lumber from the "Heartwood Trees".
+- **Q: How does the logging system work with special trees like the "Heartwood Trees"?**
+  > **A:** Special trees now contain a hidden bonus pool of logs. As you chop them down, there is a chance per hit to safely dislodge extra special logs. Additionally, your character's Strength level gives you a flat chance to drop bonus standard logs with every swing!
 
 - **Q: How do I create my own gasoline and propane?**
   > **A:** First, read the Apocraft Survivalist and Forging magazines to learn the blueprints. Construct a Bio-Fuel Distiller and Condenser at the Forge Table. Process wood into mulch at the Armory Table, then refine that mulch at the Laboratory Table to create Crude Bio-Oil, Gasoline, and Propane!
 
 ## Changelog
+### Version 1.7.0
+- **Refactored:** Separated the custom Lumberjack skill, traits, and skill books into a standalone submod to maintain absolute stability in the core Apocraft experience.
+- **Overhaul:** Completely rebalanced the woodcutting and Special Trees system. Infinite log exploits have been patched, transitioning from a flat-drop system to a chance-based extraction system.
+- **Integrated:** The vanilla Strength perk now governs your chances of extracting bonus logs from trees per swing.
+
 ### Version 1.6.0
 - **Feature:** Overhauled Bio-Fuel and Propane distillation system!
 - **New Items & Textures:** Added Bio-Fuel Distiller, Condenser, Wood Mulch, Crude Bio-Oil (Buckets/Pots), and Empty Propane Tanks. Included all corresponding ground and inventory textures.

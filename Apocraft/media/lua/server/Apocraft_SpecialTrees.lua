@@ -1,7 +1,8 @@
 -- Lumberjack_SpecialTrees.lua
+-- Apocraft_SpecialTrees.lua
 -- Uses Procedural Coordinate Hashing for perfectly synced, random special trees.
 
-local Lumberjack_SpecialTrees = {}
+local Apocraft_SpecialTrees = {}
 
 -- A procedural hash function to turn X/Y coordinates into a random 0-9999 roll
 local function getProceduralHash(x, y)
@@ -11,7 +12,7 @@ local function getProceduralHash(x, y)
 end
 
 -- Checks a square to see if the tree on it is genetically special
-function Lumberjack_SpecialTrees.getTreeType(square)
+function Apocraft_SpecialTrees.getTreeType(square)
     -- Ensure the square actually has a tree on it before doing math
     if not square or not square:getTree() then return nil end
     local x = square:getX()
@@ -43,4 +44,4 @@ function Lumberjack_SpecialTrees.getTreeType(square)
     return nil
 end
 
-return Lumberjack_SpecialTrees
+return Apocraft_SpecialTrees

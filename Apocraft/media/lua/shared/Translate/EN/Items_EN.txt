@@ -22,9 +22,4 @@ Items_EN =
 	DisplayName_GlassPane = "Glass Pane",
 	DisplayName_ShardsOfGlass = "Shards of Glass",
 	DisplayName_Chisel = "Chisel",
-	DisplayName_BookLumberjack1 = "Lumberjack Vol. 1",
-	DisplayName_BookLumberjack2 = "Lumberjack Vol. 2",
-	DisplayName_BookLumberjack3 = "Lumberjack Vol. 3",
-	DisplayName_BookLumberjack4 = "Lumberjack Vol. 4",
-	DisplayName_BookLumberjack5 = "Lumberjack Vol. 5",
 }
