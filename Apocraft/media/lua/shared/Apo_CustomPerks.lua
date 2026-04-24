@@ -5,4 +5,4 @@
 Perks.Lumberjack = Perks.FromString("Lumberjack")
 
 -- Register it into the game's Perk UI under the "Survivalist" category
-PerkFactory.AddPerk(Perks.Lumberjack, "Lumberjack", "UI_Perk_Lumberjack", Perks.Survivalist)
+PerkFactory.AddPerk(Perks.Lumberjack, "Lumberjack", "UI_Perk_Lumberjack", "", "Survivalist")

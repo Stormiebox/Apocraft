@@ -1,5 +1,5 @@
 name=Apocraft
 id=Apocraft
-require=ISA_41, SC_ISA, craftingEnhancedCore, TargetSquareOnLoad, TraitTagFramework
-description= Vanilla friendly crafting overhaul. Still under active development.
+require=ISA_41, craftingEnhancedCore, TraitTagFramework
+description=Vanilla friendly crafting overhaul. Still under active development.
 poster=ApocraftPoster.png
