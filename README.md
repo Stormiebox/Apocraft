@@ -35,6 +35,7 @@ Welcome to Apocraft, a vanilla-friendly crafting overhaul for Project Zomboid! D
 - Weapon/Tool Repair
 - Glass Molding
 - Advanced Logging System: As you master the Lumberjack skill, gain the ability to efficiently identify and extract resources from specialized trees like the "Heartwood Trees".
+- Bio-Fuel Distillation & Refining: Convert wood mulch into crude bio-oil, and distill it further into usable gasoline and propane using custom-built laboratory equipment.
 
 ### Skills & Professions
 - Lumberjack Skill: Delve deeper into the art of woodworking and logging. Boosting this skill allows for better identification of unique trees and improved efficiency in extracting rare materials. Harness strength and finesse to gather more resources and construct intricate woodworks. As the skill levels up, integrate with advanced toolkits to maximize resource acquisition.
@@ -75,7 +76,19 @@ Delve deeper into the environment with the Enhanced Forage system. As your forag
 - **Q: How does the new "Lumberjack" skill work with special trees like the "Heartwood Trees"?**
   > **A:** As players hone their Lumberjack skills, they can more efficiently identify and extract valuable resources from these unique trees. The higher the skill level, the better the chances of harvesting special lumber from the "Heartwood Trees".
 
+- **Q: How do I create my own gasoline and propane?**
+  > **A:** First, read the Apocraft Survivalist and Forging magazines to learn the blueprints. Construct a Bio-Fuel Distiller and Condenser at the Forge Table. Process wood into mulch at the Armory Table, then refine that mulch at the Laboratory Table to create Crude Bio-Oil, Gasoline, and Propane!
+
 ## Changelog
+### Version 1.6.0
+- **Feature:** Overhauled Bio-Fuel and Propane distillation system!
+- **New Items & Textures:** Added Bio-Fuel Distiller, Condenser, Wood Mulch, Crude Bio-Oil (Buckets/Pots), and Empty Propane Tanks. Included all corresponding ground and inventory textures.
+- **Wood Mulching:** Added recipes to mulch various wood types (Logs, Branches, Twigs, Planks, Unusable Wood) using the Armory Table and logging tools.
+- **Metalworking Integration:** Added recipes to craft Distillers, Condensers, and Propane Tanks at the Forge Table.
+- **Bio-Fuel Distillation:** Added survivalist recipes to refine mulch into Crude Bio-Oil, Gasoline, and Propane at the Laboratory Table.
+- **Custom SFX Hooks:** Integrated custom Apocraft sound effects into the new crafting steps.
+- **Magazine Unlocks:** Hooked the new recipes into the existing skill learning progression (ApoForgingMagazine and ApoSurvivalistMagazine).
+
 ### Version 1.5.0
 - **Overhaul:** Complete code and script audit across all recipe, item, and translation files. Standardized formatting, syntax, and engine hooks for maximum stability.
 - **Added:** Over 20 new Metalworking recipes! You can now forge base materials (pipes, wire, sheet metal), tools (hammers, saws, wrenches), weapons (crowbars, machetes), and cooking supplies using the Forge Table.
