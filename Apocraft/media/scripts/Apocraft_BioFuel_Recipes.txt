@@ -1,0 +1,198 @@
+module Apocraft
+{
+    imports
+    {
+        Base
+    }
+
+    recipe Distill Crude Bio-Oil
+    {
+        Mulch = 450,
+        Pot,
+        keep Distiller/DistillerWater,
+        keep Condenser,
+        Heat: -0.22,
+        CanBeDoneFromFloor: true,
+        NeedToBeLearn:true,
+        Category: ApoSurvivalist,
+        NearItem: Laboratory Table,
+        Sound: WaterLabSFX,
+        AnimNode: Craft,
+        Result: CrudePot,
+        Time: 1200.0,
+    }
+
+    recipe Distill Crude Bio-Oil
+    {
+        Mulch = 450,
+        BucketEmpty,
+        keep Distiller/DistillerWater,
+        keep Condenser,
+        Heat: -0.22,
+        CanBeDoneFromFloor: true,
+        NeedToBeLearn:true,
+        Category: ApoSurvivalist,
+        NearItem: Laboratory Table,
+        Sound: WaterLabSFX,
+        AnimNode: Craft,
+        Result: CrudeBucket,
+        Time: 1200.0,
+    }
+
+    recipe Distill Gasoline
+    {
+        CrudeBucket,
+        destroy EmptyPetrolCan/PetrolCan,
+        keep Distiller/DistillerWater,
+        keep Condenser,
+        Heat: -0.22,
+        CanBeDoneFromFloor: true,
+        NeedToBeLearn:true,
+        Category: ApoSurvivalist,
+        NearItem: Laboratory Table,
+        Sound: LaboratoryTableSFX,
+        AnimNode: Craft,
+        Result: PetrolCan,
+        Time: 300.0,
+    }
+
+    recipe Distill Gasoline
+    {
+        CrudePot,
+        destroy EmptyPetrolCan/PetrolCan,
+        keep Distiller/DistillerWater,
+        keep Condenser,
+        Heat: -0.22,
+        CanBeDoneFromFloor: true,
+        NeedToBeLearn:true,
+        Category: ApoSurvivalist,
+        NearItem: Laboratory Table,
+        Sound: LaboratoryTableSFX,
+        AnimNode: Craft,
+        Result: PetrolCan,
+        Time: 300.0,
+    }
+
+    recipe Distill Propane
+    {
+        Mulch = 270,
+        destroy PropaneTankEmpty/PropaneTank,
+        keep Distiller/DistillerWater,
+        Heat: -0.22,
+        CanBeDoneFromFloor: true,
+        NeedToBeLearn:true,
+        Category: ApoSurvivalist,
+        NearItem: Laboratory Table,
+        Sound: LaboratoryTableSFX,
+        AnimNode: Craft,
+        Result: PropaneTank,
+        Time: 1000.0,
+    }
+
+    recipe Create Propane Tank
+    {
+        SheetMetal = 8,
+        WeldingRods = 1,
+        BlowTorch = 7,
+        CanBeDoneFromFloor: true,
+        Category: ApoMetalwork,
+        NeedToBeLearn:true,
+        NearItem: Forge Table,
+        Sound: MetalWeldingSFX,
+        AnimNode: BlowTorch,
+        SkillRequired: MetalWelding=7,
+        Result: PropaneTankEmpty,
+        Time: 2000.0,
+    }
+
+    recipe Create Condenser
+    {
+        GlassPane = 1,
+        SmallSheetMetal = 2,
+        MetalPipe = 3,
+        Water = 20,
+        WeldingRods = 1,
+        BlowTorch = 2,
+        destroy BucketEmpty/BucketWaterFull/Pot/WaterPot,
+        CanBeDoneFromFloor: true,
+        Category: ApoMetalwork,
+        NeedToBeLearn:true,
+        NearItem: Forge Table,
+        Sound: MetalWeldingSFX,
+        AnimNode: BlowTorch,
+        SkillRequired: MetalWelding=6,
+        Result: Condenser,
+        Time: 1500.0,
+    }
+
+    recipe Create Distiller
+    {
+        Pot = 1,
+        SheetMetal = 1,
+        MetalPipe = 1,
+        WeldingRods = 1,
+        BlowTorch = 1,
+        Category: ApoMetalwork,
+        NeedToBeLearn:true,
+        NearItem: Forge Table,
+        Sound: MetalWeldingSFX,
+        AnimNode: BlowTorch,
+        SkillRequired: MetalWelding=5,
+        Result: Distiller,
+        Time: 2000.0,
+    }
+
+    recipe Mulch Log
+    {
+        Log = 1,
+        keep Saw/GardenSaw,
+        Category: ApoSurvivalist,
+        NearItem: Armory Table,
+        Sound: LoggingSFX,
+        AnimNode: SawLog,
+        Result: Mulch = 90,
+        Time: 1200.0,
+    }
+
+    recipe Mulch Branch
+    {
+        TreeBranch = 1,
+        Category: ApoSurvivalist,
+        Sound: WoodCarvingSFX,
+        AnimNode: Craft,
+        Result: Mulch = 17,
+        Time: 150.0,
+    }
+
+    recipe Mulch Twigs
+    {
+        Twigs = 1,
+        Category: ApoSurvivalist,
+        Sound: WoodCarvingSFX,
+        AnimNode: Craft,
+        Result: Mulch = 1,
+        Time: 1.0,
+    }
+
+    recipe Mulch Plank
+    {
+        Plank = 1,
+        keep Saw/GardenSaw,
+        Category: ApoSurvivalist,
+        NearItem: Armory Table,
+        Sound: LoggingSFX,
+        AnimNode: SawLog,
+        Result: Mulch = 30,
+        Time: 300.0,
+    }
+
+    recipe Mulch Unusable Wood
+    {
+        UnusableWood = 1,
+        Category: ApoSurvivalist,
+        Sound: LoggingSFX,
+        AnimNode: Craft,
+        Result: Mulch = 30,
+        Time: 100.0,
+    }
+}

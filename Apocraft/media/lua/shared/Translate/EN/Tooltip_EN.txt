@@ -30,4 +30,10 @@ Tooltip_EN =
 	Tooltip_BookLumberjack3            = "Detailed instructional literature on maximizing timber yields and efficiency. For Advanced lumberjacks.",
 	Tooltip_BookLumberjack4            = "Elite texts on industrial-grade forestry and specialized tree extraction. For Experts.",
 	Tooltip_BookLumberjack5            = "The definitive mastery guide to logging and woodworking. For Masters.",
+	Tooltip_Distiller                  = "A specialized apparatus used to distill crude bio-oil and other resources into usable fuels when heated.",
+	Tooltip_Condenser                  = "An essential glass-paneled cooling component for fuel distillation setups.",
+	Tooltip_Mulch                      = "Processed wood chips and scraps. Perfect for fueling a distiller to create bio-oil or propane.",
+	Tooltip_CrudeBucket                = "A bucket filled with raw, unrefined bio-oil extracted from mulch.",
+	Tooltip_CrudePot                   = "A pot filled with raw, unrefined bio-oil extracted from mulch.",
+	Tooltip_PropaneTankEmpty           = "An empty propane tank, ready to be refilled using a bio-fuel distiller.",
 }
