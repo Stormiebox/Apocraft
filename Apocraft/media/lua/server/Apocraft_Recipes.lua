@@ -1,15 +1,29 @@
 -- Initialization
 -- Get thread (sometimes, depending on tailoring level) and add XP
 local function GetThreadAndXP(player)
+    if not player then
+        return
+    end
+
     if ZombRand(7) < player:getPerkLevel(Perks.Tailoring) + 1 then
         local max = ZombRand(2, 7) -- Generates 2 through 6
         local thread = InventoryItemFactory.CreateItem("Base.Thread")
+        if not thread then
+            return
+        end
 
         -- Safely adjust the amount of thread remaining based on the random max value
         thread:setUsedDelta(thread:getUseDelta() * max)
 
-        player:getInventory():AddItem(thread)
-        player:getXp():AddXP(Perks.Tailoring, 1)
+        local inventory = player:getInventory()
+        if inventory then
+            inventory:AddItem(thread)
+        end
+
+        local xp = player:getXp()
+        if xp then
+            xp:AddXP(Perks.Tailoring, 1)
+        end
     end
 end
 
@@ -20,7 +34,9 @@ end
 
 -- Rip Bra's and Clothing Items
 function Recipe.OnCreate.ApoRipBra(items, result, player)
-    player:getInventory():AddItem("Base.RippedSheets")
+    if player and player:getInventory() then
+        player:getInventory():AddItem("Base.RippedSheets")
+    end
     GetThreadAndXP(player)
 end
 
@@ -35,15 +51,21 @@ end
 
 -- Safely load TraitTagFramework only if it is activated
 local TTF = nil
-if getActivatedMods():contains("TraitTagFramework") then
+if getActivatedMods and getActivatedMods():contains("TraitTagFramework") then
     TTF = require("TraitTagFramework")
 end
 
 -- Gives an extra plank to anyone with the "Woodworker" tag when sawing logs
 function Recipe.OnCreate.SawLogsWoodworkerBonus(items, result, player, selectedItem)
-    if TTF and TTF.PlayerHasTag(player, "Woodworker") then
+    if not player then
+        return
+    end
+
+    if TTF and TTF.PlayerHasTag and TTF.PlayerHasTag(player, "Woodworker") then
         -- Add an extra plank directly to their inventory
-        player:getInventory():AddItem("Base.Plank")
+        if player:getInventory() then
+            player:getInventory():AddItem("Base.Plank")
+        end
 
         -- Pop up a little green text over their head so they know the trait worked!
         if player:isLocalPlayer() then

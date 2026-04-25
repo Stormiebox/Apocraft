@@ -22,8 +22,8 @@ function Apocraft_SpecialTrees.getTreeType(square)
 
     -- Optional: Allow server admins to scale the chance of special trees
     local multiplier = 1.0
-    if SandboxVars.Apocraft and SandboxVars.Apocraft.SpecialTreeChanceMultiplier then
-        multiplier = SandboxVars.Apocraft.SpecialTreeChanceMultiplier
+    if SandboxVars and SandboxVars.Apocraft and SandboxVars.Apocraft.SpecialTreeChanceMultiplier then
+        multiplier = tonumber(SandboxVars.Apocraft.SpecialTreeChanceMultiplier) or 1.0
     end
 
     -- THE SPAWN CHANCES (Out of 10,000. 100 = 1%)

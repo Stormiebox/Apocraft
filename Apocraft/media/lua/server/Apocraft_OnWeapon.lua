@@ -11,4 +11,6 @@ local loggingOnWeapon = require "Apocraft_Woodcutting"
 -- Add the hit function to the OnWeaponHitTree event.
 -- This event is triggered when a weapon hits a tree.
 -- It passes two parameters: 'owner' (the character doing the hitting) and 'weapon' (the weapon used).
-Events.OnWeaponHitTree.Add(loggingOnWeapon.hit)
+if loggingOnWeapon and loggingOnWeapon.hit then
+    Events.OnWeaponHitTree.Add(loggingOnWeapon.hit)
+end

@@ -182,7 +182,7 @@ module Apocraft
         ReplaceOnUse     = ApoSurvivalistMagazine,
         Tooltip          = Tooltip_ApoSurvivalistMagazine,
         StaticModel      = Magazine,
-        WorldStaticModel = ApoSurvivalTXT,
+        WorldStaticModel = ApoSurvivalistTXT,
     }
 
    /******Teaches recipes for Logging.*********/
