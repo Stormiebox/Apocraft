@@ -92,7 +92,7 @@ module Apocraft
     model ApoSurvivalTXT
     {
         mesh    = WorldItems/Magazine,
-        texture = Apo/ApoSurvivalTXT,
+        texture = Apo/ApoSurvivalistTXT,
         scale   = 0.4,
     }
 }
