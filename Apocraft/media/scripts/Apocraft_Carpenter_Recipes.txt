@@ -65,7 +65,7 @@ module Apocraft
         CanBeDoneFromFloor:true,
         NeedToBeLearn:true,
         NearItem:Armory Table,
-        SkillRequired:Carpentry=1,
+        SkillRequired:Woodwork=1,
         OnGiveXP:Give5WoodworkXP,
    }
 
@@ -81,7 +81,7 @@ module Apocraft
         CanBeDoneFromFloor:true,
         NeedToBeLearn:true,
         NearItem:Armory Table,
-        SkillRequired:Carpentry=1,
+        SkillRequired:Woodwork=1,
         OnGiveXP:Give5WoodworkXP,
    }
 

@@ -18,7 +18,7 @@ module Apocraft
         MetalValue       = 50,
         SurvivalGear     = TRUE,
         Tooltip          = Tooltip_Distiller,
-        WorldStaticModel = DistillerGround,
+        WorldStaticModel = SaucePan,
     }
 
     item Condenser
@@ -31,7 +31,7 @@ module Apocraft
         MetalValue       = 30,
         SurvivalGear     = TRUE,
         Tooltip          = Tooltip_Condenser,
-        WorldStaticModel = DistillerGround,
+        WorldStaticModel = WaterSaucepan,
     }
 
     item PropaneTankEmpty
@@ -65,7 +65,7 @@ module Apocraft
         IsCookable       = TRUE,
         SurvivalGear     = TRUE,
         EatType          = Pot,
-        WorldStaticModel = DistillerGround,
+        WorldStaticModel = CookingPotWater_Ground,
     }
 
     item Mulch
@@ -76,7 +76,7 @@ module Apocraft
         DisplayName      = Wood Mulch,
         Icon             = Mulch,
         Tooltip          = Tooltip_Mulch,
-        WorldStaticModel = Mulch,
+        WorldStaticModel = Twigs,
     }
 
     item CrudeBucket
@@ -92,7 +92,7 @@ module Apocraft
         UseDelta         = 1.0,
         MetalValue       = 10,
         Tooltip          = Tooltip_CrudeBucket,
-        WorldStaticModel = CrudeBucketGround,
+        WorldStaticModel = BucketFullConcrete_Ground,
     }
 
     item CrudePot
@@ -108,6 +108,6 @@ module Apocraft
         UseDelta         = 1.0,
         MetalValue       = 10,
         Tooltip          = Tooltip_CrudePot,
-        WorldStaticModel = CrudePotGround,
+        WorldStaticModel = CookingPotWater_Ground,
     }
 }
